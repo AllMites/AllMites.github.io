@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<style>
+/* ===== RESET ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* ===== MESH GRADIENT BLOBS ===== */
+.shader-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.shader-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+  mix-blend-mode: multiply;
+}
+.shader-blob--1 {
+  width: 80vmax; height: 80vmax;
+  top: -30vmax; left: -20vmax;
+  background: radial-gradient(circle, #e8b0c0 0%, transparent 70%);
+  opacity: 0.2;
+  animation: blob-drift-1 18s ease-in-out infinite;
+}
+.shader-blob--2 {
+  width: 65vmax; height: 65vmax;
+  bottom: -25vmax; right: -15vmax;
+  background: radial-gradient(circle, #f0d0a0 0%, transparent 70%);
+  opacity: 0.15;
+  animation: blob-drift-2 22s ease-in-out infinite;
+}
+.shader-blob--3 {
+  width: 50vmax; height: 50vmax;
+  top: 20%; right: -10vmax;
+  background: radial-gradient(circle, #e8c0cc 0%, transparent 70%);
+  opacity: 0.18;
+  animation: blob-drift-3 20s ease-in-out infinite;
+}
+.shader-blob--4 {
+  width: 45vmax; height: 45vmax;
+  bottom: 0%; left: -10vmax;
+  background: radial-gradient(circle, #fce8d8 0%, transparent 70%);
+  opacity: 0.12;
+  animation: blob-drift-4 25s ease-in-out infinite;
+}
+@keyframes blob-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(8vmax, -5vmax) scale(1.05); }
+  66%  { transform: translate(-4vmax, 6vmax) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes blob-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-6vmax, -4vmax) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes blob-drift-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  40%  { transform: translate(-3vmax, -6vmax) scale(1.03); }
+  80%  { transform: translate(4vmax, 2vmax) scale(0.97); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes blob-drift-4 {
+  0%   { transform: translate(0, 0) scale(1); }
+  45%  { transform: translate(5vmax, 3vmax) scale(1.06); }
+  90%  { transform: translate(-2vmax, -4vmax) scale(0.98); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ===== VARIABLES ===== */
+:root {
+  --bg: #fcf8f5;
+  --card-bg: rgba(255,255,255,0.72);
+  --text: #1a1416;
+  --text-muted: #8a7a7e;
+  --accent: #d4849a;
+  --accent-strong: #c0607a;
+  --accent-light: #f0d6de;
+  --success: #7a9a7a;
+  --success-light: #e0ede0;
+  --border: rgba(180,100,120,0.08);
+  --shadow: 0 8px 32px rgba(180,100,120,0.08);
+  --radius: 18px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --card-tint-peach: rgba(255, 231, 210, 0.35);
+  --card-tint-pink: rgba(255, 210, 211, 0.3);
+  --card-tint-sage: rgba(188, 208, 180, 0.25);
+}
+
+/* ===== UTILITY ===== */
+.hidden {
+  display: none !important;
+}
+
+/* ===== LOADING SCREEN ===== */
+#loadingScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--accent-light);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===== ERROR SCREEN ===== */
+#errorScreen {
+  text-align: center;
+  max-width: 400px;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  display: block;
+}
+
+#errorScreen h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+#errorScreen p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: var(--card-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px 24px;
+  width: 100%;
+  max-width: 520px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: card-in 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.card + .card {
+  margin-top: 16px;
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(180,100,120,0.12);
+}
+
+.card-tint-peach {
+  background: linear-gradient(135deg, var(--card-tint-peach), var(--card-bg));
+}
+
+.card-tint-pink {
+  background: linear-gradient(135deg, var(--card-tint-pink), var(--card-bg));
+}
+
+.card-tint-sage {
+  background: linear-gradient(135deg, var(--card-tint-sage), var(--card-bg));
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== PORTAL CONTENT ===== */
+#portalContent {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 520px;
+}
+
+#portalContent.visible {
+  display: flex;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ===== STATUS BADGE ===== */
+.status-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.status-badge.agreed,
+.status-badge.agreement_sent {
+  background: #e8e0f4;
+  color: #6b52a0;
+}
+
+.status-badge.deposit_paid {
+  background: #f0e8d8;
+  color: #a08040;
+}
+
+.status-badge.building {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.status-badge.launched,
+.status-badge.completed {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.status-badge.review {
+  background: #f0d8d8;
+  color: #b06060;
+}
+
+/* ===== GREETING ===== */
+.greeting {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 16px 0 20px;
+  width: 100%;
+  line-height: 1.25;
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-wrap {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--accent-light);
+  border-radius: 999px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  border-radius: 999px;
+  transition: width 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
+  width: 0%;
+}
+
+.progress-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+/* ===== SECTION CONTENT ===== */
+.status-section {
+  width: 100%;
+}
+
+.status-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.status-section p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.status-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== AGREEMENT CONTENT ===== */
+.agreement-content {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  max-height: 400px;
+  overflow-y: auto;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.agreement-content h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-bottom: 8px;
+  margin-top: 16px;
+  font-weight: 600;
+}
+
+.agreement-content h3:first-child {
+  margin-top: 0;
+}
+
+.agreement-content ul {
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+.agreement-content li {
+  margin-bottom: 4px;
+}
+
+.agreement-content p {
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+  color: #fff;
+}
+
+.btn-secondary {
+  background: var(--accent-light);
+  color: var(--accent-strong);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--success), #5a8a5a);
+  color: #fff;
+}
+
+.btn-cancel {
+  background: #e0e0e0;
+  color: var(--text-muted);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ===== MODAL OVERLAY ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+  padding: 28px 24px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.modal-card p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #1a1a1a;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+  max-width: 90vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+
+/* ===== PAYMENT ===== */
+.payment-section {
+  text-align: center;
+  padding: 16px 0;
+}
+
+.payment-details {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 12px auto;
+  max-width: 320px;
+}
+
+.payment-amount {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent-strong);
+  margin: 8px 0 4px;
+}
+
+.payment-instruction {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* ===== CHECKLIST ===== */
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+
+.checklist li:last-child {
+  border-bottom: none;
+}
+
+.checklist input[type="checkbox"] {
+  margin-top: 3px;
+  accent-color: var(--accent-strong);
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.checklist li.checked span {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+  list-style: none;
+  padding: 0;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 4px;
+  bottom: 4px;
+  width: 2px;
+  background: var(--accent-light);
+}
+
+.timeline li {
+  position: relative;
+  padding-left: 32px;
+  padding-bottom: 20px;
+  font-size: 0.85rem;
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--card-bg);
+}
+
+.timeline .tl-message {
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.timeline .tl-time {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ===== DELIVERABLES ===== */
+.deliverable-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.88rem;
+}
+
+.deliverable-item:last-child {
+  border-bottom: none;
+}
+
+.deliverable-title {
+  font-weight: 600;
+}
+
+.deliverable-status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 3px 10px;
+  border-radius: 999px;
+}
+
+.deliverable-status.pending {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.deliverable-status.done {
+  background: #e6f4ea;
+  color: var(--success);
+}
+
+.deliverable-status.in-progress {
+  background: #fef7e0;
+  color: #b06000;
+}
+
+/* ===== QUICK ACTIONS ===== */
+.quick-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* ===== WELCOME DOC ===== */
+.welcome-doc {
+  background: linear-gradient(135deg, var(--card-tint-peach), var(--card-tint-pink));
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.welcome-doc h3 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.welcome-doc ol {
+  padding-left: 20px;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.welcome-doc li {
+  margin-bottom: 4px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  body {
+    padding: 16px 12px;
+  }
+
+  .card {
+    padding: 20px 16px;
+  }
+
+  .greeting {
+    font-size: 1.35rem;
+  }
+
+  .payment-details {
+    padding: 12px;
+  }
+
+  .agreement-content {
+    max-height: 320px;
+    padding: 16px;
+  }
+
+  .modal-card {
+    padding: 20px 16px;
+  }
+
+  .timeline li {
+    padding-left: 28px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- MESH GRADIENT BACKGROUND -->
+<div class="shader-bg" aria-hidden="true">
+  <div class="shader-blob shader-blob--1"></div>
+  <div class="shader-blob shader-blob--2"></div>
+  <div class="shader-blob shader-blob--3"></div>
+  <div class="shader-blob shader-blob--4"></div>
+</div>
+
+<!-- LOADING SCREEN -->
+<div id="loadingScreen" class="card" role="status" aria-label="Loading">
+  <div class="spinner"></div>
+  <span>Loading your portal...</span>
+</div>
+
+<!-- ERROR SCREEN -->
+<div id="errorScreen" class="card hidden" role="alert">
+  <span class="error-icon">&#x26A0;&#xFE0F;</span>
+  <h2>Could not load your project</h2>
+  <p>We couldn't find a project matching your link. Double-check the URL or reach out to Rider for assistance.</p>
+</div>
+
+<!-- PORTAL CONTENT -->
+<div id="portalContent">
+  <!-- HEADER -->
+  <div class="header card" style="padding-bottom:16px;">
+    <span class="brand">Rider &middot; Web</span>
+    <span id="statusBadge" class="status-badge">Loading</span>
+  </div>
+
+  <!-- GREETING -->
+  <h1 id="greeting" class="greeting card" style="padding-top:0;padding-bottom:16px;">Hello!</h1>
+
+  <!-- PROGRESS -->
+  <div class="card progress-wrap" style="padding-bottom:20px;">
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill" style="width:0%;"></div>
+    </div>
+    <div class="progress-labels">
+      <span id="progressStartLabel">Started</span>
+      <span id="progressPercentLabel">0%</span>
+      <span id="progressLiveLabel">Live</span>
+    </div>
+  </div>
+
+  <!-- STATUS SECTIONS -->
+
+  <!-- INQUIRY -->
+  <div id="sectionInquiry" class="card status-section hidden">
+    <h2>Welcome!</h2>
+    <p>We've received your inquiry and are preparing your project proposal. You'll receive an email with the agreement details shortly.</p>
+    <p>In the meantime, feel free to reach out if you have any questions.</p>
+  </div>
+
+  <!-- AGREEMENT SENT -->
+  <div id="sectionAgreementSent" class="card status-section hidden">
+    <h2>Your Agreement is Ready</h2>
+    <p>Please review the project agreement below. Once you're happy, click "I Agree" to move forward.</p>
+    <div id="agreementContent" class="agreement-content">
+      <!-- Populated from client.agreement_html -->
+    </div>
+    <button id="agreeBtn" class="btn btn-primary btn-block">I Agree &mdash; Let's Go!</button>
+  </div>
+
+  <!-- AGREED -->
+  <div id="sectionAgreed" class="card status-section hidden">
+    <h2>Agreement Signed &#x2713;</h2>
+    <p>Thank you! Your agreement has been acknowledged. The next step is to send the deposit so we can begin working on your site.</p>
+    <div class="payment-section">
+      <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:4px;">Send deposit to:</p>
+      <p style="font-weight:700;margin-bottom:4px;">Rider Web</p>
+      <div id="paymentDetails" class="payment-details">
+        <div class="payment-amount" id="depositAmount">&#x20B1;7,500</div>
+        <div id="paymentInfoText" class="payment-instruction">Bank transfer details loading...</div>
+      </div>
+      <div class="payment-instruction">Once sent, message Rider to confirm. We'll update your portal within 24 hours.</div>
+    </div>
+  </div>
+
+  <!-- DEPOSIT PAID -->
+  <div id="sectionDepositPaid" class="card status-section hidden">
+    <h2>Deposit Received &#x2713;</h2>
+    <p>We've received your deposit. Your project is queued for development. Here's your welcome guide to get started.</p>
+    <div class="welcome-doc">
+      <h3>Welcome &amp; Next Steps</h3>
+      <ol>
+        <li>We'll send a design mockup within 1&ndash;2 business days</li>
+        <li>Review and request up to 2 rounds of revisions</li>
+        <li>Once approved, we begin building your site</li>
+        <li>We'll share a preview link before launch</li>
+        <li>Final payment is due on launch day</li>
+      </ol>
+    </div>
+    <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:10px;font-weight:600;">Day 1 Checklist</h3>
+    <ul id="checklist" class="checklist">
+      <li data-key="photos"><input type="checkbox" id="ck-photos"><span>Send 3&ndash;5 photos of your business</span></li>
+      <li data-key="logo"><input type="checkbox" id="ck-logo"><span>Share your logo (if you have one)</span></li>
+      <li data-key="content"><input type="checkbox" id="ck-content"><span>Provide business description &amp; services</span></li>
+      <li data-key="social"><input type="checkbox" id="ck-social"><span>Share social media links (Facebook, Instagram)</span></li>
+      <li data-key="contact"><input type="checkbox" id="ck-contact"><span>Confirm contact info: phone, email, address</span></li>
+    </ul>
+  </div>
+
+  <!-- BUILDING -->
+  <div id="sectionBuilding" class="card status-section hidden">
+    <h2>In Progress</h2>
+    <p>Your website is being built. We'll keep you updated on progress here. Check the timeline below for the latest updates.</p>
+    <div id="deliverablesWrap">
+      <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:8px;font-weight:600;">Deliverables</h3>
+      <div id="deliverablesList"></div>
+    </div>
+  </div>
+
+  <!-- REVIEW -->
+  <div id="sectionReview" class="card status-section hidden">
+    <h2>Your Site is Ready for Review &#x1F389;</h2>
+    <p>We've completed the initial build! Review your mockup and let us know if you'd like any changes before launch.</p>
+    <a id="mockupLink" href="#" target="_blank" rel="noopener" class="btn btn-primary btn-block">View Mockup</a>
+  </div>
+
+  <!-- LAUNCHED -->
+  <div id="sectionLaunched" class="card status-section hidden">
+    <h2>Your Site is Live! &#x1F680;</h2>
+    <p>Congratulations! Your website is live and ready to share with the world.</p>
+    <a id="liveSiteLink" href="#" target="_blank" rel="noopener" class="btn btn-success btn-block">Visit Live Site</a>
+    <p style="margin-top:12px;font-size:0.82rem;color:var(--text-muted);">Share the link with your customers and on your social media. Don't forget to collect the final payment.</p>
+  </div>
+
+  <!-- COMPLETED -->
+  <div id="sectionCompleted" class="card status-section hidden">
+    <h2>Project Complete &#x2705;</h2>
+    <p>Your website project is fully complete. We hope you love it!</p>
+    <p style="margin-top:12px;">Need ongoing updates, content changes, or a new page? Maintenance is available at &#x20B1;2,500/month &mdash; just message Rider.</p>
+    <p style="font-size:0.82rem;color:var(--text-muted);">Reach out to Rider to discuss maintenance options.</p>
+  </div>
+
+  <!-- QUICK ACTIONS -->
+  <div id="quickActions" class="card hidden" style="padding-bottom:20px;">
+    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;">Quick Actions</h3>
+    <div class="quick-actions">
+      <a id="quickMockupLink" href="#" target="_blank" rel="noopener" class="btn btn-secondary">View Mockup</a>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div id="timelineCard" class="card hidden">
+    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;">Updates</h3>
+    <ul id="timelineList" class="timeline">
+      <li>
+        <div class="tl-message">Project started</div>
+        <div class="tl-time">Just now</div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- CONFIRM MODAL -->
+<div id="confirmModal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <h3>Confirm Agreement</h3>
+    <p>By confirming, you agree to the terms outlined in the project agreement above.</p>
+    <div class="modal-actions">
+      <button id="modalCancelBtn" class="btn btn-cancel">Cancel</button>
+      <button id="modalConfirmBtn" class="btn btn-primary">Confirm</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast">Message</div>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ===== SUPABASE CONFIG ===== */
+  const SUPABASE_URL = 'https://wsmfpajkiuuleorwfmna.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndzbWZwYWpraXV1bGVvcndmbW5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3ODk5ODgsImV4cCI6MjA5NzM2NTk4OH0.iv3aS8y86CG3kAbthfIcSZNOPj3JxjyC6DfO_gMaBSE';
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  /* ===== DOM REFS ===== */
+  const loadingScreen  = document.getElementById('loadingScreen');
+  const errorScreen    = document.getElementById('errorScreen');
+  const portalContent  = document.getElementById('portalContent');
+  const statusBadge    = document.getElementById('statusBadge');
+  const greeting       = document.getElementById('greeting');
+  const progressFill   = document.getElementById('progressFill');
+  const progressPct    = document.getElementById('progressPercentLabel');
+
+  const sectionInquiry        = document.getElementById('sectionInquiry');
+  const sectionAgreementSent  = document.getElementById('sectionAgreementSent');
+  const sectionAgreed         = document.getElementById('sectionAgreed');
+  const sectionDepositPaid    = document.getElementById('sectionDepositPaid');
+  const sectionBuilding       = document.getElementById('sectionBuilding');
+  const sectionReview         = document.getElementById('sectionReview');
+  const sectionLaunched       = document.getElementById('sectionLaunched');
+  const sectionCompleted      = document.getElementById('sectionCompleted');
+
+  const agreementContent   = document.getElementById('agreementContent');
+  const agreeBtn           = document.getElementById('agreeBtn');
+  const depositAmount      = document.getElementById('depositAmount');
+  const paymentInfoText    = document.getElementById('paymentInfoText');
+  const checklist          = document.getElementById('checklist');
+  const deliverablesList   = document.getElementById('deliverablesList');
+  const mockupLink         = document.getElementById('mockupLink');
+  const liveSiteLink       = document.getElementById('liveSiteLink');
+  const quickMockupLink    = document.getElementById('quickMockupLink');
+  const quickActions       = document.getElementById('quickActions');
+  const timelineCard       = document.getElementById('timelineCard');
+  const timelineList       = document.getElementById('timelineList');
+  const confirmModal       = document.getElementById('confirmModal');
+  const modalCancelBtn     = document.getElementById('modalCancelBtn');
+  const modalConfirmBtn    = document.getElementById('modalConfirmBtn');
+  const toast              = document.getElementById('toast');
+
+  const allSections = [
+    sectionInquiry, sectionAgreementSent, sectionAgreed,
+    sectionDepositPaid, sectionBuilding, sectionReview,
+    sectionLaunched, sectionCompleted
+  ];
+
+  /* ===== STATE ===== */
+  let client = null;
+  let toastTimer = null;
+
+  /* ===== CONSTANTS ===== */
+  const PROGRESS = {
+    inquiry: 0,
+    agreement_sent: 15,
+    agreed: 30,
+    deposit_paid: 40,
+    building: 60,
+    review: 80,
+    launched: 95,
+    completed: 100
+  };
+
+  const STATUS_LABELS = {
+    inquiry: 'Inquiry',
+    agreement_sent: 'Agreement Sent',
+    agreed: 'Agreed',
+    deposit_paid: 'Deposit Paid',
+    building: 'Building',
+    review: 'Review',
+    launched: 'Launched',
+    completed: 'Completed'
+  };
+
+  /* ===== TOAST ===== */
+  function showToast(msg) {
+    if (toastTimer) {
+      clearTimeout(toastTimer);
+      toastTimer = null;
+    }
+    toast.textContent = msg;
+    toast.classList.add('visible');
+    toastTimer = setTimeout(function() {
+      toast.classList.remove('visible');
+      toastTimer = null;
+    }, 4000);
+  }
+
+  /* ===== SHOW SECTION ===== */
+  function showSection(sectionEl) {
+    for (var i = 0; i < allSections.length; i++) {
+      allSections[i].classList.add('hidden');
+    }
+    if (sectionEl) {
+      sectionEl.classList.remove('hidden');
+    }
+  }
+
+  /* ===== RENDER CLIENT ===== */
+  function renderClient(data) {
+    client = data;
+
+    /* Header / greeting */
+    var bizName = data.business_name || data.businessName || 'Valued Client';
+    greeting.textContent = 'Hello, ' + bizName + '!';
+
+    var status = data.status || 'inquiry';
+    var label = STATUS_LABELS[status] || status;
+    statusBadge.textContent = label;
+    statusBadge.className = 'status-badge ' + status;
+
+    /* Progress bar */
+    var pct = PROGRESS[status] !== undefined ? PROGRESS[status] : 0;
+    progressFill.style.width = pct + '%';
+    progressPct.textContent = pct + '%';
+
+    /* Agreement content from stored HTML */
+    if (data.agreement_html) {
+      agreementContent.innerHTML = data.agreement_html;
+    }
+
+    /* Payment info */
+    var depositAmt = data.gcash_amount || Math.round((data.price_peso || 18000) / 2);
+    depositAmount.textContent = '₱' + (depositAmt.toLocaleString ? depositAmt.toLocaleString() : depositAmt);
+    if (data.payment_info) {
+      paymentInfoText.innerHTML = data.payment_info.replace(/\n/g, '<br>');
+    } else {
+      paymentInfoText.textContent = 'Bank details provided via GCash. Contact Rider for instructions.';
+    }
+
+    /* Mockup / live links */
+    var mockupHref = data.mockup_url || data.mockupUrl || '#';
+    mockupLink.href = mockupHref;
+    quickMockupLink.href = mockupHref;
+
+    var liveHref = data.live_url || data.liveUrl || '#';
+    liveSiteLink.href = liveHref;
+
+    /* Switch on status */
+    switch (status) {
+      case 'inquiry':
+        showSection(sectionInquiry);
+        quickActions.classList.add('hidden');
+        timelineCard.classList.add('hidden');
+        break;
+
+      case 'agreement_sent':
+        showSection(sectionAgreementSent);
+        quickActions.classList.add('hidden');
+        timelineCard.classList.add('hidden');
+        if (data.client_requested_agree) {
+          agreeBtn.textContent = 'Awaiting Confirmation ✓';
+          agreeBtn.disabled = true;
+          agreeBtn.style.opacity = '0.6';
+          agreeBtn.style.cursor = 'default';
+        } else {
+          agreeBtn.textContent = 'I Agree — Let\'s Go!';
+          agreeBtn.disabled = false;
+          agreeBtn.style.opacity = '';
+          agreeBtn.style.cursor = '';
+        }
+        break;
+
+      case 'agreed':
+        showSection(sectionAgreed);
+        quickActions.classList.add('hidden');
+        timelineCard.classList.add('hidden');
+        break;
+
+      case 'deposit_paid':
+        showSection(sectionDepositPaid);
+        quickActions.classList.add('hidden');
+        timelineCard.classList.add('hidden');
+        loadChecklist();
+        break;
+
+      case 'building':
+        showSection(sectionBuilding);
+        quickActions.classList.remove('hidden');
+        timelineCard.classList.remove('hidden');
+        loadDeliverables();
+        loadTimeline();
+        break;
+
+      case 'review':
+        showSection(sectionReview);
+        quickActions.classList.remove('hidden');
+        timelineCard.classList.remove('hidden');
+        loadDeliverables();
+        loadTimeline();
+        break;
+
+      case 'launched':
+        showSection(sectionLaunched);
+        quickActions.classList.remove('hidden');
+        timelineCard.classList.remove('hidden');
+        loadTimeline();
+        break;
+
+      case 'completed':
+        showSection(sectionCompleted);
+        quickActions.classList.remove('hidden');
+        timelineCard.classList.remove('hidden');
+        loadTimeline();
+        break;
+
+      default:
+        showSection(sectionInquiry);
+        quickActions.classList.add('hidden');
+        timelineCard.classList.add('hidden');
+        break;
+    }
+  }
+
+  /* ===== LOAD TIMELINE ===== */
+  async function loadTimeline() {
+    if (!client) return;
+
+    var clientId = client.id || client.client_id;
+    if (!clientId) {
+      timelineList.innerHTML = '<li><div class="tl-message">No updates yet</div></li>';
+      return;
+    }
+
+    try {
+      var { data, error } = await supabase
+        .from('updates')
+        .select('*')
+        .eq('client_id', clientId)
+        .order('created_at', { ascending: false });
+
+      if (error) throw error;
+
+      if (!data || data.length === 0) {
+        timelineList.innerHTML = '<li><div class="tl-message">No updates yet</div></li>';
+        return;
+      }
+
+      var html = '';
+      for (var i = 0; i < data.length; i++) {
+        var u = data[i];
+        var timeStr = formatTime(u.created_at);
+        html += '<li>' +
+          '<div class="tl-message">' + escapeHtml(u.message || 'Update') + '</div>' +
+          '<div class="tl-time">' + timeStr + '</div>' +
+          '</li>';
+      }
+      timelineList.innerHTML = html;
+
+    } catch (err) {
+      console.error('Timeline load error:', err);
+      timelineList.innerHTML = '<li><div class="tl-message">Could not load updates</div></li>';
+    }
+  }
+
+  /* ===== LOAD DELIVERABLES ===== */
+  async function loadDeliverables() {
+    if (!client) return;
+
+    var clientId = client.id || client.client_id;
+    if (!clientId) {
+      deliverablesList.innerHTML = '<div class="deliverable-item"><span class="deliverable-title">No deliverables yet</span></div>';
+      return;
+    }
+
+    try {
+      var { data, error } = await supabase
+        .from('deliverables')
+        .select('*')
+        .eq('client_id', clientId)
+        .order('created_at', { ascending: true });
+
+      if (error) throw error;
+
+      if (!data || data.length === 0) {
+        deliverablesList.innerHTML = '<div class="deliverable-item"><span class="deliverable-title">No deliverables yet</span></div>';
+        return;
+      }
+
+      var html = '';
+      for (var i = 0; i < data.length; i++) {
+        var d = data[i];
+        var statusClass = (d.status || 'pending').toLowerCase().replace(/\s+/g, '-');
+        var statusLabel = (d.status || 'Pending');
+        html += '<div class="deliverable-item">' +
+          '<span class="deliverable-title">' + escapeHtml(d.title || d.name || 'Deliverable') + '</span>' +
+          '<span class="deliverable-status ' + statusClass + '">' + escapeHtml(statusLabel) + '</span>' +
+          '</div>';
+      }
+      deliverablesList.innerHTML = html;
+
+    } catch (err) {
+      console.error('Deliverables load error:', err);
+      deliverablesList.innerHTML = '<div class="deliverable-item"><span class="deliverable-title">Could not load deliverables</span></div>';
+    }
+  }
+
+  /* ===== LOAD CHECKLIST (localStorage) ===== */
+  function loadChecklist() {
+    if (!client) return;
+
+    var storageKey = 'portal-checklist-' + (client.id || client.client_id || 'unknown');
+
+    var items = checklist.querySelectorAll('li');
+    var saved;
+    try {
+      saved = JSON.parse(localStorage.getItem(storageKey)) || {};
+    } catch(e) {
+      saved = {};
+    }
+
+    for (var i = 0; i < items.length; i++) {
+      var li = items[i];
+      var key = li.getAttribute('data-key');
+      var cb = li.querySelector('input[type="checkbox"]');
+
+      if (key && saved[key]) {
+        cb.checked = true;
+        li.classList.add('checked');
+      }
+
+      cb.addEventListener('change', (function(li, key, storageKey) {
+        return function(e) {
+          var checked = e.target.checked;
+          if (checked) {
+            li.classList.add('checked');
+          } else {
+            li.classList.remove('checked');
+          }
+          saveChecklist(storageKey);
+        };
+      })(li, key, storageKey));
+    }
+  }
+
+  function saveChecklist(storageKey) {
+    var items = checklist.querySelectorAll('li');
+    var state = {};
+    for (var i = 0; i < items.length; i++) {
+      var li = items[i];
+      var key = li.getAttribute('data-key');
+      var cb = li.querySelector('input[type="checkbox"]');
+      if (key) {
+        state[key] = cb.checked;
+      }
+    }
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(state));
+    } catch(e) {
+      /* localStorage may be unavailable */
+    }
+  }
+
+  /* ===== AGREEMENT FLOW ===== */
+
+  /* "I Agree" button -> show modal */
+  agreeBtn.addEventListener('click', function() {
+    confirmModal.classList.remove('hidden');
+  });
+
+  /* Modal cancel */
+  modalCancelBtn.addEventListener('click', function() {
+    confirmModal.classList.add('hidden');
+  });
+
+  /* Modal confirm -> toast + DB write */
+  modalConfirmBtn.addEventListener('click', function() {
+    confirmModal.classList.add('hidden');
+
+    var token = new URLSearchParams(window.location.search).get('token');
+    if (token) {
+      supabase
+        .from('clients')
+        .update({ client_requested_agree: true })
+        .eq('access_token', token)
+        .then(function(result) {
+          if (result.error) {
+            console.warn('Failed to save agreement:', result.error);
+            showToast('Saved locally! Rider will follow up.');
+          } else {
+            showToast('Agreement recorded! We\'ll confirm shortly.');
+          }
+        });
+    } else {
+      showToast('Thanks! Rider will confirm your agreement shortly.');
+    }
+  });
+
+  /* Close modal on overlay click */
+  confirmModal.addEventListener('click', function(e) {
+    if (e.target === confirmModal) {
+      confirmModal.classList.add('hidden');
+    }
+  });
+
+  /* ===== HELPERS ===== */
+  function formatTime(isoStr) {
+    if (!isoStr) return 'Just now';
+    try {
+      var d = new Date(isoStr);
+      if (isNaN(d.getTime())) return 'Just now';
+      var now = new Date();
+      var diffMs = now - d;
+      var diffMins = Math.floor(diffMs / 60000);
+      var diffHours = Math.floor(diffMs / 3600000);
+      var diffDays = Math.floor(diffMs / 86400000);
+
+      if (diffMins < 1) return 'Just now';
+      if (diffMins < 60) return diffMins + 'm ago';
+      if (diffHours < 24) return diffHours + 'h ago';
+      if (diffDays < 7) return diffDays + 'd ago';
+
+      return d.toLocaleDateString('en-PH', { month: 'short', day: 'numeric' });
+    } catch(e) {
+      return 'Just now';
+    }
+  }
+
+  function escapeHtml(str) {
+    if (typeof str !== 'string') return str;
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+  /* ===== INIT ===== */
+  async function init() {
+    var params = new URLSearchParams(window.location.search);
+    var token = params.get('token');
+
+    if (!token) {
+      loadingScreen.classList.add('hidden');
+      errorScreen.classList.remove('hidden');
+      return;
+    }
+
+    try {
+      var { data, error } = await supabase
+        .from('clients')
+        .select('*')
+        .eq('access_token', token)
+        .single();
+
+      if (error) {
+        console.error('Supabase query error:', error);
+        loadingScreen.classList.add('hidden');
+        errorScreen.classList.remove('hidden');
+        return;
+      }
+
+      if (!data) {
+        loadingScreen.classList.add('hidden');
+        errorScreen.classList.remove('hidden');
+        return;
+      }
+
+      /* Render portal */
+      loadingScreen.classList.add('hidden');
+      portalContent.classList.add('visible');
+      renderClient(data);
+
+    } catch (err) {
+      console.error('Init error:', err);
+      loadingScreen.classList.add('hidden');
+      errorScreen.classList.remove('hidden');
+    }
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
