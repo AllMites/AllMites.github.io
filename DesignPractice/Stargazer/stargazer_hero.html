@@ -200,12 +200,11 @@
             animation: bg-breathe 12s ease-in-out infinite;
         }
 
-        /* ── Hero BG Wrapper (for liquid distort filter) ── */
+        /* ── Hero BG Wrapper ── */
         .hero-bg-wrap {
             position: fixed;
             inset: 0;
             z-index: 2;
-            filter: url(#liquid-distort);
             pointer-events: none;
         }
 
@@ -1032,14 +1031,6 @@
                     <feMergeNode in="SourceGraphic"/>
                 </feMerge>
             </filter>
-
-            <!-- Liquid Distort Filter (for mouse-driven distortion) -->
-            <filter id="liquid-distort" x="-20%" y="-20%" width="140%" height="140%" colorInterpolationFilters="sRGB">
-                <feTurbulence id="ld-turbulence" type="fractalNoise" baseFrequency="0.001 0.001" numOctaves="2" seed="5" result="turbulence"/>
-                <feDisplacementMap id="ld-displacement" in="SourceGraphic" in2="turbulence" scale="0" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
-                <feGaussianBlur in="displaced" stdDeviation="0.5" result="blurred"/>
-                <feComposite in="blurred" in2="SourceGraphic" operator="in"/>
-            </filter>
         </defs>
     </svg>
 
@@ -1243,9 +1234,9 @@
     })();
     </script>
 
-    <!-- ── Mouse Parallax + Liquid Distortion ── -->
+    <!-- ── Mouse Parallax ── -->
     <script>
-    (function initParallaxAndLiquid() {
+    (function initParallax() {
         var isDesktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
         if (!isDesktop) return;
 
@@ -1253,41 +1244,19 @@
         var fgClone = document.querySelector('.parallax-clone--fg');
         if (!bgClone || !fgClone) return;
 
-        // SVG filter elements for liquid distortion
-        var turbulence = document.getElementById('ld-turbulence');
-        var displacement = document.getElementById('ld-displacement');
-        if (!turbulence || !displacement) return;
-
         // Mouse state
         var mouse = { x: 0, y: 0 };
         var smoothBg = { x: 0, y: 0 };
         var smoothFg = { x: 0, y: 0 };
-        var prevMouse = { x: 0, y: 0 };
-        var speed = 0;
-        var smoothSpeed = 0;
 
-        // Track mouse position + speed
+        // Track mouse position
         document.addEventListener('mousemove', function(e) {
             mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
             mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
-
-            // Speed: pixel delta, low-pass filtered
-            var dx = e.clientX - prevMouse.x;
-            var dy = e.clientY - prevMouse.y;
-            var rawSpeed = Math.hypot(dx, dy);
-            speed = speed * 0.7 + rawSpeed * 0.3;
-            prevMouse.x = e.clientX;
-            prevMouse.y = e.clientY;
         });
 
-        // Decay speed when mouse stops
-        setInterval(function() {
-            speed *= 0.85;
-        }, 50);
-
-        // Animation loop (shared with ink if running)
+        // Animation loop
         function update() {
-            // Parallax: smooth lerp
             smoothBg.x += (mouse.x * 12 - smoothBg.x) * 0.05;
             smoothBg.y += (mouse.y * 8 - smoothBg.y) * 0.05;
             smoothFg.x += (mouse.x * -6 - smoothFg.x) * 0.05;
@@ -1295,16 +1264,6 @@
 
             bgClone.style.transform = 'translate(' + smoothBg.x + 'px, ' + smoothBg.y + 'px)';
             fgClone.style.transform = 'translate(' + smoothFg.x + 'px, ' + smoothFg.y + 'px)';
-
-            // Liquid distortion: smoother speed tracking
-            smoothSpeed += (speed - smoothSpeed) * 0.1;
-
-            // Map speed to filter parameters
-            var freq = Math.min(0.08, 0.001 + smoothSpeed * 0.0005);
-            var scale = Math.min(20, smoothSpeed * 0.5);
-
-            turbulence.setAttribute('baseFrequency', freq + ' ' + freq);
-            displacement.setAttribute('scale', Math.round(scale));
 
             requestAnimationFrame(update);
         }
