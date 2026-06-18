@@ -16,7 +16,7 @@ Create and manage client portal records. Each client gets a unique portal URL (`
 - `scripts/node_modules` installed (`cd scripts && npm install`)
 - DB has `payment_info` column: `ALTER TABLE clients ADD COLUMN IF NOT EXISTS payment_info text;`
 
-## Payment Details (Rider's accounts)
+## Payment Details (Daniel's accounts)
 
 ```
 GCash: 0920 910 0616 — DANIEL JEHREMIAH ASIS
