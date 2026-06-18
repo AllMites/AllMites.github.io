@@ -17,7 +17,7 @@ html { font-size: 16px; -webkit-font-smoothing: antialiased; }
 body {
   font-family: 'Source Serif 4', Georgia, serif;
   background: #0a0a0f;
-  color: #e0ddd8;
+  color: #f5f3f0;
   min-height: 100vh;
   padding: 32px 16px;
   line-height: 1.6;
@@ -46,7 +46,7 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #f0ede6;
+  color: #f5f3f0;
 }
 
 .header-actions {
@@ -95,7 +95,7 @@ th {
   text-align: left;
   padding: 8px 12px 12px 12px;
   font-weight: 700;
-  color: #a09e98;
+  color: #f5f3f0;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -114,12 +114,12 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 
 .client-name {
   font-weight: 600;
-  color: #e0ddd8;
+  color: #f5f3f0;
 }
 
 .client-slug {
   font-size: 0.75rem;
-  color: #a09e98;
+  color: #f5f3f0;
 }
 
 /* ===== STATUS DOT ===== */
@@ -154,8 +154,8 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 }
 .btn:hover { opacity: 0.85; }
 .btn:active { transform: scale(0.97); }
-.btn-primary { background: #d4a853; color: #1a1a10; }
-.btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #e0ddd8; }
+.btn-primary { background: #d4a853; color: #f5f3f0; }
+.btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #f5f3f0; }
 .btn-outline:hover { background: rgba(255,255,255,0.06); }
 .btn-sm { padding: 6px 16px; font-size: 0.72rem; }
 .btn-block { width: 100%; }
@@ -164,7 +164,7 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 .empty-state {
   text-align: center;
   padding: 40px 20px;
-  color: #a09e98;
+  color: #f5f3f0;
 }
 .empty-state p { margin-bottom: 8px; }
 .empty-state .emoji { font-size: 2rem; margin-bottom: 12px; display: block; }
@@ -192,11 +192,11 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   font-size: 1.3rem;
   margin-bottom: 6px;
   font-weight: 700;
-  color: #f0ede6;
+  color: #f5f3f0;
 }
 
 .login-card p {
-  color: #a09e98;
+  color: #f5f3f0;
   font-size: 0.85rem;
   margin-bottom: 20px;
 }
@@ -209,7 +209,7 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   font-family: 'Source Serif 4', Georgia, serif;
   font-size: 0.9rem;
   background: rgba(255,255,255,0.04);
-  color: #e0ddd8;
+  color: #f5f3f0;
   outline: none;
   transition: border-color 0.2s;
   margin-bottom: 12px;
@@ -235,7 +235,7 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   left: 50%;
   transform: translateX(-50%) translateY(80px);
   background: #1a1a10;
-  color: #e0ddd8;
+  color: #f5f3f0;
   padding: 10px 20px;
   border-radius: 9999px;
   font-size: 0.82rem;
@@ -247,6 +247,49 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   white-space: nowrap;
 }
 .toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+
+/* ===== MODAL OVERLAY ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 16px;
+}
+.modal-card {
+  background: #14141a;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+  padding: 28px 24px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+.modal-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  color: #f5f3f0;
+}
+.modal-card p {
+  color: #f5f3f0;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.modal-actions .btn { min-width: 100px; }
+.hidden { display: none !important; }
+
+/* Clickable status dots */
+.status-dot.clickable { cursor: pointer; }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
@@ -281,7 +324,7 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   <div class="header">
     <h1>Clients</h1>
     <div class="header-actions">
-      <span id="clientCount" style="font-size:0.82rem;color:#a09e98;">0 clients</span>
+      <span id="clientCount" style="font-size:0.82rem;color:#f5f3f0;">0 clients</span>
       <button id="refreshBtn" class="btn btn-outline btn-sm">&#x21bb; Refresh</button>
     </div>
   </div>
@@ -312,13 +355,25 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   </div>
 
   <!-- FOOTER -->
-  <div style="margin-top:24px;text-align:center;font-size:0.75rem;color:#a09e98;">
+  <div style="margin-top:24px;text-align:center;font-size:0.75rem;color:#f5f3f0;">
     Daniel Asis &middot; <a href="/portal/" style="color:#d4a853;text-decoration:none;">Client Portal</a>
   </div>
 </div>
 
 <!-- TOAST -->
 <div id="toast" class="toast">Copied!</div>
+
+<!-- CONFIRM MODAL -->
+<div id="confirmModal" class="modal-overlay hidden">
+  <div class="modal-card">
+    <h3 id="modalTitle">Confirm</h3>
+    <p id="modalMessage">Are you sure?</p>
+    <div class="modal-actions">
+      <button id="modalCancelBtn" class="btn btn-outline btn-sm" style="min-width:100px;">Cancel</button>
+      <button id="modalConfirmBtn" class="btn btn-primary btn-sm" style="min-width:100px;">Confirm</button>
+    </div>
+  </div>
+</div>
 
 <script>
 (function() {
@@ -351,6 +406,18 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 
   var toastTimer = null;
 
+  /* ===== MODAL STATE ===== */
+  var modalTargetClientId = null;
+  var modalTargetField = null;
+  var modalTargetNewValue = null;
+  var modalTargetStatus = null;
+
+  var confirmModal = document.getElementById('confirmModal');
+  var modalTitle = document.getElementById('modalTitle');
+  var modalMessage = document.getElementById('modalMessage');
+  var modalCancelBtn = document.getElementById('modalCancelBtn');
+  var modalConfirmBtn = document.getElementById('modalConfirmBtn');
+
   /* ===== TOAST ===== */
   function showToast(msg) {
     if (toastTimer) { clearTimeout(toastTimer); }
@@ -360,6 +427,66 @@ tr:hover td { background: rgba(255,255,255,0.03); }
       toast.classList.remove('visible');
       toastTimer = null;
     }, 2500);
+  }
+
+  /* ===== MODAL CONTROLS ===== */
+  modalCancelBtn.addEventListener('click', function() {
+    confirmModal.classList.add('hidden');
+    modalTargetClientId = null;
+    modalTargetField = null;
+    modalTargetNewValue = null;
+  });
+
+  modalConfirmBtn.addEventListener('click', function() {
+    var clientId = modalTargetClientId;
+    var field = modalTargetField;
+    var newValue = modalTargetNewValue;
+    var advanceStatus = modalTargetStatus || null;
+
+    confirmModal.classList.add('hidden');
+    modalTargetClientId = null;
+    modalTargetField = null;
+    modalTargetNewValue = null;
+    modalTargetStatus = null;
+
+    if (!clientId || !field) return;
+
+    var update = {};
+    update[field] = newValue;
+
+    /* Advance main status when boolean flags are set */
+    if (advanceStatus) {
+      update.status = advanceStatus;
+    }
+
+    supabase
+      .from('clients')
+      .update(update)
+      .eq('id', clientId)
+      .then(function(result) {
+        if (result.error) {
+          showToast('Error: ' + result.error.message);
+        } else {
+          showToast(newValue ? 'Marked' : 'Unmarked');
+          loadClients();
+        }
+      });
+  });
+
+  confirmModal.addEventListener('click', function(e) {
+    if (e.target === confirmModal) {
+      modalCancelBtn.click();
+    }
+  });
+
+  function showConfirmModal(title, message, clientId, field, newValue, advanceStatus) {
+    modalTitle.textContent = title;
+    modalMessage.textContent = message;
+    modalTargetClientId = clientId;
+    modalTargetField = field;
+    modalTargetNewValue = newValue;
+    modalTargetStatus = advanceStatus || null;
+    confirmModal.classList.remove('hidden');
   }
 
   /* ===== SHA-256 HASH ===== */
@@ -461,7 +588,7 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 
   /* ===== LOAD CLIENTS ===== */
   function loadClients() {
-    clientsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:#a09e98;">Loading...</td></tr>';
+    clientsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:#f5f3f0;">Loading...</td></tr>';
     emptyState.style.display = 'none';
 
     supabase
@@ -486,15 +613,19 @@ tr:hover td { background: rgba(255,255,255,0.03); }
         for (var i = 0; i < data.length; i++) {
           var c = data[i];
           var portalUrl = 'https://allmites.github.io/portal/?token=' + c.access_token;
-          var agreeDot = c.client_requested_agree ? '<span class="status-dot yes"></span>Yes' : '<span class="status-dot no"></span>No';
-          var depositDot = c.deposit_received ? '<span class="status-dot yes"></span>Yes' : '<span class="status-dot no"></span>No';
+          var agreeDot = '<span class="toggle-status clickable" data-client-id="' + c.id + '" data-field="client_requested_agree" data-current="' + (c.client_requested_agree ? 'true' : 'false') + '" data-status="' + (c.status || '') + '">' +
+            (c.client_requested_agree ? '<span class="status-dot yes"></span>Yes' : '<span class="status-dot no"></span>No') +
+            '</span>';
+          var depositDot = '<span class="toggle-status clickable" data-client-id="' + c.id + '" data-field="deposit_received" data-current="' + (c.deposit_received ? 'true' : 'false') + '" data-status="' + (c.status || '') + '">' +
+            (c.deposit_received ? '<span class="status-dot yes"></span>Yes' : '<span class="status-dot no"></span>No') +
+            '</span>';
 
           html += '<tr>' +
             '<td>' +
               '<div class="client-name">' + escapeHtml(c.business_name || c.slug) + '</div>' +
               '<div class="client-slug">' + escapeHtml(c.slug) + ' &middot; ' + formatDate(c.created_at) + '</div>' +
             '</td>' +
-            '<td>' + getStatusBadge(c.status) + '</td>' +
+            '<td>' + getStatusBadge(c.status) + (c.status === 'deposit_paid' ? ' <button class="btn btn-outline btn-sm advance-status" data-client-id="' + c.id + '" data-next-status="building">→ Build</button>' : '') + '</td>' +
             '<td>' + agreeDot + '</td>' +
             '<td>' + depositDot + '</td>' +
             '<td>' +
@@ -504,6 +635,56 @@ tr:hover td { background: rgba(255,255,255,0.03); }
         }
         clientsBody.innerHTML = html;
         clientCount.textContent = data.length + ' client' + (data.length !== 1 ? 's' : '');
+
+        /* Wire toggle-status click handlers */
+        var toggleEls = clientsBody.querySelectorAll('.toggle-status');
+        for (var t = 0; t < toggleEls.length; t++) {
+          toggleEls[t].addEventListener('click', function(e) {
+            var el = e.currentTarget;
+            var clientId = el.getAttribute('data-client-id');
+            var field = el.getAttribute('data-field');
+            var current = el.getAttribute('data-current') === 'true';
+            var status = el.getAttribute('data-status') || '';
+            var newValue = !current;
+            var bizName = el.closest('tr').querySelector('.client-name').textContent;
+
+            var fieldLabel = field === 'client_requested_agree' ? 'Agreed' : 'Deposit Received';
+            var action = newValue ? 'Mark' : 'Unmark';
+
+            /* Auto-advance status when boolean toggled on */
+            var advanceStatus = null;
+            if (newValue) {
+              if (field === 'client_requested_agree' && status === 'agreement_sent') {
+                advanceStatus = 'agreed';
+              } else if (field === 'deposit_received' && status === 'agreed') {
+                advanceStatus = 'deposit_paid';
+              }
+            }
+
+            showConfirmModal(
+              action + ' ' + fieldLabel,
+              action + ' "' + bizName + '" as ' + (newValue ? '' : 'not ') + fieldLabel + '?' + (advanceStatus ? ' Status will advance to "' + advanceStatus + '".' : ''),
+              clientId, field, newValue, advanceStatus
+            );
+          });
+        }
+
+        /* Wire advance-status buttons */
+        var advanceEls = clientsBody.querySelectorAll('.advance-status');
+        for (var a = 0; a < advanceEls.length; a++) {
+          advanceEls[a].addEventListener('click', function(e) {
+            var el = e.currentTarget;
+            var clientId = el.getAttribute('data-client-id');
+            var nextStatus = el.getAttribute('data-next-status');
+            var bizName = el.closest('tr').querySelector('.client-name').textContent;
+
+            showConfirmModal(
+              'Advance Status',
+              'Move "' + bizName + '" from Deposit Paid → Building?',
+              clientId, 'status', nextStatus, null
+            );
+          });
+        }
 
         /* Wire copy buttons */
         var copyBtns = clientsBody.querySelectorAll('.copy-btn');

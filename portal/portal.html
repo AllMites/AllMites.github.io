@@ -39,8 +39,8 @@ body {
   --bg: #0a0a0f;
   --card-bg: rgba(255,255,255,0.06);
   --card-bg-hover: rgba(255,255,255,0.09);
-  --text: #e0ddd8;
-  --text-muted: #a09e98;
+  --text: #f5f3f0;
+  --text-muted: #f5f3f0;
   --accent: #d4a853;
   --accent-strong: #c49a3f;
   --accent-light: rgba(212,168,83,0.12);
@@ -212,6 +212,7 @@ body {
   margin: 16px 0 20px;
   width: 100%;
   line-height: 1.25;
+  color: #f5f3f0;
 }
 
 /* ===== PROGRESS BAR ===== */
@@ -255,6 +256,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 12px;
   font-weight: 600;
+  color: var(--text);
 }
 
 .status-section p {
@@ -288,6 +290,7 @@ body {
   margin-bottom: 8px;
   margin-top: 16px;
   font-weight: 600;
+  color: var(--text);
 }
 
 .agreement-content h3:first-child {
@@ -301,6 +304,7 @@ body {
 
 .agreement-content li {
   margin-bottom: 4px;
+  color: var(--text);
 }
 
 .agreement-content p {
@@ -336,7 +340,7 @@ body {
 
 .btn-primary {
   background: var(--accent);
-  color: #1a1a10;
+  color: #f5f3f0;
 }
 
 .btn-secondary {
@@ -347,7 +351,7 @@ body {
 
 .btn-success {
   background: var(--success);
-  color: #0a0a0f;
+  color: #f5f3f0;
 }
 
 .btn-cancel {
@@ -386,6 +390,7 @@ body {
   font-family: var(--font-display);
   font-size: 1.15rem;
   margin-bottom: 8px;
+  color: var(--text);
 }
 
 .modal-card p {
@@ -407,7 +412,7 @@ body {
   left: 50%;
   transform: translateX(-50%) translateY(80px);
   background: #1a1a10;
-  color: #e0ddd8;
+  color: #f5f3f0;
   padding: 12px 24px;
   border-radius: 9999px;
   font-size: 0.85rem;
@@ -432,6 +437,7 @@ body {
 .payment-section {
   text-align: center;
   padding: 16px 0;
+  color: var(--text);
 }
 
 .payment-details {
@@ -453,7 +459,7 @@ body {
 
 .payment-instruction {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: var(--text);
   margin-bottom: 8px;
 }
 
@@ -471,6 +477,7 @@ body {
   border-bottom: 1px solid var(--border);
   font-size: 0.88rem;
   cursor: pointer;
+  color: var(--text);
 }
 
 .checklist li:last-child {
@@ -513,6 +520,7 @@ body {
   padding-left: 32px;
   padding-bottom: 20px;
   font-size: 0.85rem;
+  color: var(--text);
 }
 
 .timeline li:last-child {
@@ -534,6 +542,7 @@ body {
 .timeline .tl-message {
   font-weight: 600;
   margin-bottom: 2px;
+  color: var(--text);
 }
 
 .timeline .tl-time {
@@ -549,6 +558,7 @@ body {
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
   font-size: 0.88rem;
+  color: var(--text);
 }
 
 .deliverable-item:last-child {
@@ -557,6 +567,7 @@ body {
 
 .deliverable-title {
   font-weight: 600;
+  color: var(--text);
 }
 
 .deliverable-status {
@@ -605,16 +616,19 @@ body {
   font-size: 1rem;
   margin-bottom: 12px;
   font-weight: 600;
+  color: var(--text);
 }
 
 .welcome-doc ol {
   padding-left: 20px;
   font-size: 0.85rem;
   line-height: 1.7;
+  color: var(--text);
 }
 
 .welcome-doc li {
   margin-bottom: 4px;
+  color: var(--text);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -736,7 +750,7 @@ body {
         <li>Final payment is due on launch day</li>
       </ol>
     </div>
-    <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:10px;font-weight:600;">Day 1 Checklist</h3>
+    <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:10px;font-weight:600;color:var(--text);">Day 1 Checklist</h3>
     <ul id="checklist" class="checklist">
       <li data-key="photos"><input type="checkbox" id="ck-photos"><span>Send 3&ndash;5 photos of your business</span></li>
       <li data-key="logo"><input type="checkbox" id="ck-logo"><span>Share your logo (if you have one)</span></li>
@@ -751,7 +765,7 @@ body {
     <h2>In Progress</h2>
     <p>Your website is being built. We'll keep you updated on progress here. Check the timeline below for the latest updates.</p>
     <div id="deliverablesWrap">
-      <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:8px;font-weight:600;">Deliverables</h3>
+      <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:8px;font-weight:600;color:var(--text);">Deliverables</h3>
       <div id="deliverablesList"></div>
     </div>
   </div>
@@ -781,7 +795,7 @@ body {
 
   <!-- QUICK ACTIONS -->
   <div id="quickActions" class="card hidden" style="padding-bottom:20px;">
-    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;">Quick Actions</h3>
+    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;color:var(--text);">Quick Actions</h3>
     <div class="quick-actions">
       <a id="quickMockupLink" href="#" target="_blank" rel="noopener" class="btn btn-secondary">View Mockup</a>
     </div>
@@ -789,7 +803,7 @@ body {
 
   <!-- TIMELINE -->
   <div id="timelineCard" class="card hidden">
-    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;">Updates</h3>
+    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;color:var(--text);">Updates</h3>
     <ul id="timelineList" class="timeline">
       <li>
         <div class="tl-message">Project started</div>
