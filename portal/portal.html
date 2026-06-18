@@ -6,7 +6,7 @@
   <title>Project Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <style>
 /* ===== RESET ===== */
@@ -34,92 +34,23 @@ body {
   position: relative;
 }
 
-/* ===== MESH GRADIENT BLOBS ===== */
-.shader-bg {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-.shader-blob {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  will-change: transform;
-  mix-blend-mode: multiply;
-}
-.shader-blob--1 {
-  width: 80vmax; height: 80vmax;
-  top: -30vmax; left: -20vmax;
-  background: radial-gradient(circle, #e8b0c0 0%, transparent 70%);
-  opacity: 0.2;
-  animation: blob-drift-1 18s ease-in-out infinite;
-}
-.shader-blob--2 {
-  width: 65vmax; height: 65vmax;
-  bottom: -25vmax; right: -15vmax;
-  background: radial-gradient(circle, #f0d0a0 0%, transparent 70%);
-  opacity: 0.15;
-  animation: blob-drift-2 22s ease-in-out infinite;
-}
-.shader-blob--3 {
-  width: 50vmax; height: 50vmax;
-  top: 20%; right: -10vmax;
-  background: radial-gradient(circle, #e8c0cc 0%, transparent 70%);
-  opacity: 0.18;
-  animation: blob-drift-3 20s ease-in-out infinite;
-}
-.shader-blob--4 {
-  width: 45vmax; height: 45vmax;
-  bottom: 0%; left: -10vmax;
-  background: radial-gradient(circle, #fce8d8 0%, transparent 70%);
-  opacity: 0.12;
-  animation: blob-drift-4 25s ease-in-out infinite;
-}
-@keyframes blob-drift-1 {
-  0%   { transform: translate(0, 0) scale(1); }
-  33%  { transform: translate(8vmax, -5vmax) scale(1.05); }
-  66%  { transform: translate(-4vmax, 6vmax) scale(0.95); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-@keyframes blob-drift-2 {
-  0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(-6vmax, -4vmax) scale(1.08); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-@keyframes blob-drift-3 {
-  0%   { transform: translate(0, 0) scale(1); }
-  40%  { transform: translate(-3vmax, -6vmax) scale(1.03); }
-  80%  { transform: translate(4vmax, 2vmax) scale(0.97); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-@keyframes blob-drift-4 {
-  0%   { transform: translate(0, 0) scale(1); }
-  45%  { transform: translate(5vmax, 3vmax) scale(1.06); }
-  90%  { transform: translate(-2vmax, -4vmax) scale(0.98); }
-  100% { transform: translate(0, 0) scale(1); }
-}
-
 /* ===== VARIABLES ===== */
 :root {
-  --bg: #fcf8f5;
-  --card-bg: rgba(255,255,255,0.72);
-  --text: #1a1416;
-  --text-muted: #8a7a7e;
-  --accent: #d4849a;
-  --accent-strong: #c0607a;
-  --accent-light: #f0d6de;
+  --bg: #0a0a0f;
+  --card-bg: rgba(255,255,255,0.06);
+  --card-bg-hover: rgba(255,255,255,0.09);
+  --text: #f5f3f0;
+  --text-muted: #f5f3f0;
+  --accent: #d4a853;
+  --accent-strong: #c49a3f;
+  --accent-light: rgba(212,168,83,0.12);
   --success: #7a9a7a;
-  --success-light: #e0ede0;
-  --border: rgba(180,100,120,0.08);
-  --shadow: 0 8px 32px rgba(180,100,120,0.08);
-  --radius: 18px;
+  --success-light: rgba(122,154,122,0.12);
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --radius: 12px;
   --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Source Sans 3', system-ui, sans-serif;
-  --card-tint-peach: rgba(255, 231, 210, 0.35);
-  --card-tint-pink: rgba(255, 210, 211, 0.3);
-  --card-tint-sage: rgba(188, 208, 180, 0.25);
+  --font-body: 'Source Serif 4', Georgia, serif;
 }
 
 /* ===== UTILITY ===== */
@@ -176,15 +107,12 @@ body {
 /* ===== CARD ===== */
 .card {
   background: var(--card-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
   padding: 28px 24px;
   width: 100%;
   max-width: 520px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.2s, transform 0.3s ease;
   animation: card-in 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
@@ -193,19 +121,7 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 12px 40px rgba(180,100,120,0.12);
-}
-
-.card-tint-peach {
-  background: linear-gradient(135deg, var(--card-tint-peach), var(--card-bg));
-}
-
-.card-tint-pink {
-  background: linear-gradient(135deg, var(--card-tint-pink), var(--card-bg));
-}
-
-.card-tint-sage {
-  background: linear-gradient(135deg, var(--card-tint-sage), var(--card-bg));
+  background: var(--card-bg-hover);
 }
 
 @keyframes card-in {
@@ -245,8 +161,7 @@ body {
   font-family: var(--font-display);
   font-size: 0.85rem;
   color: var(--text-muted);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 /* ===== STATUS BADGE ===== */
@@ -264,13 +179,13 @@ body {
 
 .status-badge.agreed,
 .status-badge.agreement_sent {
-  background: #e8e0f4;
-  color: #6b52a0;
+  background: rgba(212,168,83,0.12);
+  color: var(--accent);
 }
 
 .status-badge.deposit_paid {
-  background: #f0e8d8;
-  color: #a08040;
+  background: rgba(212,168,83,0.12);
+  color: var(--accent);
 }
 
 .status-badge.building {
@@ -285,8 +200,8 @@ body {
 }
 
 .status-badge.review {
-  background: #f0d8d8;
-  color: #b06060;
+  background: rgba(212,168,83,0.12);
+  color: var(--accent);
 }
 
 /* ===== GREETING ===== */
@@ -297,6 +212,7 @@ body {
   margin: 16px 0 20px;
   width: 100%;
   line-height: 1.25;
+  color: #f5f3f0;
 }
 
 /* ===== PROGRESS BAR ===== */
@@ -307,8 +223,8 @@ body {
 
 .progress-bar {
   width: 100%;
-  height: 8px;
-  background: var(--accent-light);
+  height: 6px;
+  background: rgba(255,255,255,0.08);
   border-radius: 999px;
   overflow: hidden;
   position: relative;
@@ -316,7 +232,7 @@ body {
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+  background: var(--accent);
   border-radius: 999px;
   transition: width 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
   width: 0%;
@@ -340,6 +256,7 @@ body {
   font-size: 1.2rem;
   margin-bottom: 12px;
   font-weight: 600;
+  color: var(--text);
 }
 
 .status-section p {
@@ -355,7 +272,7 @@ body {
 
 /* ===== AGREEMENT CONTENT ===== */
 .agreement-content {
-  background: #fff;
+  background: rgba(255,255,255,0.03);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px;
@@ -373,6 +290,7 @@ body {
   margin-bottom: 8px;
   margin-top: 16px;
   font-weight: 600;
+  color: var(--text);
 }
 
 .agreement-content h3:first-child {
@@ -386,6 +304,7 @@ body {
 
 .agreement-content li {
   margin-bottom: 4px;
+  color: var(--text);
 }
 
 .agreement-content p {
@@ -399,12 +318,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 10px 20px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 10px;
+  border-radius: 9999px;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.15s;
   text-decoration: none;
@@ -420,22 +339,23 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
-  color: #fff;
+  background: var(--accent);
+  color: #f5f3f0;
 }
 
 .btn-secondary {
-  background: var(--accent-light);
-  color: var(--accent-strong);
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .btn-success {
-  background: linear-gradient(135deg, var(--success), #5a8a5a);
-  color: #fff;
+  background: var(--success);
+  color: #f5f3f0;
 }
 
 .btn-cancel {
-  background: #e0e0e0;
+  background: rgba(255,255,255,0.06);
   color: var(--text-muted);
 }
 
@@ -447,9 +367,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -458,9 +376,10 @@ body {
 }
 
 .modal-card {
-  background: #fff;
+  background: #14141a;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
   padding: 28px 24px;
   max-width: 400px;
   width: 100%;
@@ -471,6 +390,7 @@ body {
   font-family: var(--font-display);
   font-size: 1.15rem;
   margin-bottom: 8px;
+  color: var(--text);
 }
 
 .modal-card p {
@@ -491,12 +411,12 @@ body {
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(80px);
-  background: #1a1a1a;
-  color: #fff;
+  background: #1a1a10;
+  color: #f5f3f0;
   padding: 12px 24px;
-  border-radius: 12px;
+  border-radius: 9999px;
   font-size: 0.85rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   z-index: 200;
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
@@ -517,6 +437,7 @@ body {
 .payment-section {
   text-align: center;
   padding: 16px 0;
+  color: var(--text);
 }
 
 .payment-details {
@@ -532,13 +453,13 @@ body {
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--accent-strong);
+  color: var(--accent);
   margin: 8px 0 4px;
 }
 
 .payment-instruction {
   font-size: 0.82rem;
-  color: var(--text-muted);
+  color: var(--text);
   margin-bottom: 8px;
 }
 
@@ -556,6 +477,7 @@ body {
   border-bottom: 1px solid var(--border);
   font-size: 0.88rem;
   cursor: pointer;
+  color: var(--text);
 }
 
 .checklist li:last-child {
@@ -564,7 +486,7 @@ body {
 
 .checklist input[type="checkbox"] {
   margin-top: 3px;
-  accent-color: var(--accent-strong);
+  accent-color: var(--accent);
   width: 16px;
   height: 16px;
   flex-shrink: 0;
@@ -590,7 +512,7 @@ body {
   top: 4px;
   bottom: 4px;
   width: 2px;
-  background: var(--accent-light);
+  background: rgba(255,255,255,0.08);
 }
 
 .timeline li {
@@ -598,6 +520,7 @@ body {
   padding-left: 32px;
   padding-bottom: 20px;
   font-size: 0.85rem;
+  color: var(--text);
 }
 
 .timeline li:last-child {
@@ -613,12 +536,13 @@ body {
   height: 10px;
   border-radius: 50%;
   background: var(--accent);
-  border: 2px solid var(--card-bg);
+  border: 2px solid #0a0a0f;
 }
 
 .timeline .tl-message {
   font-weight: 600;
   margin-bottom: 2px;
+  color: var(--text);
 }
 
 .timeline .tl-time {
@@ -634,6 +558,7 @@ body {
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
   font-size: 0.88rem;
+  color: var(--text);
 }
 
 .deliverable-item:last-child {
@@ -642,6 +567,7 @@ body {
 
 .deliverable-title {
   font-weight: 600;
+  color: var(--text);
 }
 
 .deliverable-status {
@@ -659,13 +585,13 @@ body {
 }
 
 .deliverable-status.done {
-  background: #e6f4ea;
+  background: var(--success-light);
   color: var(--success);
 }
 
 .deliverable-status.in-progress {
-  background: #fef7e0;
-  color: #b06000;
+  background: rgba(212,168,83,0.12);
+  color: var(--accent);
 }
 
 /* ===== QUICK ACTIONS ===== */
@@ -678,7 +604,8 @@ body {
 
 /* ===== WELCOME DOC ===== */
 .welcome-doc {
-  background: linear-gradient(135deg, var(--card-tint-peach), var(--card-tint-pink));
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 16px;
@@ -689,16 +616,19 @@ body {
   font-size: 1rem;
   margin-bottom: 12px;
   font-weight: 600;
+  color: var(--text);
 }
 
 .welcome-doc ol {
   padding-left: 20px;
   font-size: 0.85rem;
   line-height: 1.7;
+  color: var(--text);
 }
 
 .welcome-doc li {
   margin-bottom: 4px;
+  color: var(--text);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -735,14 +665,6 @@ body {
 </style>
 </head>
 <body>
-
-<!-- MESH GRADIENT BACKGROUND -->
-<div class="shader-bg" aria-hidden="true">
-  <div class="shader-blob shader-blob--1"></div>
-  <div class="shader-blob shader-blob--2"></div>
-  <div class="shader-blob shader-blob--3"></div>
-  <div class="shader-blob shader-blob--4"></div>
-</div>
 
 <!-- LOADING SCREEN -->
 <div id="loadingScreen" class="card" role="status" aria-label="Loading">
@@ -828,7 +750,7 @@ body {
         <li>Final payment is due on launch day</li>
       </ol>
     </div>
-    <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:10px;font-weight:600;">Day 1 Checklist</h3>
+    <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:10px;font-weight:600;color:var(--text);">Day 1 Checklist</h3>
     <ul id="checklist" class="checklist">
       <li data-key="photos"><input type="checkbox" id="ck-photos"><span>Send 3&ndash;5 photos of your business</span></li>
       <li data-key="logo"><input type="checkbox" id="ck-logo"><span>Share your logo (if you have one)</span></li>
@@ -843,7 +765,7 @@ body {
     <h2>In Progress</h2>
     <p>Your website is being built. We'll keep you updated on progress here. Check the timeline below for the latest updates.</p>
     <div id="deliverablesWrap">
-      <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:8px;font-weight:600;">Deliverables</h3>
+      <h3 style="font-family:var(--font-display);font-size:1rem;margin-bottom:8px;font-weight:600;color:var(--text);">Deliverables</h3>
       <div id="deliverablesList"></div>
     </div>
   </div>
@@ -873,7 +795,7 @@ body {
 
   <!-- QUICK ACTIONS -->
   <div id="quickActions" class="card hidden" style="padding-bottom:20px;">
-    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;">Quick Actions</h3>
+    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;color:var(--text);">Quick Actions</h3>
     <div class="quick-actions">
       <a id="quickMockupLink" href="#" target="_blank" rel="noopener" class="btn btn-secondary">View Mockup</a>
     </div>
@@ -881,7 +803,7 @@ body {
 
   <!-- TIMELINE -->
   <div id="timelineCard" class="card hidden">
-    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;">Updates</h3>
+    <h3 style="font-family:var(--font-display);font-size:0.95rem;margin-bottom:12px;font-weight:600;color:var(--text);">Updates</h3>
     <ul id="timelineList" class="timeline">
       <li>
         <div class="tl-message">Project started</div>
