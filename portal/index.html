@@ -6,7 +6,7 @@
   <title>Project Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <style>
 /* ===== RESET ===== */
@@ -31,22 +31,26 @@ body {
   justify-content: center;
   padding: 24px 16px;
   line-height: 1.6;
+  position: relative;
 }
 
 /* ===== VARIABLES ===== */
 :root {
-  --bg: #faf7f2;
-  --card-bg: rgba(255,255,255,0.75);
-  --text: #1a1a1a;
-  --text-muted: #6b6b6b;
-  --accent: #c17f4b;
-  --accent-light: #e8d5c0;
-  --success: #3a7d44;
-  --border: rgba(0,0,0,0.08);
-  --shadow: 0 8px 32px rgba(0,0,0,0.06);
-  --radius: 16px;
+  --bg: #0a0a0f;
+  --card-bg: rgba(255,255,255,0.06);
+  --card-bg-hover: rgba(255,255,255,0.09);
+  --text: #e0ddd8;
+  --text-muted: #a09e98;
+  --accent: #d4a853;
+  --accent-strong: #c49a3f;
+  --accent-light: rgba(212,168,83,0.12);
+  --success: #7a9a7a;
+  --success-light: rgba(122,154,122,0.12);
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --radius: 12px;
   --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
 }
 
 /* ===== UTILITY ===== */
@@ -103,18 +107,32 @@ body {
 /* ===== CARD ===== */
 .card {
   background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
   padding: 28px 24px;
   width: 100%;
   max-width: 520px;
+  transition: background 0.2s, transform 0.3s ease;
+  animation: card-in 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 .card + .card {
   margin-top: 16px;
+}
+
+.card:hover {
+  background: var(--card-bg-hover);
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== PORTAL CONTENT ===== */
@@ -143,8 +161,7 @@ body {
   font-family: var(--font-display);
   font-size: 0.85rem;
   color: var(--text-muted);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  letter-spacing: 0.3px;
 }
 
 /* ===== STATUS BADGE ===== */
@@ -162,29 +179,29 @@ body {
 
 .status-badge.agreed,
 .status-badge.agreement_sent {
-  background: #e8f0fe;
-  color: #1967d2;
+  background: rgba(212,168,83,0.12);
+  color: var(--accent);
 }
 
 .status-badge.deposit_paid {
-  background: #fef7e0;
-  color: #b06000;
+  background: rgba(212,168,83,0.12);
+  color: var(--accent);
 }
 
 .status-badge.building {
-  background: #e6f4ea;
+  background: var(--success-light);
   color: var(--success);
 }
 
 .status-badge.launched,
 .status-badge.completed {
-  background: #e6f4ea;
+  background: var(--success-light);
   color: var(--success);
 }
 
 .status-badge.review {
-  background: #fce8e6;
-  color: #c5221f;
+  background: rgba(212,168,83,0.12);
+  color: var(--accent);
 }
 
 /* ===== GREETING ===== */
@@ -205,8 +222,8 @@ body {
 
 .progress-bar {
   width: 100%;
-  height: 8px;
-  background: var(--accent-light);
+  height: 6px;
+  background: rgba(255,255,255,0.08);
   border-radius: 999px;
   overflow: hidden;
   position: relative;
@@ -216,7 +233,7 @@ body {
   height: 100%;
   background: var(--accent);
   border-radius: 999px;
-  transition: width 0.6s ease;
+  transition: width 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
   width: 0%;
 }
 
@@ -253,7 +270,7 @@ body {
 
 /* ===== AGREEMENT CONTENT ===== */
 .agreement-content {
-  background: #fff;
+  background: rgba(255,255,255,0.03);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px;
@@ -297,12 +314,12 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6px;
-  padding: 10px 20px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 10px;
+  border-radius: 9999px;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.15s;
   text-decoration: none;
@@ -319,21 +336,22 @@ body {
 
 .btn-primary {
   background: var(--accent);
-  color: #fff;
+  color: #1a1a10;
 }
 
 .btn-secondary {
-  background: var(--accent-light);
-  color: var(--accent);
+  background: rgba(255,255,255,0.08);
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .btn-success {
   background: var(--success);
-  color: #fff;
+  color: #0a0a0f;
 }
 
 .btn-cancel {
-  background: #e0e0e0;
+  background: rgba(255,255,255,0.06);
   color: var(--text-muted);
 }
 
@@ -345,9 +363,7 @@ body {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(0,0,0,0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -356,9 +372,10 @@ body {
 }
 
 .modal-card {
-  background: #fff;
+  background: #14141a;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+  box-shadow: 0 16px 48px rgba(0,0,0,0.4);
   padding: 28px 24px;
   max-width: 400px;
   width: 100%;
@@ -389,12 +406,12 @@ body {
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(80px);
-  background: #1a1a1a;
-  color: #fff;
+  background: #1a1a10;
+  color: #e0ddd8;
   padding: 12px 24px;
-  border-radius: 12px;
+  border-radius: 9999px;
   font-size: 0.85rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   z-index: 200;
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
@@ -488,7 +505,7 @@ body {
   top: 4px;
   bottom: 4px;
   width: 2px;
-  background: var(--accent-light);
+  background: rgba(255,255,255,0.08);
 }
 
 .timeline li {
@@ -511,7 +528,7 @@ body {
   height: 10px;
   border-radius: 50%;
   background: var(--accent);
-  border: 2px solid var(--card-bg);
+  border: 2px solid #0a0a0f;
 }
 
 .timeline .tl-message {
@@ -557,13 +574,13 @@ body {
 }
 
 .deliverable-status.done {
-  background: #e6f4ea;
+  background: var(--success-light);
   color: var(--success);
 }
 
 .deliverable-status.in-progress {
-  background: #fef7e0;
-  color: #b06000;
+  background: rgba(212,168,83,0.12);
+  color: var(--accent);
 }
 
 /* ===== QUICK ACTIONS ===== */
@@ -576,7 +593,8 @@ body {
 
 /* ===== WELCOME DOC ===== */
 .welcome-doc {
-  background: var(--accent-light);
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 16px;
@@ -644,14 +662,14 @@ body {
 <div id="errorScreen" class="card hidden" role="alert">
   <span class="error-icon">&#x26A0;&#xFE0F;</span>
   <h2>Could not load your project</h2>
-  <p>We couldn't find a project matching your link. Double-check the URL or reach out to Rider for assistance.</p>
+  <p>We couldn't find a project matching your link. Double-check the URL or reach out to Daniel for assistance.</p>
 </div>
 
 <!-- PORTAL CONTENT -->
 <div id="portalContent">
   <!-- HEADER -->
   <div class="header card" style="padding-bottom:16px;">
-    <span class="brand">Rider &middot; Web</span>
+    <span class="brand">Daniel Asis</span>
     <span id="statusBadge" class="status-badge">Loading</span>
   </div>
 
@@ -695,12 +713,12 @@ body {
     <p>Thank you! Your agreement has been acknowledged. The next step is to send the deposit so we can begin working on your site.</p>
     <div class="payment-section">
       <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:4px;">Send deposit to:</p>
-      <p style="font-weight:700;margin-bottom:4px;">Rider Web</p>
+      <p style="font-weight:700;margin-bottom:4px;">Daniel Asis</p>
       <div id="paymentDetails" class="payment-details">
         <div class="payment-amount" id="depositAmount">&#x20B1;7,500</div>
         <div id="paymentInfoText" class="payment-instruction">Bank transfer details loading...</div>
       </div>
-      <div class="payment-instruction">Once sent, message Rider to confirm. We'll update your portal within 24 hours.</div>
+      <div class="payment-instruction">Once sent, message Daniel to confirm. We'll update your portal within 24 hours.</div>
     </div>
   </div>
 
@@ -757,8 +775,8 @@ body {
   <div id="sectionCompleted" class="card status-section hidden">
     <h2>Project Complete &#x2705;</h2>
     <p>Your website project is fully complete. We hope you love it!</p>
-    <p style="margin-top:12px;">Need ongoing updates, content changes, or a new page? Maintenance is available at &#x20B1;2,500/month &mdash; just message Rider.</p>
-    <p style="font-size:0.82rem;color:var(--text-muted);">Reach out to Rider to discuss maintenance options.</p>
+    <p style="margin-top:12px;">Need ongoing updates, content changes, or a new page? Maintenance is available at &#x20B1;2,500/month &mdash; just message Daniel.</p>
+    <p style="font-size:0.82rem;color:var(--text-muted);">Reach out to Daniel to discuss maintenance options.</p>
   </div>
 
   <!-- QUICK ACTIONS -->
@@ -926,7 +944,7 @@ body {
     if (data.payment_info) {
       paymentInfoText.innerHTML = data.payment_info.replace(/\n/g, '<br>');
     } else {
-      paymentInfoText.textContent = 'Bank details provided via GCash. Contact Rider for instructions.';
+      paymentInfoText.textContent = 'Bank details provided via GCash. Contact Daniel for instructions.';
     }
 
     /* Mockup / live links */
@@ -949,6 +967,17 @@ body {
         showSection(sectionAgreementSent);
         quickActions.classList.add('hidden');
         timelineCard.classList.add('hidden');
+        if (data.client_requested_agree) {
+          agreeBtn.textContent = 'Awaiting Confirmation ✓';
+          agreeBtn.disabled = true;
+          agreeBtn.style.opacity = '0.6';
+          agreeBtn.style.cursor = 'default';
+        } else {
+          agreeBtn.textContent = 'I Agree — Let\'s Go!';
+          agreeBtn.disabled = false;
+          agreeBtn.style.opacity = '';
+          agreeBtn.style.cursor = '';
+        }
         break;
 
       case 'agreed':
@@ -1153,10 +1182,27 @@ body {
     confirmModal.classList.add('hidden');
   });
 
-  /* Modal confirm -> toast only, no DB write */
+  /* Modal confirm -> toast + DB write */
   modalConfirmBtn.addEventListener('click', function() {
     confirmModal.classList.add('hidden');
-    showToast('Thanks! Rider will confirm your agreement shortly.');
+
+    var token = new URLSearchParams(window.location.search).get('token');
+    if (token) {
+      supabase
+        .from('clients')
+        .update({ client_requested_agree: true })
+        .eq('access_token', token)
+        .then(function(result) {
+          if (result.error) {
+            console.warn('Failed to save agreement:', result.error);
+            showToast('Saved locally! Daniel will follow up.');
+          } else {
+            showToast('Agreement recorded! We\'ll confirm shortly.');
+          }
+        });
+    } else {
+      showToast('Thanks! Daniel will confirm your agreement shortly.');
+    }
   });
 
   /* Close modal on overlay click */

@@ -6,7 +6,7 @@
   <title>Admin — Client Dashboard</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <style>
 /* ===== RESET ===== */
@@ -15,24 +15,14 @@
 html { font-size: 16px; -webkit-font-smoothing: antialiased; }
 
 body {
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-  background: #fcf8f5;
-  color: #1a1416;
+  font-family: 'Source Serif 4', Georgia, serif;
+  background: #0a0a0f;
+  color: #e0ddd8;
   min-height: 100vh;
   padding: 32px 16px;
   line-height: 1.6;
   position: relative;
 }
-
-/* ===== BLOB BG ===== */
-.shader-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
-.shader-blob { position: absolute; border-radius: 50%; filter: blur(80px); will-change: transform; mix-blend-mode: multiply; }
-.shader-blob--1 { width: 80vmax; height: 80vmax; top: -30vmax; left: -20vmax; background: radial-gradient(circle, #e8b0c0 0%, transparent 70%); opacity: 0.15; animation: drift1 18s ease-in-out infinite; }
-.shader-blob--2 { width: 65vmax; height: 65vmax; bottom: -25vmax; right: -15vmax; background: radial-gradient(circle, #f0d0a0 0%, transparent 70%); opacity: 0.12; animation: drift2 22s ease-in-out infinite; }
-.shader-blob--3 { width: 50vmax; height: 50vmax; top: 20%; right: -10vmax; background: radial-gradient(circle, #e8c0cc 0%, transparent 70%); opacity: 0.14; animation: drift3 20s ease-in-out infinite; }
-@keyframes drift1 { 0%{transform:translate(0,0)scale(1)}33%{transform:translate(8vmax,-5vmax)scale(1.05)}66%{transform:translate(-4vmax,6vmax)scale(0.95)}100%{transform:translate(0,0)scale(1)} }
-@keyframes drift2 { 0%{transform:translate(0,0)scale(1)}50%{transform:translate(-6vmax,-4vmax)scale(1.08)}100%{transform:translate(0,0)scale(1)} }
-@keyframes drift3 { 0%{transform:translate(0,0)scale(1)}40%{transform:translate(-3vmax,-6vmax)scale(1.03)}80%{transform:translate(4vmax,2vmax)scale(0.97)}100%{transform:translate(0,0)scale(1)} }
 
 /* ===== CONTAINER ===== */
 .container {
@@ -56,7 +46,7 @@ body {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.6rem;
   font-weight: 700;
-  color: #1a1416;
+  color: #f0ede6;
 }
 
 .header-actions {
@@ -67,12 +57,9 @@ body {
 
 /* ===== CARD ===== */
 .card {
-  background: rgba(255,255,255,0.72);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(180,100,120,0.08);
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(180,100,120,0.08);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
   padding: 24px;
 }
 
@@ -89,11 +76,11 @@ body {
   letter-spacing: 0.4px;
   white-space: nowrap;
 }
-.badge-neutral { background: #f0d6de; color: #c0607a; }
-.badge-blue { background: #e8e0f4; color: #6b52a0; }
-.badge-amber { background: #f0e8d8; color: #a08040; }
-.badge-green { background: #e0ede0; color: #7a9a7a; }
-.badge-red { background: #f0d8d8; color: #b06060; }
+.badge-neutral { background: rgba(212,168,83,0.12); color: #d4a853; }
+.badge-blue { background: rgba(212,168,83,0.12); color: #d4a853; }
+.badge-amber { background: rgba(212,168,83,0.12); color: #d4a853; }
+.badge-green { background: rgba(122,154,122,0.12); color: #7a9a7a; }
+.badge-red { background: rgba(212,168,83,0.12); color: #d4a853; }
 
 /* ===== TABLE ===== */
 .table-wrap { overflow-x: auto; }
@@ -108,31 +95,31 @@ th {
   text-align: left;
   padding: 8px 12px 12px 12px;
   font-weight: 700;
-  color: #8a7a7e;
+  color: #a09e98;
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-bottom: 1px solid rgba(180,100,120,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 td {
   padding: 12px;
-  border-bottom: 1px solid rgba(180,100,120,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
   vertical-align: middle;
 }
 
 tr:last-child td { border-bottom: none; }
 
-tr:hover td { background: rgba(212,132,154,0.04); }
+tr:hover td { background: rgba(255,255,255,0.03); }
 
 .client-name {
   font-weight: 600;
-  color: #1a1416;
+  color: #e0ddd8;
 }
 
 .client-slug {
   font-size: 0.75rem;
-  color: #8a7a7e;
+  color: #a09e98;
 }
 
 /* ===== STATUS DOT ===== */
@@ -145,8 +132,8 @@ tr:hover td { background: rgba(212,132,154,0.04); }
   vertical-align: middle;
 }
 .status-dot.yes { background: #7a9a7a; }
-.status-dot.no  { background: #d0c0c4; }
-.status-dot.pending { background: #d4849a; animation: pulse 1.5s ease-in-out infinite; }
+.status-dot.no  { background: rgba(255,255,255,0.2); }
+.status-dot.pending { background: #d4a853; animation: pulse 1.5s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
 
 /* ===== BUTTONS ===== */
@@ -154,12 +141,12 @@ tr:hover td { background: rgba(212,132,154,0.04); }
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 6px 14px;
+  padding: 12px 28px;
   border: none;
-  border-radius: 8px;
-  font-family: 'Source Sans 3', system-ui, sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
+  border-radius: 9999px;
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 500;
   cursor: pointer;
   transition: opacity 0.2s, transform 0.15s;
   text-decoration: none;
@@ -167,17 +154,17 @@ tr:hover td { background: rgba(212,132,154,0.04); }
 }
 .btn:hover { opacity: 0.85; }
 .btn:active { transform: scale(0.97); }
-.btn-primary { background: linear-gradient(135deg, #d4849a, #c0607a); color: #fff; }
-.btn-outline { background: transparent; border: 1px solid rgba(180,100,120,0.15); color: #c0607a; }
-.btn-outline:hover { background: rgba(212,132,154,0.08); }
-.btn-sm { padding: 4px 10px; font-size: 0.72rem; }
+.btn-primary { background: #d4a853; color: #1a1a10; }
+.btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #e0ddd8; }
+.btn-outline:hover { background: rgba(255,255,255,0.06); }
+.btn-sm { padding: 6px 16px; font-size: 0.72rem; }
 .btn-block { width: 100%; }
 
 /* ===== EMPTY STATE ===== */
 .empty-state {
   text-align: center;
   padding: 40px 20px;
-  color: #8a7a7e;
+  color: #a09e98;
 }
 .empty-state p { margin-bottom: 8px; }
 .empty-state .emoji { font-size: 2rem; margin-bottom: 12px; display: block; }
@@ -191,12 +178,9 @@ tr:hover td { background: rgba(212,132,154,0.04); }
 }
 
 .login-card {
-  background: rgba(255,255,255,0.72);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(180,100,120,0.08);
-  border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(180,100,120,0.08);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
   padding: 36px 32px;
   max-width: 380px;
   width: 100%;
@@ -208,10 +192,11 @@ tr:hover td { background: rgba(212,132,154,0.04); }
   font-size: 1.3rem;
   margin-bottom: 6px;
   font-weight: 700;
+  color: #f0ede6;
 }
 
 .login-card p {
-  color: #8a7a7e;
+  color: #a09e98;
   font-size: 0.85rem;
   margin-bottom: 20px;
 }
@@ -219,24 +204,24 @@ tr:hover td { background: rgba(212,132,154,0.04); }
 .login-card input {
   width: 100%;
   padding: 10px 14px;
-  border: 1px solid rgba(180,100,120,0.15);
-  border-radius: 10px;
-  font-family: 'Source Sans 3', system-ui, sans-serif;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 9999px;
+  font-family: 'Source Serif 4', Georgia, serif;
   font-size: 0.9rem;
-  background: rgba(255,255,255,0.8);
-  color: #1a1416;
+  background: rgba(255,255,255,0.04);
+  color: #e0ddd8;
   outline: none;
   transition: border-color 0.2s;
   margin-bottom: 12px;
 }
 
 .login-card input:focus {
-  border-color: #d4849a;
-  box-shadow: 0 0 0 3px rgba(212,132,154,0.15);
+  border-color: #d4a853;
+  box-shadow: 0 0 0 3px rgba(212,168,83,0.12);
 }
 
 .login-error {
-  color: #c0607a;
+  color: #d4a853;
   font-size: 0.8rem;
   margin-top: -8px;
   margin-bottom: 12px;
@@ -249,12 +234,12 @@ tr:hover td { background: rgba(212,132,154,0.04); }
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(80px);
-  background: #1a1416;
-  color: #fff;
+  background: #1a1a10;
+  color: #e0ddd8;
   padding: 10px 20px;
-  border-radius: 10px;
+  border-radius: 9999px;
   font-size: 0.82rem;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
   z-index: 200;
   opacity: 0;
   transition: opacity 0.3s, transform 0.3s;
@@ -270,20 +255,13 @@ tr:hover td { background: rgba(212,132,154,0.04); }
   .header h1 { font-size: 1.25rem; }
   table { font-size: 0.78rem; }
   th, td { padding: 8px 6px; }
-  .btn-sm { padding: 3px 8px; font-size: 0.68rem; }
+  .btn-sm { padding: 4px 12px; font-size: 0.68rem; }
   .login-card { padding: 24px 20px; }
   .login-card h2 { font-size: 1.1rem; }
 }
 </style>
 </head>
 <body>
-
-<!-- BLOB BG -->
-<div class="shader-bg" aria-hidden="true">
-  <div class="shader-blob shader-blob--1"></div>
-  <div class="shader-blob shader-blob--2"></div>
-  <div class="shader-blob shader-blob--3"></div>
-</div>
 
 <!-- LOGIN GATE -->
 <div id="loginGate">
@@ -303,7 +281,7 @@ tr:hover td { background: rgba(212,132,154,0.04); }
   <div class="header">
     <h1>Clients</h1>
     <div class="header-actions">
-      <span id="clientCount" style="font-size:0.82rem;color:#8a7a7e;">0 clients</span>
+      <span id="clientCount" style="font-size:0.82rem;color:#a09e98;">0 clients</span>
       <button id="refreshBtn" class="btn btn-outline btn-sm">&#x21bb; Refresh</button>
     </div>
   </div>
@@ -334,8 +312,8 @@ tr:hover td { background: rgba(212,132,154,0.04); }
   </div>
 
   <!-- FOOTER -->
-  <div style="margin-top:24px;text-align:center;font-size:0.75rem;color:#8a7a7e;">
-    Daniel Asis &middot; <a href="/portal/" style="color:#d4849a;text-decoration:none;">Client Portal</a>
+  <div style="margin-top:24px;text-align:center;font-size:0.75rem;color:#a09e98;">
+    Daniel Asis &middot; <a href="/portal/" style="color:#d4a853;text-decoration:none;">Client Portal</a>
   </div>
 </div>
 
@@ -349,7 +327,7 @@ tr:hover td { background: rgba(212,132,154,0.04); }
   /* ==========================================================
    * === CONFIGURATION ===
    * Change PASSWORD_HASH to your own secret.
-   * Default password: "rider2024" (SHA-256 hash).
+   * Default password: "Petal's Paradise" (SHA-256 hash).
    * Generate a new hash via: echo -n "yourpassword" | sha256sum
    * ========================================================== */
   var PASSWORD_HASH = '5bb904458fbc3f1cf910a77b24051c7ea114fbc9c252d1fe7f43dc11fa4669a6';
@@ -483,7 +461,7 @@ tr:hover td { background: rgba(212,132,154,0.04); }
 
   /* ===== LOAD CLIENTS ===== */
   function loadClients() {
-    clientsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:#8a7a7e;">Loading...</td></tr>';
+    clientsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:#a09e98;">Loading...</td></tr>';
     emptyState.style.display = 'none';
 
     supabase
@@ -492,7 +470,7 @@ tr:hover td { background: rgba(212,132,154,0.04); }
       .order('created_at', { ascending: false })
       .then(function(result) {
         if (result.error) {
-          clientsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:#c0607a;">Error: ' + escapeHtml(result.error.message) + '</td></tr>';
+          clientsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:#d4a853;">Error: ' + escapeHtml(result.error.message) + '</td></tr>';
           return;
         }
 
