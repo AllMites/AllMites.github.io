@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin — Client Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<style>
+/* ===== RESET ===== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 16px; -webkit-font-smoothing: antialiased; }
+
+body {
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  background: #fcf8f5;
+  color: #1a1416;
+  min-height: 100vh;
+  padding: 32px 16px;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* ===== BLOB BG ===== */
+.shader-bg { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.shader-blob { position: absolute; border-radius: 50%; filter: blur(80px); will-change: transform; mix-blend-mode: multiply; }
+.shader-blob--1 { width: 80vmax; height: 80vmax; top: -30vmax; left: -20vmax; background: radial-gradient(circle, #e8b0c0 0%, transparent 70%); opacity: 0.15; animation: drift1 18s ease-in-out infinite; }
+.shader-blob--2 { width: 65vmax; height: 65vmax; bottom: -25vmax; right: -15vmax; background: radial-gradient(circle, #f0d0a0 0%, transparent 70%); opacity: 0.12; animation: drift2 22s ease-in-out infinite; }
+.shader-blob--3 { width: 50vmax; height: 50vmax; top: 20%; right: -10vmax; background: radial-gradient(circle, #e8c0cc 0%, transparent 70%); opacity: 0.14; animation: drift3 20s ease-in-out infinite; }
+@keyframes drift1 { 0%{transform:translate(0,0)scale(1)}33%{transform:translate(8vmax,-5vmax)scale(1.05)}66%{transform:translate(-4vmax,6vmax)scale(0.95)}100%{transform:translate(0,0)scale(1)} }
+@keyframes drift2 { 0%{transform:translate(0,0)scale(1)}50%{transform:translate(-6vmax,-4vmax)scale(1.08)}100%{transform:translate(0,0)scale(1)} }
+@keyframes drift3 { 0%{transform:translate(0,0)scale(1)}40%{transform:translate(-3vmax,-6vmax)scale(1.03)}80%{transform:translate(4vmax,2vmax)scale(0.97)}100%{transform:translate(0,0)scale(1)} }
+
+/* ===== CONTAINER ===== */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a1416;
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(180,100,120,0.08);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(180,100,120,0.08);
+  padding: 24px;
+}
+
+.card + .card { margin-top: 16px; }
+
+/* ===== STATUS BADGES ===== */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  white-space: nowrap;
+}
+.badge-neutral { background: #f0d6de; color: #c0607a; }
+.badge-blue { background: #e8e0f4; color: #6b52a0; }
+.badge-amber { background: #f0e8d8; color: #a08040; }
+.badge-green { background: #e0ede0; color: #7a9a7a; }
+.badge-red { background: #f0d8d8; color: #b06060; }
+
+/* ===== TABLE ===== */
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+th {
+  text-align: left;
+  padding: 8px 12px 12px 12px;
+  font-weight: 700;
+  color: #8a7a7e;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(180,100,120,0.1);
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(180,100,120,0.06);
+  vertical-align: middle;
+}
+
+tr:last-child td { border-bottom: none; }
+
+tr:hover td { background: rgba(212,132,154,0.04); }
+
+.client-name {
+  font-weight: 600;
+  color: #1a1416;
+}
+
+.client-slug {
+  font-size: 0.75rem;
+  color: #8a7a7e;
+}
+
+/* ===== STATUS DOT ===== */
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.status-dot.yes { background: #7a9a7a; }
+.status-dot.no  { background: #d0c0c4; }
+.status-dot.pending { background: #d4849a; animation: pulse 1.5s ease-in-out infinite; }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+  text-decoration: none;
+  line-height: 1.4;
+}
+.btn:hover { opacity: 0.85; }
+.btn:active { transform: scale(0.97); }
+.btn-primary { background: linear-gradient(135deg, #d4849a, #c0607a); color: #fff; }
+.btn-outline { background: transparent; border: 1px solid rgba(180,100,120,0.15); color: #c0607a; }
+.btn-outline:hover { background: rgba(212,132,154,0.08); }
+.btn-sm { padding: 4px 10px; font-size: 0.72rem; }
+.btn-block { width: 100%; }
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: #8a7a7e;
+}
+.empty-state p { margin-bottom: 8px; }
+.empty-state .emoji { font-size: 2rem; margin-bottom: 12px; display: block; }
+
+/* ===== PASSWORD GATE ===== */
+#loginGate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.login-card {
+  background: rgba(255,255,255,0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(180,100,120,0.08);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(180,100,120,0.08);
+  padding: 36px 32px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+}
+
+.login-card h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.login-card p {
+  color: #8a7a7e;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid rgba(180,100,120,0.15);
+  border-radius: 10px;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.8);
+  color: #1a1416;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 12px;
+}
+
+.login-card input:focus {
+  border-color: #d4849a;
+  box-shadow: 0 0 0 3px rgba(212,132,154,0.15);
+}
+
+.login-error {
+  color: #c0607a;
+  font-size: 0.8rem;
+  margin-top: -8px;
+  margin-bottom: 12px;
+  display: none;
+}
+
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(80px);
+  background: #1a1416;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  z-index: 200;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  body { padding: 16px 12px; }
+  .card { padding: 16px; }
+  .header h1 { font-size: 1.25rem; }
+  table { font-size: 0.78rem; }
+  th, td { padding: 8px 6px; }
+  .btn-sm { padding: 3px 8px; font-size: 0.68rem; }
+  .login-card { padding: 24px 20px; }
+  .login-card h2 { font-size: 1.1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- BLOB BG -->
+<div class="shader-bg" aria-hidden="true">
+  <div class="shader-blob shader-blob--1"></div>
+  <div class="shader-blob shader-blob--2"></div>
+  <div class="shader-blob shader-blob--3"></div>
+</div>
+
+<!-- LOGIN GATE -->
+<div id="loginGate">
+  <div class="login-card">
+    <h2>Client Dashboard</h2>
+    <p>Enter password to access admin panel.</p>
+    <input type="password" id="passwordInput" placeholder="Password" autocomplete="off">
+    <div id="loginError" class="login-error">Incorrect password</div>
+    <button id="loginBtn" class="btn btn-primary btn-block">Unlock</button>
+  </div>
+</div>
+
+<!-- DASHBOARD (hidden until auth) -->
+<div id="dashboard" class="container" style="display:none;">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Clients</h1>
+    <div class="header-actions">
+      <span id="clientCount" style="font-size:0.82rem;color:#8a7a7e;">0 clients</span>
+      <button id="refreshBtn" class="btn btn-outline btn-sm">&#x21bb; Refresh</button>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="card">
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Client</th>
+            <th>Status</th>
+            <th>Agreed</th>
+            <th>Deposit</th>
+            <th>Portal</th>
+          </tr>
+        </thead>
+        <tbody id="clientsBody">
+          <!-- populated by JS -->
+        </tbody>
+      </table>
+    </div>
+    <div id="emptyState" class="empty-state" style="display:none;">
+      <span class="emoji">&#x1F50D;</span>
+      <p>No clients found</p>
+      <p style="font-size:0.78rem;">Create a client via the CLI to see them here.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="margin-top:24px;text-align:center;font-size:0.75rem;color:#8a7a7e;">
+    Rider Admin &middot; <a href="/portal/" style="color:#d4849a;text-decoration:none;">Client Portal</a>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast">Copied!</div>
+
+<script>
+(function() {
+  'use strict';
+
+  /* ==========================================================
+   * === CONFIGURATION ===
+   * Change PASSWORD_HASH to your own secret.
+   * Default password: "rider2024" (SHA-256 hash).
+   * Generate a new hash via: echo -n "yourpassword" | sha256sum
+   * ========================================================== */
+  var PASSWORD_HASH = 'cb0829cb60530521109e8fe47f13f9acae8e86857bc59452ae7f84ce10152704';
+  var SUPABASE_URL = 'https://wsmfpajkiuuleorwfmna.supabase.co';
+  var SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndzbWZwYWpraXV1bGVvcndmbW5hIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE3ODk5ODgsImV4cCI6MjA5NzM2NTk4OH0.iv3aS8y86CG3kAbthfIcSZNOPj3JxjyC6DfO_gMaBSE';
+  /* ========================================================== */
+
+  var supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+  /* ===== DOM ===== */
+  var loginGate = document.getElementById('loginGate');
+  var dashboard = document.getElementById('dashboard');
+  var passwordInput = document.getElementById('passwordInput');
+  var loginBtn = document.getElementById('loginBtn');
+  var loginError = document.getElementById('loginError');
+  var clientsBody = document.getElementById('clientsBody');
+  var emptyState = document.getElementById('emptyState');
+  var clientCount = document.getElementById('clientCount');
+  var refreshBtn = document.getElementById('refreshBtn');
+  var toast = document.getElementById('toast');
+
+  var toastTimer = null;
+
+  /* ===== TOAST ===== */
+  function showToast(msg) {
+    if (toastTimer) { clearTimeout(toastTimer); }
+    toast.textContent = msg;
+    toast.classList.add('visible');
+    toastTimer = setTimeout(function() {
+      toast.classList.remove('visible');
+      toastTimer = null;
+    }, 2500);
+  }
+
+  /* ===== SHA-256 HASH ===== */
+  async function sha256(str) {
+    var enc = new TextEncoder().encode(str);
+    var buf = await crypto.subtle.digest('SHA-256', enc);
+    var hex = '';
+    var bytes = new Uint8Array(buf);
+    for (var i = 0; i < bytes.length; i++) {
+      hex += bytes[i].toString(16).padStart(2, '0');
+    }
+    return hex;
+  }
+
+  /* ===== AUTH CHECK ===== */
+  var isAuthed = sessionStorage.getItem('admin_auth') === '1';
+
+  function showAuth() {
+    loginGate.style.display = '';
+    dashboard.style.display = 'none';
+    passwordInput.value = '';
+    passwordInput.focus();
+  }
+
+  function showDashboard() {
+    loginGate.style.display = 'none';
+    dashboard.style.display = '';
+    sessionStorage.setItem('admin_auth', '1');
+    loadClients();
+  }
+
+  if (isAuthed) {
+    showDashboard();
+  } else {
+    showAuth();
+  }
+
+  /* ===== LOGIN ===== */
+  loginBtn.addEventListener('click', function() {
+    var pw = passwordInput.value;
+    if (!pw) return;
+    sha256(pw).then(function(hash) {
+      if (hash === PASSWORD_HASH) {
+        loginError.style.display = 'none';
+        showDashboard();
+      } else {
+        loginError.style.display = '';
+        passwordInput.value = '';
+        passwordInput.focus();
+      }
+    }).catch(function() {
+      loginError.style.display = '';
+    });
+  });
+
+  passwordInput.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+      loginBtn.click();
+    }
+  });
+
+  /* ===== STATUS HELPERS ===== */
+  var STATUS_BADGE_CLASS = {
+    inquiry: 'badge-neutral',
+    agreement_sent: 'badge-blue',
+    agreed: 'badge-blue',
+    deposit_paid: 'badge-amber',
+    building: 'badge-green',
+    review: 'badge-red',
+    launched: 'badge-green',
+    completed: 'badge-green'
+  };
+
+  var STATUS_LABELS = {
+    inquiry: 'Inquiry',
+    agreement_sent: 'Agreement Sent',
+    agreed: 'Agreed',
+    deposit_paid: 'Deposit Paid',
+    building: 'Building',
+    review: 'Review',
+    launched: 'Launched',
+    completed: 'Completed'
+  };
+
+  function getStatusBadge(status) {
+    var cls = STATUS_BADGE_CLASS[status] || 'badge-neutral';
+    var label = STATUS_LABELS[status] || status;
+    return '<span class="badge ' + cls + '">' + label + '</span>';
+  }
+
+  function formatDate(iso) {
+    if (!iso) return '—';
+    try {
+      var d = new Date(iso);
+      if (isNaN(d.getTime())) return '—';
+      return d.toLocaleDateString('en-PH', { month: 'short', day: 'numeric' });
+    } catch(e) { return '—'; }
+  }
+
+  /* ===== LOAD CLIENTS ===== */
+  function loadClients() {
+    clientsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:#8a7a7e;">Loading...</td></tr>';
+    emptyState.style.display = 'none';
+
+    supabase
+      .from('clients')
+      .select('id, slug, business_name, status, client_requested_agree, deposit_received, created_at, access_token')
+      .order('created_at', { ascending: false })
+      .then(function(result) {
+        if (result.error) {
+          clientsBody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:32px;color:#c0607a;">Error: ' + escapeHtml(result.error.message) + '</td></tr>';
+          return;
+        }
+
+        var data = result.data;
+        if (!data || data.length === 0) {
+          clientsBody.innerHTML = '';
+          emptyState.style.display = '';
+          clientCount.textContent = '0 clients';
+          return;
+        }
+
+        var html = '';
+        for (var i = 0; i < data.length; i++) {
+          var c = data[i];
+          var portalUrl = 'https://allmites.github.io/portal/?token=' + c.access_token;
+          var agreeDot = c.client_requested_agree ? '<span class="status-dot yes"></span>Yes' : '<span class="status-dot no"></span>No';
+          var depositDot = c.deposit_received ? '<span class="status-dot yes"></span>Yes' : '<span class="status-dot no"></span>No';
+
+          html += '<tr>' +
+            '<td>' +
+              '<div class="client-name">' + escapeHtml(c.business_name || c.slug) + '</div>' +
+              '<div class="client-slug">' + escapeHtml(c.slug) + ' &middot; ' + formatDate(c.created_at) + '</div>' +
+            '</td>' +
+            '<td>' + getStatusBadge(c.status) + '</td>' +
+            '<td>' + agreeDot + '</td>' +
+            '<td>' + depositDot + '</td>' +
+            '<td>' +
+              '<button class="btn btn-outline btn-sm copy-btn" data-url="' + portalUrl + '">&#x1F4CB; Copy</button>' +
+            '</td>' +
+          '</tr>';
+        }
+        clientsBody.innerHTML = html;
+        clientCount.textContent = data.length + ' client' + (data.length !== 1 ? 's' : '');
+
+        /* Wire copy buttons */
+        var copyBtns = clientsBody.querySelectorAll('.copy-btn');
+        for (var j = 0; j < copyBtns.length; j++) {
+          copyBtns[j].addEventListener('click', function(e) {
+            var url = e.currentTarget.getAttribute('data-url');
+            navigator.clipboard.writeText(url).then(function() {
+              showToast('Portal URL copied!');
+            }).catch(function() {
+              /* Fallback for older browsers */
+              var ta = document.createElement('textarea');
+              ta.value = url;
+              ta.style.position = 'fixed';
+              ta.style.opacity = '0';
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand('copy');
+              document.body.removeChild(ta);
+              showToast('Portal URL copied!');
+            });
+          });
+        }
+
+        /* Auto-refresh every 30s */
+        setTimeout(function() {
+          if (sessionStorage.getItem('admin_auth') === '1') {
+            loadClients();
+          }
+        }, 30000);
+      });
+  }
+
+  /* ===== REFRESH ===== */
+  refreshBtn.addEventListener('click', loadClients);
+
+  /* ===== HELPERS ===== */
+  function escapeHtml(str) {
+    if (typeof str !== 'string') return str || '';
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
+})();
+</script>
+</body>
+</html>

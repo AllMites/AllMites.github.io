@@ -80,3 +80,15 @@ CREATE POLICY "anon_can_select_updates" ON updates FOR SELECT USING (true);
 
 -- Clean up test:
 -- DELETE FROM clients WHERE slug = 'test-business';
+
+-- ============================================================
+-- Migration: client_requested_agree + anon UPDATE policy
+-- Run this after the base schema.
+-- ============================================================
+ALTER TABLE clients ADD COLUMN IF NOT EXISTS client_requested_agree boolean DEFAULT false;
+
+-- Allow anon key to set client_requested_agree (portal "I Agree" button)
+CREATE POLICY IF NOT EXISTS "anon_can_request_agree" ON clients
+  FOR UPDATE
+  USING (true)
+  WITH CHECK (client_requested_agree = true);

@@ -31,22 +31,95 @@ body {
   justify-content: center;
   padding: 24px 16px;
   line-height: 1.6;
+  position: relative;
+}
+
+/* ===== MESH GRADIENT BLOBS ===== */
+.shader-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.shader-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  will-change: transform;
+  mix-blend-mode: multiply;
+}
+.shader-blob--1 {
+  width: 80vmax; height: 80vmax;
+  top: -30vmax; left: -20vmax;
+  background: radial-gradient(circle, #e8b0c0 0%, transparent 70%);
+  opacity: 0.2;
+  animation: blob-drift-1 18s ease-in-out infinite;
+}
+.shader-blob--2 {
+  width: 65vmax; height: 65vmax;
+  bottom: -25vmax; right: -15vmax;
+  background: radial-gradient(circle, #f0d0a0 0%, transparent 70%);
+  opacity: 0.15;
+  animation: blob-drift-2 22s ease-in-out infinite;
+}
+.shader-blob--3 {
+  width: 50vmax; height: 50vmax;
+  top: 20%; right: -10vmax;
+  background: radial-gradient(circle, #e8c0cc 0%, transparent 70%);
+  opacity: 0.18;
+  animation: blob-drift-3 20s ease-in-out infinite;
+}
+.shader-blob--4 {
+  width: 45vmax; height: 45vmax;
+  bottom: 0%; left: -10vmax;
+  background: radial-gradient(circle, #fce8d8 0%, transparent 70%);
+  opacity: 0.12;
+  animation: blob-drift-4 25s ease-in-out infinite;
+}
+@keyframes blob-drift-1 {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(8vmax, -5vmax) scale(1.05); }
+  66%  { transform: translate(-4vmax, 6vmax) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes blob-drift-2 {
+  0%   { transform: translate(0, 0) scale(1); }
+  50%  { transform: translate(-6vmax, -4vmax) scale(1.08); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes blob-drift-3 {
+  0%   { transform: translate(0, 0) scale(1); }
+  40%  { transform: translate(-3vmax, -6vmax) scale(1.03); }
+  80%  { transform: translate(4vmax, 2vmax) scale(0.97); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+@keyframes blob-drift-4 {
+  0%   { transform: translate(0, 0) scale(1); }
+  45%  { transform: translate(5vmax, 3vmax) scale(1.06); }
+  90%  { transform: translate(-2vmax, -4vmax) scale(0.98); }
+  100% { transform: translate(0, 0) scale(1); }
 }
 
 /* ===== VARIABLES ===== */
 :root {
-  --bg: #faf7f2;
-  --card-bg: rgba(255,255,255,0.75);
-  --text: #1a1a1a;
-  --text-muted: #6b6b6b;
-  --accent: #c17f4b;
-  --accent-light: #e8d5c0;
-  --success: #3a7d44;
-  --border: rgba(0,0,0,0.08);
-  --shadow: 0 8px 32px rgba(0,0,0,0.06);
-  --radius: 16px;
+  --bg: #fcf8f5;
+  --card-bg: rgba(255,255,255,0.72);
+  --text: #1a1416;
+  --text-muted: #8a7a7e;
+  --accent: #d4849a;
+  --accent-strong: #c0607a;
+  --accent-light: #f0d6de;
+  --success: #7a9a7a;
+  --success-light: #e0ede0;
+  --border: rgba(180,100,120,0.08);
+  --shadow: 0 8px 32px rgba(180,100,120,0.08);
+  --radius: 18px;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Source Sans 3', system-ui, sans-serif;
+  --card-tint-peach: rgba(255, 231, 210, 0.35);
+  --card-tint-pink: rgba(255, 210, 211, 0.3);
+  --card-tint-sage: rgba(188, 208, 180, 0.25);
 }
 
 /* ===== UTILITY ===== */
@@ -103,18 +176,47 @@ body {
 /* ===== CARD ===== */
 .card {
   background: var(--card-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 28px 24px;
   width: 100%;
   max-width: 520px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: card-in 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) both;
 }
 
 .card + .card {
   margin-top: 16px;
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba(180,100,120,0.12);
+}
+
+.card-tint-peach {
+  background: linear-gradient(135deg, var(--card-tint-peach), var(--card-bg));
+}
+
+.card-tint-pink {
+  background: linear-gradient(135deg, var(--card-tint-pink), var(--card-bg));
+}
+
+.card-tint-sage {
+  background: linear-gradient(135deg, var(--card-tint-sage), var(--card-bg));
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ===== PORTAL CONTENT ===== */
@@ -162,29 +264,29 @@ body {
 
 .status-badge.agreed,
 .status-badge.agreement_sent {
-  background: #e8f0fe;
-  color: #1967d2;
+  background: #e8e0f4;
+  color: #6b52a0;
 }
 
 .status-badge.deposit_paid {
-  background: #fef7e0;
-  color: #b06000;
+  background: #f0e8d8;
+  color: #a08040;
 }
 
 .status-badge.building {
-  background: #e6f4ea;
+  background: var(--success-light);
   color: var(--success);
 }
 
 .status-badge.launched,
 .status-badge.completed {
-  background: #e6f4ea;
+  background: var(--success-light);
   color: var(--success);
 }
 
 .status-badge.review {
-  background: #fce8e6;
-  color: #c5221f;
+  background: #f0d8d8;
+  color: #b06060;
 }
 
 /* ===== GREETING ===== */
@@ -214,9 +316,9 @@ body {
 
 .progress-fill {
   height: 100%;
-  background: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--accent-strong));
   border-radius: 999px;
-  transition: width 0.6s ease;
+  transition: width 0.6s cubic-bezier(0.22, 0.61, 0.36, 1);
   width: 0%;
 }
 
@@ -318,17 +420,17 @@ body {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   color: #fff;
 }
 
 .btn-secondary {
   background: var(--accent-light);
-  color: var(--accent);
+  color: var(--accent-strong);
 }
 
 .btn-success {
-  background: var(--success);
+  background: linear-gradient(135deg, var(--success), #5a8a5a);
   color: #fff;
 }
 
@@ -430,7 +532,7 @@ body {
   font-family: var(--font-display);
   font-size: 1.4rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--accent-strong);
   margin: 8px 0 4px;
 }
 
@@ -462,7 +564,7 @@ body {
 
 .checklist input[type="checkbox"] {
   margin-top: 3px;
-  accent-color: var(--accent);
+  accent-color: var(--accent-strong);
   width: 16px;
   height: 16px;
   flex-shrink: 0;
@@ -576,7 +678,7 @@ body {
 
 /* ===== WELCOME DOC ===== */
 .welcome-doc {
-  background: var(--accent-light);
+  background: linear-gradient(135deg, var(--card-tint-peach), var(--card-tint-pink));
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 16px;
@@ -633,6 +735,14 @@ body {
 </style>
 </head>
 <body>
+
+<!-- MESH GRADIENT BACKGROUND -->
+<div class="shader-bg" aria-hidden="true">
+  <div class="shader-blob shader-blob--1"></div>
+  <div class="shader-blob shader-blob--2"></div>
+  <div class="shader-blob shader-blob--3"></div>
+  <div class="shader-blob shader-blob--4"></div>
+</div>
 
 <!-- LOADING SCREEN -->
 <div id="loadingScreen" class="card" role="status" aria-label="Loading">
@@ -949,6 +1059,17 @@ body {
         showSection(sectionAgreementSent);
         quickActions.classList.add('hidden');
         timelineCard.classList.add('hidden');
+        if (data.client_requested_agree) {
+          agreeBtn.textContent = 'Awaiting Confirmation ✓';
+          agreeBtn.disabled = true;
+          agreeBtn.style.opacity = '0.6';
+          agreeBtn.style.cursor = 'default';
+        } else {
+          agreeBtn.textContent = 'I Agree — Let\'s Go!';
+          agreeBtn.disabled = false;
+          agreeBtn.style.opacity = '';
+          agreeBtn.style.cursor = '';
+        }
         break;
 
       case 'agreed':
@@ -1153,10 +1274,27 @@ body {
     confirmModal.classList.add('hidden');
   });
 
-  /* Modal confirm -> toast only, no DB write */
+  /* Modal confirm -> toast + DB write */
   modalConfirmBtn.addEventListener('click', function() {
     confirmModal.classList.add('hidden');
-    showToast('Thanks! Rider will confirm your agreement shortly.');
+
+    var token = new URLSearchParams(window.location.search).get('token');
+    if (token) {
+      supabase
+        .from('clients')
+        .update({ client_requested_agree: true })
+        .eq('access_token', token)
+        .then(function(result) {
+          if (result.error) {
+            console.warn('Failed to save agreement:', result.error);
+            showToast('Saved locally! Rider will follow up.');
+          } else {
+            showToast('Agreement recorded! We\'ll confirm shortly.');
+          }
+        });
+    } else {
+      showToast('Thanks! Rider will confirm your agreement shortly.');
+    }
   });
 
   /* Close modal on overlay click */
