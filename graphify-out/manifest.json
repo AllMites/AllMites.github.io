@@ -1,0 +1,1022 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1780570740.9869123,
+    "ast_hash": "8dedc224f63ce4f1737bbf291aad4225",
+    "semantic_hash": "8dedc224f63ce4f1737bbf291aad4225"
+  },
+  ".mcp.json": {
+    "mtime": 1780757309.758604,
+    "ast_hash": "6e68975c68923e5d1d5b0d4dbb362fd1",
+    "semantic_hash": "6e68975c68923e5d1d5b0d4dbb362fd1"
+  },
+  "Clients/better-barbers/clientconfig.json": {
+    "mtime": 1780882021.4686153,
+    "ast_hash": "043be9b7542610e8635b62ea2171ddb0",
+    "semantic_hash": "043be9b7542610e8635b62ea2171ddb0"
+  },
+  "Clients/cafe-singko/clientconfig.json": {
+    "mtime": 1781603656.838412,
+    "ast_hash": "a899e1f156b104e7c7ce675b88b21cec",
+    "semantic_hash": ""
+  },
+  "Clients/izu-koffee/clientconfig.json": {
+    "mtime": 1780661911.844177,
+    "ast_hash": "2e3ef63212d0fd2d49bdc89dfc98dd3f",
+    "semantic_hash": "2e3ef63212d0fd2d49bdc89dfc98dd3f"
+  },
+  "Clients/maestro-cafe/clientconfig.json": {
+    "mtime": 1780905718.597422,
+    "ast_hash": "6ab19e820cf9736f4e8b958a027233a8",
+    "semantic_hash": "6ab19e820cf9736f4e8b958a027233a8"
+  },
+  "Clients/oragon-barber-shop/clientconfig.json": {
+    "mtime": 1780800954.0173063,
+    "ast_hash": "c5f3d233acc4fa250211970ee18df6e1",
+    "semantic_hash": "c5f3d233acc4fa250211970ee18df6e1"
+  },
+  "Clients/sinaya-coffee/clientconfig.json": {
+    "mtime": 1780569781.6958952,
+    "ast_hash": "369dfa790cd3304cf06fac89f3b2507d",
+    "semantic_hash": "369dfa790cd3304cf06fac89f3b2507d"
+  },
+  "Clients/suave-cut-and-shave-sucat/clientconfig.json": {
+    "mtime": 1780882067.618147,
+    "ast_hash": "7553ce1b75f731d71bacbe5d5fa44925",
+    "semantic_hash": "7553ce1b75f731d71bacbe5d5fa44925"
+  },
+  "WebsiteTemplates/barbershop_config.json": {
+    "mtime": 1780829008.5026631,
+    "ast_hash": "ab6a74fd5b65613c5ec7d5358827a1e8",
+    "semantic_hash": "ab6a74fd5b65613c5ec7d5358827a1e8"
+  },
+  "WebsiteTemplates/barbershop_replace.js": {
+    "mtime": 1780815247.6971807,
+    "ast_hash": "417ddaede4cb8c0bdde6fa9d48eec452",
+    "semantic_hash": "417ddaede4cb8c0bdde6fa9d48eec452"
+  },
+  "WebsiteTemplates/cafe_config.json": {
+    "mtime": 1781772804.4853332,
+    "ast_hash": "ec96a4169cbf862976cb28d68ce9797c",
+    "semantic_hash": ""
+  },
+  "WebsiteTemplates/config.maestro.json": {
+    "mtime": 1780564338.5458767,
+    "ast_hash": "063a7df3829bf333fe8c683036068f2d",
+    "semantic_hash": "063a7df3829bf333fe8c683036068f2d"
+  },
+  "WebsiteTemplates/config.sinaya.json": {
+    "mtime": 1780564326.6819048,
+    "ast_hash": "f118ef61d335affead4a115b40402578",
+    "semantic_hash": "f118ef61d335affead4a115b40402578"
+  },
+  "WebsiteTemplates/replace.js": {
+    "mtime": 1781781845.8690393,
+    "ast_hash": "e3f5814ec34b6f7ca8f323564f275248",
+    "semantic_hash": ""
+  },
+  "WebsiteTemplates/trades_config.json": {
+    "mtime": 1780462039.5722594,
+    "ast_hash": "b4084d02eaafa82ad1ed4c55fb08b774",
+    "semantic_hash": "b4084d02eaafa82ad1ed4c55fb08b774"
+  },
+  "WebsiteTemplates/trades_replace.js": {
+    "mtime": 1780815252.9474337,
+    "ast_hash": "f23f46573c44a9d35be7c0aa35c8bf24",
+    "semantic_hash": "f23f46573c44a9d35be7c0aa35c8bf24"
+  },
+  "client-profiles/_schema-reference.json": {
+    "mtime": 1780404506.0219636,
+    "ast_hash": "39e5e339c081d7f2084e5f8ca9ebe6a3",
+    "semantic_hash": "39e5e339c081d7f2084e5f8ca9ebe6a3"
+  },
+  "client-profiles/better-barbers.json": {
+    "mtime": 1780707386.6291697,
+    "ast_hash": "38b89c474623ce1ca92006e27eee7910",
+    "semantic_hash": "38b89c474623ce1ca92006e27eee7910"
+  },
+  "client-profiles/bond-st-social.json": {
+    "mtime": 1780706271.7404087,
+    "ast_hash": "556e1272b8a806e2bac1bbd8ba9b9f48",
+    "semantic_hash": "556e1272b8a806e2bac1bbd8ba9b9f48"
+  },
+  "client-profiles/cafe-singko.json": {
+    "mtime": 1780801106.901667,
+    "ast_hash": "444ba8a4334a443ec3b8962fce1a995a",
+    "semantic_hash": "444ba8a4334a443ec3b8962fce1a995a"
+  },
+  "client-profiles/dapper-district.json": {
+    "mtime": 1780707416.09454,
+    "ast_hash": "92dad282c043e8e0fe1a2c100875e729",
+    "semantic_hash": "92dad282c043e8e0fe1a2c100875e729"
+  },
+  "client-profiles/design-lodge-cafe.json": {
+    "mtime": 1780801119.5298214,
+    "ast_hash": "0df51857836a4207dd149e203dfacfa6",
+    "semantic_hash": "0df51857836a4207dd149e203dfacfa6"
+  },
+  "client-profiles/homukafe.json": {
+    "mtime": 1780801085.5397115,
+    "ast_hash": "d08b0f281b15e405b6a7d2020cdc2f5e",
+    "semantic_hash": "d08b0f281b15e405b6a7d2020cdc2f5e"
+  },
+  "client-profiles/izu-koffee.json": {
+    "mtime": 1780659261.6785676,
+    "ast_hash": "a177e0f4b143cf97ae25ffdb4d597a66",
+    "semantic_hash": "a177e0f4b143cf97ae25ffdb4d597a66"
+  },
+  "client-profiles/juan-and-pablo-barber-lounge.json": {
+    "mtime": 1780706711.9730968,
+    "ast_hash": "352dec90ab3296481b8338d358f9925c",
+    "semantic_hash": "352dec90ab3296481b8338d358f9925c"
+  },
+  "client-profiles/maestro-cafe.json": {
+    "mtime": 1780905890.4637864,
+    "ast_hash": "0e4acf5031d31203332b89b9adc3c69b",
+    "semantic_hash": "0e4acf5031d31203332b89b9adc3c69b"
+  },
+  "client-profiles/oragon-barber-shop.json": {
+    "mtime": 1780800902.78858,
+    "ast_hash": "8543e11e4502ebcb8d02da0a8950d66f",
+    "semantic_hash": "8543e11e4502ebcb8d02da0a8950d66f"
+  },
+  "client-profiles/paranaque-plumbing-electrical.json": {
+    "mtime": 1780704910.0783508,
+    "ast_hash": "f8ea5cab219711ef0b7a00b3781a155b",
+    "semantic_hash": "f8ea5cab219711ef0b7a00b3781a155b"
+  },
+  "client-profiles/sinaya-coffee.json": {
+    "mtime": 1780563973.0277798,
+    "ast_hash": "72905653f9a44e9092227c561f5adc80",
+    "semantic_hash": "72905653f9a44e9092227c561f5adc80"
+  },
+  "client-profiles/suave-cut-and-shave-sucat.json": {
+    "mtime": 1780707373.5431328,
+    "ast_hash": "c7544a11d0b29c92c83e360c4c3a3108",
+    "semantic_hash": "c7544a11d0b29c92c83e360c4c3a3108"
+  },
+  "client-profiles/the-barberian-barbershop.json": {
+    "mtime": 1780707325.5743647,
+    "ast_hash": "9479a89b223ef8b0cd36b699c075632a",
+    "semantic_hash": "9479a89b223ef8b0cd36b699c075632a"
+  },
+  "client-profiles/the-barberian.json": {
+    "mtime": 1780707422.220821,
+    "ast_hash": "96913aed5c25b6f50d5ffd85784750d0",
+    "semantic_hash": "96913aed5c25b6f50d5ffd85784750d0"
+  },
+  "portfolio/.netlify/state.json": {
+    "mtime": 1780476948.4072466,
+    "ast_hash": "09062e4295c93c2959d819cf0946ba85",
+    "semantic_hash": "09062e4295c93c2959d819cf0946ba85"
+  },
+  "portfolio/eslint.config.js": {
+    "mtime": 1780459828.5466032,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
+  },
+  "portfolio/package.json": {
+    "mtime": 1780459863.3328128,
+    "ast_hash": "4561b56e36ef10f38fc9e6cfc1d52c72",
+    "semantic_hash": "4561b56e36ef10f38fc9e6cfc1d52c72"
+  },
+  "portfolio/src/App.jsx": {
+    "mtime": 1780464265.3866649,
+    "ast_hash": "a50c989f4149ff3d3e80fd805c4ad40f",
+    "semantic_hash": "a50c989f4149ff3d3e80fd805c4ad40f"
+  },
+  "portfolio/src/components/About.jsx": {
+    "mtime": 1780480510.4444318,
+    "ast_hash": "7acda99cbd1d11439c1cd40e6d0d919e",
+    "semantic_hash": "7acda99cbd1d11439c1cd40e6d0d919e"
+  },
+  "portfolio/src/components/AnimatedBg.jsx": {
+    "mtime": 1780459968.2526126,
+    "ast_hash": "7651e28cc40a4b69f74790f299b5cf26",
+    "semantic_hash": "7651e28cc40a4b69f74790f299b5cf26"
+  },
+  "portfolio/src/components/Contact.jsx": {
+    "mtime": 1780480513.5154321,
+    "ast_hash": "b5bbb64447bdceadaf4fa8aea53cc14e",
+    "semantic_hash": "b5bbb64447bdceadaf4fa8aea53cc14e"
+  },
+  "portfolio/src/components/DotGridShader.jsx": {
+    "mtime": 1780464150.0236447,
+    "ast_hash": "b5cd3170da887bbd99e79c9849f909ba",
+    "semantic_hash": "b5cd3170da887bbd99e79c9849f909ba"
+  },
+  "portfolio/src/components/ExampleSites.jsx": {
+    "mtime": 1780801069.02377,
+    "ast_hash": "078799460cf07e44ace0aa5aeb3aab82",
+    "semantic_hash": "078799460cf07e44ace0aa5aeb3aab82"
+  },
+  "portfolio/src/components/Footer.jsx": {
+    "mtime": 1780476875.2441382,
+    "ast_hash": "c5542b6178e1c75ab9b9b4df39f39993",
+    "semantic_hash": "c5542b6178e1c75ab9b9b4df39f39993"
+  },
+  "portfolio/src/components/Hero.jsx": {
+    "mtime": 1780480507.5101001,
+    "ast_hash": "acb92ff6c22f912b27643d0a1cd67c1e",
+    "semantic_hash": "acb92ff6c22f912b27643d0a1cd67c1e"
+  },
+  "portfolio/src/components/Nav.jsx": {
+    "mtime": 1780459971.0239735,
+    "ast_hash": "8f4ea02b673bc140527d0e641d5d7363",
+    "semantic_hash": "8f4ea02b673bc140527d0e641d5d7363"
+  },
+  "portfolio/src/components/Pricing.jsx": {
+    "mtime": 1780480511.9154692,
+    "ast_hash": "b3da4a288b3207d420db3940fa18eebc",
+    "semantic_hash": "b3da4a288b3207d420db3940fa18eebc"
+  },
+  "portfolio/src/main.jsx": {
+    "mtime": 1780459828.5982144,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "portfolio/vite.config.js": {
+    "mtime": 1780746712.0436707,
+    "ast_hash": "89568f800535b967272506931673ffa5",
+    "semantic_hash": "89568f800535b967272506931673ffa5"
+  },
+  ".claude/skills/daily-quickstart/SKILL.md": {
+    "mtime": 1780707217.2446413,
+    "ast_hash": "c43c1868bdac4c5d70abdc895f9e6b77",
+    "semantic_hash": "c43c1868bdac4c5d70abdc895f9e6b77"
+  },
+  ".claude/skills/deploy-mockup/SKILL.md": {
+    "mtime": 1780905872.1514435,
+    "ast_hash": "b069686dfd2510eddc40dc8730d525df",
+    "semantic_hash": "b069686dfd2510eddc40dc8730d525df"
+  },
+  ".claude/skills/gather-client-profile/SKILL.md": {
+    "mtime": 1780905834.652088,
+    "ast_hash": "cb967dd7fd47f882e646dce06c8978f1",
+    "semantic_hash": "cb967dd7fd47f882e646dce06c8978f1"
+  },
+  ".claude/skills/map-profile-to-template/SKILL.md": {
+    "mtime": 1780829029.4875739,
+    "ast_hash": "9942083a6be30af12a3d8dd152fb0715",
+    "semantic_hash": "9942083a6be30af12a3d8dd152fb0715"
+  },
+  ".superpowers/brainstorm/11001-1780453893/content/example-sites-section.html": {
+    "mtime": 1780454083.5175903,
+    "ast_hash": "d095daab9f54428f8b77b8aad3b12320",
+    "semantic_hash": "d095daab9f54428f8b77b8aad3b12320"
+  },
+  ".superpowers/brainstorm/11001-1780453893/content/hero-section.html": {
+    "mtime": 1780453970.963133,
+    "ast_hash": "df92c1b625e01a34ceb6d23cb1dddbbe",
+    "semantic_hash": "df92c1b625e01a34ceb6d23cb1dddbbe"
+  },
+  ".superpowers/brainstorm/11001-1780453893/content/layout-options.html": {
+    "mtime": 1780453907.5129204,
+    "ast_hash": "bb3452d45bc27556db5bf753340b842b",
+    "semantic_hash": "bb3452d45bc27556db5bf753340b842b"
+  },
+  ".superpowers/brainstorm/11001-1780453893/content/waiting.html": {
+    "mtime": 1780454235.6446483,
+    "ast_hash": "91c3c4b644fca9182d1c63243d10643f",
+    "semantic_hash": "91c3c4b644fca9182d1c63243d10643f"
+  },
+  "CLAUDE.md": {
+    "mtime": 1781753813.9075992,
+    "ast_hash": "1bf95ab23072db786aa18688b211c9cf",
+    "semantic_hash": ""
+  },
+  "Clients/better-barbers/mockup.html": {
+    "mtime": 1780881986.6985042,
+    "ast_hash": "f8a89b87784c3f60be1b4828a02f2d33",
+    "semantic_hash": "f8a89b87784c3f60be1b4828a02f2d33"
+  },
+  "Clients/cafe-singko/mockup.html": {
+    "mtime": 1781615485.965302,
+    "ast_hash": "b4331994f716bae0b5954a5d1347dd0b",
+    "semantic_hash": ""
+  },
+  "Clients/izu-koffee/logo-b64.txt": {
+    "mtime": 1780661246.3327272,
+    "ast_hash": "17a42ebc979ca645b3b322cd9a70b9ff",
+    "semantic_hash": "17a42ebc979ca645b3b322cd9a70b9ff"
+  },
+  "Clients/izu-koffee/mockup.html": {
+    "mtime": 1780661866.0078514,
+    "ast_hash": "1cc4a420d1769d419d011a760a5fa8f4",
+    "semantic_hash": "1cc4a420d1769d419d011a760a5fa8f4"
+  },
+  "Clients/maestro-cafe/mockup.html": {
+    "mtime": 1780909059.6983068,
+    "ast_hash": "01558bd94cee4013171673e9d5dd4ea2",
+    "semantic_hash": "01558bd94cee4013171673e9d5dd4ea2"
+  },
+  "Clients/oragon-barber-shop/mockup.html": {
+    "mtime": 1780800939.2666893,
+    "ast_hash": "60897e0a09ea908eccd4f813bd29f8cc",
+    "semantic_hash": "60897e0a09ea908eccd4f813bd29f8cc"
+  },
+  "Clients/sinaya-coffee/mockup.html": {
+    "mtime": 1780655484.8748198,
+    "ast_hash": "1b0d7f1e323a50e7acdea584c95be19b",
+    "semantic_hash": "1b0d7f1e323a50e7acdea584c95be19b"
+  },
+  "Clients/suave-cut-and-shave-sucat/mockup.html": {
+    "mtime": 1780881894.769456,
+    "ast_hash": "5873918efb5347b809507fb650fc8d67",
+    "semantic_hash": "5873918efb5347b809507fb650fc8d67"
+  },
+  "WebsiteTemplates/barbershop_template.html": {
+    "mtime": 1780829005.427134,
+    "ast_hash": "bb76c8227e999d1de06a12a14719ca68",
+    "semantic_hash": "bb76c8227e999d1de06a12a14719ca68"
+  },
+  "WebsiteTemplates/kanto_coffee_template.html": {
+    "mtime": 1780661527.1512756,
+    "ast_hash": "f67598fbaac33a00cdb7975f47689388",
+    "semantic_hash": "f67598fbaac33a00cdb7975f47689388"
+  },
+  "WebsiteTemplates/trades_business_template.html": {
+    "mtime": 1780563609.8312852,
+    "ast_hash": "d867c38470415ac465e06e244d4b4d4e",
+    "semantic_hash": "d867c38470415ac465e06e244d4b4d4e"
+  },
+  "client-profiles/maestro-cafe/menu-extract.md": {
+    "mtime": 1780495425.956439,
+    "ast_hash": "8a53b580580abe3b4cb5f131f0dd2d58",
+    "semantic_hash": "8a53b580580abe3b4cb5f131f0dd2d58"
+  },
+  "database/Learnings_2026-06-06/01-business-model.md": {
+    "mtime": 1780755207.4682345,
+    "ast_hash": "de1cc5766ff005e3f39a9e363eee4884",
+    "semantic_hash": "de1cc5766ff005e3f39a9e363eee4884"
+  },
+  "database/Learnings_2026-06-06/02-market-research.md": {
+    "mtime": 1780755215.662532,
+    "ast_hash": "6cad51f89aa9b0e0e0cbbc5da80d0cc8",
+    "semantic_hash": "6cad51f89aa9b0e0e0cbbc5da80d0cc8"
+  },
+  "database/Learnings_2026-06-06/03-cold-calling.md": {
+    "mtime": 1780903979.9074268,
+    "ast_hash": "8d8394a76654fffc336a8aacd953be2b",
+    "semantic_hash": "8d8394a76654fffc336a8aacd953be2b"
+  },
+  "database/Learnings_2026-06-06/04-templates.md": {
+    "mtime": 1780755243.4465892,
+    "ast_hash": "48d11ef26e6549e38b1533fbfd0e2f3b",
+    "semantic_hash": "48d11ef26e6549e38b1533fbfd0e2f3b"
+  },
+  "database/Learnings_2026-06-06/05-client-pipeline.md": {
+    "mtime": 1780755254.3751528,
+    "ast_hash": "4d283f7e06c570f60e8410a3cf666c27",
+    "semantic_hash": "4d283f7e06c570f60e8410a3cf666c27"
+  },
+  "database/Learnings_2026-06-06/06-portfolio.md": {
+    "mtime": 1780755260.4986653,
+    "ast_hash": "af9bdc1781cff77031e6eb6d5c30c8a8",
+    "semantic_hash": "af9bdc1781cff77031e6eb6d5c30c8a8"
+  },
+  "database/Learnings_2026-06-06/07-operator-context.md": {
+    "mtime": 1780755265.9109228,
+    "ast_hash": "6d17e78de949b1723d00f167c99214d8",
+    "semantic_hash": "6d17e78de949b1723d00f167c99214d8"
+  },
+  "database/Learnings_2026-06-06/08-call-results-log.md": {
+    "mtime": 1780814897.2282667,
+    "ast_hash": "02b1a5ab3a36c2c3a765354b42dadd42",
+    "semantic_hash": "02b1a5ab3a36c2c3a765354b42dadd42"
+  },
+  "database/Learnings_2026-06-06/README.md": {
+    "mtime": 1780755282.0809286,
+    "ast_hash": "5f7c1f615dbcd1b2e3190ef79ee2d425",
+    "semantic_hash": "5f7c1f615dbcd1b2e3190ef79ee2d425"
+  },
+  "database/Learnings_2026-06-08/01-cold-calling-log.md": {
+    "mtime": 1781762778.202679,
+    "ast_hash": "33c1d6802bdb7407ffa71bc86417d695",
+    "semantic_hash": ""
+  },
+  "database/Learnings_2026-06-08/02-technical-learnings.md": {
+    "mtime": 1780909444.9174,
+    "ast_hash": "2f4912636f5e606bf286fa8cffe64ffb",
+    "semantic_hash": "2f4912636f5e606bf286fa8cffe64ffb"
+  },
+  "database/Learnings_2026-06-08/03-pipeline-status.md": {
+    "mtime": 1781602233.1036284,
+    "ast_hash": "529e67e2cb5b7aaeb7bd05ff8100a6ff",
+    "semantic_hash": ""
+  },
+  "database/Learnings_2026-06-08/04-call-insights-refinements.md": {
+    "mtime": 1780909925.0252638,
+    "ast_hash": "23ba5e2ff312de85fddd7771ddd2ee23",
+    "semantic_hash": "23ba5e2ff312de85fddd7771ddd2ee23"
+  },
+  "database/Learnings_2026-06-08/README.md": {
+    "mtime": 1780909448.849364,
+    "ast_hash": "6f7e4d1d88f35c84f72984bef997a4f3",
+    "semantic_hash": "6f7e4d1d88f35c84f72984bef997a4f3"
+  },
+  "database/Today_2026-06-07/daily-brief.md": {
+    "mtime": 1780756256.8564641,
+    "ast_hash": "1147bf2618dc587570e9b481ffefa3eb",
+    "semantic_hash": "1147bf2618dc587570e9b481ffefa3eb"
+  },
+  "database/Today_2026-06-08/daily-brief.md": {
+    "mtime": 1780909908.345305,
+    "ast_hash": "a2e052a3a6bfb0b5d384f10c95797143",
+    "semantic_hash": "a2e052a3a6bfb0b5d384f10c95797143"
+  },
+  "docs/superpowers/plans/2026-06-02-client-data-gathering-implementation.md": {
+    "mtime": 1780403925.2315392,
+    "ast_hash": "e0c6b85a5292f1693a9f32c9f9733d07",
+    "semantic_hash": "e0c6b85a5292f1693a9f32c9f9733d07"
+  },
+  "docs/superpowers/plans/2026-06-02-kanto-template-batch-fix.md": {
+    "mtime": 1780387846.2174616,
+    "ast_hash": "2f9a7672e470700bf7adaba9547e242c",
+    "semantic_hash": "2f9a7672e470700bf7adaba9547e242c"
+  },
+  "docs/superpowers/plans/2026-06-04-migrate-kantowd-to-github-pages.md": {
+    "mtime": 1780578024.0154757,
+    "ast_hash": "7c541b4c8fb7d13f95a025f2f7dc9f7d",
+    "semantic_hash": "7c541b4c8fb7d13f95a025f2f7dc9f7d"
+  },
+  "docs/superpowers/specs/2026-06-02-client-data-gathering-design.md": {
+    "mtime": 1780403456.5121381,
+    "ast_hash": "0485b75ae203345d343a4f711a18b3a6",
+    "semantic_hash": "0485b75ae203345d343a4f711a18b3a6"
+  },
+  "docs/superpowers/specs/2026-06-03-portfolio-site-design.md": {
+    "mtime": 1780459479.4154146,
+    "ast_hash": "29b74d4ca75c3c13e75cf7183b0a220c",
+    "semantic_hash": "29b74d4ca75c3c13e75cf7183b0a220c"
+  },
+  "portfolio/.github/workflows/deploy.yml": {
+    "mtime": 1780578671.6731446,
+    "ast_hash": "24d7650715ec38ba055a11eb844d5f6d",
+    "semantic_hash": "24d7650715ec38ba055a11eb844d5f6d"
+  },
+  "portfolio/README.md": {
+    "mtime": 1780476971.3399265,
+    "ast_hash": "4421e49b4e167fd2936eaf75733fd05a",
+    "semantic_hash": "4421e49b4e167fd2936eaf75733fd05a"
+  },
+  "portfolio/REVISION_POLICY.md": {
+    "mtime": 1780476887.4380598,
+    "ast_hash": "6ae63d2d8ee7d1115d9ca51c74e4dd7e",
+    "semantic_hash": "6ae63d2d8ee7d1115d9ca51c74e4dd7e"
+  },
+  "portfolio/index.html": {
+    "mtime": 1780459911.606956,
+    "ast_hash": "60e5fb0b5963daba843bdd795ec7d912",
+    "semantic_hash": "60e5fb0b5963daba843bdd795ec7d912"
+  },
+  "Clients/izu-koffee/FreeSample-Vectorizer-io-logo.svg": {
+    "mtime": 1780661050.7786648,
+    "ast_hash": "e553295b85ba6f9a726a6695f264d776",
+    "semantic_hash": "e553295b85ba6f9a726a6695f264d776"
+  },
+  "Clients/izu-koffee/FreeSample-Vectorizer-io-logo.webp": {
+    "mtime": 1780661201.1211815,
+    "ast_hash": "bbd5dce0cbc17594a365c7865873ab13",
+    "semantic_hash": "bbd5dce0cbc17594a365c7865873ab13"
+  },
+  "Clients/maestro-cafe/images/food1.jpg": {
+    "mtime": 1780905688.649254,
+    "ast_hash": "4bce7fca619fd14723fd25880f808c78",
+    "semantic_hash": "4bce7fca619fd14723fd25880f808c78"
+  },
+  "Clients/maestro-cafe/images/food2.jpg": {
+    "mtime": 1780905688.805137,
+    "ast_hash": "7470ddfc7cf9a4b63960bfd4e8d39661",
+    "semantic_hash": "7470ddfc7cf9a4b63960bfd4e8d39661"
+  },
+  "Clients/maestro-cafe/images/food3.jpg": {
+    "mtime": 1780905688.9407835,
+    "ast_hash": "da4b10935e8343c8b8e6413662617f5c",
+    "semantic_hash": "da4b10935e8343c8b8e6413662617f5c"
+  },
+  "Clients/maestro-cafe/images/hero.jpg": {
+    "mtime": 1780905688.508145,
+    "ast_hash": "6aa3333c756986b1ec06932d0fa2dbbb",
+    "semantic_hash": "6aa3333c756986b1ec06932d0fa2dbbb"
+  },
+  "Clients/sinaya-coffee/images/about.jpg": {
+    "mtime": 1780611171.9865613,
+    "ast_hash": "e901218d64390cde90dd683aa187866f",
+    "semantic_hash": "e901218d64390cde90dd683aa187866f"
+  },
+  "Clients/sinaya-coffee/images/gallery-1.jpg": {
+    "mtime": 1780611113.9182959,
+    "ast_hash": "02f026d9f1fb9616970653378e66a08f",
+    "semantic_hash": "02f026d9f1fb9616970653378e66a08f"
+  },
+  "Clients/sinaya-coffee/images/gallery-2.jpg": {
+    "mtime": 1780611114.1953316,
+    "ast_hash": "cd7a3c9fb1a60b20b5a1461dba099a7c",
+    "semantic_hash": "cd7a3c9fb1a60b20b5a1461dba099a7c"
+  },
+  "Clients/sinaya-coffee/images/gallery-3.jpg": {
+    "mtime": 1780611114.0204325,
+    "ast_hash": "8ae2f5a7a6d1662cb95253a83f0ea576",
+    "semantic_hash": "8ae2f5a7a6d1662cb95253a83f0ea576"
+  },
+  "Clients/sinaya-coffee/images/gallery-4.jpg": {
+    "mtime": 1780611113.9745076,
+    "ast_hash": "99daf0e38a391551fe5bffd8f3534929",
+    "semantic_hash": "99daf0e38a391551fe5bffd8f3534929"
+  },
+  "Clients/sinaya-coffee/images/gallery-5.jpg": {
+    "mtime": 1780611114.0972629,
+    "ast_hash": "470c0f1ef9c8f78ee06fe4054934848d",
+    "semantic_hash": "470c0f1ef9c8f78ee06fe4054934848d"
+  },
+  "Clients/sinaya-coffee/images/hero.jpg": {
+    "mtime": 1780611171.8752246,
+    "ast_hash": "1ef99bc746a36ddbcbcd6ff81b2bda3e",
+    "semantic_hash": "1ef99bc746a36ddbcbcd6ff81b2bda3e"
+  },
+  "Clients/suave-cut-and-shave-sucat/images/exterior.jpg": {
+    "mtime": 1780827214.752277,
+    "ast_hash": "3c50d2da51fe22e79a2c32e3ee2a46a7",
+    "semantic_hash": "3c50d2da51fe22e79a2c32e3ee2a46a7"
+  },
+  "Clients/suave-cut-and-shave-sucat/images/interior.jpg": {
+    "mtime": 1780827217.3029566,
+    "ast_hash": "915d28eea7f3e51dde56b17482b94a4d",
+    "semantic_hash": "915d28eea7f3e51dde56b17482b94a4d"
+  },
+  "Clients/suave-cut-and-shave-sucat/images/lobby.jpg": {
+    "mtime": 1780827219.7645874,
+    "ast_hash": "796e06244356a3f0a078580594eac2e6",
+    "semantic_hash": "796e06244356a3f0a078580594eac2e6"
+  },
+  "Clients/suave-cut-and-shave-sucat/images/setup.jpg": {
+    "mtime": 1780827222.1843884,
+    "ast_hash": "88b49e92f1547e83425098bcfdca7156",
+    "semantic_hash": "88b49e92f1547e83425098bcfdca7156"
+  },
+  "client-profiles/sinaya-coffee/menu 1.jpg": {
+    "mtime": 1780478932.953715,
+    "ast_hash": "564f3a2dd88fc021805d39059ae4055c",
+    "semantic_hash": "564f3a2dd88fc021805d39059ae4055c"
+  },
+  "client-profiles/sinaya-coffee/menu 2.jpg": {
+    "mtime": 1780478939.7296295,
+    "ast_hash": "2b1257ee353678c00eb8a32107772dcc",
+    "semantic_hash": "2b1257ee353678c00eb8a32107772dcc"
+  },
+  "client-profiles/sinaya-coffee/menu 3.jpg": {
+    "mtime": 1780478944.9191823,
+    "ast_hash": "dd14dff8647e37fef7d84c6c1da0412d",
+    "semantic_hash": "dd14dff8647e37fef7d84c6c1da0412d"
+  },
+  "client-profiles/sinaya-coffee/schedule and contacts.jpg": {
+    "mtime": 1780478923.5865903,
+    "ast_hash": "73894fb9a2ac0517243ea3e337182deb",
+    "semantic_hash": "73894fb9a2ac0517243ea3e337182deb"
+  },
+  "portfolio/public/favicon.svg": {
+    "mtime": 1780459828.643678,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": "7e840862161341271697daa99a40d76b"
+  },
+  "portfolio/public/icons.svg": {
+    "mtime": 1780459828.6599545,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  ".claude/workflows/prospect-scout.js": {
+    "mtime": 1781748905.034408,
+    "ast_hash": "9eadf054d2a4e26302d11536d78ffb95",
+    "semantic_hash": ""
+  },
+  "Clients/the-cup-of-joe/clientconfig.json": {
+    "mtime": 1781772817.06926,
+    "ast_hash": "ec96a4169cbf862976cb28d68ce9797c",
+    "semantic_hash": ""
+  },
+  "WebsiteTemplates/premium_config.json": {
+    "mtime": 1781781872.3975708,
+    "ast_hash": "7e9a167f02081e1f5352cf33410a8c13",
+    "semantic_hash": ""
+  },
+  "client-profiles/the-cup-of-joe.json": {
+    "mtime": 1781772336.9139202,
+    "ast_hash": "c703091e348c752784864dd5916b4dac",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/raw-json/prospects_1_20.json": {
+    "mtime": 1781750269.9491568,
+    "ast_hash": "0e0760d123057e2911fce08c324b4c2a",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/raw-json/prospects_31_60.json": {
+    "mtime": 1781750378.425129,
+    "ast_hash": "096531e418a97cca19be01e395d52804",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/raw-json/prospects_59_85.json": {
+    "mtime": 1781750433.3983893,
+    "ast_hash": "e33ea1264c060124b68341a6f48888af",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/raw-json/prospects_86_105.json": {
+    "mtime": 1781750466.1550548,
+    "ast_hash": "2a6c63308383a72e77da58803d89fe2c",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/raw-json/prospects_all.json": {
+    "mtime": 1781750255.9623675,
+    "ast_hash": "76d060ff7796030d8d2870cccb82da66",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/raw-json/prospects_compact.json": {
+    "mtime": 1781750179.0323403,
+    "ast_hash": "502a98e90f5adac0b9ce94fbcad08562",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/raw-json/prospects_input.json": {
+    "mtime": 1781750328.9468155,
+    "ast_hash": "0d5612eec9197530ac9f0c8cf7a9a51e",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/raw-json/temp_prospects.json": {
+    "mtime": 1781750109.541422,
+    "ast_hash": "19bd9be766b875e166a823dd048c4364",
+    "semantic_hash": ""
+  },
+  "scripts/prospects/merge_and_rank.ps1": {
+    "mtime": 1781750495.5486858,
+    "ast_hash": "27f75b2cd3fad512b5bf1a6ef45d16b9",
+    "semantic_hash": ""
+  },
+  "scripts/prospects/process_prospects.ps1": {
+    "mtime": 1781750132.9360394,
+    "ast_hash": "d24098bf3ecb32d3b0bec4f1065ca411",
+    "semantic_hash": ""
+  },
+  "scripts/prospects/rank_prospects.py": {
+    "mtime": 1781750198.870165,
+    "ast_hash": "4ee82bf9cec5f04bf928c16aafc85346",
+    "semantic_hash": ""
+  },
+  "Clients/the-cup-of-joe/mockup.html": {
+    "mtime": 1781774114.1652358,
+    "ast_hash": "79bffbf837b290ac97ab6bfc8e70b359",
+    "semantic_hash": ""
+  },
+  "DesignPractice/README.md": {
+    "mtime": 1781705846.8250284,
+    "ast_hash": "278ffe0e904b225e97d844866bbd160c",
+    "semantic_hash": ""
+  },
+  "DesignPractice/Stargazer/Prompts/inkreveal.md": {
+    "mtime": 1781754940.3177125,
+    "ast_hash": "e30999a96c68f30b4d6266f43feb84fa",
+    "semantic_hash": ""
+  },
+  "DesignPractice/Stargazer/Prompts/liquidglass.md": {
+    "mtime": 1781755020.1468546,
+    "ast_hash": "bb024a69c29f0d76941e7e485a0a0362",
+    "semantic_hash": ""
+  },
+  "DesignPractice/Stargazer/Prompts/shaderlines.md": {
+    "mtime": 1781754892.817376,
+    "ast_hash": "acccb17a796bed5fbb2291ce712a59ac",
+    "semantic_hash": ""
+  },
+  "DesignPractice/Stargazer/Prompts/smoothshader.md": {
+    "mtime": 1781757048.9585066,
+    "ast_hash": "db59fd784f9dab93e9e74a777b702f48",
+    "semantic_hash": ""
+  },
+  "DesignPractice/Stargazer/stargazer_hero.html": {
+    "mtime": 1781760935.8087175,
+    "ast_hash": "e449b9111595aec519d8b982b32a8f3b",
+    "semantic_hash": ""
+  },
+  "WebsiteTemplates/agreement-custom.html": {
+    "mtime": 1781575967.0534937,
+    "ast_hash": "7a1600109d5d18dfa653f3291196fa87",
+    "semantic_hash": ""
+  },
+  "WebsiteTemplates/agreement-generic.html": {
+    "mtime": 1781575959.7343092,
+    "ast_hash": "6560bfcc9c88a90e393011932420d0c1",
+    "semantic_hash": ""
+  },
+  "WebsiteTemplates/cafe_generic_template.html": {
+    "mtime": 1780660486.025552,
+    "ast_hash": "c97b4ce22a6acc31b9cabce9ce31c797",
+    "semantic_hash": ""
+  },
+  "WebsiteTemplates/premium_base_template.html": {
+    "mtime": 1781782166.217017,
+    "ast_hash": "8e4250fa25e32d6517829bf2690eac5d",
+    "semantic_hash": ""
+  },
+  "assets/textures/README.md": {
+    "mtime": 1781713324.8007624,
+    "ast_hash": "a48ffdf38e2fdcefbfb9098d4b6030b3",
+    "semantic_hash": ""
+  },
+  "client-profiles/raw-snapshots/concordias-cafe-fb.txt": {
+    "mtime": 1780985469.7338705,
+    "ast_hash": "77573548d70985d8478fa7786ccaf64b",
+    "semantic_hash": ""
+  },
+  "client-profiles/raw-snapshots/curious-coffee-fb.txt": {
+    "mtime": 1780985479.7825243,
+    "ast_hash": "90b40942558cd880c6ed0bd77f529c39",
+    "semantic_hash": ""
+  },
+  "client-profiles/raw-snapshots/pque-plumbing-maps.txt": {
+    "mtime": 1781708746.8900092,
+    "ast_hash": "9e3c1ab9cfdd8dd4a377943c46ad1695",
+    "semantic_hash": ""
+  },
+  "client-profiles/raw-snapshots/rossie-bean-maps.txt": {
+    "mtime": 1781709558.1873753,
+    "ast_hash": "ac48848ac61108e32dbc04d8e21c4436",
+    "semantic_hash": ""
+  },
+  "client-profiles/raw-snapshots/stayup-fb.txt": {
+    "mtime": 1780985493.9224665,
+    "ast_hash": "128210c3da9a1e910d6cb1f33ee0e9da",
+    "semantic_hash": ""
+  },
+  "client-profiles/the-cup-of-joe/fill-in.md": {
+    "mtime": 1781771899.6783774,
+    "ast_hash": "b6ad4f575f70e020fb5e5c6e3c32f1e5",
+    "semantic_hash": ""
+  },
+  "database/Today_2026-06-18/daily-brief.md": {
+    "mtime": 1781762769.371331,
+    "ast_hash": "61ad26c36295228805fe9e614a50702f",
+    "semantic_hash": ""
+  },
+  "database/prospect-db/README.md": {
+    "mtime": 1781705157.2503817,
+    "ast_hash": "0cd9aab1a2ba2544606745658b8546b6",
+    "semantic_hash": ""
+  },
+  "docs/business-model/WebDropshipping_Learnings.md": {
+    "mtime": 1780379328.9401956,
+    "ast_hash": "f1d980a5a68d4c51710ebc8632b0760c",
+    "semantic_hash": ""
+  },
+  "docs/business-model/expanded-client-list.md": {
+    "mtime": 1780451807.462487,
+    "ast_hash": "3f5905f0fb188910ad6df828c8376507",
+    "semantic_hash": ""
+  },
+  "docs/business-model/summer-web-business-learnings.md": {
+    "mtime": 1780801071.0111046,
+    "ast_hash": "a2104a4224c12251f6dab4f082149945",
+    "semantic_hash": ""
+  },
+  "docs/legal/contract-template.html": {
+    "mtime": 1780452627.433446,
+    "ast_hash": "07bd288627104b3a07f37c548bdc12ea",
+    "semantic_hash": ""
+  },
+  "docs/sales/call-script-cafe-taglish.md": {
+    "mtime": 1780802824.679915,
+    "ast_hash": "463c4df9f47cff2b46597c3fae4b10cb",
+    "semantic_hash": ""
+  },
+  "docs/sales/call-script-english.md": {
+    "mtime": 1781766765.8000107,
+    "ast_hash": "1bb83e8f370c959c24469071f990dd40",
+    "semantic_hash": ""
+  },
+  "docs/sales/call-script-taglish.md": {
+    "mtime": 1781763347.5742934,
+    "ast_hash": "5ceeb31ef5b9664cca29177f7f14f67a",
+    "semantic_hash": ""
+  },
+  "docs/sales/emails/bbc-coffee-cold-email.md": {
+    "mtime": 1781769135.9718025,
+    "ast_hash": "4d01f31db6f7ff96e2a426fe844a72a9",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-16-client-onboarding-system.md": {
+    "mtime": 1781573405.6951277,
+    "ast_hash": "9d6782217c3b6a1ae92bbe7427d70f70",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-16-sav-gift-site.md": {
+    "mtime": 1781622358.6435935,
+    "ast_hash": "43c4680290496ac08d76cfa98649402b",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-17-prospect-scouting.md": {
+    "mtime": 1781705075.9248643,
+    "ast_hash": "1ebd6960e81fd107089ef4325df0f520",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-17-sav-gift-site-v2-motion.md": {
+    "mtime": 1781660440.1560204,
+    "ast_hash": "61d34a6038d3b96875be576f4b3113fa",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-17-stargazer-hero-plan.md": {
+    "mtime": 1781712873.463345,
+    "ast_hash": "e6417ebb6a7efa5f6bf28eb0d0d03138",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-18-premium-base-template.md": {
+    "mtime": 1781775493.0985742,
+    "ast_hash": "c49e35ab78c55e9427e4975eb49ced26",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-18-premium-motion-upgrades.md": {
+    "mtime": 1781779053.6775045,
+    "ast_hash": "cd7a0542700db7e1f153880553281a17",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-06-18-stargazer-interactivity-plan.md": {
+    "mtime": 1781759395.4047153,
+    "ast_hash": "ef37d23349828f4ea6397c3e56ae02f9",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-16-client-onboarding-system-design.md": {
+    "mtime": 1781573163.3542051,
+    "ast_hash": "7f46c2851fe54a300ec45a005069b68a",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-16-sav-gift-site-design.md": {
+    "mtime": 1781619319.4740286,
+    "ast_hash": "bd5f2030bf5ddca3861c8be97bcae913",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-17-prospect-scouting-design.md": {
+    "mtime": 1781704968.0910833,
+    "ast_hash": "09340ea3c277d5b0f0f29c013d6e45e2",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-17-sav-gift-site-v2-motion.md": {
+    "mtime": 1781660274.0089135,
+    "ast_hash": "972954b92703deacac169c1750cffb61",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-17-stargazer-hero-design.md": {
+    "mtime": 1781712550.655923,
+    "ast_hash": "efded3a60d0da288dd6956dc72c8fbd6",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-18-premium-base-template-design.md": {
+    "mtime": 1781775287.3575602,
+    "ast_hash": "7aece2f7fef6f46a23a3ed473c39b336",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-18-premium-motion-upgrades-design.md": {
+    "mtime": 1781778779.2240536,
+    "ast_hash": "3049eaa1e5a3158cbda574c465f50f9a",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-06-18-stargazer-interactivity-design.md": {
+    "mtime": 1781759038.7936065,
+    "ast_hash": "7dc572c5ccf9fb9bfea08a2ac17f952d",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/practice_design_hero_system.md": {
+    "mtime": 1781705870.8781734,
+    "ast_hash": "9ed9d11b78a1b168235f6d1fc9c303df",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260615_164249_cold_calling_refinements__pattern_interrupt__no_ch.md": {
+    "mtime": 1781541769.3668685,
+    "ast_hash": "707bcd5a590f3bcd72affda0c366ecb5",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260616_alch3mist_coffee_personalized_script.md": {
+    "mtime": 1781601124.9570816,
+    "ast_hash": "8f54603ca2901ff5383164d36b01470b",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/query_20260616_prospect_sweep_16_new_cafes_barbershops_trades.md": {
+    "mtime": 1781600816.5834565,
+    "ast_hash": "7f6c945e3f6416ea0ec41d06cf6f2898",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/stargazer_design_session_liquid_glass.md": {
+    "mtime": 1781760982.9536865,
+    "ast_hash": "dbc33bb6ed1c2b3b1ba9e1165c279b85",
+    "semantic_hash": ""
+  },
+  "output/mockup.html": {
+    "mtime": 1781782178.177655,
+    "ast_hash": "57e4780bd5b889a3fc1993e89a47b2b0",
+    "semantic_hash": ""
+  },
+  "scripts/prospects/README.md": {
+    "mtime": 1781753802.8256974,
+    "ast_hash": "78d62976ac44feb8ea202c3090bf3c96",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/images/c0a6-Restaurant-Cafe-Singko-dishes.jpg": {
+    "mtime": 1781603594.0892448,
+    "ast_hash": "59c3039b4a52f39aa68b3e961c48b4c2",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/images/c519-Cafe-Singko-Las-Pinas-meals.jpg": {
+    "mtime": 1781603594.9743443,
+    "ast_hash": "1cd08951dff8a57dd1ab1182536a03e6",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/images/c5e0-Restaurant-Cafe-Singko-burger.jpg": {
+    "mtime": 1781603595.7867017,
+    "ast_hash": "35a5823106d7090b5b37ba8decc69806",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/images/c697-Restaurant-Cafe-Singko-interior.jpg": {
+    "mtime": 1781603591.5001814,
+    "ast_hash": "d9c8fad29a8509287cbc879acf5d17e2",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/images/c965-Restaurant-Cafe-Singko-chocolate-mousse.jpg": {
+    "mtime": 1781603596.6868174,
+    "ast_hash": "9e5748262131e35bda5623c26d147cdb",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/images/caf6-Restaurant-Cafe-Singko-food.jpg": {
+    "mtime": 1781603590.6380012,
+    "ast_hash": "67db4815b4ef5372b48a24007c5b5dc7",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/images/cce1-Cafe-Singko-Las-Pinas-interior.jpg": {
+    "mtime": 1781603593.2408369,
+    "ast_hash": "62f5fecc6446c2933630dc15118fe76b",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/images/ce10-Restaurant-Cafe-Singko-beverage.jpg": {
+    "mtime": 1781603598.3733234,
+    "ast_hash": "57097afde3c69f5d147245c60e1e0ad9",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/test_1.jpg": {
+    "mtime": 1781603534.7844677,
+    "ast_hash": "d8597a993b0045b3ea8a5d1e92408184",
+    "semantic_hash": ""
+  },
+  "Clients/cafe-singko/test_2.jpg": {
+    "mtime": 1781603535.4679675,
+    "ast_hash": "641966837e834335daa334f79b38161a",
+    "semantic_hash": ""
+  },
+  "Clients/the-cup-of-joe/images/about.jpg": {
+    "mtime": 1781772247.433153,
+    "ast_hash": "227bbf29e5d1434e0c6c9a39a3dc0669",
+    "semantic_hash": ""
+  },
+  "Clients/the-cup-of-joe/images/coffee-cup.jpg": {
+    "mtime": 1781772223.0871954,
+    "ast_hash": "09483bb2467225720a76882835bba6b0",
+    "semantic_hash": ""
+  },
+  "Clients/the-cup-of-joe/images/gallery-1.jpg": {
+    "mtime": 1781772277.3762765,
+    "ast_hash": "6dfcc91b662464d2d319f3f1e2496bbe",
+    "semantic_hash": ""
+  },
+  "Clients/the-cup-of-joe/images/hero.jpg": {
+    "mtime": 1781771021.3542273,
+    "ast_hash": "f5260df8ac8cac6463651b0fb2a501dd",
+    "semantic_hash": ""
+  },
+  "Clients/the-cup-of-joe/images/logo.jpg": {
+    "mtime": 1781769753.7893853,
+    "ast_hash": "05e8b495c92199840e1bef59c2a09ea4",
+    "semantic_hash": ""
+  },
+  "Clients/the-cup-of-joe/images/menu-board.jpg": {
+    "mtime": 1781772223.0317397,
+    "ast_hash": "5bf773458aa822dbe537eff49e2c5885",
+    "semantic_hash": ""
+  },
+  "DesignPractice/Stargazer/stargazer_hero_bg.jpg": {
+    "mtime": 1781751963.07062,
+    "ast_hash": "e681982b598f2dd81d6f568b0bb0356e",
+    "semantic_hash": ""
+  },
+  "assets/textures/stargazer_hero_bg.jpg": {
+    "mtime": 1781749170.07753,
+    "ast_hash": "e681982b598f2dd81d6f568b0bb0356e",
+    "semantic_hash": ""
+  },
+  "assets/textures/stargazer_timeline.jpg": {
+    "mtime": 1781749187.6776717,
+    "ast_hash": "515dfd2d15bc75ded1f0cee1d252e5b3",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/premium-template-motion-system.md": {
+    "mtime": 1781782215.127092,
+    "ast_hash": "fed9bcfb629e3d38262f4e1f05519ab3",
+    "semantic_hash": ""
+  },
+  "graphify-out/memory/swiper-parallax-configuration.md": {
+    "mtime": 1781782221.4250698,
+    "ast_hash": "a6ba9803dbd37254e8b577e0c71a7a94",
+    "semantic_hash": ""
+  }
+}

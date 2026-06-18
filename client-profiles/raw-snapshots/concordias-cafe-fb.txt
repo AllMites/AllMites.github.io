@@ -1,0 +1,208 @@
+- generic [ref=e5]:
+  - banner:
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - generic:
+          - button [disabled]:
+            - img
+        - button "Facebook" [ref=e12] [cursor=pointer]:
+          - img "Facebook" [ref=e13]
+      - generic [ref=e16]:
+        - button "Log in with QR code" [ref=e19] [cursor=pointer]:
+          - img [ref=e20]
+        - generic [ref=e23]:
+          - textbox "Email or phone" [ref=e26]
+          - textbox "Password" [ref=e29]
+          - button "Log In" [ref=e32] [cursor=pointer]:
+            - generic [ref=e36]: Log In
+          - link "Forgot Account?" [ref=e39] [cursor=pointer]:
+            - /url: https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+  - main [ref=e46]:
+    - generic [ref=e47]:
+      - link [ref=e58] [cursor=pointer]:
+        - /url: https://www.facebook.com/photo/?fbid=462064356724075&set=a.204481135815733
+      - generic [ref=e66]:
+        - button [ref=e69] [cursor=pointer]:
+          - img [ref=e71]
+        - generic [ref=e78]:
+          - heading [level=1] [ref=e83]: Concordia’s Cafe - BF Homes
+          - generic [ref=e85]:
+            - link [ref=e86] [cursor=pointer]:
+              - /url: https://www.facebook.com/concordiascafe/followers/
+              - strong [ref=e87]: 19K
+              - text: followers
+            - text: •
+            - link [ref=e88] [cursor=pointer]:
+              - /url: https://www.facebook.com/concordiascafe/following/
+              - strong [ref=e89]: "1"
+              - text: following
+    - generic [ref=e97]:
+      - tablist [ref=e105]:
+        - generic [ref=e107]:
+          - generic [ref=e108]:
+            - generic [ref=e109]: More
+            - img [ref=e111]
+          - tab [selected] [ref=e114] [cursor=pointer]:
+            - generic [ref=e116]: Posts
+          - tab [ref=e118] [cursor=pointer]:
+            - generic [ref=e120]: About
+          - tab [ref=e122] [cursor=pointer]:
+            - generic [ref=e124]: Reels
+          - tab [ref=e126] [cursor=pointer]:
+            - generic [ref=e128]: Photos
+      - button [ref=e132] [cursor=pointer]:
+        - img [ref=e134]
+    - generic [ref=e140]:
+      - generic [ref=e143]:
+        - generic [ref=e147]:
+          - heading [level=2] [ref=e156]:
+            - generic [ref=e158]: Intro
+          - generic [ref=e159]:
+            - generic [ref=e163]: Our Home, Your Home 📞 Reserve 0962 884 3971 (no DMs) ☕️ Book us on GRAB & Food Panda ☀️ 7am-12mn | Mon-Sun 🐶 Pets are welcome here 📸 Enjoy our in-house photobooth
+            - list [ref=e166]:
+              - button [ref=e174] [cursor=pointer]:
+                - generic [ref=e175]:
+                  - strong [ref=e176]: Page
+                  - text: · Coffee shop
+              - button [ref=e180] [cursor=pointer]:
+                - generic [ref=e181]: 106 Aguirre Avenue, B. F. Homes, Philippines
+              - generic [ref=e187]: concordiascafe@gmail.com
+              - link [ref=e192] [cursor=pointer]:
+                - /url: https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2FConcordiascafe%2F&h=AUBUfclne1w8goI_fKCpRZe_deRWval_Rz3I7oJV1OQ0nOOgffsZkxytoo9-U8-TLlbW0o6hy_dzIozlKwRPNmi9_0po4YN2jXbDsVurr3lFnQwn9pUzAGHWD053jwTNH8lggyxocAP2rlpCwXai6g
+                - generic [ref=e195]: instagram.com/Concordiascafe
+        - generic [ref=e199]:
+          - generic [ref=e206]:
+            - heading [level=2] [ref=e208]:
+              - link [ref=e211] [cursor=pointer]:
+                - /url: https://www.facebook.com/concordiascafe/photos
+                - text: Photos
+            - link [ref=e216] [cursor=pointer]:
+              - /url: https://www.facebook.com/concordiascafe/photos
+              - generic [ref=e217]: See all photos
+          - generic [ref=e221]:
+            - link [ref=e224] [cursor=pointer]:
+              - /url: /photo/?fbid=991565223773983&set=pb.100087615427383.-2207520000
+            - link [ref=e229] [cursor=pointer]:
+              - /url: /photo/?fbid=991565207107318&set=pb.100087615427383.-2207520000
+            - link [ref=e234] [cursor=pointer]:
+              - /url: /photo/?fbid=991565160440656&set=pb.100087615427383.-2207520000
+            - link [ref=e239] [cursor=pointer]:
+              - /url: /photo/?fbid=991565137107325&set=pb.100087615427383.-2207520000
+            - link [ref=e244] [cursor=pointer]:
+              - /url: /photo/?fbid=991565123773993&set=pb.100087615427383.-2207520000
+            - link [ref=e249] [cursor=pointer]:
+              - /url: /photo/?fbid=991288657134973&set=pb.100087615427383.-2207520000
+            - link [ref=e254] [cursor=pointer]:
+              - /url: /photo/?fbid=991288643801641&set=pb.100087615427383.-2207520000
+            - link [ref=e259] [cursor=pointer]:
+              - /url: /photo/?fbid=986027250994447&set=pb.100087615427383.-2207520000
+            - link [ref=e264] [cursor=pointer]:
+              - /url: /photo/?fbid=986027230994449&set=pb.100087615427383.-2207520000
+        - contentinfo [ref=e267]:
+          - list [ref=e269]:
+            - listitem [ref=e270]:
+              - link [ref=e271] [cursor=pointer]:
+                - /url: /privacy/policy/?entry_point=comet_dropdown
+                - text: Privacy
+              - generic [ref=e272]: ·
+            - listitem [ref=e274]:
+              - link [ref=e275] [cursor=pointer]:
+                - /url: /policies?ref=pf
+                - text: Terms
+              - generic [ref=e276]: ·
+            - listitem [ref=e278]:
+              - link [ref=e279] [cursor=pointer]:
+                - /url: /business/
+                - text: Advertising
+              - generic [ref=e280]: ·
+            - listitem [ref=e282]:
+              - link [ref=e283] [cursor=pointer]:
+                - /url: /help/568137493302217
+                - text: Ad Choices
+                - img [ref=e285]
+              - generic [ref=e288]: ·
+            - listitem [ref=e290]:
+              - link [ref=e291] [cursor=pointer]:
+                - /url: /policies/cookies/
+                - text: Cookies
+              - generic [ref=e292]: ·
+            - listitem [ref=e294]:
+              - button [ref=e295] [cursor=pointer]: More
+      - generic [ref=e297]:
+        - article [ref=e304]:
+          - generic [ref=e312]:
+            - generic [ref=e318]:
+              - text: Album
+              - link [ref=e319] [cursor=pointer]:
+                - /url: https://www.facebook.com/media/set/?vanity=concordiascafe&set=a.571759062421270&__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=-R
+                - text: MENU
+                - img [ref=e321]
+            - generic [ref=e323]:
+              - link [ref=e327] [cursor=pointer]:
+                - /url: /stories/102619409335240/UzpfSVNDOjk3Mzc5NTQ4NTQ0OTQ4MQ==/?view_single=false&__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=%3C%3C%2CP-R
+                - img [ref=e329]
+              - generic [ref=e335]:
+                - heading [level=2] [ref=e339]:
+                  - generic [ref=e342]:
+                    - link [ref=e345] [cursor=pointer]:
+                      - /url: https://www.facebook.com/concordiascafe?__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=-]C%2CP-R
+                      - text: Concordia’s Cafe - BF Homes
+                    - text: added 5 new photos.
+                - generic [ref=e348]:
+                  - link [ref=e352] [cursor=pointer]:
+                    - /url: https://www.facebook.com/concordiascafe/posts/pfbid0yevyPWRyxKCWvbEMYu6ncXxMQGo96PaMemmofpi7K4vzYUsW7JqcQvoYXmdrVF5ol?__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=%2CO%2CP-R
+                    - text: May 26 at 11:59 PM
+                  - generic [ref=e354]: ·
+                  - img [ref=e359]
+            - generic [ref=e370]:
+              - link [ref=e372] [cursor=pointer]:
+                - /url: https://www.facebook.com/photo/?fbid=991565123773993&set=pcb.991565310440641&__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=*b0H-R
+              - link [ref=e377] [cursor=pointer]:
+                - /url: https://www.facebook.com/photo/?fbid=991565160440656&set=pcb.991565310440641&__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=*b1H-R
+              - link [ref=e382] [cursor=pointer]:
+                - /url: https://www.facebook.com/photo/?fbid=991565137107325&set=pcb.991565310440641&__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=*b2H-R
+              - link [ref=e387] [cursor=pointer]:
+                - /url: https://www.facebook.com/photo/?fbid=991565207107318&set=pcb.991565310440641&__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=*b3H-R
+              - link [ref=e392] [cursor=pointer]:
+                - /url: https://www.facebook.com/photo/?fbid=991565223773983&set=pcb.991565310440641&__cft__[0]=AZbvqNZjzJx-olbA4OmsmQvZzUPSML4vZxib3X5jkhkEfODGo9oltIfmL-OaYJC3TViYH3-Kuy7jeDKUvLUKnGtvsqwMt93D6RCeuyb-rzRP6UWFY-2HlbRxEpxYSwqpN2jKP4Yfxeqj1XiGTrYpii-55MBA64C5WOPwyKdIKrHjQ9f7LlT1FTL7ouA-qI9jeEY&__tn__=*b4H-R
+            - generic [ref=e400]:
+              - generic [ref=e403]:
+                - toolbar [ref=e404]:
+                  - generic [ref=e405]:
+                    - button [ref=e409] [cursor=pointer]
+                    - button [ref=e413] [cursor=pointer]
+                - generic [ref=e414]: "All reactions:"
+                - generic [ref=e416]: "7"
+              - generic [ref=e418]:
+                - button [ref=e420] [cursor=pointer]:
+                  - generic [ref=e425]: Like
+                - button [ref=e427] [cursor=pointer]:
+                  - generic [ref=e432]: Comment
+        - generic [ref=e434]:
+          - article [ref=e435]:
+            - status [ref=e436]
+          - article [ref=e448]:
+            - status [ref=e449]
+  - dialog [ref=e469]:
+    - button "Close" [ref=e471] [cursor=pointer]
+    - generic [ref=e477]:
+      - generic [ref=e478]:
+        - img [ref=e482]
+        - generic [ref=e488]: See more from Concordia’s Cafe - BF Homes | B. F. Homes
+        - generic [ref=e493]:
+          - generic: Email or phone number
+          - textbox "Email or phone number" [active] [ref=e494]
+        - generic [ref=e499]:
+          - generic: Password
+          - textbox "Password" [ref=e500]
+        - button "Log in to Facebook" [ref=e502] [cursor=pointer]:
+          - generic [ref=e505]: Log In
+        - link "Forgot password?" [ref=e507] [cursor=pointer]:
+          - /url: https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+          - generic [ref=e508]: Forgot password?
+        - generic [ref=e514]: or
+        - button "Create new account" [ref=e518] [cursor=pointer]:
+          - generic [ref=e521]: Create new account
+      - generic [ref=e528]:
+        - generic [ref=e529]: Scan the QR code and confirm the codes match to log in.
+        - generic [ref=e531]: BFB-FZP-OTVS

@@ -1,0 +1,236 @@
+{
+  "_meta": {
+    "businessName": "The Barberian Barbershop",
+    "businessSlug": "the-barberian-barbershop",
+    "businessType": "barbershop",
+    "location": "Westgate Center, Alabang, Muntinlupa, NCR",
+    "gatheredAt": "2026-06-06T12:00:00.000Z",
+    "sources": [
+      "https://www.facebook.com/BarberianPh/",
+      "https://www.instagram.com/barberianph/",
+      "https://www.westgatefilinvest.com/tenants/the-barberian-barbershop/",
+      "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop",
+      "https://barberhead.com/paranaque-city/the-barberian-barbershop",
+      "https://philippinecompanies.com/companyprofile/718190/the-barberian",
+      "https://8list.ph/man-caves-for-haircuts-grooming/"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 28,
+      "missing": 10
+    }
+  },
+  "identity": {
+    "businessName": {
+      "value": "The Barberian Barbershop",
+      "source": "https://www.facebook.com/BarberianPh/"
+    },
+    "tagline": {
+      "value": "Alabang's Must Try Specialty Grooming Shop",
+      "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+    },
+    "aboutText": {
+      "value": "An upscale specialty barbershop offering premium grooming services — haircuts, shaves, and beard trims — each with hot towels, hair wash, and a massage. Set in a comfortable lounge with couches, magazines, TV, and a bar serving complimentary coffee, whiskey, beer, or iced tea. Designed as a retreat where men can slow down, unwind, and socialize.",
+      "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+    },
+    "established": {
+      "value": 2017,
+      "source": "https://www.facebook.com/BarberianPh/posts/grateful-for-7-years-barberianph/666034222198648/"
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#2C2C2C",
+      "source": "https://www.facebook.com/BarberianPh/"
+    },
+    "accentColor": {
+      "value": "#C9A84C",
+      "source": "https://www.facebook.com/BarberianPh/"
+    },
+    "vibe": {
+      "value": "Classic, masculine, laid-back, premium — a sanctuary for men who appreciate craft grooming",
+      "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+    },
+    "logoUrl": {
+      "value": null,
+      "source": null
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "+63 2 8805 0342",
+      "source": "https://barberhead.com/paranaque-city/the-barberian-barbershop"
+    },
+    "address": {
+      "value": "Westgate Center, Alabang-Zapote Road cor. Filinvest Avenue, Ayala Alabang, Muntinlupa City, Metro Manila, Philippines",
+      "source": "https://8list.ph/man-caves-for-haircuts-grooming/"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/BarberianPh/",
+      "source": "https://www.facebook.com/BarberianPh/"
+    },
+    "instagramUrl": {
+      "value": "https://www.instagram.com/barberianph/",
+      "source": "https://www.instagram.com/barberianph/"
+    },
+    "mapsIframe": {
+      "value": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.2974!2d121.0302!3d14.4208!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d033432b3a19%3A0xb7de4024a401fa0a!2sThe+Barberian+Barbershop!5e0!3m2!1sen!2sph!4v1",
+      "source": "https://barberhead.com/paranaque-city/the-barberian-barbershop"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        "Monday-Saturday: 10:00 AM - 8:00 PM",
+        "Sunday: 10:00 AM - 8:00 PM"
+      ],
+      "source": "https://barberhead.com/paranaque-city/the-barberian-barbershop"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Grooming Services",
+      "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+    },
+    "items": [
+      {
+        "name": {
+          "value": "Classic Haircut",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "desc": {
+          "value": "Precision haircut with hot towel, hair wash, and massage",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": "cut",
+          "source": null
+        }
+      },
+      {
+        "name": {
+          "value": "Beard Trim",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "desc": {
+          "value": "Expert beard shaping and trim with hot towel finish",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": "beard",
+          "source": null
+        }
+      },
+      {
+        "name": {
+          "value": "Straight Razor Shave",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "desc": {
+          "value": "Traditional hot towel straight razor shave with soothing aftershave",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": "razor",
+          "source": null
+        }
+      },
+      {
+        "name": {
+          "value": "Cut & Beard Trim Combo",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "desc": {
+          "value": "Haircut paired with a full beard trim — the go-to package for regulars",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": "combo",
+          "source": null
+        }
+      },
+      {
+        "name": {
+          "value": "Cut & Shave Combo",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "desc": {
+          "value": "Full haircut and straight razor shave with complimentary drink",
+          "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": "combo",
+          "source": null
+        }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": null,
+      "source": null
+    },
+    "about": {
+      "value": null,
+      "source": null
+    },
+    "gallery": [],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.5,
+      "source": "https://barberhead.com/paranaque-city/the-barberian-barbershop"
+    },
+    "reviewCount": {
+      "value": 23,
+      "source": "https://barberhead.com/paranaque-city/the-barberian-barbershop"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "The Barberian Barbershop is a premium specialty grooming shop at Westgate Center in Alabang, Muntinlupa. Offering classic haircuts, beard trims, and straight razor shaves with hot towels, hair wash, and massage in a masculine lounge atmosphere with complimentary drinks. Open daily 10AM-8PM.",
+      "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+    },
+    "keywords": {
+      "value": "barbershop, Alabang barber, Muntinlupa barbershop, Westgate barber, The Barberian, premium haircut, beard trim, straight razor shave, men's grooming, specialty barbershop, Filipino barbershop",
+      "source": "https://www.hoppler.com.ph/magazine/lifestyle/the-barberian-is-alabangs-must-try-specialty-grooming-shop"
+    },
+    "city": {
+      "value": "Muntinlupa",
+      "source": "https://www.westgatefilinvest.com/tenants/the-barberian-barbershop/"
+    },
+    "province": {
+      "value": "Metro Manila",
+      "source": "https://www.westgatefilinvest.com/tenants/the-barberian-barbershop/"
+    }
+  }
+}

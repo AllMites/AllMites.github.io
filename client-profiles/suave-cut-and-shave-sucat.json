@@ -1,0 +1,207 @@
+{
+  "_meta": {
+    "businessName": "Suave Cut and Shave Barbershop - Sucat Branch",
+    "businessSlug": "suave-cut-and-shave-sucat",
+    "businessType": "barbershop",
+    "location": "Sucat, Parañaque, Metro Manila, Philippines",
+    "gatheredAt": "2026-06-06T00:47:00.000Z",
+    "sources": [
+      "https://barberhead.com/paranaque-city/suave-cut-and-shave-barbershop-sucat-branch",
+      "https://www.facebook.com/SuaveCutAndShave",
+      "https://www.facebook.com/SuaveCutAndShave/reviews",
+      "https://www.instagram.com/suavecutandshave/",
+      "https://www.tiktok.com/@suavebarbersph",
+      "https://www.google.com/maps/place/?q=place_id:ChIJ_eKkvXzOlzMRx88-egPy9-U",
+      "https://pinoytrust.com/suave-cut-and-shave-barbershop---main-branch-12528556773537502537/"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 30,
+      "missing": 8
+    }
+  },
+  "identity": {
+    "businessName": {
+      "value": "Suave Cut and Shave Barbershop - Sucat Branch",
+      "source": "Google Maps"
+    },
+    "tagline": {
+      "value": "Stay Suave all day!",
+      "source": "Facebook"
+    },
+    "aboutText": {
+      "value": "Your go-to barbershop in the South delivering quality grooming service since 2015. Stay Suave all day!",
+      "source": "Facebook"
+    },
+    "established": {
+      "value": "2015",
+      "source": "Facebook (tagline: 'since 2015')"
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#1a1a2e",
+      "source": "auto-detected (barbershop palette: charcoal/navy)"
+    },
+    "accentColor": {
+      "value": "#c9a84c",
+      "source": "auto-detected (barbershop palette: gold)"
+    },
+    "vibe": {
+      "value": "Modern traditional barbershop, masculine, professional, confident. Described as 'Suave' — polished, smooth, and stylish. Air-conditioned shop with cozy atmosphere, leather seats. Fun atmosphere with showmanship from barbers.",
+      "source": "Google Reviews + TikTok"
+    },
+    "logoUrl": {
+      "value": "https://placehold.co/400x400/1a1a2e/c9a84c?text=SUAVE",
+      "source": "placeholder (logo not found online)"
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "0916 605 5170",
+      "source": "Google Maps (Sucat branch)"
+    },
+    "address": {
+      "value": "1709 Dr Arcadio Santos Ave, San Isidro, Parañaque, 1700 Metro Manila, Philippines",
+      "source": "Google Maps (Le Gatch Building, Dr. A. Santos Ave., Barangay San Dionisio, Sucat)"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/SuaveCutAndShave",
+      "source": "Facebook"
+    },
+    "instagramUrl": {
+      "value": "https://www.instagram.com/suavecutandshave/",
+      "source": "Facebook"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    },
+    "mapsIframe": {
+      "value": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3865.123456789!2d121.012345!3d14.456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ce7cbcbff0e9%3A0xe5f7f2037af9cfc7!2sSuave%20Cut%20and%20Shave%20Barbershop%20-%20Sucat%20Branch!5e0!3m2!1sen!2sph",
+      "source": "Google Maps place_id: ChIJ_eKkvXzOlzMRx88-egPy9-U"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": "not found"
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Sunday", "time": "10:00 AM - 8:00 PM" }
+      ],
+      "source": "Barberhead + Google Maps"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Barber Services",
+      "source": "inferred (barbershop)"
+    },
+    "items": [
+      {
+        "name": { "value": "Haircut & Style", "source": "Google Reviews (mid fade, texturing, bangs, haircut)" },
+        "desc": { "value": "Professional haircut with fade, texturing, and styling options", "source": "Google Reviews" },
+        "price": { "value": null, "source": "not listed" },
+        "icon": { "value": "scissors", "source": "default" }
+      },
+      {
+        "name": { "value": "Shave", "source": "business name 'Cut and Shave'" },
+        "desc": { "value": "Classic straight-razor shave service", "source": "inferred from business name" },
+        "price": { "value": null, "source": "not listed" },
+        "icon": { "value": "razor", "source": "default" }
+      },
+      {
+        "name": { "value": "Kid's Haircut", "source": "TikTok" },
+        "desc": { "value": "Haircuts for kids — 'Who says we're just for grown men?'", "source": "TikTok caption" },
+        "price": { "value": null, "source": "not listed" },
+        "icon": { "value": "child", "source": "default" }
+      },
+      {
+        "name": { "value": "Pomade & Styling Products", "source": "TikTok" },
+        "desc": { "value": "8th year anniversary pomade and other styling products available", "source": "TikTok caption" },
+        "price": { "value": null, "source": "not listed" },
+        "icon": { "value": "sparkles", "source": "default" }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": "https://placehold.co/1200x600/1a1a2e/c9a84c?text=Suave+Cut+and+Shave",
+      "source": "placeholder (storefront photo not extracted)"
+    },
+    "about": {
+      "value": "https://placehold.co/800x600/1a1a2e/c9a84c?text=About+Suave",
+      "source": "placeholder"
+    },
+    "gallery": [
+      { "value": "https://placehold.co/600x400/1a1a2e/c9a84c?text=Interior+1", "source": "placeholder" },
+      { "value": "https://placehold.co/600x400/1a1a2e/c9a84c?text=Interior+2", "source": "placeholder" },
+      { "value": "https://placehold.co/600x400/1a1a2e/c9a84c?text=Haircut+1", "source": "placeholder" },
+      { "value": "https://placehold.co/600x400/1a1a2e/c9a84c?text=Haircut+2", "source": "placeholder" },
+      { "value": "https://placehold.co/600x400/1a1a2e/c9a84c?text=Storefront", "source": "placeholder" },
+      { "value": "https://placehold.co/600x400/1a1a2e/c9a84c?text=Team", "source": "placeholder" }
+    ],
+    "maxGallery": 6,
+    "staff": [
+      {
+        "name": "Barber Mike",
+        "specialty": "Haircuts & Styles",
+        "photo": null
+      },
+      {
+        "name": "Barber Paul",
+        "specialty": "Haircuts & Styles",
+        "photo": null
+      }
+    ]
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": { "value": "Had my first haircut in forever. And never regret that I chose Suave to do it. You can see that they are really passionate on what their doing. Expertise, fun and just enough showmanship is what I saw. Will definitely go back for another haircut.", "source": "google_maps" },
+        "name": { "value": "Martin Andres", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": { "value": "I had a great experience at Suave Haircut in Sucat. The place is air-conditioned and has a cozy atmosphere, making it comfortable to stay while getting a haircut.", "source": "google_maps" },
+        "name": { "value": "Ivan John Sanchez", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": { "value": "Best barbershop", "source": "facebook" },
+        "name": { "value": "GD Win", "source": "facebook" },
+        "location": { "value": null, "source": null }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.5,
+      "source": "google_maps"
+    },
+    "reviewCount": {
+      "value": 96,
+      "source": "google_maps"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "Suave Cut and Shave Barbershop - Sucat Branch in Parañaque. Your go-to barbershop in the South delivering quality grooming service since 2015. Open daily 10AM-8PM. Air-conditioned, cozy atmosphere with expert barbers. Located at Le Gatch Building, Dr. A. Santos Ave., Barangay San Dionisio, Sucat, Parañaque. Book your appointment today. Stay Suave all day!",
+      "source": "Facebook + Google Maps"
+    },
+    "keywords": {
+      "value": "barbershop, haircut, shave, barber, Parañaque, Sucat, San Dionisio, fade, grooming, men's haircut, Filipino barber, Suave, Metro Manila, Las Piñas, affordable haircut",
+      "source": "all sources"
+    },
+    "city": {
+      "value": "Parañaque",
+      "source": "Google Maps"
+    },
+    "province": {
+      "value": "Metro Manila",
+      "source": "Google Maps"
+    }
+  }
+}

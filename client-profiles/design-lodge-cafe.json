@@ -1,0 +1,76 @@
+{
+  "_meta": {
+    "businessName": "Design Lodge Café",
+    "businessSlug": "design-lodge-cafe",
+    "businessType": "cafe",
+    "location": "BF Resort Village, Las Piñas, NCR",
+    "gatheredAt": "2026-06-07T00:00:00Z",
+    "sources": ["facebook"],
+    "fieldCount": { "total": 22, "populated": 14, "missing": 8 }
+  },
+  "identity": {
+    "businessName": { "value": "Design Lodge Café", "source": "facebook" },
+    "tagline": { "value": "Sip and Create", "source": "web_search" },
+    "aboutText": { "value": "Design Lodge Café is a creative café and 3D printing space at BF Resort Village, Las Piñas — where coffee fuels creativity. Combines specialty coffee with fast 3D printing services. Anything is possible with DL.", "source": "facebook" },
+    "established": { "value": null, "source": null }
+  },
+  "branding": {
+    "primaryColor": { "value": "#1E2A3A", "source": "manual" },
+    "accentColor": { "value": "#E05C2E", "source": "manual" },
+    "vibe": { "value": "Creative industrial café meets design studio; modern, precision-forward; 3D printing + coffee; design-forward aesthetic with maker-space energy", "source": "facebook" },
+    "logoUrl": { "value": null, "source": null }
+  },
+  "contact": {
+    "phone": { "value": null, "source": null },
+    "address": { "value": "126 Gloria Diaz St. BF Resort Village, Las Piñas", "source": "facebook" },
+    "facebookUrl": { "value": "https://www.facebook.com/designlodgeph/", "source": "facebook" },
+    "instagramUrl": { "value": null, "source": null },
+    "mapsIframe": { "value": null, "source": null },
+    "whatsapp": { "value": null, "source": null }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Daily", "time": "10:00 AM - 10:00 PM" }
+      ],
+      "source": "blog"
+    }
+  },
+  "offerings": {
+    "title": { "value": "Coffee + Create", "source": "manual" },
+    "items": [
+      {
+        "name": { "value": "Coffee", "source": "facebook" },
+        "desc": { "value": "Specialty coffee drinks — fuel for creativity and long design sessions", "source": "facebook" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "3D Printing Service", "source": "facebook" },
+        "desc": { "value": "Fast 3D prints on-site — from prototypes to custom items, all while you sip", "source": "facebook" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": { "value": null, "source": null },
+    "about": { "value": null, "source": null },
+    "gallery": [],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [],
+    "maxTestimonials": 3,
+    "rating": { "value": null, "source": null },
+    "reviewCount": { "value": null, "source": null }
+  },
+  "seo": {
+    "description": { "value": "Design Lodge Café in BF Resort Village, Las Piñas — specialty coffee and on-site 3D printing in one creative space. Sip and create, daily 10AM–10PM.", "source": "constructed" },
+    "keywords": { "value": "cafe Las Piñas, 3D printing cafe, creative space BF Resort, design cafe Las Piñas, coffee and 3D printing Philippines", "source": "constructed" },
+    "city": { "value": "Las Piñas", "source": "extracted_from_address" },
+    "province": { "value": "NCR", "source": "default" }
+  }
+}

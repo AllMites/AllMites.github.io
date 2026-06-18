@@ -1,0 +1,70 @@
+{
+  "_meta": {
+    "businessName": "Hōmukafe",
+    "businessSlug": "homukafe",
+    "businessType": "cafe",
+    "location": "Moonwalk Village, Las Piñas, NCR",
+    "gatheredAt": "2026-06-07T00:00:00Z",
+    "sources": ["facebook", "instagram", "blog"],
+    "fieldCount": { "total": 25, "populated": 16, "missing": 9 }
+  },
+  "identity": {
+    "businessName": { "value": "Hōmukafe", "source": "facebook" },
+    "tagline": { "value": "A magical dark substance that turns your mood to cozy homey feels", "source": "facebook" },
+    "aboutText": { "value": "Hōmukafe is a famous walk-up window coffee shop in Moonwalk Village, Las Piñas — quick, clean caffeine without the fuss. A cozy homey spot in the South for your daily brew.", "source": "facebook" },
+    "established": { "value": null, "source": null }
+  },
+  "branding": {
+    "primaryColor": { "value": "#1A1208", "source": "manual" },
+    "accentColor": { "value": "#C8936A", "source": "manual" },
+    "vibe": { "value": "Japanese-inspired walk-up window; minimalist, dark-roast aesthetic; quick-serve with warm homey character; hashtag #stayathomu", "source": "facebook" },
+    "logoUrl": { "value": null, "source": null }
+  },
+  "contact": {
+    "phone": { "value": null, "source": null },
+    "address": { "value": "63 Pegasus St. Moonwalk Village, Brgy. Talon Singko, Las Piñas", "source": "facebook" },
+    "facebookUrl": { "value": "https://www.facebook.com/homu.kafe/", "source": "facebook" },
+    "instagramUrl": { "value": "https://www.instagram.com/homu.kafe/", "source": "web_search" },
+    "mapsIframe": { "value": null, "source": null },
+    "whatsapp": { "value": null, "source": null }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Daily", "time": "11:00 AM - 7:00 PM" }
+      ],
+      "source": "blog"
+    }
+  },
+  "offerings": {
+    "title": { "value": "What We Brew", "source": "manual" },
+    "items": [
+      {
+        "name": { "value": "Coffee", "source": "facebook" },
+        "desc": { "value": "A magical dark substance — clean, no-fuss caffeine for your daily homey fix", "source": "facebook" },
+        "price": { "value": "From ₱85", "source": "blog" },
+        "icon": { "value": null, "source": null }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": { "value": null, "source": null },
+    "about": { "value": null, "source": null },
+    "gallery": [],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [],
+    "maxTestimonials": 3,
+    "rating": { "value": null, "source": null },
+    "reviewCount": { "value": null, "source": null }
+  },
+  "seo": {
+    "description": { "value": "Hōmukafe is a walk-up window coffee shop in Moonwalk Village, Las Piñas — cozy caffeine from ₱85, no fuss. Open daily 11AM–7PM.", "source": "constructed" },
+    "keywords": { "value": "coffee Las Piñas, walk-up window coffee, Moonwalk Village cafe, Talon Singko coffee, takeout coffee south Manila", "source": "constructed" },
+    "city": { "value": "Las Piñas", "source": "extracted_from_address" },
+    "province": { "value": "NCR", "source": "default" }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "_meta": {
+    "businessName": "Izu Koffee",
+    "businessSlug": "izu-koffee",
+    "businessType": "cafe",
+    "location": "Las Piñas, Metro Manila",
+    "gatheredAt": "2026-06-05T14:20:00+08:00",
+    "updatedAt": "2026-06-05T00:00:00+08:00",
+    "sources": [
+      "facebook",
+      "instagram",
+      "google_maps",
+      "restaurant_guru",
+      "blog_gretasjunkyard",
+      "wanderlog",
+      "lifestyleplusph"
+    ],
+    "fieldCount": {
+      "total": 34,
+      "populated": 31,
+      "missing": 3
+    },
+    "stillMissing": [
+      "branding.logoUrl",
+      "images.hero",
+      "identity.established"
+    ],
+    "unverified": []
+  },
+  "identity": {
+    "businessName": {
+      "value": "Izu Koffee",
+      "source": "facebook"
+    },
+    "tagline": {
+      "value": "Japanese-inspired neighborhood cafe — zen atmosphere, Japandi aesthetics, specialty coffee",
+      "source": "constructed"
+    },
+    "aboutText": {
+      "value": "Izu Koffee is a Japanese-inspired coffee shop in BF Resort Village, Las Piñas, serving specialty coffee, pastries, and comfort food in a minimalist Japandi space. With a zen atmosphere, warm interiors, and a takeout window for cyclists, it's a neighborhood favorite for studying, working, or catching up with friends.",
+      "source": "constructed"
+    },
+    "established": {
+      "value": null,
+      "source": null
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#3D2C2A",
+      "source": "extracted_from_photos"
+    },
+    "accentColor": {
+      "value": "#8FA88F",
+      "source": "extracted_from_photos"
+    },
+    "vibe": {
+      "value": "Japandi aesthetic — minimalist, clean, modern Japanese meets Scandinavian. Warm lighting, wood tones, IG-worthy corners, barn door, takeout window. Cozy, family-friendly, pet-friendly.",
+      "source": "manual"
+    },
+    "logoUrl": {
+      "value": null,
+      "source": null
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "+63 917 109 0157",
+      "source": "restaurant_guru"
+    },
+    "address": {
+      "value": "JEE Village Center, Vatican Drive Corner, Aventine Hills Street, BF Resort Dr, Village, Las Piñas, 1742 Metro Manila",
+      "source": "restaurant_guru"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/profile.php?id=100072572614413",
+      "source": "facebook"
+    },
+    "instagramUrl": {
+      "value": "https://www.instagram.com/izu.koffee/",
+      "source": "instagram"
+    },
+    "mapsIframe": {
+      "value": null,
+      "source": null
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Thursday", "time": "7:30 AM - 8:30 PM" },
+        { "days": "Friday", "time": "7:30 AM - 9:00 PM" },
+        { "days": "Saturday", "time": "7:30 AM - 9:00 PM" },
+        { "days": "Sunday", "time": "7:30 AM - 9:00 PM" }
+      ],
+      "source": "restaurant_guru"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Our Menu",
+      "source": "manual"
+    },
+    "items": [
+      {
+        "name": { "value": "Spanish Latte", "source": "facebook_post" },
+        "desc": { "value": "Rich espresso with steamed milk — not too sweet, crowd favorite", "source": "manual" },
+        "price": { "value": "₱160", "source": "facebook_post" },
+        "icon": { "value": "☕", "source": "manual" }
+      },
+      {
+        "name": { "value": "Dirty Matcha", "source": "facebook_post" },
+        "desc": { "value": "Matcha latte with espresso shot — best of both worlds", "source": "manual" },
+        "price": { "value": "₱160", "source": "facebook_post" },
+        "icon": { "value": "🍵", "source": "manual" }
+      },
+      {
+        "name": { "value": "Caramel Latte", "source": "facebook_post" },
+        "desc": { "value": "Smooth caramel sweetness meets espresso", "source": "manual" },
+        "price": { "value": "₱160", "source": "facebook_post" },
+        "icon": { "value": "☕", "source": "manual" }
+      },
+      {
+        "name": { "value": "Matcha Latte", "source": "wanderlog" },
+        "desc": { "value": "Ceremonial-grade matcha — excellent value at this price", "source": "manual" },
+        "price": { "value": "₱200", "source": "wanderlog" },
+        "icon": { "value": "🍵", "source": "manual" }
+      },
+      {
+        "name": { "value": "Maple Biscoff Iced Latte", "source": "restaurant_guru" },
+        "desc": { "value": "Must-try — maple and Biscoff in a cold brew", "source": "manual" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": "🧊", "source": "manual" }
+      },
+      {
+        "name": { "value": "Chocolate Almond Croissant", "source": "restaurant_guru" },
+        "desc": { "value": "Crisp, buttery — excellent even for non-chocolate lovers", "source": "manual" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": "🥐", "source": "manual" }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": null,
+      "source": null
+    },
+    "about": {
+      "value": null,
+      "source": null
+    },
+    "gallery": [
+      {
+        "value": "https://gretasjunkyard.com/wp-content/uploads/2022/08/izu-koffee-4-768x1024.jpeg",
+        "source": "blog_gretasjunkyard",
+        "label": "Cafe interior — Japandi design"
+      },
+      {
+        "value": "https://gretasjunkyard.com/wp-content/uploads/2022/08/izu-koffee-1-768x1024.jpeg",
+        "source": "blog_gretasjunkyard",
+        "label": "Interior shot with warm lighting"
+      },
+      {
+        "value": "https://gretasjunkyard.com/wp-content/uploads/2022/08/izu-koffee-3-768x1024.jpeg",
+        "source": "blog_gretasjunkyard",
+        "label": "Food and drinks"
+      },
+      {
+        "value": "https://gretasjunkyard.com/wp-content/uploads/2022/08/izu-koffee-2-768x1024.jpeg",
+        "source": "blog_gretasjunkyard",
+        "label": "Coffee and pastries"
+      }
+    ],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": {
+          "value": "One of the best, if not the best coffee shops in the village. Chocolate almond croissant paired with black coffee is perfect. Ample parking, great takeout area.",
+          "source": "google_maps"
+        },
+        "name": { "value": "Doc", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": {
+          "value": "₱200 for a matcha this good in this economy? I wish Izu Koffee had branches closer to Manila.",
+          "source": "google_maps"
+        },
+        "name": { "value": "Sam P", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": {
+          "value": "Good coffee with great baristas. Got requested latte art — they really care about quality here.",
+          "source": "google_maps"
+        },
+        "name": { "value": "Ligaya", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.4,
+      "source": "google_maps"
+    },
+    "reviewCount": {
+      "value": 184,
+      "source": "google_maps"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "Izu Koffee — Japanese-inspired specialty coffee shop with Japandi interiors in BF Resort Village, Las Piñas. Spanish lattes, matcha, pastries, and cozy workspace. Pet-friendly, takeout window. Open daily 7:30 AM.",
+      "source": "constructed"
+    },
+    "keywords": {
+      "value": "izu koffee, las piñas, bf resort village, japanese cafe, japandi cafe, specialty coffee, spanish latte, matcha, las piñas coffee shop, parañaque coffee",
+      "source": "constructed"
+    },
+    "city": {
+      "value": "Las Piñas",
+      "source": "extracted_from_address"
+    },
+    "province": {
+      "value": "Metro Manila",
+      "source": "extracted_from_address"
+    }
+  }
+}

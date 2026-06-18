@@ -1,0 +1,169 @@
+{
+  "_meta": {
+    "businessName": "Dapper District Barbershop & Lounge",
+    "businessSlug": "dapper-district",
+    "businessType": "barbershop",
+    "location": "President's Ave, Parañaque, NCR",
+    "gatheredAt": "2026-06-06T09:00:00+08:00",
+    "sources": [
+      "facebook",
+      "instagram",
+      "barberhead",
+      "google_maps"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 24,
+      "missing": 14
+    },
+    "stillMissing": [
+      "identity.aboutText",
+      "identity.established",
+      "images.hero",
+      "images.about",
+      "images.staff",
+      "offerings.items[1-5].price"
+    ]
+  },
+  "identity": {
+    "businessName": {
+      "value": "Dapper District Barbershop & Lounge",
+      "source": "facebook"
+    },
+    "tagline": {
+      "value": null,
+      "source": null
+    },
+    "aboutText": {
+      "value": "Barbershop and lounge in President's Grove, Parañaque. Modern gentlemen's grooming destination. Bring a picture of the desired haircut if you are unsure.",
+      "source": "barberhead"
+    },
+    "established": {
+      "value": null,
+      "source": null
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#1E1B18",
+      "source": "default_barbershop"
+    },
+    "accentColor": {
+      "value": "#C8462C",
+      "source": "default_barbershop"
+    },
+    "vibe": {
+      "value": "Modern dapper gentlemen's barbershop — sophisticated, clean, professional",
+      "source": "manual"
+    },
+    "logoUrl": {
+      "value": null,
+      "source": null
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "+63 2 8552 0896",
+      "source": "barberhead"
+    },
+    "address": {
+      "value": "President's Grove, President's Avenue, Parañaque, Metro Manila",
+      "source": "barberhead"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/dapperdistrictbarbershop/",
+      "source": "facebook"
+    },
+    "instagramUrl": {
+      "value": "https://www.instagram.com/dapperdistrictph/",
+      "source": "instagram"
+    },
+    "mapsIframe": {
+      "value": null,
+      "source": null
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Friday", "time": "12:00 PM - 8:30 PM" },
+        { "days": "Saturday - Sunday", "time": "11:00 AM - 8:30 PM" }
+      ],
+      "source": "barberhead"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Services",
+      "source": "manual"
+    },
+    "items": [
+      {
+        "name": { "value": "Classic Haircut", "source": "manual" },
+        "desc": { "value": "Professional cut tailored to your style — bring a photo for reference", "source": "barberhead" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Hot Towel Shave", "source": "manual" },
+        "desc": { "value": "Traditional straight razor shave with hot towel treatment", "source": "manual" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Beard Trim & Shape", "source": "manual" },
+        "desc": { "value": "Precision beard grooming and detailing", "source": "manual" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": null,
+      "source": null
+    },
+    "about": {
+      "value": null,
+      "source": null
+    },
+    "gallery": [],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.5,
+      "source": "barberhead"
+    },
+    "reviewCount": {
+      "value": 12,
+      "source": "barberhead"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "Dapper District Barbershop & Lounge — Modern gentlemen's grooming in President's Grove, Parañaque. Classic haircuts, hot towel shaves, and beard grooming. Open daily.",
+      "source": "constructed"
+    },
+    "keywords": {
+      "value": "dapper district, barbershop parañaque, presidents avenue barber, gentlemen's grooming, haircut parañaque",
+      "source": "constructed"
+    },
+    "city": {
+      "value": "Parañaque",
+      "source": "extracted_from_address"
+    },
+    "province": {
+      "value": "NCR",
+      "source": "default"
+    }
+  }
+}

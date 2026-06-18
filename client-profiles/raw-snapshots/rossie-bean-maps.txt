@@ -1,0 +1,209 @@
+- generic "Google Maps" [ref=e9]:
+  - generic [ref=e3]:
+    - application "Map · Use arrow keys to pan the map. · Get details about a place by pressing its corresponding number key." [ref=e10]
+    - search [ref=e15]:
+      - generic [ref=e16]:
+        - combobox [ref=e18]: DECADES BARBERSHOP
+        - button "Search" [ref=e20] [cursor=pointer]:
+          - generic [ref=e21]: 
+        - button "Close" [ref=e23] [cursor=pointer]:
+          - generic [ref=e24]: 
+    - region "Available search options for this area" [ref=e31]:
+      - generic [ref=e34]:
+        - button "Restaurants" [ref=e36] [cursor=pointer]:
+          - generic [ref=e37]:
+            - generic [ref=e39]: 
+            - generic [ref=e40]: Restaurants
+        - button "Hotels" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]:
+            - generic [ref=e45]: 
+            - generic [ref=e46]: Hotels
+        - button "Things to do" [ref=e48] [cursor=pointer]:
+          - generic [ref=e49]:
+            - generic [ref=e51]: 
+            - generic [ref=e52]: Things to do
+        - button "Transit" [ref=e54] [cursor=pointer]:
+          - generic [ref=e55]:
+            - generic [ref=e57]: 
+            - generic [ref=e58]: Transit
+        - button "Parking" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]:
+            - generic [ref=e63]: 
+            - generic [ref=e64]: Parking
+        - button "Pharmacies" [ref=e66] [cursor=pointer]:
+          - generic [ref=e67]:
+            - generic [ref=e69]: 
+            - generic [ref=e70]: Pharmacies
+        - button "ATMs" [ref=e72] [cursor=pointer]:
+          - generic [ref=e73]:
+            - generic [ref=e75]: 
+            - generic [ref=e76]: ATMs
+      - button "Next page" [ref=e77] [cursor=pointer]:
+        - generic [ref=e78]: 
+    - generic [ref=e79]:
+      - generic [ref=e80]:
+        - list [ref=e82]:
+          - listitem [ref=e83]:
+            - button "Menu" [ref=e84] [cursor=pointer]:
+              - generic [ref=e86]: 
+          - listitem [ref=e87]:
+            - button "Saved" [ref=e88] [cursor=pointer]:
+              - generic [ref=e90]: 
+              - generic [ref=e92]: Saved
+          - listitem [ref=e93]:
+            - button "Recents" [ref=e94] [cursor=pointer]:
+              - generic [ref=e96]: 
+              - generic [ref=e98]: Recents
+          - listitem [ref=e100]:
+            - button "DECADES BARBERSHOP" [ref=e101] [cursor=pointer]:
+              - generic [ref=e107]: DECADES BARBERSHOP
+          - listitem [ref=e109]:
+            - button "Get app" [ref=e110] [cursor=pointer]:
+              - generic [ref=e112]: 
+              - generic [ref=e114]: Get app
+        - main "DECADES BARBERSHOP" [ref=e119]:
+          - generic [ref=e120]:
+            - button "Photo of DECADES BARBERSHOP" [active] [ref=e122] [cursor=pointer]:
+              - img [ref=e123]
+            - button "See photos" [ref=e124] [cursor=pointer]:
+              - generic [ref=e125]: 
+              - generic [ref=e126]: See photos
+          - generic [ref=e129]:
+            - heading "DECADES BARBERSHOP" [level=1] [ref=e131]: DECADES BARBERSHOP
+            - button "Barber shop" [ref=e137]
+          - region "Actions for DECADES BARBERSHOP" [ref=e140]:
+            - button "Directions" [ref=e142] [cursor=pointer]:
+              - generic [ref=e144]: 
+              - generic [ref=e145]: Directions
+            - button "Save" [ref=e147] [cursor=pointer]:
+              - generic [ref=e149]: 
+              - generic [ref=e150]: Save
+            - button "Nearby" [ref=e152] [cursor=pointer]:
+              - generic [ref=e154]: 
+              - generic [ref=e155]: Nearby
+            - button "Send to phone" [ref=e157] [cursor=pointer]:
+              - generic [ref=e159]: 
+              - generic [ref=e160]: Send to phone
+            - button "Share" [ref=e162] [cursor=pointer]:
+              - generic [ref=e164]: 
+              - generic [ref=e165]: Share
+          - region "Information for DECADES BARBERSHOP" [ref=e168]:
+            - generic [ref=e169]:
+              - 'button "Address: Plaza San Antonio, San Antonio Ave, San Antonio Valley 1, Parañaque, 1715 Metro Manila" [ref=e170] [cursor=pointer]':
+                - generic [ref=e171]:
+                  - generic [ref=e173]: 
+                  - generic [ref=e175]: Plaza San Antonio, San Antonio Ave, San Antonio Valley 1, Parañaque, 1715 Metro Manila
+              - button "Copy address" [ref=e178] [cursor=pointer]:
+                - generic [ref=e180]: 
+            - button "Hours Closed · Opens 10 AM Thu Show open hours for the week Confirmed by this business 9 weeks ago" [ref=e182] [cursor=pointer]:
+              - img "Hours" [ref=e183]: 
+              - generic [ref=e184]:
+                - generic [ref=e185]:
+                  - generic [ref=e187]: Closed · Opens 10 AM Thu
+                  - img "Show open hours for the week" [ref=e188]: 
+                - generic [ref=e189]: Confirmed by this business 9 weeks ago
+            - generic [ref=e190]:
+              - 'link "Website: facebook.com" [ref=e191] [cursor=pointer]':
+                - /url: http://www.facebook.com/decadesbarbers
+                - generic [ref=e192]:
+                  - generic [ref=e194]: 
+                  - generic [ref=e196]: facebook.com
+              - generic [ref=e197]:
+                - link "Open website" [ref=e199] [cursor=pointer]:
+                  - /url: http://www.facebook.com/decadesbarbers
+                  - generic [ref=e201]: 
+                - button "Copy website" [ref=e203] [cursor=pointer]:
+                  - generic [ref=e205]: 
+            - generic [ref=e206]:
+              - 'button "Phone: 0905 425 9970" [ref=e207] [cursor=pointer]':
+                - generic [ref=e208]:
+                  - generic [ref=e210]: 
+                  - generic [ref=e212]: 0905 425 9970
+              - generic [ref=e213]:
+                - button "Copy phone number" [ref=e215] [cursor=pointer]:
+                  - generic [ref=e217]: 
+                - link "Call phone number" [ref=e219] [cursor=pointer]:
+                  - /url: tel:09054259970
+                  - generic [ref=e221]: 
+            - generic [ref=e222]:
+              - 'button "Plus code: F28C+V5 Parañaque, Metro Manila" [ref=e223] [cursor=pointer]':
+                - generic [ref=e224]:
+                  - generic [ref=e226]: 
+                  - generic [ref=e228]: F28C+V5 Parañaque, Metro Manila
+              - generic [ref=e229]:
+                - button "Copy plus code" [ref=e231] [cursor=pointer]:
+                  - generic [ref=e233]: 
+                - button "Learn more about plus codes" [ref=e235] [cursor=pointer]:
+                  - generic [ref=e237]: 
+          - button "Suggest an edit" [ref=e241] [cursor=pointer]:
+            - generic [ref=e242]:
+              - generic [ref=e243]: 
+              - generic [ref=e244]: Suggest an edit
+          - generic [ref=e247]:
+            - heading "Photos & videos" [level=2] [ref=e249]
+            - region "Photos of DECADES BARBERSHOP" [ref=e250]:
+              - generic [ref=e253]:
+                - generic [ref=e254] [cursor=pointer]:
+                  - button "All" [ref=e255]
+                  - generic:
+                    - generic: All
+                - generic [ref=e256] [cursor=pointer]:
+                  - button "Exterior" [ref=e257]
+                  - generic:
+                    - generic: Exterior
+                - generic [ref=e258] [cursor=pointer]:
+                  - button "By owner" [ref=e259]
+                  - generic:
+                    - generic: By owner
+                - generic [ref=e260] [cursor=pointer]:
+                  - button "Street View & 360°" [ref=e261]
+                  - generic:
+                    - generic: Street View & 360°
+          - button "Add photos & videos" [ref=e266] [cursor=pointer]:
+            - generic [ref=e267]:
+              - generic [ref=e268]: 
+              - generic [ref=e269]: Add photos & videos
+          - button "Write a review" [ref=e275] [cursor=pointer]:
+            - generic [ref=e276]:
+              - generic [ref=e277]: 
+              - generic [ref=e278]: Write a review
+          - heading "Web results" [level=2] [ref=e282]
+          - region [ref=e285]
+          - link "About this data" [ref=e324] [cursor=pointer]:
+            - /url: https://support.google.com/local-listings?p=how_google_sources&authuser=0&hl=en
+            - generic [ref=e326]: About this data
+          - heading "Get the most out of Google Maps Sign in" [level=2] [ref=e330]:
+            - generic [ref=e331]: Get the most out of Google Maps
+            - button "Sign in" [ref=e334] [cursor=pointer]:
+              - generic [ref=e336]: Sign in
+      - button "Collapse side panel" [ref=e338] [cursor=pointer]:
+        - generic [ref=e339]: 
+    - generic [ref=e343]:
+      - button "Google apps" [ref=e347] [cursor=pointer]:
+        - img [ref=e348]
+      - link "Sign in" [ref=e351] [cursor=pointer]:
+        - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https%3A%2F%2Fwww.google.com%2Fmaps%2Fplace%2FDECADES%2BBARBERSHOP%2F%4014.4672074%2C121.0204599%2C17z%2Fdata%3D!3m1!4b1!4m6!3m5!1s0x3397cf000d4db49f%3A0x89179bf5def4aaeb!8m2!3d14.4672074!4d121.0204599!16s%252Fg%252F11z4mhqz6v%3Fved%3D1t%253A314688&service=local&ec=GAZAcQ
+    - generic:
+      - generic:
+        - button "Show Your Location" [ref=e354] [cursor=pointer]:
+          - generic [ref=e356]: 
+        - generic [ref=e358] [cursor=pointer]:
+          - button "Zoom in" [ref=e359]
+          - button "Zoom out" [ref=e362]
+      - generic [ref=e368]:
+        - button "Browse Street View images" [ref=e370]
+        - button "Street View" [ref=e372] [cursor=pointer]
+      - generic [ref=e376]:
+        - generic "Interactive map" [ref=e377]
+        - generic [ref=e381] [cursor=pointer]:
+          - generic [ref=e382]: 
+          - generic [ref=e383]: Layers
+        - button "Layers" [ref=e384] [cursor=pointer]
+    - generic [ref=e386]:
+      - contentinfo [ref=e389]:
+        - text: Imagery ©2026 , Map data ©2026
+        - button "Philippines" [ref=e390] [cursor=pointer]
+        - button "Terms" [ref=e391] [cursor=pointer]
+        - button "Privacy" [ref=e392] [cursor=pointer]
+        - button "Send Product Feedback" [ref=e393] [cursor=pointer]
+      - button "100 m" [ref=e395] [cursor=pointer]: 100 m

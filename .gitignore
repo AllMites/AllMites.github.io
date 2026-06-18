@@ -1,0 +1,12 @@
+.playwright-mcp/
+*.png
+WebsiteTemplates/output/
+WebsiteTemplates/trades_output/
+WebsiteTemplates/barbershop_output/
+WebsiteTemplates/dist/
+node_modules/
+.env
+.superpowers/
+ForSav/
+portfolio/
+assets/screenshots/

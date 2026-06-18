@@ -1,0 +1,107 @@
+{
+  "_meta": {
+    "businessName": "Café Singko",
+    "businessSlug": "cafe-singko",
+    "businessType": "cafe",
+    "location": "BF Resort Village, Las Piñas, NCR",
+    "gatheredAt": "2026-06-07T00:00:00Z",
+    "sources": ["facebook", "instagram", "google_maps", "restaurantguru", "blog"],
+    "fieldCount": { "total": 35, "populated": 25, "missing": 10 }
+  },
+  "identity": {
+    "businessName": { "value": "Café Singko", "source": "facebook" },
+    "tagline": { "value": "A comfy refuge for students, workers, and friends", "source": "blog" },
+    "aboutText": { "value": "A small, family-owned café tucked inside the busy but happy streets of BF Resort Village, Las Piñas. Named after founder Angela's five children, Café Singko opened during the pandemic and has become a neighborhood staple — minimalist interiors, espresso drinks, sandwiches, pasta, and pastries. Now partners with Twenty Four Bakeshop for baked goods.", "source": "facebook" },
+    "established": { "value": "2021", "source": "blog" }
+  },
+  "branding": {
+    "primaryColor": { "value": "#4A3728", "source": "manual" },
+    "accentColor": { "value": "#C8A96E", "source": "manual" },
+    "vibe": { "value": "Classic white and light wood interiors; bright, minimalist, cozy; eclectic vintage finds mixed with modern art; work-from-cafe friendly; WiFi available", "source": "blog" },
+    "logoUrl": { "value": null, "source": null }
+  },
+  "contact": {
+    "phone": { "value": "+63 920 982 3206", "source": "facebook" },
+    "address": { "value": "Unit L, MJ Square Building, BF Resort Drive, BF Resort Village, Las Piñas", "source": "facebook" },
+    "facebookUrl": { "value": "https://www.facebook.com/cafesingkoph/", "source": "facebook" },
+    "instagramUrl": { "value": "https://www.instagram.com/cafesingko/", "source": "web_search" },
+    "mapsIframe": { "value": null, "source": null },
+    "whatsapp": { "value": null, "source": null }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Thursday", "time": "9:00 AM - 9:00 PM" },
+        { "days": "Friday - Sunday", "time": "9:00 AM - 10:00 PM" }
+      ],
+      "source": "facebook"
+    }
+  },
+  "offerings": {
+    "title": { "value": "Neighborhood Favorites", "source": "manual" },
+    "items": [
+      {
+        "name": { "value": "Spanish Latte", "source": "blog" },
+        "desc": { "value": "Best-seller espresso drink — rich, milky, and perfectly balanced", "source": "blog" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Singko Salt Cream", "source": "blog" },
+        "desc": { "value": "Signature house drink — sweet-salty cream over coffee, a Café Singko original", "source": "blog" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Egg Drop Sandwich", "source": "blog" },
+        "desc": { "value": "Best-selling all-day snack — soft egg, toasted bread, a crowd favorite", "source": "blog" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Bellagio Chocolate", "source": "restaurantguru" },
+        "desc": { "value": "Indulgent chocolate drink — rich and dessert-worthy", "source": "restaurantguru" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Smashed Burger", "source": "restaurantguru" },
+        "desc": { "value": "Juicy smash-style burger — a hearty option beyond the usual café fare", "source": "restaurantguru" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Cookie Butter Blondie", "source": "blog" },
+        "desc": { "value": "Pastry from Twenty Four Bakeshop partnership — buttery, sweet, pairs well with coffee", "source": "blog" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": { "value": null, "source": null },
+    "about": { "value": null, "source": null },
+    "gallery": [],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": { "value": "Cafe Singko is such a gem! Great coffee, good food, and a nice spot to get some work done.", "source": "restaurantguru" },
+        "name": { "value": "RestaurantGuru reviewer", "source": "restaurantguru" },
+        "location": { "value": null, "source": null }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": { "value": 4.8, "source": "google_maps" },
+    "reviewCount": { "value": 83, "source": "google_maps" }
+  },
+  "seo": {
+    "description": { "value": "Café Singko is a family-owned coffee shop on BF Resort Drive, Las Piñas — espresso drinks, egg drop sandwiches, and pastries in a bright, cozy space.", "source": "constructed" },
+    "keywords": { "value": "cafe Las Piñas, BF Resort Drive coffee, Spanish Latte Las Piñas, family cafe, work from cafe Las Piñas", "source": "constructed" },
+    "city": { "value": "Las Piñas", "source": "extracted_from_address" },
+    "province": { "value": "NCR", "source": "default" }
+  }
+}

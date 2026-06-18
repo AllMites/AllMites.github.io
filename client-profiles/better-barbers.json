@@ -1,0 +1,193 @@
+{
+  "_meta": {
+    "businessName": "Better Barbers",
+    "businessSlug": "better-barbers",
+    "businessType": "barbershop",
+    "location": "Doña Soledad, Parañaque, NCR",
+    "gatheredAt": "2026-06-06T00:50:00.000Z",
+    "sources": [
+      "Facebook: https://www.facebook.com/BetterBarbersPH/",
+      "Google Maps: https://www.google.com/maps/place/Better+Barbers/@14.4848881,121.0387716,17z",
+      "Instagram: https://www.instagram.com/betterbarbersph/",
+      "Barberhead: https://barberhead.com/paranaque-city/better-barbers",
+      "Bizippines: https://www.bizippines.com/better-barbers-02-7744-6473",
+      "BeautyNailHairSalons: https://www.beautynailhairsalons.com/PH/Parañaque/237748990338886/Better-Barbers"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 29,
+      "missing": 9
+    }
+  },
+  "identity": {
+    "businessName": {
+      "value": "Better Barbers",
+      "source": "Google Maps"
+    },
+    "tagline": {
+      "value": "One of the best and most popular barber shops in Paranaque City",
+      "source": "Barberhead"
+    },
+    "aboutText": {
+      "value": "Classic barbershop on Doña Soledad Avenue with nostalgic ambiance, relaxing soft music, comfy waiting lounge, professional barbers, and complimentary massage after haircut. Serves free brewed coffee to customers.",
+      "source": "Google Maps reviews + Barberhead"
+    },
+    "established": {
+      "value": null,
+      "source": null
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#CC0000",
+      "source": "Facebook profile photo (red barber pole logo)"
+    },
+    "accentColor": {
+      "value": "#2C2C2C",
+      "source": "Facebook profile photo (charcoal/black)"
+    },
+    "vibe": {
+      "value": "Nostalgic, classic, vintage barbershop with relaxing ambiance and professional service",
+      "source": "Google Maps reviews"
+    },
+    "logoUrl": {
+      "value": "https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-1/305318328_485985583536973_2329221287185240565_n.jpg",
+      "source": "Facebook profile photo"
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "(02) 7744 6473",
+      "source": "Google Maps"
+    },
+    "address": {
+      "value": "27 Doña Soledad Ave, Parañaque, 1709 Metro Manila",
+      "source": "Google Maps"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/BetterBarbersPH/",
+      "source": "Facebook"
+    },
+    "instagramUrl": {
+      "value": "https://www.instagram.com/betterbarbersph/",
+      "source": "Facebook post + Instagram"
+    },
+    "mapsIframe": {
+      "value": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.5!2d121.0387716!3d14.4848881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cfd8c9cb0b59%3A0x9d3f5a890d501bb4!2sBetter+Barbers!5e0!3m2!1sen!2sph",
+      "source": "Google Maps Place ID: ChIJWQvLydjPlzMRtBtQDYlaP50"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Sunday", "time": "9:00 AM - 7:30 PM" }
+      ],
+      "source": "Barberhead + Google Maps"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Barber Services",
+      "source": "Derived from barbershop type + reviews"
+    },
+    "items": [
+      {
+        "name": { "value": "Haircut", "source": "Google Maps reviews" },
+        "desc": { "value": "Professional haircut with consultation", "source": "Derived" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": "content_cut", "source": "Material Icons" }
+      },
+      {
+        "name": { "value": "Haircut & Shave", "source": "Google Maps reviews" },
+        "desc": { "value": "Full haircut with straight razor shave", "source": "Derived" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": "face", "source": "Material Icons" }
+      },
+      {
+        "name": { "value": "Post-Haircut Massage", "source": "Google Maps reviews" },
+        "desc": { "value": "Complimentary shoulder and neck massage after every haircut", "source": "Google Maps reviews" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": "spa", "source": "Material Icons" }
+      },
+      {
+        "name": { "value": "Free Coffee", "source": "Google Maps review keywords" },
+        "desc": { "value": "Complimentary brewed coffee for all customers", "source": "Google Maps review keywords" },
+        "price": { "value": "Free", "source": "Google Maps reviews" },
+        "icon": { "value": "local_cafe", "source": "Material Icons" }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSmOfdazGeQHfHB-68vlueBv9rbacH05OYvseNblA63h5L9Ki8A-5jrlUTXSKWrX7RNMqZS0qFhf32SOOeOf4UPRnsCO88K5kX_IDRPN-0bKaJNhDWyDfa9KJE1bvyyt8SKpY3aA=w800-h600-k-no",
+      "source": "Google Maps photo (interior, Jun 2022)"
+    },
+    "about": {
+      "value": null,
+      "source": null
+    },
+    "gallery": [
+      {
+        "value": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFSmOfdazGeQHfHB-68vlueBv9rbacH05OYvseNblA63h5L9Ki8A-5jrlUTXSKWrX7RNMqZS0qFhf32SOOeOf4UPRnsCO88K5kX_IDRPN-0bKaJNhDWyDfa9KJE1bvyyt8SKpY3aA=w408-h306-k-no",
+        "source": "Google Maps (interior, Jun 2022)"
+      }
+    ],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": { "value": "Great nostalgic ambiance, relaxing soft music, comfy waiting lounge, professional barbers, and dose of massage after the haircut.", "source": "google_maps" },
+        "name": { "value": "Ricky", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": { "value": "I've had 2 haircuts here and the first one was good. Second haircut with the barber next to the counter was terrible - unprofessional, untidy and rushed.", "source": "google_maps" },
+        "name": { "value": "Met Al", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": { "value": "Was here Oct 2024. The barbers seem snooty. Haircut was just ok. I still gave a good tip but won't come back.", "source": "google_maps" },
+        "name": { "value": "7Alaris", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.5,
+      "source": "Google Maps"
+    },
+    "reviewCount": {
+      "value": 133,
+      "source": "Google Maps (also 53 on Barberhead)"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "Better Barbers is a classic barbershop located at 27 Doña Soledad Ave, Brgy. Don Bosco, Parañaque. Known for its nostalgic ambiance, professional barbers, complimentary post-haircut massage, and free brewed coffee. Open daily 9AM-7:30PM.",
+      "source": "Synthesized from all sources"
+    },
+    "keywords": {
+      "value": "barbershop, barber, haircut, Parañaque barber, Doña Soledad barbershop, Don Bosco barber, men's haircut, massage after haircut, Better Barbers, affordable barbershop Parañaque",
+      "source": "Synthesized"
+    },
+    "city": {
+      "value": "Parañaque",
+      "source": "Google Maps"
+    },
+    "province": {
+      "value": "Metro Manila",
+      "source": "Google Maps"
+    }
+  }
+}

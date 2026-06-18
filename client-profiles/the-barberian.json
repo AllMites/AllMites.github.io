@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "businessName": "The Barberian Barbershop",
+    "businessSlug": "the-barberian",
+    "businessType": "barbershop",
+    "location": "Westgate, Alabang, Muntinlupa, NCR",
+    "gatheredAt": "2026-06-06T09:05:00+08:00",
+    "sources": [
+      "facebook",
+      "instagram",
+      "barberhead",
+      "westgate_filinvest"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 20,
+      "missing": 18
+    },
+    "stillMissing": [
+      "identity.aboutText",
+      "identity.established",
+      "contact.phone",
+      "contact.address",
+      "images.hero",
+      "images.about",
+      "images.gallery",
+      "offerings.items[].price"
+    ]
+  },
+  "identity": {
+    "businessName": {
+      "value": "The Barberian Barbershop",
+      "source": "facebook"
+    },
+    "tagline": {
+      "value": null,
+      "source": null
+    },
+    "aboutText": {
+      "value": "Premium barbershop located at Westgate, Filinvest City, Alabang — a 9.2 hectare open-air retail hub. Modern barbering services in a mall setting.",
+      "source": "westgate_filinvest"
+    },
+    "established": {
+      "value": null,
+      "source": null
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#1E1B18",
+      "source": "default_barbershop"
+    },
+    "accentColor": {
+      "value": "#C8462C",
+      "source": "default_barbershop"
+    },
+    "vibe": {
+      "value": "Premium mall-based barbershop — modern, professional, high-traffic location in Westgate Alabang",
+      "source": "manual"
+    },
+    "logoUrl": {
+      "value": null,
+      "source": null
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "805-0342",
+      "source": "westgate_filinvest"
+    },
+    "address": {
+      "value": "Westgate Center, Filinvest City, Alabang, Muntinlupa, Metro Manila",
+      "source": "westgate_filinvest"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/BarberianPh/",
+      "source": "facebook"
+    },
+    "instagramUrl": {
+      "value": "https://www.instagram.com/barberianph/",
+      "source": "instagram"
+    },
+    "mapsIframe": {
+      "value": null,
+      "source": null
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": null,
+      "source": null
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Services",
+      "source": "manual"
+    },
+    "items": [
+      {
+        "name": { "value": "Premium Haircut", "source": "manual" },
+        "desc": { "value": "Professional haircut and styling", "source": "manual" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Hot Towel Shave", "source": "manual" },
+        "desc": { "value": "Classic straight razor shave treatment", "source": "manual" },
+        "price": { "value": null, "source": null },
+        "icon": { "value": null, "source": null }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": null,
+      "source": null
+    },
+    "about": {
+      "value": null,
+      "source": null
+    },
+    "gallery": [],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": null,
+      "source": null
+    },
+    "reviewCount": {
+      "value": 0,
+      "source": "barberhead"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "The Barberian Barbershop — Premium grooming at Westgate, Filinvest City, Alabang. Professional haircuts and hot towel shaves in a modern mall setting.",
+      "source": "constructed"
+    },
+    "keywords": {
+      "value": "the barberian, barbershop alabang, westgate barber, filinvest barber, premium haircut muntinlupa",
+      "source": "constructed"
+    },
+    "city": {
+      "value": "Muntinlupa",
+      "source": "extracted_from_address"
+    },
+    "province": {
+      "value": "NCR",
+      "source": "default"
+    }
+  }
+}

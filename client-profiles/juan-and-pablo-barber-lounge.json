@@ -1,0 +1,162 @@
+{
+  "_meta": {
+    "businessName": "Juan and Pablo Barber Lounge",
+    "businessSlug": "juan-and-pablo-barber-lounge",
+    "businessType": "barbershop",
+    "location": "BF Homes, Parañaque, NCR",
+    "gatheredAt": "2026-06-06T00:45:00+08:00",
+    "sources": [
+      "https://barberhead.com/paranaque-city/juan-and-pablo-barber-lounge",
+      "https://www.bizippines.com/juan-and-pablo-barber-lounge",
+      "https://philippines.worldplaces.me/barber-shops-in-paranaque/57512210-juan-and-pablo.html",
+      "https://www.facebook.com/mukatman/posts/gumawa-kami-ng-mural-sa-juan-pablo-barber-lounge-sa-paranaque-soft-opening-nila-/10159332778815004/",
+      "https://www.facebook.com/TigaSouthKaBa/videos/know-what-proper-barbering-is-all-about-through-the-hands-of-the-craftsmen-from-/1799915853637907/"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 16,
+      "missing": 22
+    },
+    "status": "Business appears to be permanently closed. Multiple directories mark it as closed. Facebook page redirects to unrelated business."
+  },
+  "identity": {
+    "businessName": {
+      "value": "Juan and Pablo Barber Lounge",
+      "source": "https://barberhead.com/paranaque-city/juan-and-pablo-barber-lounge, https://www.bizippines.com/juan-and-pablo-barber-lounge"
+    },
+    "tagline": {
+      "value": "Basta Guwapo, Gupit Juan and Pablo",
+      "source": "https://www.facebook.com/TigaSouthKaBa/videos/know-what-proper-barbering-is-all-about-through-the-hands-of-the-craftsmen-from-/1799915853637907/"
+    },
+    "aboutText": {
+      "value": "A barber lounge in BF Homes, Parañaque serving gentlemanly haircuts. Considered one of the best and most popular barber shops in Paranaque City, Philippines. Soft-opened October 2017.",
+      "source": "https://barberhead.com/paranaque-city/juan-and-pablo-barber-lounge, https://www.facebook.com/mukatman/posts/"
+    },
+    "established": {
+      "value": "2017",
+      "source": "https://www.facebook.com/mukatman/posts/gumawa-kami-ng-mural-sa-juan-pablo-barber-lounge-sa-paranaque-soft-opening-nila-/10159332778815004/"
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#2D2D2D",
+      "source": "barbershop default (charcoal based on business type)"
+    },
+    "accentColor": {
+      "value": "#C0A060",
+      "source": "barbershop default (gold tone based on business type)"
+    },
+    "vibe": {
+      "value": "Neighborhood barbershop, gentlemanly, Filipino neighborhood feel",
+      "source": "https://www.facebook.com/TigaSouthKaBa/videos/, https://www.bizippines.com/juan-and-pablo-barber-lounge"
+    },
+    "logoUrl": {
+      "value": null,
+      "source": "No logo found via web search"
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "+63 945 226 1774",
+      "source": "https://www.bizippines.com/juan-and-pablo-barber-lounge, https://philippines.worldplaces.me/barber-shops-in-paranaque/57512210-juan-and-pablo.html"
+    },
+    "address": {
+      "value": "Unit 102, 209 Aguirre Ave, BF Homes, Parañaque, 1720 Metro Manila, Philippines",
+      "source": "https://www.bizippines.com/juan-and-pablo-barber-lounge, https://philippines.worldplaces.me/barber-shops-in-paranaque/57512210-juan-and-pablo.html"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/121266045176437/",
+      "source": "https://www.bizippines.com/juan-and-pablo-barber-lounge"
+    },
+    "instagramUrl": {
+      "value": null,
+      "source": "No Instagram account found for Parañaque location"
+    },
+    "mapsIframe": {
+      "value": "https://www.google.com/maps?cid=15508503834783191922",
+      "source": "https://www.bizippines.com/juan-and-pablo-barber-lounge"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": "Not found"
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        {"day": "Monday", "open": "10:00", "close": "22:00"},
+        {"day": "Tuesday", "open": "10:00", "close": "22:00"},
+        {"day": "Wednesday", "open": "10:00", "close": "22:00"},
+        {"day": "Thursday", "open": "10:00", "close": "22:00"},
+        {"day": "Friday", "open": "10:00", "close": "22:00"},
+        {"day": "Saturday", "open": "10:00", "close": "22:00"},
+        {"day": "Sunday", "open": "10:00", "close": "22:00"}
+      ],
+      "source": "https://philippines.worldplaces.me/barber-shops-in-paranaque/57512210-juan-and-pablo.html, https://www.bizippines.com/juan-and-pablo-barber-lounge"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Barber Services",
+      "source": "Business type: barbershop"
+    },
+    "items": [
+      {
+        "name": {"value": "Gentlemanly Haircut", "source": "https://www.facebook.com/mukatman/posts/"},
+        "desc": {"value": "Professional haircut service", "source": "Business type: barbershop"},
+        "price": {"value": null, "source": "No price list found"},
+        "icon": {"value": "content_cut", "source": "default barbershop icon"}
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": null,
+      "source": "No hero/storefront image found"
+    },
+    "about": {
+      "value": null,
+      "source": "No about image found"
+    },
+    "gallery": [],
+    "maxGallery": 6,
+    "staff": [
+      {
+        "name": null,
+        "specialty": null,
+        "photo": null
+      }
+    ]
+  },
+  "socialProof": {
+    "testimonials": [],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.9,
+      "source": "https://www.bizippines.com/juan-and-pablo-barber-lounge (aggregated from 50+ reviews across platforms)"
+    },
+    "reviewCount": {
+      "value": 50,
+      "source": "https://www.bizippines.com/juan-and-pablo-barber-lounge"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "Juan and Pablo Barber Lounge is a barbershop in BF Homes, Parañaque. Located at Unit 102, 209 Aguirre Ave. Offers gentlemanly haircuts. Open daily 10AM-10PM.",
+      "source": "Compiled from multiple sources"
+    },
+    "keywords": {
+      "value": "barbershop, barber, haircut, Parañaque, BF Homes, Aguirre Avenue, Juan and Pablo, gentleman's haircut, Metro Manila",
+      "source": "Compiled from multiple sources"
+    },
+    "city": {
+      "value": "Parañaque",
+      "source": "https://www.bizippines.com/juan-and-pablo-barber-lounge"
+    },
+    "province": {
+      "value": "Metro Manila",
+      "source": "https://www.bizippines.com/juan-and-pablo-barber-lounge"
+    }
+  }
+}

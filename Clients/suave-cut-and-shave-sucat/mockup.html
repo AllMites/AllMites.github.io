@@ -1,0 +1,1590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suave Cut and Shave | Klasikong Gupit at Ahit</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts: Oswald (display) + Work Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Structured Data (LocalBusiness) — populated by JS -->
+    <script type="application/ld+json" id="seo-jsonld">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "",
+        "image": "",
+        "telephone": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "",
+            "addressRegion": "",
+            "addressCountry": "PH"
+        },
+        "url": "",
+        "description": "",
+        "priceRange": "₱"
+    }
+    </script>
+
+    <!-- System fonts — no external dependencies -->
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!-- INSTRUCTIONS:
+         This SITE_CONFIG object is the single source of truth. Changing these
+         values or compiling with the {{TOKEN}} replacement engine will
+         instantly reskin and re-populate the entire barbershop template.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            theme: {
+                colors: {
+                    background: "#FDFAF7",       // #FDFAF7 (Warm Cream)
+                    text: "#1a1a2e",           // #1E1B18 (Deep Charcoal)
+                    accent: "#C8462C",       // #C8462C (Barber Red)
+                    surface: "#F3EEE8",     // #F3EEE8 (Leather Tan)
+                    border: "#D4CDC4",       // #D4CDC4 (Warm Muted)
+                    barberPole: "#1B4D8C"    // #1B4D8C (Barber Blue)
+                },
+                fonts: {
+                    heading: "'Oswald', sans-serif",
+                    body: "'Work Sans', sans-serif"
+                }
+            },
+            seo: {
+                templateTitle: "Suave Cut and Shave | Barbershop in Parañaque",
+                description: "Suave Cut and Shave — your go-to barbershop in the South since 2015. Stay Suave all day! Air-conditioned, professional barbers, classic cuts and shaves.",
+                keywords: "Suave Cut and Shave, barbershop Parañaque, Sucat barbershop, haircut Sucat, barber Parañaque, men's grooming",
+                city: "Parañaque",
+                province: "Metro Manila",
+                phone: "0916 605 5170",
+                image: "https://placehold.co/1920x1080/1a1a2e/FDFAF7?text=Suave+Cut+and+Shave+Interior",
+                url: null
+            },
+            hero: {
+                businessName: "Suave Cut and Shave",
+                tagline: "Stay Suave all day!",
+                backgroundImage: "images/exterior.jpg",
+                ctaText: "Walk-ins Welcome / Book a Cut"
+            },
+            services: [
+                { icon: "💈", name: "Haircut & Style", desc: "Professional haircut with fade, texturing, and styling options", price: "₱250" },
+                { icon: "🪒", name: "Shave", desc: "Classic straight-razor shave service", price: "₱180" },
+                { icon: "✂️", name: "Kid's Haircut", desc: "Haircuts for kids — 'Who says we're just for grown men?'", price: "₱150" },
+                { icon: "🧴", name: "Pomade & Styling Products", desc: "8th year anniversary pomade and other styling products available", price: "₱300" },
+                { icon: "👑", name: "Haircut + Shave Combo", desc: "Full haircut with straight razor shave — the classic barbershop experience in one visit", price: "₱380" },
+                { icon: "🔥", name: "Hot Towel Shave", desc: "Traditional straight razor shave with hot towel treatment and cold pack finish", price: "₱280" }
+            ],
+            about: {
+                text: "Your go-to barbershop in the South delivering quality grooming service since 2015. Stay Suave all day! Modern traditional barbershop with air-conditioned cozy atmosphere, leather seats, and fun atmosphere with showmanship from barbers.",
+                yearsInBusiness: "Est. 2015 — Sucat Local",
+                image: "images/setup.jpg"
+            },
+            barbers: [
+                { name: "Barber Mike", specialty: "Haircuts & Styles", image: "https://placehold.co/400x500/1a1a2e/F3EEE8?text=Barber+Mike" },
+                { name: "Barber Paul", specialty: "Haircuts & Styles", image: "https://placehold.co/400x500/1a1a2e/F3EEE8?text=Barber+Paul" },
+                { name: "Our Barber", specialty: "Classic Cuts & Beard Grooming", image: "https://placehold.co/400x500/1a1a2e/F3EEE8?text=Our+Barber" }
+            ],
+            gallery: [
+                "images/interior.jpg",
+                "images/lobby.jpg",
+                "images/exterior.jpg",
+                "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1621605815971-f11498e13fcc?w=600&h=600&fit=crop",
+                "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=600&h=600&fit=crop"
+            ],
+            galleryLabels: [
+                "Shop Interior",
+                "Lobby Area",
+                "Storefront",
+                "Haircut",
+                "Haircut",
+                "Barber Chair"
+            ],
+            galleryTitle: "The Suave Style",
+            gallerySubtitle: "Modern grooming, traditional values. Since 2015.",
+            testimonials: [
+                { quote: "Had my first haircut in forever. And never regret that I chose Suave to do it. You can see that they are really passionate on what their doing. Expertise, fun and just enough showmanship is what I saw. Will definitely go back for another haircut.", name: "Martin Andres", location: "Parañaque", stars: 5 },
+                { quote: "I had a great experience at Suave Haircut in Sucat. The place is air-conditioned and has a cozy atmosphere, making it comfortable to stay while getting a haircut.", name: "Ivan John Sanchez", location: "Sucat, Parañaque", stars: 5 },
+                { quote: "Best barbershop", name: "GD Win", location: "Parañaque", stars: 5 }
+            ],
+            pricingTitle: "Pricing & Services",
+            contact: {
+                address: "1709 Dr Arcadio Santos Ave, San Isidro, Parañaque, 1700 Metro Manila, Philippines",
+                phone: "0916 605 5170",
+                whatsapp: "https://wa.me/639166055170",
+                facebook: "https://www.facebook.com/SuaveCutAndShave",
+                instagram: "https://www.instagram.com/suavecutandshave/",
+                mapEmbedUrl: "https://www.google.com/maps?q=Suave+Cut+and+Shave+Barbershop+Sucat+Para%C3%B1aque&output=embed"
+            },
+            hours: {
+                monFri: "10:00 AM - 8:00 PM",
+                sat: "10:00 AM - 8:00 PM",
+                sun: "10:00 AM - 8:00 PM"
+            },
+            footer: {
+                copyright: "Suave Cut and Shave"
+            }
+        };
+
+        // DEFAULT STANDALONE MOCK DATA (Local BF Homes Barbershop Fallback)
+        // Ensures instant portfolio-ready render on direct file opening or double click
+        const DEFAULT_FALLBACKS = {
+            "#FDFAF7": "#FDFAF7",
+            "#1a1a2e": "#1E1B18",
+            "#c9a84c": "#C8462C",
+            "#F3EEE8": "#F3EEE8",
+            "#D4CDC4": "#D4CDC4",
+            "#1B4D8C": "#1B4D8C",
+            "'Segoe UI', system-ui, -apple-system, sans-serif": "'Segoe UI', system-ui, -apple-system, sans-serif",
+            "'Segoe UI', system-ui, -apple-system, sans-serif": "'Segoe UI', system-ui, -apple-system, sans-serif",
+            "Suave Cut and Shave | Barbershop in Parañaque": "Barbero's Barbershop | Klasikong Gupit sa BF Homes, Parañaque",
+            "Suave Cut and Shave — your go-to barbershop in the South since 2015. Stay Suave all day! Air-conditioned, professional barbers, classic cuts and shaves.": "Barbero's Barbershop — klasikong gupit at ahit sa BF Homes, Parañaque. Fade, hot towel shave, beard trim. Walk-ins welcome.",
+            "Suave Cut and Shave, barbershop Parañaque, Sucat barbershop, haircut Sucat, barber Parañaque, men's grooming": "barbershop, paranaque, haircut, bf homes, fade, barbero",
+            "Parañaque": "Parañaque",
+            "Metro Manila": "NCR",
+            "0916 605 5170": "+63 2 8820 1234",
+            "https://placehold.co/1920x1080/1a1a2e/FDFAF7?text=Suave+Cut+and+Shave+Interior": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&h=1080&fit=crop",
+            "Suave Cut and Shave": "Barbero's Barbershop",
+            "Stay Suave all day!": "Hindi lang pogi. Matinong gupit.",
+            "https://placehold.co/1920x1080/1a1a2e/FDFAF7?text=Suave+Cut+and+Shave+Interior": "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=1920&h=1080&fit=crop",
+            "Walk-ins Welcome / Book a Cut": "Walk-ins Welcome / Book a Cut",
+            "💈": "💈", "Haircut & Style": "Klasikong Gupit", "Professional haircut with fade, texturing, and styling options": "Includes standard wash, traditional hot razor neck shave, and pomade styling.", "[placeholder]": "₱150",
+            "🪒": "✂️", "Shave": "Signature Fade", "Classic straight-razor shave service": "Mid, high, taper, or skin fade customized to your head shape and hair texture.", "[placeholder]": "₱180",
+            "✂️": "🔥", "Kid's Haircut": "Hot Towel Shave", "Haircuts for kids — 'Who says we're just for grown men?'": "Traditional straight razor shave with essential oils, pre-shave cream, and cold pack finish.", "[placeholder]": "₱200",
+            "🧴": "🧔", "Pomade & Styling Products": "Beard Trim & Lineup", "8th year anniversary pomade and other styling products available": "Precise beard sculpting with straight razor edge lineup and conditioning oil.", "[placeholder]": "₱120",
+            "👑": "🧼", "Haircut + Shave Combo": "Shampoo & Blow Style", "Full haircut with straight razor shave — the classic barbershop experience in one visit": "Deep cooling scalp wash with mint-infused formula followed by style blowout.", "[placeholder]": "₱130",
+            "🔥": "👑", "Hot Towel Shave": "The Full Barber Package", "Traditional straight razor shave with hot towel treatment and cold pack finish": "Signature fade, full hot towel shave, beard design, and relaxing ear and shoulder massage.", "[placeholder]": "₱500",
+            "Your go-to barbershop in the South delivering quality grooming service since 2015. Stay Suave all day! Modern traditional barbershop with air-conditioned cozy atmosphere, leather seats, and fun atmosphere with showmanship from barbers.": "Founded right in the heart of BF Homes, Parañaque, Barbero's brings back the warmth of the traditional local barberya. We believe that a haircut isn't just a chore — it's a neighborhood ritual. Backed by generations of gupit expertise, our local masters combine timeless barbering values with clean, sharp modern lines.",
+            "Est. 2015 — Sucat Local": "Est. 2018 — BF Homes Local",
+            "https://placehold.co/800x1000/1a1a2e/F3EEE8?text=Suave+Cut+and+Shave+Setup": "https://images.unsplash.com/photo-1585747861115-6bc0b31ba1ed?w=800&h=1000&fit=crop",
+            "Barber Mike": "Mang Jun", "Haircuts & Styles": "Traditional Scissor Cuts & Razor Shaves", "https://placehold.co/400x500/1a1a2e/F3EEE8?text=Barber+Mike": "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=400&h=500&fit=crop",
+            "Barber Paul": "Niko", "Haircuts & Styles": "Modern Skin Fades & Hair Tattoo Art", "https://placehold.co/400x500/1a1a2e/F3EEE8?text=Barber+Paul": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=400&h=500&fit=crop",
+            "Our Barber": "Kuya Boyet", "Classic Cuts & Beard Grooming": "Classic Pomp, Slick Backs, & Beard Sculpting", "https://placehold.co/400x500/1a1a2e/F3EEE8?text=Our+Barber": "https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=400&h=500&fit=crop",
+            "https://placehold.co/600x600/1a1a2e/F3EEE8?text=Interior+1": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=600&h=600&fit=crop",
+            "https://placehold.co/600x600/1a1a2e/F3EEE8?text=Interior+2": "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?w=600&h=600&fit=crop",
+            "https://placehold.co/600x600/1a1a2e/F3EEE8?text=Haircut+1": "https://images.unsplash.com/photo-1657105052497-f996284ffff8?w=600&h=600&fit=crop",
+            "https://placehold.co/600x600/1a1a2e/F3EEE8?text=Haircut+2": "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=600&h=600&fit=crop",
+            "https://placehold.co/600x600/1a1a2e/F3EEE8?text=Storefront": "https://images.unsplash.com/photo-1647140655214-e4a2d914971f?w=600&h=600&fit=crop",
+            "https://placehold.co/600x600/1a1a2e/F3EEE8?text=Barber+Chair": "https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=600&h=600&fit=crop",
+            "Interior": "Skin Fade",
+            "Interior": "Klasikong Pompadour",
+            "Haircut": "Beard Sculpting",
+            "Haircut": "Hot Towel Shave",
+            "Storefront": "Gent's Cut",
+            "Barber Chair": "Razor Ahit",
+            "The Suave Style": "Barbero Style Book",
+            "Modern grooming, traditional values. Since 2015.": "Real results from real local clients. Simple, sharp, and clean.",
+            "Had my first haircut in forever. And never regret that I chose Suave to do it. You can see that they are really passionate on what their doing. Expertise, fun and just enough showmanship is what I saw. Will definitely go back for another haircut.": "Walang kupas si Mang Jun. Swabe ang kamay sa ahit at talagang relaxing ang shoulder massage pagkatapos.",
+            "Martin Andres": "Vicente D.",
+            "Parañaque": "Aguirre Ave, Parañaque",
+            "I had a great experience at Suave Haircut in Sucat. The place is air-conditioned and has a cozy atmosphere, making it comfortable to stay while getting a haircut.": "Perfect skin fade palagi si Niko. Matino kausap at talagang detalyado magtrabaho. Sila lang ang pinagkakatiwalaan ko rito.",
+            "Ivan John Sanchez": "Miggy P.",
+            "Sucat, Parañaque": "Don Bosco, Parañaque",
+            "Best barbershop": "Malinis ang shop, malamig ang aircon, at higit sa lahat napaka-reasonable ng presyo para sa kalidad ng gupit.",
+            "GD Win": "Engr. Castro",
+            "Parañaque": "BF Homes, Parañaque",
+            "Pricing & Services": "Pricing & Packages",
+            "1709 Dr Arcadio Santos Ave, San Isidro, Parañaque, 1700 Metro Manila, Philippines": "Block 5 Lot 12 Aguirre Avenue, BF Homes, Parañaque, Metro Manila",
+            "0916 605 5170": "+63 2 8820 1234",
+            "https://wa.me/639166055170": "https://wa.me/639171234567",
+            "https://www.facebook.com/SuaveCutAndShave": "https://facebook.com/barberosbf",
+            "https://www.instagram.com/suavecutandshave/": "https://instagram.com/barberosbf",
+            "https://www.google.com/maps?q=Suave+Cut+and+Shave+Barbershop+Sucat+Para%C3%B1aque&output=embed": "https://www.google.com/maps?q=Barbero%27s+Barbershop+BF+Homes+Para%C3%B1aque&output=embed",
+            "10:00 AM - 8:00 PM": "9:00 AM - 8:00 PM",
+            "10:00 AM - 8:00 PM": "8:00 AM - 9:00 PM",
+            "10:00 AM - 8:00 PM": "8:00 AM - 6:00 PM",
+            "Suave Cut and Shave": "Barbero's Barbershop Parañaque"
+        };
+
+        // Automatic mapping utility
+        Object.keys(SITE_CONFIG).forEach(key => {
+            const val = SITE_CONFIG[key];
+            if (typeof val === 'string' && val.startsWith('{{')) {
+                SITE_CONFIG[key] = DEFAULT_FALLBACKS[val] || '';
+            } else if (typeof val === 'object' && val !== null) {
+                Object.keys(val).forEach(subKey => {
+                    if (typeof val[subKey] === 'string' && val[subKey].startsWith('{{')) {
+                        val[subKey] = DEFAULT_FALLBACKS[val[subKey]] || '';
+                    } else if (typeof val[subKey] === 'object' && val[subKey] !== null) {
+                        Object.keys(val[subKey]).forEach(deepKey => {
+                            if (typeof val[subKey][deepKey] === 'string' && val[subKey][deepKey].startsWith('{{')) {
+                                val[subKey][deepKey] = DEFAULT_FALLBACKS[val[subKey][deepKey]] || '';
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        // Loop over array properties
+        ['services', 'barbers', 'gallery', 'galleryLabels', 'testimonials'].forEach(arrKey => {
+            SITE_CONFIG[arrKey] = SITE_CONFIG[arrKey].map((item, index) => {
+                if (typeof item === 'string' && item.startsWith('{{')) {
+                    return DEFAULT_FALLBACKS[item] || '';
+                } else if (typeof item === 'object') {
+                    const cleanObj = {};
+                    Object.keys(item).forEach(k => {
+                        cleanObj[k] = (typeof item[k] === 'string' && item[k].startsWith('{{')) ? DEFAULT_FALLBACKS[item[k]] : item[k];
+                    });
+                    return cleanObj;
+                }
+                return item;
+            });
+        });
+    </script>
+    <!-- === END EDIT HERE === -->
+    <!-- ======================================================================= -->
+
+    <!-- CUSTOM BARBERSHOP STYLING -->
+    <style>
+        :root {
+            --bg-color: #fdfaf7;
+            --text-color: #1e1b18;
+            --accent-color: #c8462c;
+            --surface-color: #f3eee8;
+            --border-color: #d4cdc4;
+            --barber-blue: #1b4d8c;
+            --font-heading: 'Oswald', sans-serif;
+            --font-body: 'Work Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Prevent FOUC — body hidden until JS runs */
+        body { opacity: 0; transition: opacity 0.2s ease; }
+        body.ready { opacity: 1; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image:
+                radial-gradient(var(--border-color) 0.5px, transparent 0.5px),
+                radial-gradient(var(--border-color) 0.5px, var(--bg-color) 0.5px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: 0.03em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Subtle repeating barber pole gradient */
+        .barber-pole-stripe {
+            height: 6px;
+            width: 100%;
+            background: repeating-linear-gradient(
+                -45deg,
+                var(--accent-color),
+                var(--accent-color) 12px,
+                #ffffff 12px,
+                #ffffff 24px,
+                var(--barber-blue) 24px,
+                var(--barber-blue) 36px,
+                #ffffff 36px,
+                #ffffff 48px
+            );
+        }
+
+        /* Container & Spacing rules */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 6%;
+        }
+
+        .section {
+            padding: 130px 0;
+        }
+
+        .section-title {
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+            display: block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 1.2rem auto 0;
+        }
+
+        /* Action Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-weight: 400;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 1.2rem 2.5rem;
+            border: 2px solid var(--accent-color);
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border-color: var(--text-color);
+            color: var(--text-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--text-color);
+            border-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Sticky Navigation Bar — fully hidden at top, appears on scroll */
+        #navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            background-color: transparent;
+            border-bottom: 1px solid transparent;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-100%);
+        }
+
+        #navbar.scrolled {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            transition: padding 0.3s ease;
+        }
+
+        #navbar.scrolled .nav-inner {
+            padding: 1rem 0;
+        }
+
+        .nav-logo {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            font-weight: 400;
+            color: var(--text-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: var(--font-heading);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.25s ease;
+            position: relative;
+            font-weight: 400;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px; left: 0; width: 0; height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.25s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hamburger / Burger Icon */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2000;
+            position: relative;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 26px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 5px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile Overlay Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100vh;
+            background-color: var(--surface-color);
+            z-index: 1500;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-nav a {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 400;
+        }
+
+        /* Hero */
+        #hero {
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(30, 27, 24, 0.8) 20%, rgba(30, 27, 24, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6.5rem);
+            margin-bottom: 1.2rem;
+            text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            font-weight: 300;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+        }
+
+        /* Services Grid (3x2) */
+        #services {
+            background-color: var(--surface-color);
+            position: relative;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.5rem;
+        }
+
+        .service-card {
+            background-color: var(--bg-color);
+            padding: 3.5rem 2.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .service-top {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .service-name {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            line-height: 1.5;
+        }
+
+        .service-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px dashed var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        .service-price {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--accent-color);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+            border: 1px solid var(--border-color);
+        }
+
+        .about-badge {
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 2rem 2.5rem;
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 1.1rem;
+            border: 2px solid var(--accent-color);
+        }
+
+        .about-description {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+
+        /* Meet the Barbers */
+        #barbers {
+            background-color: var(--surface-color);
+        }
+
+        .barbers-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .barber-card {
+            overflow: hidden;
+        }
+
+        .barber-image-box {
+            width: 100%;
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            background-color: var(--border-color);
+        }
+
+        .barber-image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .barber-card:hover .barber-image-box img {
+            transform: scale(1.03);
+        }
+
+        .barber-info {
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .barber-name {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .barber-specialty {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #ffffff;
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(to top, rgba(30,27,24,0.7) 0%, transparent 100%);
+        }
+
+        /* Simple Pricing Horizontal Table */
+        #pricing {
+            background-color: var(--surface-color);
+        }
+
+        .pricing-table {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .pricing-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: center;
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+
+        .pricing-detail h3 {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-bottom: 0.3rem;
+        }
+
+        .pricing-detail p {
+            font-size: 0.95rem;
+            opacity: 0.8;
+            max-width: 700px;
+        }
+
+        .pricing-cost {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: var(--accent-color);
+            white-space: nowrap;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3.5rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--surface-color);
+            padding: 3rem 2.5rem;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        .testimonial-quote::before {
+            content: '\201C';
+            position: absolute;
+            top: -20px; left: -15px;
+            font-size: 3rem;
+            opacity: 0.15;
+            font-family: var(--font-heading);
+        }
+
+        .testimonial-author h4 {
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .testimonial-author span {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Location + Hours */
+        #location {
+            background-color: var(--surface-color);
+            padding-bottom: 0;
+        }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .location-info {
+            padding: 6rem 15% 6rem 12%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .location-address {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+        }
+
+        .hours-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+
+        .hours-table tr {
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .hours-table tr:last-child {
+            border-bottom: none;
+        }
+
+        .hours-table td {
+            padding: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .hours-table td.day {
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .hours-table td.time {
+            text-align: right;
+            opacity: 0.9;
+        }
+
+        .location-map {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .location-map iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 6rem 0 3rem;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .footer-logo span {
+            color: var(--accent-color);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-socials a {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+            transition: color 0.3s ease;
+            font-weight: 400;
+        }
+
+        .footer-socials a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* Lightbox */
+        .lightbox {
+          position: fixed; inset: 0; z-index: 9999;
+          background: rgba(0,0,0,0.92);
+          display: flex; align-items: center; justify-content: center;
+          opacity: 0; pointer-events: none;
+          transition: opacity 0.3s ease;
+        }
+        .lightbox.open { opacity: 1; pointer-events: auto; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+        .lightbox-close {
+          position: absolute; top: 20px; right: 30px;
+          color: #fff; font-size: 2rem; cursor: pointer;
+          background: none; border: none; font-family: sans-serif;
+        }
+        .lightbox-nav {
+          position: absolute; top: 50%; transform: translateY(-50%);
+          color: #fff; font-size: 2.5rem; cursor: pointer;
+          background: none; border: none; padding: 1rem; font-family: sans-serif;
+        }
+        .lightbox-nav.prev { left: 10px; }
+        .lightbox-nav.next { right: 10px; }
+
+        /* Scroll Animation States */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: calc(var(--i, 0) * 0.1s);
+        }
+
+        /* Breakpoints for Fluid Responsiveness */
+        @media (max-width: 900px) {
+            .services-grid, .barbers-grid, .gallery-grid, .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-grid, .location-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .location-info {
+                padding: 4rem 6%;
+            }
+
+            .location-map {
+                height: 400px;
+                min-height: auto;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .services-grid, .barbers-grid, .gallery-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+                padding: 1.5rem 1.5rem;
+            }
+
+            .pricing-cost {
+                text-align: left;
+            }
+
+            .about-badge {
+                right: 0;
+                bottom: -10px;
+                padding: 1rem 1.5rem;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+
+        /* Prevent the 3rd testimonial from being orphaned alone on mobile */
+        @media (min-width: 601px) and (max-width: 900px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .testimonial-card:last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                max-width: 60%;
+                justify-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo font-heading">
+                <span>💈</span> <span id="dom-nav-logo"></span>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#barbers">Barbers</a>
+                <a href="#pricing">Prices</a>
+                <a href="#location" class="btn btn-outline" style="padding: 0.6rem 1.2rem; margin-left: 1rem;">Visit Us</a>
+            </div>
+            <button id="menu-burger" class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <!-- Thin subtle barber pole stripe running at the bottom of the sticky navigation menu -->
+        <div class="barber-pole-stripe"></div>
+    </nav>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-navigation" class="mobile-nav">
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#barbers" class="mobile-link">Barbers</a>
+        <a href="#pricing" class="mobile-link">Prices</a>
+        <a href="#location" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="container">
+            <div class="hero-content fade-up">
+                <h1 id="dom-hero-title" class="hero-title font-heading"></h1>
+                <p id="dom-hero-tagline" class="hero-tagline"></p>
+                <a href="#pricing" id="dom-hero-cta" class="btn"></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title font-heading fade-up">What We Do</h2>
+            <div id="dom-services-grid" class="services-grid">
+                <!-- Dynamically populated with 6 clean service cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section container">
+        <div class="about-grid">
+            <div class="about-image-wrapper fade-up">
+                <img id="dom-about-img" class="about-image" src="" alt="Barber Chair">
+                <div id="dom-about-badge" class="about-badge font-heading"></div>
+            </div>
+            <div class="fade-up">
+                <h2 class="section-title font-heading" style="text-align: left; margin-bottom: 2rem;">Ang Kwento Namin</h2>
+                <p id="dom-about-text" class="about-description"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Barbers Section -->
+    <section id="barbers" class="section">
+        <div class="container">
+            <h2 class="section-title font-heading fade-up">Meet the Barbers</h2>
+            <div id="dom-barbers-grid" class="barbers-grid">
+                <!-- Dynamically populated with 3 barber profile cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Style Book / Gallery Section -->
+    <section id="gallery" class="section container">
+        <h2 id="dom-gallery-title" class="section-title font-heading fade-up"></h2>
+        <p id="dom-gallery-subtitle" class="fade-up" style="text-align: center; margin-top: -2.5rem; margin-bottom: 4rem; opacity: 0.8; font-size: 1.1rem;"></p>
+        <div id="dom-gallery-grid" class="gallery-grid">
+            <!-- Dynamically populated with 6 style shots -->
+        </div>
+    </section>
+
+    <!-- Horizontal Simple Pricing Table -->
+    <section id="pricing" class="section">
+        <div class="container">
+            <h2 id="dom-pricing-title" class="section-title font-heading fade-up"></h2>
+            <div id="dom-pricing-table" class="pricing-table fade-up">
+                <!-- Dynamically populated with signature services -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="section container">
+        <h2 class="section-title font-heading fade-up">Trusted by the Barangay</h2>
+        <div id="dom-testimonials-grid" class="testimonials-grid">
+            <!-- Dynamically populated with 3 local reviews -->
+        </div>
+    </section>
+
+    <!-- Location, Hours, & Google Map Section -->
+    <section id="location" class="section">
+        <div class="location-grid">
+            <div class="location-info fade-up">
+                <h2 class="section-title font-heading" style="text-align: left; margin-bottom: 2rem;">Bisitahan Kami</h2>
+                <p id="dom-contact-address" class="location-address"></p>
+
+                <table class="hours-table">
+                    <tbody>
+                        <tr>
+                            <td class="day">Monday - Friday</td>
+                            <td id="dom-hours-mon-fri" class="time"></td>
+                        </tr>
+                        <tr>
+                            <td class="day">Saturday</td>
+                            <td id="dom-hours-sat" class="time"></td>
+                        </tr>
+                        <tr>
+                            <td class="day">Sunday</td>
+                            <td id="dom-hours-sun" class="time"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div style="margin-top: 1rem;">
+                    <a id="dom-contact-phone-btn" href="" class="btn btn-outline" style="width: 100%;"></a>
+                </div>
+            </div>
+            <div class="location-map fade-up">
+                <iframe id="dom-map-iframe" src="" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-nav prev" id="lightbox-prev">&lsaquo;</button>
+      <img id="lightbox-img" src="" alt="">
+      <button class="lightbox-nav next" id="lightbox-next">&rsaquo;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <a href="#" class="footer-logo font-heading">
+                    <span>💈</span> <span id="dom-footer-logo"></span>
+                </a>
+                <div class="footer-socials">
+                    <a id="dom-social-fb" href="" target="_blank">Facebook</a>
+                    <a id="dom-social-ig" href="" target="_blank">Instagram</a>
+                    <a id="dom-social-wa" href="" target="_blank">WhatsApp</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="dom-copyright"></p>
+                <p>Designed and Crafted in the Philippines</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- DYNAMIC POPULATION & INTERACTIVITY ENGINE -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const conf = SITE_CONFIG;
+
+            // 1. Map CSS Design Variables from Theme Config
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', conf.theme.colors.background);
+            root.style.setProperty('--text-color', conf.theme.colors.text);
+            root.style.setProperty('--accent-color', conf.theme.colors.accent);
+            root.style.setProperty('--surface-color', conf.theme.colors.surface);
+            root.style.setProperty('--border-color', conf.theme.colors.border);
+            root.style.setProperty('--barber-blue', conf.theme.colors.barberPole);
+            root.style.setProperty('--font-heading', conf.theme.fonts.heading);
+            root.style.setProperty('--font-body', conf.theme.fonts.body);
+
+            // 2. SEO Meta, OG, JSON-LD
+            const city = conf.seo.city || "Parañaque";
+            const province = conf.seo.province || "NCR";
+            document.title = conf.seo.templateTitle || `${conf.hero.businessName} | Barbershop in ${city}, ${province}`;
+            document.querySelector('meta[name="description"]').content = conf.seo.description || `${conf.hero.businessName} — ${conf.hero.tagline}. Located in ${city}, ${province}.`;
+            document.querySelector('meta[name="keywords"]').content = conf.seo.keywords || conf.hero.businessName.toLowerCase() + ", barbershop, haircut, " + city.toLowerCase();
+            document.querySelector('meta[property="og:title"]').content = document.title;
+            document.querySelector('meta[property="og:description"]').content = conf.seo.description || `${conf.hero.businessName} — ${conf.hero.tagline}.`;
+            document.querySelector('meta[property="og:image"]').content = conf.seo.image || conf.hero.backgroundImage;
+            try {
+                const ld = JSON.parse(document.getElementById('seo-jsonld').textContent);
+                ld.name = conf.hero.businessName;
+                ld.image = conf.seo.image || conf.hero.backgroundImage;
+                ld.telephone = conf.seo.phone || conf.contact.phone;
+                ld.description = conf.seo.description || `${conf.hero.businessName} — ${conf.hero.tagline}`;
+                const addrParts = (conf.contact.address || '').split(',').map(s => s.trim());
+                ld.address.streetAddress = addrParts[0] || conf.contact.address;
+                ld.address.addressLocality = city;
+                ld.address.addressRegion = province;
+                ld.url = conf.seo.url || window.location.href;
+                document.getElementById('seo-jsonld').textContent = JSON.stringify(ld, null, 2);
+            } catch (e) { console.warn('JSON-LD injection failed:', e); }
+
+            // 3. Populate Header & Hero Elements
+            document.getElementById('dom-nav-logo').textContent = conf.hero.businessName;
+            document.getElementById('dom-footer-logo').textContent = conf.hero.businessName;
+
+            const heroEl = document.getElementById('hero');
+            heroEl.style.backgroundImage = `url('${conf.hero.backgroundImage}')`;
+            document.getElementById('dom-hero-title').textContent = conf.hero.businessName;
+            document.getElementById('dom-hero-tagline').textContent = conf.hero.tagline;
+            document.getElementById('dom-hero-cta').textContent = conf.hero.ctaText;
+
+            // 3. Populate Services Cards
+            const servicesGrid = document.getElementById('dom-services-grid');
+            conf.services.forEach((srv, index) => {
+                const card = document.createElement('div');
+                card.className = 'service-card fade-up';
+                card.style.setProperty('--i', index);
+                card.innerHTML = `
+                    <div class="service-top">
+                        <div class="service-icon">${srv.icon}</div>
+                        <h3 class="service-name font-heading">${srv.name}</h3>
+                        <p class="service-desc">${srv.desc}</p>
+                    </div>
+                    <div class="service-bottom">
+                        <span style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.7;">Price Starts At</span>
+                        <span class="service-price">${srv.price}</span>
+                    </div>
+                `;
+                servicesGrid.appendChild(card);
+            });
+
+            // 4. Populate About Details
+            document.getElementById('dom-about-text').textContent = conf.about.text;
+            document.getElementById('dom-about-badge').textContent = conf.about.yearsInBusiness;
+            document.getElementById('dom-about-img').src = conf.about.image;
+
+            // 5. Populate Barbers Profiles
+            const barbersGrid = document.getElementById('dom-barbers-grid');
+            conf.barbers.forEach((barb, index) => {
+                const card = document.createElement('div');
+                card.className = 'barber-card fade-up';
+                card.style.setProperty('--i', index);
+                card.innerHTML = `
+                    <div class="barber-image-box">
+                        <img src="${barb.image}" alt="${barb.name}">
+                    </div>
+                    <div class="barber-info">
+                        <h3 class="barber-name font-heading">${barb.name}</h3>
+                        <span class="barber-specialty">${barb.specialty}</span>
+                    </div>
+                `;
+                barbersGrid.appendChild(card);
+            });
+
+            // 6. Populate Photo Style Book
+            document.getElementById('dom-gallery-title').textContent = conf.galleryTitle;
+            document.getElementById('dom-gallery-subtitle').textContent = conf.gallerySubtitle;
+
+            const galleryGrid = document.getElementById('dom-gallery-grid');
+            conf.gallery.forEach((imgUrl, i) => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item fade-up';
+                item.style.setProperty('--i', i);
+                const labelText = conf.galleryLabels[i] || 'Signature Cut';
+                item.innerHTML = `
+                    <img src="${imgUrl}" alt="Gallery Style Shot">
+                    <span class="gallery-label">${labelText}</span>
+                `;
+                galleryGrid.appendChild(item);
+            });
+
+            // 7. Populate Simplified Pricing Row Elements
+            document.getElementById('dom-pricing-title').textContent = conf.pricingTitle;
+            const pricingTable = document.getElementById('dom-pricing-table');
+
+            // Render the top 4 featured services as signature lineup table rows
+            conf.services.slice(0, 4).forEach((srv, index) => {
+                const row = document.createElement('div');
+                row.className = 'pricing-row';
+                row.style.setProperty('--i', index);
+                row.innerHTML = `
+                    <div class="pricing-detail">
+                        <h3 class="font-heading">${srv.name}</h3>
+                        <p>${srv.desc}</p>
+                    </div>
+                    <div class="pricing-cost">${srv.price}</div>
+                `;
+                pricingTable.appendChild(row);
+            });
+
+            // 8. Populate Client Feedbacks
+            const testimonialsGrid = document.getElementById('dom-testimonials-grid');
+            conf.testimonials.forEach((test, index) => {
+                const card = document.createElement('div');
+                card.className = 'testimonial-card fade-up';
+                card.style.setProperty('--i', index);
+                let starCount = '';
+                for (let s = 0; s < test.stars; s++) { starCount += '★'; }
+                card.innerHTML = `
+                    <div>
+                        <div class="stars">${starCount}</div>
+                        <p class="testimonial-quote">"${test.quote}"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4 class="font-heading">${test.name}</h4>
+                        <span>${test.location}</span>
+                    </div>
+                `;
+                testimonialsGrid.appendChild(card);
+            });
+
+            // 9. Location, Hours & Anchors
+            document.getElementById('dom-contact-address').textContent = conf.contact.address;
+
+            const phoneBtn = document.getElementById('dom-contact-phone-btn');
+            phoneBtn.textContent = `Call Shop: ${conf.contact.phone}`;
+            phoneBtn.href = `tel:${conf.contact.phone.replace(/[^0-9+]/g, '')}`;
+
+            document.getElementById('dom-map-iframe').src = conf.contact.mapEmbedUrl;
+            document.getElementById('dom-hours-mon-fri').textContent = conf.hours.monFri;
+            document.getElementById('dom-hours-sat').textContent = conf.hours.sat;
+            document.getElementById('dom-hours-sun').textContent = conf.hours.sun;
+
+            // Highlight today's hours
+            const today = new Date().getDay();
+            const dayRowMap = {1:"monFri",2:"monFri",3:"monFri",4:"monFri",5:"sat",6:"sat",0:"sun"};
+            const activeRowId = dayRowMap[today];
+            if (activeRowId === "monFri") {
+              const cell = document.getElementById("dom-hours-mon-fri");
+              if (cell) { cell.style.color = "var(--accent-color)"; cell.style.fontWeight = "700"; }
+            } else if (activeRowId === "sat") {
+              const cell = document.getElementById("dom-hours-sat");
+              if (cell) { cell.style.color = "var(--accent-color)"; cell.style.fontWeight = "700"; }
+            } else if (activeRowId === "sun") {
+              const cell = document.getElementById("dom-hours-sun");
+              if (cell) { cell.style.color = "var(--accent-color)"; cell.style.fontWeight = "700"; }
+            }
+
+            // 10. Social Platforms Mapping
+            document.getElementById('dom-social-fb').href = conf.contact.facebook;
+            document.getElementById('dom-social-ig').href = conf.contact.instagram;
+            document.getElementById('dom-social-wa').href = conf.contact.whatsapp;
+            document.getElementById('dom-copyright').textContent = `© ${new Date().getFullYear()} ${conf.footer.copyright}. All Rights Reserved.`;
+
+            // 11. Interactive Mobile Hamburger Nav Handling
+            const burger = document.getElementById('menu-burger');
+            const mobileMenu = document.getElementById('mobile-navigation');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleOverlayMenu() {
+                burger.classList.toggle('active');
+                mobileMenu.classList.toggle('open');
+
+                const spans = burger.querySelectorAll('span');
+                if (mobileMenu.classList.contains('open')) {
+                    spans[0].style.transform = "rotate(45deg) translate(6px, 6px)";
+                    spans[1].style.opacity = "0";
+                    spans[2].style.transform = "rotate(-45deg) translate(5px, -6px)";
+                } else {
+                    spans[0].style.transform = "none";
+                    spans[1].style.opacity = "1";
+                    spans[2].style.transform = "none";
+                }
+            }
+
+            burger.addEventListener('click', toggleOverlayMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleOverlayMenu));
+
+            // 12. Sticky Navbar Visual Treatment on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 13. Dynamic Load Visibility Animations (Intersection Observer)
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.05, rootMargin: "0px 0px -30px 0px" });
+
+            setTimeout(() => {
+                document.querySelectorAll('.fade-up').forEach(item => revealObserver.observe(item));
+            }, 100);
+
+            // Lightbox
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxClose = document.getElementById("lightbox-close");
+            const lightboxPrev = document.getElementById("lightbox-prev");
+            const lightboxNext = document.getElementById("lightbox-next");
+            let currentImgIndex = 0;
+            const galleryImages = conf.gallery;
+
+            document.querySelectorAll(".gallery-item img").forEach((img, i) => {
+              img.style.cursor = "pointer";
+              img.addEventListener("click", () => {
+                currentImgIndex = i;
+                lightboxImg.src = galleryImages[currentImgIndex];
+                lightbox.classList.add("open");
+              });
+            });
+
+            function closeLightbox() { lightbox.classList.remove("open"); }
+            lightboxClose.addEventListener("click", closeLightbox);
+            lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener("keydown", (e) => {
+              if (!lightbox.classList.contains("open")) return;
+              if (e.key === "Escape") closeLightbox();
+              if (e.key === "ArrowLeft") navigateLightbox(-1);
+              if (e.key === "ArrowRight") navigateLightbox(1);
+            });
+            function navigateLightbox(dir) {
+              currentImgIndex = (currentImgIndex + dir + galleryImages.length) % galleryImages.length;
+              lightboxImg.src = galleryImages[currentImgIndex];
+            }
+            lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
+            lightboxNext.addEventListener("click", () => navigateLightbox(1));
+
+            // Reveal body after all content is injected (FOUC prevention)
+            requestAnimationFrame(() => {
+                document.body.classList.add('ready');
+            });
+        });
+    </script>
+</body>
+</html>
+
+<!-- ======================================================================= -->
+<!-- === TOKEN REFERENCE === -->
+<!--
+     These are the token keys parsed by replace.js & config.json
+     to instantly recompile or deploy this specific layout template:
+
+     THEME & STYLES:
+     - #FDFAF7        : Page Background color (e.g., #FDFAF7)
+     - #1a1a2e      : Text base color (e.g., #1E1B18)
+     - #c9a84c    : Classic Highlight Accent Red (e.g., #C8462C)
+     - #F3EEE8   : Component/Card Background Tan (e.g., #F3EEE8)
+     - #D4CDC4    : Hairlines and boundaries (e.g., #D4CDC4)
+     - #1B4D8C    : Secondary accent color Blue (e.g., #1B4D8C)
+     - 'Oswald', sans-serif    : Primary Display Font Family String (e.g., 'Abril Fatface', serif)
+     - 'Work Sans', sans-serif       : Body Copy Typography Family String (e.g., 'Poppins', sans-serif)
+
+     SEO & STRUCTURED DATA:
+     - Suave Cut and Shave | Barbershop in Parañaque             : Page title for browser tab + search results.
+     - Suave Cut and Shave — your go-to barbershop in the South since 2015. Stay Suave all day! Air-conditioned, professional barbers, classic cuts and shaves.       : Meta description (~155 chars) for search snippet.
+     - Suave Cut and Shave, barbershop Parañaque, Sucat barbershop, haircut Sucat, barber Parañaque, men's grooming          : Comma-separated search keywords.
+     - Parañaque              : Business city/locality (e.g. Parañaque).
+     - Metro Manila          : Province or region (e.g. NCR).
+     - 0916 605 5170             : Business phone (same as CONTACT_PHONE).
+     - https://placehold.co/1920x1080/1a1a2e/FDFAF7?text=Suave+Cut+and+Shave+Interior             : Image URL for social preview (same as HERO_BG_IMAGE).
+
+     HERO HEADER:
+     - Suave Cut and Shave    : The business legal name used across all sections.
+     - Stay Suave all day!          : Main punchline slogan describing the barbershop aesthetic.
+     - https://placehold.co/1920x1080/1a1a2e/FDFAF7?text=Suave+Cut+and+Shave+Interior         : Clean high-resolution storefront or interior placeholder image URL.
+     - Walk-ins Welcome / Book a Cut         : CTA button action text.
+
+     SERVICES SET (1 through 6):
+     - 💈 to 🔥 (Unicode / Emoji barber symbols)
+     - Haircut & Style to Hot Towel Shave
+     - Professional haircut with fade, texturing, and styling options to Traditional straight razor shave with hot towel treatment and cold pack finish
+     - [placeholder] to [placeholder] (PHP ₱ format recommended)
+
+     ABOUT SEGMENT:
+     - Your go-to barbershop in the South delivering quality grooming service since 2015. Stay Suave all day! Modern traditional barbershop with air-conditioned cozy atmosphere, leather seats, and fun atmosphere with showmanship from barbers.            : Complete multi-sentence story detailing local history.
+     - Est. 2015 — Sucat Local           : Milestone duration tagline banner (e.g., "Est. 2018").
+     - https://placehold.co/800x1000/1a1a2e/F3EEE8?text=Suave+Cut+and+Shave+Setup           : Image representing barbershop seats or details.
+
+     BARBER PROFILES (1 through 3):
+     - Barber Mike to Our Barber
+     - Haircuts & Styles to Classic Cuts & Beard Grooming
+     - https://placehold.co/400x500/1a1a2e/F3EEE8?text=Barber+Mike to https://placehold.co/400x500/1a1a2e/F3EEE8?text=Our+Barber
+
+     STYLE BOOK GALLERY:
+     - The Suave Style         : Main section head for portfolio (e.g. "Style Book").
+     - Modern grooming, traditional values. Since 2015.      : Short introduction text detailing actual results.
+     - https://placehold.co/600x600/1a1a2e/F3EEE8?text=Interior+1 to https://placehold.co/600x600/1a1a2e/F3EEE8?text=Barber+Chair
+     - Interior to Barber Chair (The haircuts displayed, e.g. "Pompadour")
+
+     PRICING SEGMENT:
+     - Pricing & Services         : Section heading (e.g., "Pricing & Packages").
+
+     TESTIMONIALS (1 through 3):
+     - Had my first haircut in forever. And never regret that I chose Suave to do it. You can see that they are really passionate on what their doing. Expertise, fun and just enough showmanship is what I saw. Will definitely go back for another haircut. to Best barbershop
+     - Martin Andres to GD Win
+     - Parañaque to Parañaque
+
+     CONTACT & DISPATCH CHANNELS:
+     - 1709 Dr Arcadio Santos Ave, San Isidro, Parañaque, 1700 Metro Manila, Philippines       : Headquarters physical address.
+     - 0916 605 5170         : Main shop line number.
+     - https://wa.me/639166055170      : Quick Viber/WhatsApp link or URL.
+     - https://www.facebook.com/SuaveCutAndShave      : Facebook profile link.
+     - https://www.instagram.com/suavecutandshave/     : Instagram feed URL.
+     - https://www.google.com/maps?q=Suave+Cut+and+Shave+Barbershop+Sucat+Para%C3%B1aque&output=embed       : Direct embed link exported from Google Maps.
+
+     FOOTER METRICS:
+     - Suave Cut and Shave      : Official business copyright name.
+-->

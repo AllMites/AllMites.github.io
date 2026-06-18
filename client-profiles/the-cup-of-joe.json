@@ -1,0 +1,114 @@
+{
+  "_meta": {
+    "businessName": "The Cup of Joe",
+    "businessSlug": "the-cup-of-joe",
+    "businessType": "cafe",
+    "location": "Better Living, Parañaque",
+    "gatheredAt": "2026-06-18T16:40:00+08:00",
+    "sources": ["facebook", "user_provided"],
+    "fieldCount": { "total": 28, "populated": 17, "missing": 11 }
+  },
+  "identity": {
+    "businessName": { "value": "The Cup of Joe", "source": "facebook" },
+    "tagline": { "value": "A place to savor life's little moments.", "source": "user" },
+    "aboutText": { "value": "The Cup of Joe is a cozy coffee shop in Better Living, Parañaque — a place to savor life's little moments over a handcrafted cup. From Dirty Matcha to Spanish Mocha Latte, every drink is made to be enjoyed at your own pace. Open daily from 7 AM to midnight.", "source": "synthesized" },
+    "established": { "value": null, "source": null }
+  },
+  "branding": {
+    "primaryColor": { "value": "#061a32", "source": "user" },
+    "accentColor": { "value": "#fcb029", "source": "user" },
+    "bgColor": { "value": "#f5f5f5", "source": "user" },
+    "vibe": { "value": "cozy, warm, neighborhood coffee shop", "source": "user" },
+    "logoUrl": { "value": "images/logo.jpg", "source": "user" }
+  },
+  "contact": {
+    "phone": { "value": "0953 970 0246", "source": "user", "verified": false },
+    "address": { "value": "Matthew St. Annex 35, Better Living Subd. Don Bosco, Parañaque", "source": "facebook" },
+    "email": { "value": "cupofjoeparanaque@gmail.com", "source": "user" },
+    "facebookUrl": { "value": "https://www.facebook.com/geyldealca", "source": "websearch" },
+    "instagramUrl": { "value": null, "source": null },
+    "tiktokUrl": { "value": "https://www.tiktok.com/@thecupofjoe_official", "source": "facebook_menu_board" },
+    "mapsIframe": { "value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.9516988101414!2d121.02781159999999!3d14.487462299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cfc97b5cafc9%3A0x4601373b2a3e3022!2sThe%20Cup%20of%20Joe!5e0!3m2!1sen!2sph!4v1781771877406!5m2!1sen!2sph\" width=\"100%\" height=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>", "source": "user" },
+    "whatsapp": { "value": null, "source": null }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Daily", "time": "7:00 AM – 12:00 AM" }
+      ],
+      "source": "facebook"
+    }
+  },
+  "offerings": {
+    "title": { "value": "Our Menu", "source": "facebook" },
+    "items": [
+      {
+        "name": { "value": "Dirty Matcha", "source": "user" },
+        "desc": { "value": "Rich matcha latte with an espresso kick — bold green tea meets smooth coffee.", "source": "synthesized" },
+        "price": { "value": "Grande: ₱179 / Venti: ₱199", "source": "user" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Spanish Mocha Latte", "source": "user" },
+        "desc": { "value": "Chocolate and espresso with a Spanish twist — creamy, indulgent, and satisfying.", "source": "synthesized" },
+        "price": { "value": "Grande: ₱179 / Venti: ₱199", "source": "user" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Salted Caramel Popcorn", "source": "user" },
+        "desc": { "value": "Sweet and salty caramel popcorn crunch — a playful treat to pair with your coffee.", "source": "synthesized" },
+        "price": { "value": "Grande: ₱179 / Venti: ₱199", "source": "user" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Hazelnut Mocha", "source": "user" },
+        "desc": { "value": "Nutty hazelnut meets rich chocolate mocha — a warm, comforting classic.", "source": "synthesized" },
+        "price": { "value": "Grande: ₱179 / Venti: ₱199", "source": "user" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Spanish Latte", "source": "user" },
+        "desc": { "value": "Creamy condensed milk latte — sweet, smooth, and perfectly balanced.", "source": "synthesized" },
+        "price": { "value": "Grande: ₱179 / Venti: ₱199", "source": "user" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Sea Salt Latte", "source": "user" },
+        "desc": { "value": "A hint of sea salt elevates this creamy latte — savory-sweet perfection.", "source": "synthesized" },
+        "price": { "value": "Grande: ₱179 / Venti: ₱199", "source": "user" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "White Mocha", "source": "user" },
+        "desc": { "value": "Sweet white chocolate and espresso — a creamy, dreamy classic.", "source": "synthesized" },
+        "price": { "value": "Grande: ₱179 / Venti: ₱199", "source": "user" },
+        "icon": { "value": null, "source": null }
+      }
+    ],
+    "maxItems": 7
+  },
+  "images": {
+    "hero": { "value": "images/hero.jpg", "source": "user" },
+    "about": { "value": "images/about.jpg", "source": "facebook" },
+    "logo": { "value": "images/logo.jpg", "source": "user" },
+    "gallery": [
+      { "value": "images/about.jpg", "source": "facebook", "label": "The Cup of Joe event" },
+      { "value": "images/coffee-cup.jpg", "source": "facebook", "label": "Coffee cup" },
+      { "value": "images/menu-board.jpg", "source": "facebook", "label": "Menu board" }
+    ],
+    "_localPath": "Clients/the-cup-of-joe/images/",
+    "maxGallery": 6
+  },
+  "socialProof": {
+    "testimonials": [],
+    "maxTestimonials": 3,
+    "rating": { "value": null, "source": null },
+    "reviewCount": { "value": null, "source": null }
+  },
+  "seo": {
+    "description": { "value": "The Cup of Joe — a cozy coffee shop in Better Living, Parañaque. Handcrafted drinks from Dirty Matcha to Spanish Mocha Latte. Open daily 7AM–12AM.", "source": "constructed" },
+    "keywords": { "value": "The Cup of Joe, coffee shop Parañaque, Better Living coffee, café Parañaque, coffee near me, drinks Parañaque", "source": "constructed" },
+    "city": { "value": "Parañaque", "source": "extracted_from_address" },
+    "province": { "value": "NCR", "source": "default" }
+  }
+}

@@ -1,0 +1,234 @@
+- generic [ref=e5]:
+  - banner:
+    - generic [ref=e8]:
+      - generic [ref=e10]:
+        - generic:
+          - button [disabled]:
+            - img
+        - button "Facebook" [ref=e12] [cursor=pointer]:
+          - img "Facebook" [ref=e13]
+      - generic [ref=e16]:
+        - button "Log in with QR code" [ref=e19] [cursor=pointer]:
+          - img [ref=e20]
+        - generic [ref=e23]:
+          - textbox "Email or phone" [ref=e26]
+          - textbox "Password" [ref=e29]
+          - button "Log In" [ref=e32] [cursor=pointer]:
+            - generic [ref=e36]: Log In
+          - link "Forgot Account?" [ref=e39] [cursor=pointer]:
+            - /url: https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+  - main [ref=e46]:
+    - generic [ref=e47]:
+      - link [ref=e58] [cursor=pointer]:
+        - /url: https://www.facebook.com/photo/?fbid=443833047769640&set=a.443833017769643
+      - generic [ref=e66]:
+        - link [ref=e69] [cursor=pointer]:
+          - /url: https://www.facebook.com/photo/?fbid=443833044436307&set=a.443833004436311&__tn__=%3C
+          - img [ref=e71]
+        - generic [ref=e77]:
+          - heading [level=1] [ref=e82]: Curious Coffee Co.
+          - generic [ref=e84]:
+            - link [ref=e85] [cursor=pointer]:
+              - /url: https://www.facebook.com/curiouscoffeeco/followers/
+              - strong [ref=e86]: 2.4K
+              - text: followers
+            - text: •
+            - link [ref=e87] [cursor=pointer]:
+              - /url: https://www.facebook.com/curiouscoffeeco/following/
+              - strong [ref=e88]: "20"
+              - text: following
+    - generic [ref=e96]:
+      - tablist [ref=e104]:
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - generic [ref=e108]: More
+            - img [ref=e110]
+          - tab [selected] [ref=e113] [cursor=pointer]:
+            - generic [ref=e115]: Posts
+          - tab [ref=e117] [cursor=pointer]:
+            - generic [ref=e119]: About
+          - tab [ref=e121] [cursor=pointer]:
+            - generic [ref=e123]: Reels
+          - tab [ref=e125] [cursor=pointer]:
+            - generic [ref=e127]: Photos
+      - button [ref=e131] [cursor=pointer]:
+        - img [ref=e133]
+    - generic [ref=e139]:
+      - generic [ref=e142]:
+        - generic [ref=e146]:
+          - heading [level=2] [ref=e155]:
+            - generic [ref=e157]: Intro
+          - generic [ref=e158]:
+            - generic [ref=e162]: Serving you specialty coffee and a fusion of local and international eats.
+            - list [ref=e165]:
+              - button [ref=e173] [cursor=pointer]:
+                - generic [ref=e174]:
+                  - strong [ref=e175]: Page
+                  - text: · Coffee shop
+              - button [ref=e179] [cursor=pointer]:
+                - generic [ref=e180]: 2nd Floor, Noah's Place, 330 Aguirre Ave., BF Homes Parañaque, Manila, Philippines
+              - generic [ref=e186]: curiouscoffeeco@gmail.com
+              - link [ref=e191] [cursor=pointer]:
+                - /url: https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fcuriouscoffeeco&h=AUCWUYHG8fXeMOcrOl23QmIA1mFx9LqPj7tFaw_0gLsvJYfuw6i_o8b5j7IzkIrUs1A-srseHN_Phwhvfl30T795i3-okfLY-hxOGRktm_alRI13QBM_GhoP06WGICObYaU31YENESqTVxX8cgsosg
+                - generic [ref=e194]: instagram.com/curiouscoffeeco
+              - button [ref=e198] [cursor=pointer]:
+                - generic [ref=e199]:
+                  - generic [ref=e200]: Open now
+                  - img [ref=e202]
+              - button [ref=e207] [cursor=pointer]:
+                - generic [ref=e208]:
+                  - generic [ref=e210]: Dine-in · Outdoor seating · In-store pickup
+                  - img [ref=e212]
+              - generic [ref=e219]: Price Range · $$
+              - link [ref=e223] [cursor=pointer]:
+                - /url: https://www.facebook.com/curiouscoffeeco/reviews
+                - generic [ref=e226]:
+                  - text: 100% recommend (7 Reviews)
+                  - button [ref=e227]:
+                    - img [ref=e228]
+        - generic [ref=e233]:
+          - generic [ref=e240]:
+            - heading [level=2] [ref=e242]:
+              - link [ref=e245] [cursor=pointer]:
+                - /url: https://www.facebook.com/curiouscoffeeco/photos
+                - text: Photos
+            - link [ref=e250] [cursor=pointer]:
+              - /url: https://www.facebook.com/curiouscoffeeco/photos
+              - generic [ref=e251]: See all photos
+          - generic [ref=e255]:
+            - link [ref=e258] [cursor=pointer]:
+              - /url: /photo/?fbid=1379503264202609&set=pb.100064288441501.-2207520000
+            - link [ref=e263] [cursor=pointer]:
+              - /url: /photo/?fbid=1379503230869279&set=pb.100064288441501.-2207520000
+            - link [ref=e268] [cursor=pointer]:
+              - /url: /photo/?fbid=1379503207535948&set=pb.100064288441501.-2207520000
+            - link [ref=e273] [cursor=pointer]:
+              - /url: /photo/?fbid=1379503174202618&set=pb.100064288441501.-2207520000
+            - link [ref=e278] [cursor=pointer]:
+              - /url: /photo/?fbid=1377880737698195&set=pb.100064288441501.-2207520000
+            - link [ref=e283] [cursor=pointer]:
+              - /url: /photo/?fbid=1377880734364862&set=pb.100064288441501.-2207520000
+            - link [ref=e288] [cursor=pointer]:
+              - /url: /photo/?fbid=1369504875202448&set=pb.100064288441501.-2207520000
+            - link [ref=e293] [cursor=pointer]:
+              - /url: /photo/?fbid=1369504871869115&set=pb.100064288441501.-2207520000
+            - link [ref=e298] [cursor=pointer]:
+              - /url: /photo/?fbid=1369504868535782&set=pb.100064288441501.-2207520000
+        - contentinfo [ref=e301]:
+          - list [ref=e303]:
+            - listitem [ref=e304]:
+              - link [ref=e305] [cursor=pointer]:
+                - /url: /privacy/policy/?entry_point=comet_dropdown
+                - text: Privacy
+              - generic [ref=e306]: ·
+            - listitem [ref=e308]:
+              - link [ref=e309] [cursor=pointer]:
+                - /url: /policies?ref=pf
+                - text: Terms
+              - generic [ref=e310]: ·
+            - listitem [ref=e312]:
+              - link [ref=e313] [cursor=pointer]:
+                - /url: /business/
+                - text: Advertising
+              - generic [ref=e314]: ·
+            - listitem [ref=e316]:
+              - link [ref=e317] [cursor=pointer]:
+                - /url: /help/568137493302217
+                - text: Ad Choices
+                - img [ref=e319]
+              - generic [ref=e322]: ·
+            - listitem [ref=e324]:
+              - link [ref=e325] [cursor=pointer]:
+                - /url: /policies/cookies/
+                - text: Cookies
+              - generic [ref=e326]: ·
+            - listitem [ref=e328]:
+              - button [ref=e329] [cursor=pointer]: More
+      - generic [ref=e331]:
+        - article [ref=e338]:
+          - generic [ref=e346]:
+            - generic [ref=e348]:
+              - link [ref=e352] [cursor=pointer]:
+                - /url: https://www.facebook.com/curiouscoffeeco?__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=%3C%3C%2CP-R
+                - img [ref=e354]
+              - generic [ref=e359]:
+                - heading [level=2] [ref=e363]:
+                  - generic [ref=e366]:
+                    - link [ref=e369] [cursor=pointer]:
+                      - /url: https://www.facebook.com/curiouscoffeeco?__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=-]C%2CP-R
+                      - text: Curious Coffee Co.
+                    - text: is at
+                    - link [ref=e372] [cursor=pointer]:
+                      - /url: https://www.facebook.com/G1LODGE?__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=-]C%2CP-R
+                      - text: G1 Lodge
+                    - text: .
+                - generic [ref=e375]:
+                  - link [ref=e379] [cursor=pointer]:
+                    - /url: https://www.facebook.com/curiouscoffeeco/posts/pfbid027oNdy1mvEzHiv3SXrrdtXc3E1NvsyPeGdv8Xkmykh3THr5Ufge6Gmoq34jkRxBxZl?__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=%2CO%2CP-R
+                    - text: May 28 at 10:08 AM
+                  - generic [ref=e381]: ·
+                  - link [ref=e383] [cursor=pointer]:
+                    - /url: https://www.facebook.com/pages/Baguio-City/108108822550776?__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=%2CP-R
+                    - text: Baguio City
+                  - generic [ref=e385]: ·
+                  - img [ref=e390]
+            - generic [ref=e396]:
+              - generic [ref=e405]:
+                - text: "Baguio City: A Curious Style Session with Stylist Nasia Cammayo"
+                - img [ref=e407]
+                - img [ref=e409]
+                - link [ref=e411] [cursor=pointer]:
+                  - /url: https://www.facebook.com/NasiaCammayoStyling?__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=-]K-R
+                  - text: Nasia Cammayo Styling
+                - text: …
+                - button [ref=e412] [cursor=pointer]: See more
+              - generic [ref=e417]:
+                - link [ref=e419] [cursor=pointer]:
+                  - /url: https://www.facebook.com/photo/?fbid=1379503174202618&set=pcb.1379503300869272&__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=*b0H-R
+                - link [ref=e424] [cursor=pointer]:
+                  - /url: https://www.facebook.com/photo/?fbid=1379503207535948&set=pcb.1379503300869272&__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=*b1H-R
+                - link [ref=e429] [cursor=pointer]:
+                  - /url: https://www.facebook.com/photo/?fbid=1379503230869279&set=pcb.1379503300869272&__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=*b2H-R
+                - link [ref=e434] [cursor=pointer]:
+                  - /url: https://www.facebook.com/photo/?fbid=1379503264202609&set=pcb.1379503300869272&__cft__[0]=AZYA5oAORNVrElzCNelQVUnS4BAR4e704LIe0SOv2w9wkD5aN1rtWVJFSL_zNyNz2XaeqyRdBLXY6SkkNy2uThbW--1IfSNQEcLCwv7ZBJII-gsIlCSCCltUmCmVNYBD37M5O5sKYAm8FzwaJ6QqyQysZHSdqFnu3Ok4CXDPMbxJPghOueeh7IWj7uE8q6XcmVU&__tn__=*b3H-R
+            - generic [ref=e442]:
+              - generic [ref=e445]:
+                - toolbar [ref=e446]:
+                  - generic [ref=e447]:
+                    - button [ref=e451] [cursor=pointer]
+                    - button [ref=e455] [cursor=pointer]
+                - generic [ref=e456]: "All reactions:"
+                - generic [ref=e458]: "3"
+              - generic [ref=e460]:
+                - button [ref=e462] [cursor=pointer]:
+                  - generic [ref=e467]: Like
+                - button [ref=e469] [cursor=pointer]:
+                  - generic [ref=e474]: Comment
+        - generic [ref=e476]:
+          - article [ref=e477]:
+            - status [ref=e478]
+          - article [ref=e490]:
+            - status [ref=e491]
+  - dialog [ref=e511]:
+    - button "Close" [ref=e513] [cursor=pointer]
+    - generic [ref=e519]:
+      - generic [ref=e520]:
+        - img [ref=e524]
+        - generic [ref=e530]: See more from Curious Coffee Co. | Manila
+        - generic [ref=e535]:
+          - generic: Email or phone number
+          - textbox "Email or phone number" [active] [ref=e536]
+        - generic [ref=e541]:
+          - generic: Password
+          - textbox "Password" [ref=e542]
+        - button "Log in to Facebook" [ref=e544] [cursor=pointer]:
+          - generic [ref=e547]: Log In
+        - link "Forgot password?" [ref=e549] [cursor=pointer]:
+          - /url: https://www.facebook.com/recover/initiate?ars=royal_blue_bar
+          - generic [ref=e550]: Forgot password?
+        - generic [ref=e556]: or
+        - button "Create new account" [ref=e560] [cursor=pointer]:
+          - generic [ref=e563]: Create new account
+      - generic [ref=e570]:
+        - generic [ref=e571]: Scan the QR code and confirm the codes match to log in.
+        - generic [ref=e573]: BFB-FZP-OTVS

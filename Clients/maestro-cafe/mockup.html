@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maestro Café | Filipino Restaurant &amp; Coffee in Angono, Rizal</title>
+    <meta name="description" content="Maestro Café — Master the Art of Filipino Flavor. Filipino and American comfort food, specialty coffee, and refreshing beverages in Angono, Rizal.">
+    <meta name="keywords" content="maestro cafe, angono, rizal, filipino food, coffee, cafe, restaurant angono, filipino cuisine">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="Maestro Café — Master the Art of Filipino Flavor">
+    <meta property="og:description" content="Maestro Café — Filipino and American comfort food, specialty coffee, and refreshing beverages in Angono, Rizal.">
+    <meta property="og:image" content="https://allmites.github.io/maestro-cafe/images/hero.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (LocalBusiness) — populated by JS -->
+    <script type="application/ld+json" id="seo-jsonld">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "",
+        "image": "",
+        "telephone": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "",
+            "addressRegion": "",
+            "addressCountry": "PH"
+        },
+        "url": "",
+        "description": "",
+        "priceRange": "₱"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!--
+         TO RESKIN:
+           Option A (manual): Edit the SITE_CONFIG object below. Change values, save, open in browser.
+           Option B (automated): Fill in config.json, run: node replace.js
+
+         {{TOKEN}} placeholders below are targets for replace.js.
+         When using replace.js, SITE_CONFIG values are substituted automatically.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            // 1. BRAND COLORS & FONTS
+            theme: {
+                colors: {
+                    background: "#F8F4EE",  // Off-white / Crema
+                    text: "#4A2C2A",        // Deep Tropical Green
+                    accent: "#D4A853",      // Terracotta / Rattan
+                    surface: "#F0EAE0",     // Slightly darker background for cards
+                    border: "#DDD5C8"       // Subtle lines
+                },
+                fonts: {
+                    heading: "'Fraunces', serif",
+                    body: "'DM Sans', sans-serif"
+                }
+            },
+
+            // 2. SEO (meta, Open Graph, JSON-LD)
+            seo: {
+                templateTitle: "Maestro Café | Filipino Restaurant & Coffee in Angono, Rizal",  // Set via config.json token or leave blank for auto-construct
+                description: "Maestro Café — Master the Art of Filipino Flavor. Filipino and American comfort food, specialty coffee, and refreshing beverages in Angono, Rizal.",   // ~155 char meta description; auto-constructed if blank
+                keywords: "maestro cafe, angono, rizal, filipino food, coffee, cafe, restaurant angono, filipino cuisine",      // comma-separated; auto-constructed if blank
+                city: "Angono",          // e.g., "Parañaque"; extracted from address if blank
+                province: "Rizal",      // e.g., "NCR"; defaults to "NCR" if blank
+                phone: "+63 961 656 8113",         // same as contact.phone; auto-copied if blank
+                image: "images/hero.jpg",         // same as hero image; auto-copied if blank
+                url: null          // set at deploy time (GitHub Pages URL)
+            },
+
+            // 3. HERO SECTION
+            hero: {
+                businessName: "Maestro Café",
+                tagline: "Master the Art of Filipino Flavor — where art, music, and cuisine come together in perfect harmony.",
+                buttonText: "See the Menu",
+                // Placeholder uses brand colors for a cohesive preview
+                backgroundImage: "images/hero.jpg"
+            },
+
+            // 3. ABOUT SECTION
+            about: {
+                title: "Our Story",
+                text: "Once a beloved music-themed hangout (Music Wizard Cafe), Maestro Café is the same soul in a new key. We've traded the wizard hat for the conductor's baton — still playing the music of art, culture, and Filipino flavor. Every dish is a composition, every coffee a concerto. From Spanish Lattes to sizzling sisig, we serve Filipino and American comfort food in a space that hums with warmth and creativity.",
+                image: "images/hero.jpg"
+            },
+
+            // 4. MENU HIGHLIGHTS (4 Items)
+            menuTitle: "Our Menu",
+            galleryTitle: "The Stage",
+            menu: [
+                { 
+                    name: "Spanish Latte", 
+                    desc: "⭐ Must-try — rich espresso with steamed milk and Spanish-style sweetness", 
+                    price: "₱175 – ₱185" 
+                },
+                { 
+                    name: "Matcha Espresso Duet", 
+                    desc: "⭐ Must-try — creamy matcha meets espresso", 
+                    price: "₱175 – ₱185" 
+                },
+                { 
+                    name: "Manak ni San Pedro", 
+                    desc: "⭐ Classic or Spicy — signature chicken dish", 
+                    price: "₱305 – ₱505" 
+                },
+                { 
+                    name: "Maestro Sisig", 
+                    desc: "⭐ Signature sizzling sisig — a crowd favorite", 
+                    price: "₱415" 
+                }
+            ],
+            fullMenuUrl: "https://www.facebook.com/maestrocafeph/", // Link to full menu (FB album, PDF, etc.)
+
+            // 5. PHOTO GALLERY (Exactly 6 image URLs)
+            gallery: [
+                "images/hero.jpg",
+                "images/food1.jpg",
+                "images/food2.jpg",
+                "images/food3.jpg",
+                "images/food1.jpg",
+                "images/food3.jpg"
+            ],
+
+            // 6. TESTIMONIALS
+                        testimonials: {
+                rating: 4.5,
+                count: 135,
+                items: [
+                    { quote: "\"It has a cozy vibe. Loving the drinks, especially their mocha. They have a variety of pastas to choose from.\"", name: "Alyssa C", location: "" },
+                    { quote: "\"The vibe and the service is very friendly.\"", name: "Anna", location: "" },
+                    { quote: "\"Masarap at mura (Delicious and cheap) — the food is great for the price.\"", name: "Adonis Mausisa", location: "" }
+                ]
+            },isPetFriendly: false,
+
+            // 6.5 LOGO (optional — if set, replaces text logo in nav)
+            logoUrl: null,
+
+            // 7. HOURS & LOCATION
+            locationTitle: "Visit Us",
+            hours: [
+                { day: "Monday - Thursday", time: "11:00 AM - 9:00 PM" },
+                { day: "Friday - Saturday", time: "11:00 AM - 9:00 PM" },
+                { day: "Sunday", time: "11:00 AM - 9:00 PM" }
+            ],
+            contact: {
+                address: "CPV Business Center, Manila East Road cor. Col Guido Street, Barangay San Roque, Angono, Rizal",
+                phone: "+63 961 656 8113",
+                facebook: "https://www.facebook.com/maestrocafeph/",
+                instagram: "",
+                whatsapp: "",
+                // Go to Google Maps -> Share -> Embed a map -> Copy HTML
+                mapIframe: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.2797887868865!2d121.15770599999998!3d14.5259821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c6c64f6a544b%3A0xb02e820c2db44ff!2sMAESTRO%20CAF%C3%89!5e0!3m2!1sen!2sph!4v1780495051782!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+            }
+        };
+    </script>
+    <!-- === TOKEN REFERENCE (for replace.js) ===
+         SEO_TITLE, SEO_DESCRIPTION, SEO_KEYWORDS, SEO_CITY, SEO_PROVINCE, SEO_PHONE, SEO_IMAGE,
+         BUSINESS_NAME, BUSINESS_TYPE, TAGLINE,
+         PRIMARY_COLOR, ACCENT_COLOR, BACKGROUND_COLOR, SURFACE_COLOR, BORDER_COLOR,
+         HEADING_FONT, BODY_FONT,
+         HERO_IMAGE_URL,
+         ABOUT_TITLE, ABOUT_TEXT, ABOUT_IMAGE_URL,
+         MENU_TITLE,
+         MENU_ITEM_1_NAME, MENU_ITEM_1_DESC, MENU_ITEM_1_PRICE,
+         MENU_ITEM_2_NAME, MENU_ITEM_2_DESC, MENU_ITEM_2_PRICE,
+         MENU_ITEM_3_NAME, MENU_ITEM_3_DESC, MENU_ITEM_3_PRICE,
+         MENU_ITEM_4_NAME, MENU_ITEM_4_DESC, MENU_ITEM_4_PRICE,
+         FULL_MENU_URL,
+         TESTIMONIAL_RATING, TESTIMONIAL_COUNT,
+         TESTIMONIAL_1_QUOTE, TESTIMONIAL_1_NAME, TESTIMONIAL_1_LOCATION,
+         TESTIMONIAL_2_QUOTE, TESTIMONIAL_2_NAME, TESTIMONIAL_2_LOCATION,
+         TESTIMONIAL_3_QUOTE, TESTIMONIAL_3_NAME, TESTIMONIAL_3_LOCATION,
+         IS_PET_FRIENDLY, LOGO_URL,
+         PHONE, FACEBOOK_URL, INSTAGRAM_URL, WHATSAPP_URL, WHATSAPP_NUMBER,
+         ADDRESS, MAPS_EMBED_URL,
+         GALLERY_IMAGE_1 through GALLERY_IMAGE_6,
+         GALLERY_TITLE,
+         HOURS_MON_THU, HOURS_FRI_SAT, HOURS_SUN,
+         LOCATION_TITLE, NAV_LINK_HOME, COPYRIGHT_YEAR
+    === END TOKEN REFERENCE === -->
+    <!-- === END EDIT HERE === -->
+    <!-- ======================================================================= -->
+
+
+    <!-- SYSTEM STYLES (Do not edit unless modifying structural layout) -->
+    <style>
+        /* CSS Variables mapped by JS */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #000000;
+            --surface-color: #f4f4f4;
+            --border-color: #e0e0e0;
+            --font-heading: 'Fraunces', serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        /* Prevent FOUC — body hidden until JS runs */
+        body { opacity: 0; transition: opacity 0.2s ease; }
+        body.ready { opacity: 1; }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Layout Utility */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        .section { padding: 130px 0; }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover { opacity: 0.9; }
+
+        /* Navbar */
+        #navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            padding: 1.5rem 0;
+            z-index: 100;
+            transition: all 0.4s ease;
+            color: #ffffff; /* Default light for hero overlay */
+        }
+        #navbar.scrolled {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 1rem 0;
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-logo img {
+            height: 108px;
+            width: auto;
+            border-radius: 4px;
+            display: block;
+            margin: -36px 0;
+        }
+        /* Hero */
+        #hero {
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 800px;
+            padding: 0 5%;
+        }
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        .about-image-wrapper { position: relative; }
+        .about-image { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+        .about-text { font-size: 1.1rem; color: var(--text-color); opacity: 0.85; }
+        .about-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+
+        /* Menu */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem 5rem;
+        }
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px dotted var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        .menu-item-name { font-size: 1.3rem; }
+        .menu-item-price { font-weight: 500; color: var(--accent-color); font-size: 1.1rem;}
+        .menu-item-desc { font-size: 0.95rem; opacity: 0.7; }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .gallery-item {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            background-color: var(--surface-color);
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* Location & Hours */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background-color: var(--surface-color);
+        }
+        .location-content { padding: 4rem 10%; display: flex; flex-direction: column; justify-content: center; }
+        .map-container { width: 100%; height: 100%; min-height: 400px; }
+        .hours-list { margin: 2rem 0; border-top: 1px solid var(--border-color); }
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+        .hour-day { font-weight: 500; }
+        .contact-details { margin-top: 1rem; }
+        .contact-details a, .contact-details p { display: block; margin-bottom: 0.5rem; opacity: 0.8; }
+
+        /* Pet-friendly badge */
+        .pet-friendly-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(4px);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-top: 1rem;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        /* View full menu link */
+        .view-full-menu {
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        .view-full-menu a {
+            display: inline-block;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 2px;
+            transition: opacity 0.3s ease;
+        }
+        .view-full-menu a:hover { opacity: 0.7; }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .testimonial-card {
+            background: var(--surface-color);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .testimonial-stars {
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+        .testimonial-quote {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            font-style: italic;
+        }
+        .testimonial-author {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: auto;
+        }
+        .testimonial-location {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 768px) {
+            .testimonials-grid { grid-template-columns: 1fr; }
+        }
+
+        /* Sticky mobile CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 9998;
+            background: var(--text-color);
+            padding: 12px 5%;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+        }
+        .sticky-cta a {
+            flex: 1;
+            max-width: 200px;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            text-decoration: none;
+        }
+        .sticky-cta .sticky-call { background: var(--accent-color); }
+        .sticky-cta .sticky-wa { background: #25D366; }
+        .sticky-cta a:hover { opacity: 0.9; }
+        @media (max-width: 768px) {
+            .sticky-cta { display: flex; }
+            body { padding-bottom: 70px; }
+        }
+
+        /* Lightbox */
+        .lightbox {
+          position: fixed; inset: 0; z-index: 9999;
+          background: rgba(0,0,0,0.92);
+          display: flex; align-items: center; justify-content: center;
+          opacity: 0; pointer-events: none;
+          transition: opacity 0.3s ease;
+        }
+        .lightbox.open { opacity: 1; pointer-events: auto; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; }
+        .lightbox-close {
+          position: absolute; top: 20px; right: 30px;
+          color: #fff; font-size: 2rem; cursor: pointer;
+          background: none; border: none; font-family: sans-serif;
+        }
+        .lightbox-nav {
+          position: absolute; top: 50%; transform: translateY(-50%);
+          color: #fff; font-size: 2.5rem; cursor: pointer;
+          background: none; border: none; padding: 1rem; font-family: sans-serif;
+        }
+        .lightbox-nav.prev { left: 10px; }
+        .lightbox-nav.next { right: 10px; }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .footer-socials { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .footer-socials a { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; transition: color 0.3s ease; }
+        .footer-socials a:hover { color: var(--accent-color); }
+        .footer-copy { font-size: 0.85rem; opacity: 0.6; }
+
+        /* ── MUSICAL / EDITORIAL DECORATIVE ELEMENTS ── */
+
+        /* Musical staff line divider between sections */
+        .staff-divider {
+            text-align: center;
+            font-size: 1.4rem;
+            letter-spacing: 10px;
+            color: var(--accent-color);
+            opacity: 0.45;
+            margin: -2rem 0 3rem;
+            user-select: none;
+            font-style: italic;
+        }
+        .staff-divider::before,
+        .staff-divider::after {
+            content: '';
+            display: inline-block;
+            width: 36px;
+            height: 1px;
+            background: var(--accent-color);
+            opacity: 0.25;
+            vertical-align: middle;
+            margin: 0 14px;
+        }
+
+        /* Hero accent — treble clef motif */
+        .hero-accent-musical {
+            font-size: 2.2rem;
+            letter-spacing: 8px;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 0.75rem;
+            user-select: none;
+            line-height: 1;
+        }
+
+        /* Five-line staff border atop scored sections */
+        .section-score {
+            position: relative;
+        }
+        .section-score::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 10px;
+            background: repeating-linear-gradient(
+                180deg,
+                transparent,
+                transparent 1px,
+                var(--accent-color) 1px,
+                var(--accent-color) 1.5px,
+                transparent 1.5px,
+                transparent 2.5px,
+                transparent 2.5px,
+                var(--accent-color) 2.5px,
+                var(--accent-color) 3px,
+                transparent 3px,
+                transparent 4px,
+                transparent 4px,
+                var(--accent-color) 4px,
+                var(--accent-color) 4.5px,
+                transparent 4.5px,
+                transparent 5.5px,
+                transparent 5.5px,
+                var(--accent-color) 5.5px,
+                var(--accent-color) 6px,
+                transparent 6px,
+                transparent 7px,
+                transparent 7px,
+                var(--accent-color) 7px,
+                var(--accent-color) 7.5px,
+                transparent 7.5px,
+                transparent 10px
+            );
+            opacity: 0.12;
+        }
+
+        /* Warm radial glow — conductor's spotlight */
+        .bg-maestro {
+            position: relative;
+        }
+        .bg-maestro::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(ellipse at 50% 0%, var(--accent-color) 0%, transparent 60%);
+            opacity: 0.025;
+            pointer-events: none;
+            z-index: 0;
+        }
+        .bg-maestro > * { position: relative; z-index: 1; }
+
+        /* ── FLOATING MUSICAL NOTES (CSS only, 3 notes drifting up) ── */
+        .music-notes-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+        .floating-note {
+            position: absolute;
+            bottom: -20px;
+            font-size: 1.8rem;
+            opacity: 0.06;
+            animation: noteFloat 14s ease-in infinite;
+            pointer-events: none;
+            user-select: none;
+        }
+        .floating-note:nth-child(1) { left: 10%; animation-delay: 0s; font-size: 1.6rem; }
+        .floating-note:nth-child(2) { left: 35%; animation-delay: 4.5s; font-size: 2.2rem; }
+        .floating-note:nth-child(3) { left: 60%; animation-delay: 9s; font-size: 1.4rem; }
+        .floating-note:nth-child(4) { left: 80%; animation-delay: 2s; font-size: 1.9rem; }
+        @keyframes noteFloat {
+            0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10%  { opacity: 0.07; }
+            85%  { opacity: 0.04; }
+            100% { transform: translateY(-600px) rotate(25deg); opacity: 0; }
+        }
+
+        /* ── EDITORIAL GRAIN TEXTURE OVERLAY ── */
+        .grain-overlay {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9997;
+            opacity: 0.025;
+            mix-blend-mode: multiply;
+        }
+
+        /* ── LEDGER LINE ACCENT (thin musical lines between menu items) ── */
+        .menu-item-header {
+            border-bottom-style: solid !important;
+            border-bottom-width: 1px !important;
+            position: relative;
+        }
+        .menu-item-header::after {
+            content: '';
+            position: absolute;
+            bottom: -3px; left: 0; right: 0;
+            height: 1px;
+            background: var(--accent-color);
+            opacity: 0.12;
+        }
+
+        /* Music note bullet for testimonial quotes */
+        .testimonial-card {
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '♫';
+            position: absolute;
+            top: 0.75rem; right: 1rem;
+            font-size: 2rem;
+            color: var(--accent-color);
+            opacity: 0.12;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        /* About section decorative treble clef watermark */
+        .about-image-wrapper {
+            position: relative;
+        }
+        .about-image-wrapper::after {
+            content: '𝄞';
+            position: absolute;
+            bottom: -20px; right: -15px;
+            font-size: 6rem;
+            color: var(--accent-color);
+            opacity: 0.08;
+            pointer-events: none;
+            user-select: none;
+            z-index: -1;
+        }
+
+        /* Animations */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); transition-delay: calc(var(--i, 0) * 0.1s); }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 101;
+        }
+        .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: currentColor;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: opacity 0.3s ease;
+        }
+        .nav-links a:hover {
+            opacity: 0.7;
+        }
+
+        .whatsapp-link::before {
+            content: "💬 ";
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .about-grid, .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .location-content { padding: 3rem 5%; }
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background-color: var(--bg-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 100;
+            }
+            .nav-links.open {
+                display: flex;
+            }
+            .nav-links a {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DOM Structure (Dynamically injected with Data) -->
+
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" id="dom-nav-logo" class="nav-logo font-heading"></a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#location">Visit Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content fade-up">
+            <div class="music-notes-container" aria-hidden="true">
+                <span class="floating-note">♩</span>
+                <span class="floating-note">♪</span>
+                <span class="floating-note">♫</span>
+                <span class="floating-note">♬</span>
+            </div>
+            <div class="hero-accent-musical">♩ ♪ ♫ ♬</div>
+            <h1 id="dom-hero-title" class="hero-title font-heading"></h1>
+            <p id="dom-hero-tagline" class="hero-tagline"></p>
+            <a href="#menu" id="dom-hero-btn" class="btn"></a>
+            <div id="dom-pet-badge" class="pet-friendly-badge" style="display: none;">🐾 Pets Welcome</div>
+        </div>
+    </header>
+
+    <section id="about" class="section container section-score bg-maestro">
+        <div class="about-grid">
+            <div class="about-image-wrapper fade-up">
+                <img id="dom-about-img" class="about-image" src="" alt="About Us">
+            </div>
+            <div class="fade-up">
+                <h2 id="dom-about-title" class="about-title font-heading"></h2>
+                <p id="dom-about-text" class="about-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section bg-maestro" style="position: relative; overflow: hidden;">
+        <div class="music-notes-container" aria-hidden="true">
+            <span class="floating-note">♫</span>
+            <span class="floating-note">♪</span>
+            <span class="floating-note">♩</span>
+        </div>
+        <div class="container">
+            <h2 id="dom-menu-title" class="section-title font-heading fade-up"></h2>
+            <div class="staff-divider">— 𝄞 — 𝄢 —</div>
+            <div id="dom-menu-grid" class="menu-grid">
+                <!-- Menu items injected here -->
+            </div>
+            <div id="dom-full-menu-link" class="view-full-menu" style="display: none;">
+                <a href="#" target="_blank" rel="noopener">View Full Menu →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section container section-score">
+        <h2 id="dom-gallery-title" class="section-title font-heading fade-up"></h2>
+        <div class="staff-divider">— 𝄞 —</div>
+        <div id="dom-gallery-grid" class="gallery-grid" style="margin-top: 3rem;">
+            <!-- Gallery items injected here -->
+        </div>
+    </section>
+
+    <section id="reviews" class="section container bg-maestro">
+        <h2 class="section-title font-heading fade-up">What People Say</h2>
+        <div class="staff-divider">— ♪ —</div>
+        <div id="dom-rating-badge" class="fade-up" style="text-align: center;">
+            <span class="rating-badge">★ <span id="dom-rating-text"></span></span>
+        </div>
+        <div id="dom-testimonials-grid" class="testimonials-grid">
+            <!-- Testimonials injected here -->
+        </div>
+    </section>
+
+    <section id="location" class="section" style="padding-bottom: 0;">
+        <div class="location-grid">
+            <div class="location-content fade-up">
+                <h2 id="dom-location-title" class="about-title font-heading" style="margin-bottom: 0.5rem;"></h2>
+                <div id="dom-hours-list" class="hours-list">
+                    <!-- Hours injected here -->
+                </div>
+                <div class="contact-details">
+                    <p id="dom-address" class="font-heading" style="font-size: 1.2rem;"></p>
+                    <a id="dom-phone" href=""></a>
+                    <a id="dom-whatsapp" href="" target="_blank" rel="noopener" class="whatsapp-link">Message us on WhatsApp</a>
+                </div>
+            </div>
+            <div id="dom-map" class="map-container fade-up">
+                <!-- Iframe injected here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial grain texture overlay -->
+    <svg class="grain-overlay" aria-hidden="true">
+      <filter id="grain">
+        <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+        <feColorMatrix type="saturate" values="0"/>
+      </filter>
+      <rect width="100%" height="100%" filter="url(#grain)"/>
+    </svg>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-nav prev" id="lightbox-prev">&lsaquo;</button>
+      <img id="lightbox-img" src="" alt="">
+      <button class="lightbox-nav next" id="lightbox-next">&rsaquo;</button>
+    </div>
+
+    <footer>
+        <div class="container fade-up">
+            <div class="footer-socials">
+                <a id="dom-fb" href="" target="_blank">Facebook</a>
+                <a id="dom-ig" href="" target="_blank">Instagram</a>
+                <a id="dom-wa-footer" href="" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+            <p id="dom-footer-copy" class="footer-copy"></p>
+        </div>
+    </footer>
+
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta">
+        <a id="sticky-call-btn" href="#" class="sticky-call">📞 Call Now</a>
+        <a id="sticky-wa-btn" href="#" target="_blank" rel="noopener" class="sticky-wa">💬 WhatsApp</a>
+    </div>
+
+    <!-- SYSTEM SCRIPTS (Core Rendering Engine) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Apply CSS Variables from Config
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', SITE_CONFIG.theme.colors.background);
+            root.style.setProperty('--text-color', SITE_CONFIG.theme.colors.text);
+            root.style.setProperty('--accent-color', SITE_CONFIG.theme.colors.accent);
+            root.style.setProperty('--surface-color', SITE_CONFIG.theme.colors.surface);
+            root.style.setProperty('--border-color', SITE_CONFIG.theme.colors.border);
+            root.style.setProperty('--font-heading', SITE_CONFIG.theme.fonts.heading);
+            root.style.setProperty('--font-body', SITE_CONFIG.theme.fonts.body);
+
+            // 2. Populate SEO & Standard Content
+            const seo = SITE_CONFIG.seo;
+            const city = seo.city || "Parañaque";
+            const province = seo.province || "NCR";
+            document.title = seo.templateTitle || `${SITE_CONFIG.hero.businessName} | Cafe in ${city}, ${province}`;
+            document.querySelector('meta[name="description"]').content = seo.description || `${SITE_CONFIG.hero.businessName} — ${SITE_CONFIG.hero.tagline}. Located in ${city}, ${province}.`;
+            document.querySelector('meta[name="keywords"]').content = seo.keywords || `${SITE_CONFIG.hero.businessName.toLowerCase().replace(/\s+/g,', ')}, cafe, ${city.toLowerCase()}, ${province.toLowerCase()}`;
+            // Open Graph
+            document.querySelector('meta[property="og:title"]').content = document.title;
+            document.querySelector('meta[property="og:description"]').content = seo.description || `${SITE_CONFIG.hero.businessName} — ${SITE_CONFIG.hero.tagline}.`;
+            document.querySelector('meta[property="og:image"]').content = seo.image || SITE_CONFIG.hero.backgroundImage;
+            // JSON-LD LocalBusiness
+            try {
+                const ld = JSON.parse(document.getElementById('seo-jsonld').textContent);
+                ld.name = SITE_CONFIG.hero.businessName;
+                ld.image = seo.image || SITE_CONFIG.hero.backgroundImage;
+                ld.telephone = seo.phone || SITE_CONFIG.contact.phone;
+                ld.description = seo.description || `${SITE_CONFIG.hero.businessName} — ${SITE_CONFIG.hero.tagline}`;
+                const addrParts = (SITE_CONFIG.contact.address || '').split(',').map(s => s.trim());
+                ld.address.streetAddress = addrParts[0] || SITE_CONFIG.contact.address;
+                ld.address.addressLocality = city;
+                ld.address.addressRegion = province;
+                ld.url = seo.url || window.location.href;
+                document.getElementById('seo-jsonld').textContent = JSON.stringify(ld, null, 2);
+            } catch (e) { console.warn('JSON-LD injection failed:', e); }
+            document.getElementById('dom-nav-logo').textContent = SITE_CONFIG.hero.businessName;
+            // Logo image override
+            if (SITE_CONFIG.logoUrl) {
+                document.getElementById('dom-nav-logo').innerHTML = '<img src="' + SITE_CONFIG.logoUrl + '" alt="' + SITE_CONFIG.hero.businessName + '">';
+            }
+
+            // Hero
+            const heroSection = document.getElementById('hero');
+            heroSection.style.backgroundImage = `url('${SITE_CONFIG.hero.backgroundImage}')`;
+            document.getElementById('dom-hero-title').textContent = SITE_CONFIG.hero.businessName;
+
+            // Time-aware greeting
+            const hour = new Date().getHours();
+            let greeting = "";
+            if (hour < 12) greeting = "Good Morning";
+            else if (hour < 17) greeting = "Good Afternoon";
+            else greeting = "Good Evening";
+            document.getElementById("dom-hero-title").textContent = greeting + ". " + document.getElementById("dom-hero-title").textContent;
+
+            document.getElementById('dom-hero-tagline').textContent = SITE_CONFIG.hero.tagline;
+            document.getElementById('dom-hero-btn').textContent = SITE_CONFIG.hero.buttonText;
+
+            // About
+            document.getElementById('dom-about-title').textContent = SITE_CONFIG.about.title;
+            document.getElementById('dom-about-text').textContent = SITE_CONFIG.about.text;
+            document.getElementById('dom-about-img').src = SITE_CONFIG.about.image;
+
+            // Menu
+            document.getElementById('dom-menu-title').textContent = SITE_CONFIG.menuTitle;
+            const menuGrid = document.getElementById('dom-menu-grid');
+            SITE_CONFIG.menu.forEach((item, index) => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item fade-up';
+                menuItem.style = `--i: ${index}`;
+                menuItem.innerHTML = `
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name font-heading">${item.name}</h3>
+                        <span class="menu-item-price">${item.price}</span>
+                    </div>
+                    <p class="menu-item-desc">${item.desc}</p>
+                `;
+                menuGrid.appendChild(menuItem);
+            });
+
+            // Pet-friendly badge
+            if (SITE_CONFIG.isPetFriendly) {
+                document.getElementById('dom-pet-badge').style.display = 'inline-flex';
+            }
+
+            // Full menu link
+            const fullMenuLink = document.getElementById('dom-full-menu-link');
+            if (SITE_CONFIG.fullMenuUrl) {
+                fullMenuLink.querySelector('a').href = SITE_CONFIG.fullMenuUrl;
+                fullMenuLink.style.display = 'block';
+            }
+
+            // Sticky CTA buttons
+            const stickyCall = document.getElementById('sticky-call-btn');
+            const stickyWa = document.getElementById('sticky-wa-btn');
+            if (SITE_CONFIG.contact.phone) {
+                stickyCall.href = 'tel:' + SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, '');
+            }
+            if (SITE_CONFIG.contact.whatsapp) {
+                stickyWa.href = SITE_CONFIG.contact.whatsapp;
+            }
+
+            // Gallery
+            document.getElementById('dom-gallery-title').textContent = SITE_CONFIG.galleryTitle;
+            const galleryGrid = document.getElementById('dom-gallery-grid');
+            SITE_CONFIG.gallery.forEach((imgUrl, index) => {
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'gallery-item fade-up';
+                imgContainer.style = `--i: ${index}`;
+                imgContainer.innerHTML = `<img src="${imgUrl}" alt="Cafe Gallery Image">`;
+                galleryGrid.appendChild(imgContainer);
+            });
+
+            // Testimonials
+            const ratingBadge = document.getElementById('dom-rating-text');
+            const t = SITE_CONFIG.testimonials;
+            if (t.rating && t.count > 0) {
+                ratingBadge.textContent = t.rating + ' from ' + t.count + ' reviews';
+            } else if (t.rating) {
+                ratingBadge.textContent = t.rating + ' stars';
+            } else {
+                document.getElementById('dom-rating-badge').style.display = 'none';
+            }
+            const testimonialsGrid = document.getElementById('dom-testimonials-grid');
+            if (t.items) {
+                t.items.forEach(function(item, index) {
+                    if (!item || !item.quote) return;
+                    var card = document.createElement('div');
+                    card.className = 'testimonial-card fade-up';
+                    card.style = '--i: ' + index;
+                    var locHtml = item.location ? '<span class="testimonial-location">' + item.location + '</span>' : '';
+                    card.innerHTML = '<div class="testimonial-quote">' + item.quote + '</div>' +
+                        '<div class="testimonial-author">' + (item.name || '') + '</div>' + locHtml;
+                    testimonialsGrid.appendChild(card);
+                });
+            }
+
+            // Location & Hours
+            document.getElementById('dom-location-title').textContent = SITE_CONFIG.locationTitle;
+            const hoursList = document.getElementById('dom-hours-list');
+            SITE_CONFIG.hours.forEach((hour, index) => {
+                const hourEl = document.createElement('div');
+                hourEl.className = 'hour-item';
+                if (index === 0) hourEl.dataset.day = "mon-thu";
+                else if (index === 1) hourEl.dataset.day = "fri-sat";
+                else if (index === 2) hourEl.dataset.day = "sun";
+                hourEl.innerHTML = `<span class="hour-day">${hour.day}</span><span class="hour-time">${hour.time}</span>`;
+                hoursList.appendChild(hourEl);
+            });
+
+            // Hours dedup: if all entries have same time, collapse to "Daily"
+            var hourItems = document.querySelectorAll('.hour-item');
+            if (hourItems.length === 3) {
+                var times = [];
+                hourItems.forEach(function(el) { times.push(el.querySelector('.hour-time').textContent); });
+                if (times.every(function(t) { return t === times[0]; })) {
+                    hoursList.innerHTML = '';
+                    var dailyEl = document.createElement('div');
+                    dailyEl.className = 'hour-item';
+                    dailyEl.innerHTML = '<span class="hour-day">Daily</span><span class="hour-time">' + times[0] + '</span>';
+                    hoursList.appendChild(dailyEl);
+                }
+            }
+
+            // Highlight today's hours
+            const today = new Date().getDay();
+            const dayMap = {1:"mon-thu",2:"mon-thu",3:"mon-thu",4:"mon-thu",5:"fri-sat",6:"fri-sat",0:"sun"};
+            const todayClass = dayMap[today];
+            document.querySelectorAll(".hour-item").forEach(el => {
+              if (el.dataset.day === todayClass) {
+                el.style.color = "var(--accent-color)";
+                el.style.fontWeight = "600";
+              }
+            });
+
+            document.getElementById('dom-address').textContent = SITE_CONFIG.contact.address;
+
+            const phoneEl = document.getElementById('dom-phone');
+            phoneEl.textContent = SITE_CONFIG.contact.phone;
+            phoneEl.href = `tel:${SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, '')}`; // Strip spaces for link
+
+            document.getElementById('dom-map').innerHTML = SITE_CONFIG.contact.mapIframe;
+
+            // Footer
+            document.getElementById('dom-fb').href = SITE_CONFIG.contact.facebook;
+            document.getElementById('dom-ig').href = SITE_CONFIG.contact.instagram;
+            document.getElementById('dom-whatsapp').href = SITE_CONFIG.contact.whatsapp;
+            document.getElementById('dom-wa-footer').href = SITE_CONFIG.contact.whatsapp;
+            document.getElementById('dom-footer-copy').textContent = `© ${new Date().getFullYear()} ${SITE_CONFIG.hero.businessName}. All rights reserved.`;
+
+            // 3. Setup Scroll Animations (Intersection Observer)
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with .fade-up
+            setTimeout(() => {
+                document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+            }, 100);
+
+            // 4. Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger-btn');
+            const navLinks = document.getElementById('nav-links');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    const isOpen = navLinks.classList.toggle('open');
+                    hamburger.classList.toggle('active');
+                    hamburger.setAttribute('aria-expanded', isOpen);
+                });
+                // Close menu on link click
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('open');
+                        hamburger.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // Lightbox
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxClose = document.getElementById("lightbox-close");
+            const lightboxPrev = document.getElementById("lightbox-prev");
+            const lightboxNext = document.getElementById("lightbox-next");
+            let currentImgIndex = 0;
+            const galleryImages = SITE_CONFIG.gallery;
+
+            document.querySelectorAll(".gallery-item img").forEach((img, i) => {
+              img.style.cursor = "pointer";
+              img.addEventListener("click", () => {
+                currentImgIndex = i;
+                lightboxImg.src = galleryImages[currentImgIndex];
+                lightbox.classList.add("open");
+              });
+            });
+
+            function closeLightbox() { lightbox.classList.remove("open"); }
+            lightboxClose.addEventListener("click", closeLightbox);
+            lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener("keydown", (e) => {
+              if (!lightbox.classList.contains("open")) return;
+              if (e.key === "Escape") closeLightbox();
+              if (e.key === "ArrowLeft") navigateLightbox(-1);
+              if (e.key === "ArrowRight") navigateLightbox(1);
+            });
+            function navigateLightbox(dir) {
+              currentImgIndex = (currentImgIndex + dir + galleryImages.length) % galleryImages.length;
+              lightboxImg.src = galleryImages[currentImgIndex];
+            }
+            lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
+            lightboxNext.addEventListener("click", () => navigateLightbox(1));
+
+            // Reveal body after all content is injected
+            requestAnimationFrame(() => {
+                document.body.classList.add('ready');
+            });
+        });
+    </script>
+</body>
+</html>

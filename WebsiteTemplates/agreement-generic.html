@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  body { font-family: 'Georgia', serif; line-height: 1.6; color: #222; max-width: 700px; margin: 0 auto; padding: 2rem; }
+  h1 { font-size: 1.5rem; border-bottom: 2px solid #222; padding-bottom: 0.5rem; }
+  h2 { font-size: 1.2rem; margin-top: 1.5rem; }
+  .signature-line { border-top: 1px solid #999; margin-top: 2rem; padding-top: 0.5rem; }
+  .price { font-weight: bold; font-size: 1.1rem; }
+</style>
+</head>
+<body>
+
+<h1>Web Design Service Agreement</h1>
+<p><strong>Date:</strong> {{DATE}}</p>
+<p><strong>Client:</strong> {{CLIENT_NAME}}<br>
+<strong>Business:</strong> {{BUSINESS_NAME}}</p>
+
+<h2>Scope of Work</h2>
+<p>Rider (the "Designer") agrees to design and deliver a {{TIER}}-tier website for {{BUSINESS_NAME}} (the "Client").</p>
+<p><strong>Deliverables:</strong> {{SCOPE}}</p>
+
+<h2>Timeline</h2>
+<p>{{TIMELINE}}</p>
+
+<h2>Revisions</h2>
+<p>The Client is entitled to up to 2 rounds of revisions. Additional revisions may incur extra charges at ₱500 per round.</p>
+
+<h2>Payment Terms</h2>
+<p class="price">Total Fee: ₱{{PRICE}}</p>
+<p>Payment schedule:
+<ul>
+  <li><strong>50% deposit (₱{{DEPOSIT_AMOUNT}})</strong> — due upon signing this agreement</li>
+  <li><strong>50% balance (₱{{BALANCE_AMOUNT}})</strong> — due before final launch</li>
+</ul>
+</p>
+<p>Payment is accepted via bank transfer or GCash. Details: {{PAYMENT_INFO}}</p>
+
+<h2>Support</h2>
+<p>The Designer will provide 30 days of post-launch support at no additional cost. After 30 days, ongoing maintenance is available at ₱2,500/month.</p>
+
+<h2>Intellectual Property</h2>
+<p>Upon full payment, the Client owns all rights to the final delivered website files. The Designer retains the right to display the work in their portfolio.</p>
+
+<h2>Cancellation</h2>
+<p>If the Client cancels after the deposit has been paid, the deposit is non-refundable and covers work completed up to that point.</p>
+
+<h2>Agreement</h2>
+<p>By clicking "I Agree" on the project portal, the Client accepts these terms.</p>
+
+<div class="signature-line">
+  <p><strong>{{BUSINESS_NAME}}</strong> (Client) — via portal agreement</p>
+  <p><strong>Rider</strong> (Designer)</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{HERO_BUSINESS_NAME}} | Trusted Local Trade Services</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (LocalBusiness) — populated by JS -->
+    <script type="application/ld+json" id="seo-jsonld">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "",
+        "image": "",
+        "telephone": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "",
+            "addressRegion": "",
+            "addressCountry": "PH"
+        },
+        "url": "",
+        "description": "",
+        "priceRange": "₱₱"
+    }
+    </script>
+
+    <!-- Google Fonts: IBM Plex Serif (editorial headings) + IBM Plex Sans (clean body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Serif:wght@400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!-- INSTRUCTIONS:
+         This SITE_CONFIG object is the source of truth for design, layout,
+         and content. Changing these values or using the {{TOKEN}} replacement
+         pipeline will instantly reskin the entire page.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            theme: {
+                // "plumber"     -> Warm terracotta/navy palette
+                // "electrician" -> Deep steel/safety yellow palette
+                tradeStyle: "{{THEME_TRADE_STYLE}}",
+                colors: {
+                    background: "{{THEME_COLOR_BG}}",       // Plumber: #FAF9F6 (Parchment) | Electrician: #0F172A (Deep Slate)
+                    text: "{{THEME_COLOR_TEXT}}",           // Plumber: #1B2A4A (Deep Navy) | Electrician: #F8FAFC (Ice White)
+                    accent: "{{THEME_COLOR_ACCENT}}",       // Plumber: #E2583E (Copper/Rust) | Electrician: #FACC15 (Safety Yellow)
+                    surface: "{{THEME_COLOR_SURFACE}}",     // Plumber: #EAE6DF (Warm Stone)  | Electrician: #1E293B (Steel Slate)
+                    border: "{{THEME_COLOR_BORDER}}",       // Plumber: #D2CAC0 (Soft Muted)  | Electrician: #334155 (Grid Border)
+                    emergency: "{{THEME_COLOR_EMERGENCY}}"  // High contrast background for the critical banner
+                },
+                fonts: {
+                    heading: "{{THEME_FONT_HEADING}}",     // IBM Plex Serif (editorial)
+                    body: "{{THEME_FONT_BODY}}"            // IBM Plex Sans (readable)
+                }
+            },
+            seo: {
+                templateTitle: "{{SEO_TITLE}}",
+                description: "{{SEO_DESCRIPTION}}",
+                keywords: "{{SEO_KEYWORDS}}",
+                city: "{{SEO_CITY}}",
+                province: "{{SEO_PROVINCE}}",
+                phone: "{{SEO_PHONE}}",
+                image: "{{SEO_IMAGE}}",
+                url: null
+            },
+            hero: {
+                tagline: "{{HERO_TAGLINE}}",
+                phone: "{{HERO_PHONE}}",
+                backgroundImage: "{{HERO_BG_IMAGE}}",
+                ctaText: "{{HERO_CTA_TEXT}}"
+            },
+            services: [
+                { icon: "{{SERVICE_1_ICON}}", name: "{{SERVICE_1_NAME}}", desc: "{{SERVICE_1_DESC}}" },
+                { icon: "{{SERVICE_2_ICON}}", name: "{{SERVICE_2_NAME}}", desc: "{{SERVICE_2_DESC}}" },
+                { icon: "{{SERVICE_3_ICON}}", name: "{{SERVICE_3_NAME}}", desc: "{{SERVICE_3_DESC}}" },
+                { icon: "{{SERVICE_4_ICON}}", name: "{{SERVICE_4_NAME}}", desc: "{{SERVICE_4_DESC}}" },
+                { icon: "{{SERVICE_5_ICON}}", name: "{{SERVICE_5_NAME}}", desc: "{{SERVICE_5_DESC}}" },
+                { icon: "{{SERVICE_6_ICON}}", name: "{{SERVICE_6_NAME}}", desc: "{{SERVICE_6_DESC}}" }
+            ],
+            about: {
+                text: "{{ABOUT_TEXT}}",
+                yearsInBusiness: "{{ABOUT_YEARS}}",
+                image: "{{ABOUT_IMAGE}}"
+            },
+            trust: [
+                { icon: "{{TRUST_1_ICON}}", label: "{{TRUST_1_LABEL}}" },
+                { icon: "{{TRUST_2_ICON}}", label: "{{TRUST_2_LABEL}}" },
+                { icon: "{{TRUST_3_ICON}}", label: "{{TRUST_3_LABEL}}" }
+            ],
+            serviceArea: {
+                title: "{{AREA_TITLE}}",
+                cities: "{{AREA_CITIES}}",
+                mapEmbedUrl: "{{AREA_MAP_URL}}"
+            },
+            gallery: [
+                "{{GALLERY_IMG_1}}",
+                "{{GALLERY_IMG_2}}",
+                "{{GALLERY_IMG_3}}",
+                "{{GALLERY_IMG_4}}",
+                "{{GALLERY_IMG_5}}",
+                "{{GALLERY_IMG_6}}"
+            ],
+            galleryLabels: [
+                "{{GALLERY_LABEL_1}}",
+                "{{GALLERY_LABEL_2}}",
+                "{{GALLERY_LABEL_3}}",
+                "{{GALLERY_LABEL_4}}",
+                "{{GALLERY_LABEL_5}}",
+                "{{GALLERY_LABEL_6}}"
+            ],
+            galleryTitle: "{{GALLERY_TITLE}}",
+            gallerySubtitle: "{{GALLERY_SUBTITLE}}",
+            testimonials: [
+                { quote: "{{TESTIMONIAL_1_QUOTE}}", name: "{{TESTIMONIAL_1_NAME}}", location: "{{TESTIMONIAL_1_LOCATION}}", stars: 5 },
+                { quote: "{{TESTIMONIAL_2_QUOTE}}", name: "{{TESTIMONIAL_2_NAME}}", location: "{{TESTIMONIAL_2_LOCATION}}", stars: 5 },
+                { quote: "{{TESTIMONIAL_3_QUOTE}}", name: "{{TESTIMONIAL_3_NAME}}", location: "{{TESTIMONIAL_3_LOCATION}}", stars: 5 }
+            ],
+            emergency: {
+                phone: "{{EMERGENCY_PHONE}}",
+                hours: "{{EMERGENCY_HOURS}}",
+                showBanner: true
+            },
+            contact: {
+                address: "{{CONTACT_ADDRESS}}",
+                phone: "{{CONTACT_PHONE}}",
+                whatsapp: "{{CONTACT_WHATSAPP}}",
+                facebook: "{{CONTACT_FACEBOOK}}",
+                instagram: "{{CONTACT_INSTAGRAM}}"
+            },
+            footer: {
+                copyright: "{{FOOTER_COPYRIGHT}}"
+            }
+        };
+
+        // DEFAULT STANDALONE MOCK DATA (Fallback if automation / Node run is bypassed)
+        // Ensures portfolio-ready render instantly on double click
+        const DEFAULT_FALLBACKS = {
+            "{{THEME_TRADE_STYLE}}": "plumber",
+            "{{THEME_COLOR_BG}}": "#FAF9F6",
+            "{{THEME_COLOR_TEXT}}": "#1B2A4A",
+            "{{THEME_COLOR_ACCENT}}": "#E2583E",
+            "{{THEME_COLOR_SURFACE}}": "#EAE6DF",
+            "{{THEME_COLOR_BORDER}}": "#D2CAC0",
+            "{{THEME_COLOR_EMERGENCY}}": "#E2583E",
+            "{{THEME_FONT_HEADING}}": "'IBM Plex Serif', serif",
+            "{{THEME_FONT_BODY}}": "'IBM Plex Sans', sans-serif",
+            "{{SEO_TITLE}}": "Kanto Plumbing & Repair | Trusted Local Tubero in Parañaque",
+            "{{SEO_DESCRIPTION}}": "Kanto Plumbing & Repair — mabilis, matapat na tubero sa BF Homes, Parañaque. Emergency repairs, declogging, water heater installation. Serving all NCR.",
+            "{{SEO_KEYWORDS}}": "plumber, paranaque, tubero, emergency plumbing, pipe repair, bf homes",
+            "{{SEO_CITY}}": "Parañaque",
+            "{{SEO_PROVINCE}}": "NCR",
+            "{{SEO_PHONE}}": "+63 917 888 1234",
+            "{{SEO_IMAGE}}": "https://images.unsplash.com/photo-1676210134188-4c05dd172f89?w=1920&h=1080&fit=crop",
+            "{{HERO_BUSINESS_NAME}}": "Kanto Plumbing & Repair",
+            "{{HERO_TAGLINE}}": "Mabilis, Matapat, at Maaasahang Tubero sa Parañaque",
+            "{{HERO_PHONE}}": "+63 917 888 1234",
+            "{{HERO_BG_IMAGE}}": "https://images.unsplash.com/photo-1676210134188-4c05dd172f89?w=1920&h=1080&fit=crop",
+            "{{HERO_CTA_TEXT}}": "Call Now: +63 917 888 1234",
+            "{{SERVICE_1_ICON}}": "🚰", "{{SERVICE_1_NAME}}": "Emergency Pipe Leak Repairs", "{{SERVICE_1_DESC}}": "Rapid response diagnostic and repairs for bursting or leaking pipes across NCR.",
+            "{{SERVICE_2_ICON}}": "🚽", "{{SERVICE_2_NAME}}": "Toilet & Sink Declogging", "{{SERVICE_2_DESC}}": "Eco-friendly, mechanical declogging without damaging your residential drainage systems.",
+            "{{SERVICE_3_ICON}}": "🚿", "{{SERVICE_3_NAME}}": "Water Heater Installation", "{{SERVICE_3_DESC}}": "Safe setup of multi-point and single-point bathroom heating systems.",
+            "{{SERVICE_4_ICON}}": "💦", "{{SERVICE_4_NAME}}": "Water Pump Services", "{{SERVICE_4_DESC}}": "Installation, preventative maintenance, and motor rewinding for home booster pumps.",
+            "{{SERVICE_5_ICON}}": "🧺", "{{SERVICE_5_NAME}}": "Grease Trap Cleaning", "{{SERVICE_5_DESC}}": "Commercial and residential grease trap cleaning for food businesses and kitchens.",
+            "{{SERVICE_6_ICON}}": "🏠", "{{SERVICE_6_NAME}}": "Complete Re-Piping", "{{SERVICE_6_DESC}}": "Whole-house replacement from old rusted galvanized pipes to premium PPR pipelines.",
+            "{{ABOUT_TEXT}}": "Kanto Plumbing began on a neighborhood street corner in BF Homes, Parañaque. We realized local families were tired of hard-to-reach, unreliable services. Today, we bring expert, licensed plumbing solutions straight to your doorstep with honest pricing and zero shortcuts.",
+            "{{ABOUT_YEARS}}": "8+ Years of Local Service",
+            "{{ABOUT_IMAGE}}": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&h=1000&fit=crop",
+            "{{TRUST_1_ICON}}": "🛡️", "{{TRUST_1_LABEL}}": "Licensed & Insured",
+            "{{TRUST_2_ICON}}": "🏠", "{{TRUST_2_LABEL}}": "100% Parañaque Owned",
+            "{{TRUST_3_ICON}}": "🤝", "{{TRUST_3_LABEL}}": "Service Warranty Included",
+            "{{AREA_TITLE}}": "Barangays We Serve",
+            "{{AREA_CITIES}}": "BF Homes, Don Bosco, Sun Valley, Moonwalk, San Antonio, Marcelo Green, Baclaran, Tambo, Sto. Niño",
+            "{{AREA_MAP_URL}}": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0605988168273!2d121.0189!3d14.4526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI3JzA5LjQiTiAxMjHCsDAxJzA4LjAiRQ!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph",
+            "{{GALLERY_IMG_1}}": "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=600&fit=crop",
+            "{{GALLERY_IMG_2}}": "https://images.unsplash.com/photo-1676210134188-4c05dd172f89?w=600&h=600&fit=crop",
+            "{{GALLERY_IMG_3}}": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&h=600&fit=crop",
+            "{{GALLERY_IMG_4}}": "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&h=600&fit=crop",
+            "{{GALLERY_IMG_5}}": "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?w=600&h=600&fit=crop",
+            "{{GALLERY_IMG_6}}": "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=600&fit=crop",
+            "{{GALLERY_LABEL_1}}": "Plumbing Pipeline Layout",
+            "{{GALLERY_LABEL_2}}": "Leak Detection Inspection",
+            "{{GALLERY_LABEL_3}}": "Booster Pump Restoration",
+            "{{GALLERY_LABEL_4}}": "Main Drain Clearout",
+            "{{GALLERY_LABEL_5}}": "Bathroom Fittings Finish",
+            "{{GALLERY_LABEL_6}}": "Residential Supply Line Map",
+            "{{GALLERY_TITLE}}": "Recent Work",
+            "{{GALLERY_SUBTITLE}}": "See our real, completed projects and local installations in Parañaque.",
+            "{{TESTIMONIAL_1_QUOTE}}": "Mabilis dumating nung nagkaroon kami ng tagas sa banyo hatinggabi. Very professional at malinis magtrabaho!",
+            "{{TESTIMONIAL_1_NAME}}": "Maria S.",
+            "{{TESTIMONIAL_1_LOCATION}}": "BF Homes, Parañaque",
+            "{{TESTIMONIAL_2_QUOTE}}": "Highly recommended! Sila lang ang nakahanap ng leak sa ilalim ng sahig namin na matagal nang problema.",
+            "{{TESTIMONIAL_2_NAME}}": "Robert C.",
+            "{{TESTIMONIAL_2_LOCATION}}": "Don Bosco, Parañaque",
+            "{{TESTIMONIAL_3_QUOTE}}": "Subok na maaasahan. Clear ang quotation bago simulan ang gawa, walang sorpresang extra charges.",
+            "{{TESTIMONIAL_3_NAME}}": "Elena G.",
+            "{{TESTIMONIAL_3_LOCATION}}": "San Antonio, Parañaque",
+            "{{EMERGENCY_PHONE}}": "+63 917 888 1234",
+            "{{EMERGENCY_HOURS}}": "24/7",
+            "{{CONTACT_ADDRESS}}": "Aguirre Ave Cor El Grande, BF Homes, Parañaque, Metro Manila",
+            "{{CONTACT_PHONE}}": "+63 917 888 1234",
+            "{{CONTACT_WHATSAPP}}": "https://wa.me/639178881234",
+            "{{CONTACT_FACEBOOK}}": "https://facebook.com/kantoplumbing",
+            "{{CONTACT_INSTAGRAM}}": "https://instagram.com/kantoplumbing",
+            "{{FOOTER_COPYRIGHT}}": "Kanto Plumbing & Repair Services"
+        };
+
+        // Fallback execution to support clean browser preview
+        Object.keys(SITE_CONFIG).forEach(key => {
+            const val = SITE_CONFIG[key];
+            if (typeof val === 'string' && val.startsWith('{{')) {
+                SITE_CONFIG[key] = DEFAULT_FALLBACKS[val] || '';
+            } else if (typeof val === 'object' && val !== null) {
+                Object.keys(val).forEach(subKey => {
+                    if (typeof val[subKey] === 'string' && val[subKey].startsWith('{{')) {
+                        val[subKey] = DEFAULT_FALLBACKS[val[subKey]] || '';
+                    } else if (typeof val[subKey] === 'object' && val[subKey] !== null) {
+                        Object.keys(val[subKey]).forEach(deepKey => {
+                            if (typeof val[subKey][deepKey] === 'string' && val[subKey][deepKey].startsWith('{{')) {
+                                val[subKey][deepKey] = DEFAULT_FALLBACKS[val[subKey][deepKey]] || '';
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        // Array fallbacks helper
+        ['services', 'trust', 'gallery', 'galleryLabels', 'testimonials'].forEach(arrKey => {
+            SITE_CONFIG[arrKey] = SITE_CONFIG[arrKey].map(item => {
+                if (typeof item === 'string' && item.startsWith('{{')) {
+                    return DEFAULT_FALLBACKS[item] || '';
+                } else if (typeof item === 'object') {
+                    const cleanObj = {};
+                    Object.keys(item).forEach(k => {
+                        cleanObj[k] = (typeof item[k] === 'string' && item[k].startsWith('{{')) ? DEFAULT_FALLBACKS[item[k]] : item[k];
+                    });
+                    return cleanObj;
+                }
+                return item;
+            });
+        });
+    </script>
+    <!-- === END EDIT HERE === -->
+    <!-- ======================================================================= -->
+
+    <!-- STRUCTURAL & LAYOUT ENGINE (Do not edit directly) -->
+    <style>
+        /* Prevent FOUC */
+        body {
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        body.ready {
+            opacity: 1;
+        }
+
+        /* Base Variables - Injected via JS at runtime */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #ff0000;
+            --surface-color: #f1f1f1;
+            --border-color: #cccccc;
+            --emergency-bg: #ff0000;
+            --font-heading: serif;
+            --font-body: sans-serif;
+
+            /* Dynamic Structural styling defined by tradeStyle */
+            --radius-ui: 0px;
+            --accent-glow: none;
+            --bg-pattern: none;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: var(--bg-pattern);
+            background-size: 30px 30px;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Container Rules */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 6%;
+        }
+
+        .section {
+            padding: 120px 0;
+        }
+
+        .section+.section {
+            border-top: 1px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+            margin-bottom: 3.5rem;
+            text-transform: uppercase;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 70px;
+            height: 6px;
+            background-color: var(--accent-color);
+        }
+
+        /* Buttons & Badges */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 1.1rem 2.2rem;
+            border: none;
+            cursor: pointer;
+            border-radius: var(--radius-ui);
+            transition: opacity 0.2s ease;
+            font-family: var(--font-heading);
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--text-color);
+            color: var(--text-color);
+        }
+
+        .btn-outline:hover {
+            opacity: 0.7;
+            background-color: var(--text-color);
+            color: var(--bg-color);
+        }
+
+        /* Sticky Navbar */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        #navbar.scrolled {
+            background-color: var(--bg-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1rem 0;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hamburger & Overlay */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2000;
+            position: relative;
+        }
+
+        .menu-toggle span {
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: var(--text-color);
+            margin: 6px 0;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        /* Responsive Overlay Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--bg-color);
+            z-index: 1500;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-nav.open {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .mobile-nav a {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            text-transform: uppercase;
+        }
+
+        /* Hero */
+        #hero {
+            height: 100vh;
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.4) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 750px;
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 7vw, 5.2rem);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        /* Emergency Banner */
+        #emergency-banner {
+            background-color: var(--emergency-bg);
+            color: #ffffff;
+            padding: 1.2rem 0;
+            text-align: center;
+            font-family: var(--font-heading);
+            z-index: 900;
+            border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .emergency-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        /* Services Grid */
+        #services {
+            background-color: var(--surface-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .service-card {
+            padding: 3rem 2rem;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .service-card:hover {
+            opacity: 0.85;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+
+        .service-name {
+            font-size: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        /* About & Trust Badges */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+        }
+
+        .about-meta {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            font-family: var(--font-heading);
+        }
+
+        .trust-grid {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .trust-icon {
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .trust-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        /* Service Area */
+        #service-area {
+            background-color: var(--surface-color);
+        }
+
+        .area-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: stretch;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .area-details {
+            background-color: var(--bg-color);
+            padding: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .area-callout {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+            font-family: var(--font-heading);
+        }
+
+        .area-list {
+            margin: 1.5rem 0;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        .area-map {
+            position: relative;
+            min-height: 400px;
+        }
+
+        .area-map iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Projects / Before & After Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
+            padding: 2rem 1.5rem 1.5rem;
+            color: #ffffff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-title {
+            font-family: var(--font-heading);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background-color: var(--surface-color);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+        }
+
+        .testimonial-card {
+            padding: 3rem 2.5rem;
+            border: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            justify-content: space-between;
+        }
+
+        .stars {
+            color: var(--accent-color);
+            font-size: 1.2rem;
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            font-size: 1.05rem;
+            line-height: 1.6;
+        }
+
+        .testimonial-client {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .client-name {
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .client-loc {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 5rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .footer-socials a {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            font-size: 0.95rem;
+            border-bottom: 1px solid var(--bg-color);
+            padding-bottom: 2px;
+            transition: color 0.2s;
+        }
+
+        .footer-socials a:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .footer-contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-group h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+            opacity: 0.6;
+        }
+
+        .contact-group p,
+        .contact-group a {
+            font-size: 1.15rem;
+            font-weight: 500;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border-color);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            opacity: 0.6;
+        }
+
+        /* Lightbox */
+        .lightbox {
+          position: fixed; inset: 0; z-index: 9999;
+          background: rgba(0,0,0,0.92);
+          display: flex; align-items: center; justify-content: center;
+          opacity: 0; pointer-events: none;
+          transition: opacity 0.3s ease;
+        }
+        .lightbox.open { opacity: 1; pointer-events: auto; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+        .lightbox-close {
+          position: absolute; top: 20px; right: 30px;
+          color: #fff; font-size: 2rem; cursor: pointer;
+          background: none; border: none; font-family: sans-serif;
+        }
+        .lightbox-nav {
+          position: absolute; top: 50%; transform: translateY(-50%);
+          color: #fff; font-size: 2.5rem; cursor: pointer;
+          background: none; border: none; padding: 1rem; font-family: sans-serif;
+        }
+        .lightbox-nav.prev { left: 10px; }
+        .lightbox-nav.next { right: 10px; }
+
+        /* Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: calc(var(--i, 0) * 0.1s);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+
+            .about-grid,
+            .area-grid,
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .area-details {
+                padding: 3rem;
+            }
+
+            .gallery-grid,
+            .testimonials-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #navbar .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .gallery-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-grid {
+                flex-direction: column;
+                gap: 1.2rem;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            #emergency-banner {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 1001;
+            }
+
+            body {
+                padding-bottom: 60px;
+                /* Space for emergency banner sticky layout */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Overlay Navigation Panel (Mobile Only) -->
+    <div id="mobile-navigation" class="mobile-nav">
+        <a href="#services" class="mobile-link">Services</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#service-area" class="mobile-link">Service Area</a>
+        <a href="#gallery" class="mobile-link">Projects</a>
+        <a href="#contact-anchor" class="mobile-link">Contact</a>
+    </div>
+
+    <!-- Header Navigation -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" class="nav-logo font-heading">
+                <span id="nav-icon-block"></span>
+                <span id="dom-nav-brand"></span>
+            </a>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#service-area">Service Area</a>
+                <a href="#gallery">Projects</a>
+                <a href="#contact-anchor" class="btn btn-outline" style="padding: 0.6rem 1.2rem;">Contact</a>
+            </div>
+            <button id="menu-burger" class="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Area -->
+    <section id="hero">
+        <div class="container" style="position: relative; z-index: 2;">
+            <div class="hero-content fade-up">
+                <h1 id="dom-hero-title" class="hero-title font-heading"></h1>
+                <p id="dom-hero-tagline" class="hero-tagline"></p>
+                <a id="dom-hero-cta" href="tel:" class="btn"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Action Strip -->
+    <div id="emergency-banner" style="display: none;">
+        <div class="container">
+            <div class="emergency-inner">
+                <span>🚨 Emergency Service Active</span>
+                <a id="dom-emergency-tel" href="tel:">CALL: </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Service Cards -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title font-heading fade-up">Our Services</h2>
+            <div id="dom-services-grid" class="services-grid">
+                <!-- Dynamically Populated with Cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Company Trust Metrics -->
+    <section id="about" class="section container">
+        <div class="about-grid">
+            <div class="about-img-box fade-up">
+                <img id="dom-about-img" class="about-image" src="" alt="Professional Crew">
+            </div>
+            <div class="fade-up">
+                <h2 class="section-title font-heading">Who We Are</h2>
+                <p id="dom-about-text" style="font-size: 1.15rem; margin-bottom: 1.5rem;"></p>
+                <div id="dom-about-badge" class="about-meta"></div>
+
+                <div id="dom-trust-grid" class="trust-grid">
+                    <!-- Dynamic Badges -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographical Service Boundaries -->
+    <section id="service-area" class="section">
+        <div class="container">
+            <div class="area-grid">
+                <div class="area-details fade-up">
+                    <span class="area-callout">On-Site Dispatch</span>
+                    <h2 id="dom-area-title" class="font-heading"
+                        style="font-size: 2.2rem; text-transform: uppercase; margin-bottom: 1rem;"></h2>
+                    <p style="opacity: 0.8; margin-bottom: 1rem;">We provide fast home repairs and diagnostic services
+                        right to your doorstep across:</p>
+                    <div id="dom-area-cities" class="area-list font-heading"></div>
+                    <div>
+                        <a href="#contact-anchor" class="btn">Verify Your Location</a>
+                    </div>
+                </div>
+                <div class="area-map fade-up">
+                    <iframe id="dom-map-iframe" src="" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visual Portfolio Showcase -->
+    <section id="gallery" class="section container">
+        <h2 id="dom-gallery-title" class="section-title font-heading fade-up">Recent Work</h2>
+        <p id="dom-gallery-subtitle" class="fade-up"
+            style="opacity: 0.7; margin-top: -2.5rem; margin-bottom: 3.5rem; font-size: 1.1rem;">See our real, completed
+            projects and local installations in Parañaque.</p>
+        <div id="dom-gallery-grid" class="gallery-grid">
+            <!-- Dynamic project items loaded here -->
+        </div>
+    </section>
+
+    <!-- Verified Customer Endorsements -->
+    <section id="testimonials" class="section">
+        <div class="container">
+            <h2 class="section-title font-heading fade-up">Feedback from Neighbors</h2>
+            <div id="dom-testimonials-grid" class="testimonials-grid">
+                <!-- Injected with client quotes -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+      <button class="lightbox-close" id="lightbox-close">&times;</button>
+      <button class="lightbox-nav prev" id="lightbox-prev">&lsaquo;</button>
+      <img id="lightbox-img" src="" alt="">
+      <button class="lightbox-nav next" id="lightbox-next">&rsaquo;</button>
+    </div>
+
+    <!-- Contact & Footer Map anchor point -->
+    <span id="contact-anchor"></span>
+    <footer>
+        <div class="container">
+            <div class="footer-grid fade-up">
+                <div>
+                    <div id="dom-footer-logo" class="footer-logo font-heading"></div>
+                    <p style="opacity: 0.7; max-width: 480px; margin-bottom: 2rem;">Professional maintenance built on
+                        word-of-mouth recommendations, quality tools, and local service warranties.</p>
+                    <div class="footer-socials">
+                        <a id="dom-social-fb" href="#" target="_blank">Facebook</a>
+                        <a id="dom-social-ig" href="#" target="_blank">Instagram</a>
+                        <a id="dom-social-wa" href="#" target="_blank">WhatsApp</a>
+                    </div>
+                </div>
+                <div class="footer-contact-info">
+                    <div class="contact-group">
+                        <h4>Office Location</h4>
+                        <p id="dom-footer-address"></p>
+                    </div>
+                    <div class="contact-group">
+                        <h4>Contact Numbers</h4>
+                        <a id="dom-footer-phone" href=""></a>
+                    </div>
+                    <div class="contact-group">
+                        <h4>Viber / WhatsApp</h4>
+                        <a id="dom-footer-wa" href="" target="_blank">Message Support Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p id="dom-copyright"></p>
+                <p>Designed and Built in Metro Manila</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- RENDERING SYSTEM -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const conf = SITE_CONFIG;
+
+            // 1. Dynamic Design Switching (Plumber vs Electrician UI Rules)
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', conf.theme.colors.background);
+            root.style.setProperty('--text-color', conf.theme.colors.text);
+            root.style.setProperty('--accent-color', conf.theme.colors.accent);
+            root.style.setProperty('--surface-color', conf.theme.colors.surface);
+            root.style.setProperty('--border-color', conf.theme.colors.border);
+            root.style.setProperty('--emergency-bg', conf.theme.colors.emergency);
+            root.style.setProperty('--font-heading', conf.theme.fonts.heading);
+            root.style.setProperty('--font-body', conf.theme.fonts.body);
+
+            // Handle industrial visual characteristics based on choice
+            if (conf.theme.tradeStyle.toLowerCase() === "electrician") {
+                root.style.setProperty('--radius-ui', '0px');
+                root.style.setProperty('--accent-glow', 'none');
+                // Add a cool raw subtle industrial grid pattern for Electricians
+                root.style.setProperty('--bg-pattern', `radial-gradient(${conf.theme.colors.border} 1px, transparent 1px)`);
+                document.getElementById('nav-icon-block').textContent = "⚡";
+            } else {
+                root.style.setProperty('--radius-ui', '0px');
+                root.style.setProperty('--accent-glow', 'none');
+                // Subtle soft diagonal architectural line pattern for Plumbers
+                root.style.setProperty('--bg-pattern', 'none');
+                document.getElementById('nav-icon-block').textContent = "🔧";
+            }
+
+            // 2. Population logic
+            // SEO Meta, OG, JSON-LD
+            const city = conf.seo.city || "Parañaque";
+            const province = conf.seo.province || "NCR";
+            document.title = conf.seo.templateTitle || `${conf.hero.businessName} | Trusted Services in ${city}, ${province}`;
+            document.querySelector('meta[name="description"]').content = conf.seo.description || `${conf.hero.businessName} — ${conf.hero.tagline}. Serving ${city}, ${province}.`;
+            document.querySelector('meta[name="keywords"]').content = conf.seo.keywords || conf.hero.businessName.toLowerCase() + ", trade services, " + city.toLowerCase();
+            document.querySelector('meta[property="og:title"]').content = document.title;
+            document.querySelector('meta[property="og:description"]').content = conf.seo.description || `${conf.hero.businessName} — ${conf.hero.tagline}.`;
+            document.querySelector('meta[property="og:image"]').content = conf.seo.image || conf.hero.backgroundImage;
+            try {
+                const ld = JSON.parse(document.getElementById('seo-jsonld').textContent);
+                ld.name = conf.hero.businessName;
+                ld.image = conf.seo.image || conf.hero.backgroundImage;
+                ld.telephone = conf.seo.phone || conf.hero.phone;
+                ld.description = conf.seo.description || `${conf.hero.businessName} — ${conf.hero.tagline}`;
+                const addrParts = (conf.contact.address || '').split(',').map(s => s.trim());
+                ld.address.streetAddress = addrParts[0] || conf.contact.address;
+                ld.address.addressLocality = city;
+                ld.address.addressRegion = province;
+                ld.url = conf.seo.url || window.location.href;
+                document.getElementById('seo-jsonld').textContent = JSON.stringify(ld, null, 2);
+            } catch (e) { console.warn('JSON-LD injection failed:', e); }
+
+            document.getElementById('dom-nav-brand').textContent = conf.hero.businessName;
+
+            // Hero Block
+            const heroSec = document.getElementById('hero');
+            heroSec.style.backgroundImage = `url('${conf.hero.backgroundImage}')`;
+            document.getElementById('dom-hero-title').textContent = conf.hero.businessName;
+
+            // Time-aware greeting
+            const hour = new Date().getHours();
+            let greeting = "";
+            if (hour < 12) greeting = "Good Morning";
+            else if (hour < 17) greeting = "Good Afternoon";
+            else greeting = "Good Evening";
+            document.getElementById("dom-hero-title").textContent = greeting + ". " + document.getElementById("dom-hero-title").textContent;
+
+            document.getElementById('dom-hero-tagline').textContent = conf.hero.tagline;
+
+            const mainCta = document.getElementById('dom-hero-cta');
+            mainCta.textContent = conf.hero.ctaText || `Call Now: ${conf.hero.phone}`;
+            mainCta.href = `tel:${conf.hero.phone.replace(/[^0-9+]/g, '')}`;
+
+            // Emergency Active Banner
+            if (conf.emergency.showBanner) {
+                const banner = document.getElementById('emergency-banner');
+                banner.style.display = "block";
+                const telLink = document.getElementById('dom-emergency-tel');
+                telLink.textContent = `Dial ${conf.emergency.phone} (${conf.emergency.hours})`;
+                telLink.href = `tel:${conf.emergency.phone.replace(/[^0-9+]/g, '')}`;
+            }
+
+            // Populating Grid Cards (Services)
+            const serviceGrid = document.getElementById('dom-services-grid');
+            conf.services.forEach((srv, index) => {
+                const card = document.createElement('div');
+                card.className = "service-card fade-up";
+                card.style.setProperty('--i', index);
+                card.innerHTML = `
+                    <div class="service-icon">${srv.icon}</div>
+                    <h3 class="service-name font-heading">${srv.name}</h3>
+                    <p class="service-desc">${srv.desc}</p>
+                `;
+                serviceGrid.appendChild(card);
+            });
+
+            // About Block
+            document.getElementById('dom-about-text').textContent = conf.about.text;
+            document.getElementById('dom-about-badge').textContent = conf.about.yearsInBusiness;
+            document.getElementById('dom-about-img').src = conf.about.image;
+
+            const trustGrid = document.getElementById('dom-trust-grid');
+            conf.trust.forEach((tr, index) => {
+                const cell = document.createElement('div');
+                cell.className = "trust-badge";
+                cell.style.setProperty('--i', index);
+                cell.innerHTML = `
+                    <span class="trust-icon">${tr.icon}</span>
+                    <span class="trust-label font-heading">${tr.label}</span>
+                `;
+                trustGrid.appendChild(cell);
+            });
+
+            // Geographic Coverage Frame
+            document.getElementById('dom-area-title').textContent = conf.serviceArea.title;
+            document.getElementById('dom-area-cities').textContent = conf.serviceArea.cities;
+            document.getElementById('dom-map-iframe').src = conf.serviceArea.mapEmbedUrl;
+
+            // Gallery Section Setup
+            document.getElementById('dom-gallery-title').textContent = conf.galleryTitle || 'Recent Work';
+            document.getElementById('dom-gallery-subtitle').textContent = conf.gallerySubtitle || 'See our real, completed projects and local installations.';
+
+            const galleryGrid = document.getElementById('dom-gallery-grid');
+            conf.gallery.forEach((url, index) => {
+                const item = document.createElement('div');
+                item.className = "gallery-item fade-up";
+                item.style.setProperty('--i', index);
+                const label = (conf.galleryLabels && conf.galleryLabels[index]) ? conf.galleryLabels[index] : 'Finished Installation';
+                item.innerHTML = `
+                    <img src="${url}" alt="Work Portfolio Pic">
+                    <div class="gallery-overlay">
+                        <h4 class="gallery-title">${label}</h4>
+                    </div>
+                `;
+                galleryGrid.appendChild(item);
+            });
+
+            // Feedbacks
+            const reviewsGrid = document.getElementById('dom-testimonials-grid');
+            conf.testimonials.forEach((test, index) => {
+                const card = document.createElement('div');
+                card.className = "testimonial-card fade-up";
+                card.style.setProperty('--i', index);
+
+                let starsString = "";
+                for (let s = 0; s < test.stars; s++) { starsString += "★"; }
+
+                card.innerHTML = `
+                    <div>
+                        <div class="stars">${starsString}</div>
+                        <p class="testimonial-quote">"${test.quote}"</p>
+                    </div>
+                    <div class="testimonial-client">
+                        <span class="client-name font-heading">${test.name}</span>
+                        <span class="client-loc">${test.location}</span>
+                    </div>
+                `;
+                reviewsGrid.appendChild(card);
+            });
+
+            // Footer Mapping
+            document.getElementById('dom-footer-logo').textContent = conf.hero.businessName;
+            document.getElementById('dom-footer-address').textContent = conf.contact.address;
+
+            const footPhone = document.getElementById('dom-footer-phone');
+            footPhone.textContent = conf.contact.phone;
+            footPhone.href = `tel:${conf.contact.phone.replace(/[^0-9+]/g, '')}`;
+
+            document.getElementById('dom-footer-wa').href = conf.contact.whatsapp;
+            document.getElementById('dom-social-fb').href = conf.contact.facebook;
+            document.getElementById('dom-social-ig').href = conf.contact.instagram;
+            document.getElementById('dom-social-wa').href = conf.contact.whatsapp;
+            document.getElementById('dom-copyright').textContent = `© ${new Date().getFullYear()} ${conf.footer.copyright}. All Rights Reserved.`;
+
+            // 3. Header Animation & Style Adjust on Scroll
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 4. Burger / Hamburger Interactivity
+            const burger = document.getElementById('menu-burger');
+            const mobileMenu = document.getElementById('mobile-navigation');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            function toggleMenu() {
+                burger.classList.toggle('active');
+                mobileMenu.classList.toggle('open');
+
+                // Burger animation
+                const spans = burger.querySelectorAll('span');
+                if (mobileMenu.classList.contains('open')) {
+                    spans[0].style.transform = "rotate(45deg) translate(6px, 6px)";
+                    spans[1].style.opacity = "0";
+                    spans[2].style.transform = "rotate(-45deg) translate(6px, -7px)";
+                } else {
+                    spans[0].style.transform = "none";
+                    spans[1].style.opacity = "1";
+                    spans[2].style.transform = "none";
+                }
+            }
+
+            burger.addEventListener('click', toggleMenu);
+            mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+            // 5. Scroll Visibility Observer
+            const elementObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        elementObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.05, rootMargin: "0px 0px -40px 0px" });
+
+            setTimeout(() => {
+                document.querySelectorAll('.fade-up').forEach(item => elementObserver.observe(item));
+            }, 100);
+
+            // Lightbox
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxClose = document.getElementById("lightbox-close");
+            const lightboxPrev = document.getElementById("lightbox-prev");
+            const lightboxNext = document.getElementById("lightbox-next");
+            let currentImgIndex = 0;
+            const galleryImages = conf.gallery;
+
+            document.querySelectorAll(".gallery-item img").forEach((img, i) => {
+              img.style.cursor = "pointer";
+              img.addEventListener("click", () => {
+                currentImgIndex = i;
+                lightboxImg.src = galleryImages[currentImgIndex];
+                lightbox.classList.add("open");
+              });
+            });
+
+            function closeLightbox() { lightbox.classList.remove("open"); }
+            lightboxClose.addEventListener("click", closeLightbox);
+            lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener("keydown", (e) => {
+              if (!lightbox.classList.contains("open")) return;
+              if (e.key === "Escape") closeLightbox();
+              if (e.key === "ArrowLeft") navigateLightbox(-1);
+              if (e.key === "ArrowRight") navigateLightbox(1);
+            });
+            function navigateLightbox(dir) {
+              currentImgIndex = (currentImgIndex + dir + galleryImages.length) % galleryImages.length;
+              lightboxImg.src = galleryImages[currentImgIndex];
+            }
+            lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
+            lightboxNext.addEventListener("click", () => navigateLightbox(1));
+
+            // Reveal body after injection
+            requestAnimationFrame(() => {
+                document.body.classList.add('ready');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- ======================================================================= -->
+<!-- === TOKEN REFERENCE === -->
+<!--
+     Use this map list to guide custom replacement keys inside replace.js.
+     All key tokens mapped inside config.json should correlate directly to:
+
+     THEME METRICS:
+     - {{THEME_TRADE_STYLE}}     : Toggles "plumber" vs "electrician" palette.
+     - {{THEME_COLOR_BG}}        : Page background color hex code.
+     - {{THEME_COLOR_TEXT}}      : Text content element color hex code.
+     - {{THEME_COLOR_ACCENT}}    : Callout actions/highlights color hex code.
+     - {{THEME_COLOR_SURFACE}}   : Card backgrounds / off-contrast blocks.
+     - {{THEME_COLOR_BORDER}}    : Subtle dividing line separator rules.
+     - {{THEME_COLOR_EMERGENCY}} : High-contrast alert header background hex.
+     - {{THEME_FONT_HEADING}}    : Heading font family string.
+     - {{THEME_FONT_BODY}}       : Body typography font family string.
+
+     SEO & STRUCTURED DATA:
+     - {{SEO_TITLE}}             : Page title for browser tab + search results.
+     - {{SEO_DESCRIPTION}}       : Meta description (~155 chars) for search snippet.
+     - {{SEO_KEYWORDS}}          : Comma-separated search keywords.
+     - {{SEO_CITY}}              : Business city/locality (e.g. Parañaque).
+     - {{SEO_PROVINCE}}          : Province or region (e.g. NCR).
+     - {{SEO_PHONE}}             : Business phone (same as CONTACT_PHONE).
+     - {{SEO_IMAGE}}             : Image URL for social preview (same as HERO_BG_IMAGE).
+
+     HERO COMPONENT:
+     - {{HERO_BUSINESS_NAME}}    : The business name used across navbar, footer, and main banner.
+     - {{HERO_TAGLINE}}          : Subheading statement describing primary trade capabilities.
+     - {{HERO_PHONE}}            : Contact number displayed in the prominent primary button.
+     - {{HERO_BG_IMAGE}}         : Clean high-res placeholder image URL for the main background.
+
+     SERVICE CARD TOKENS:
+     - {{SERVICE_1_ICON}} to {{SERVICE_6_ICON}} (Unicode / Emoji markers representing service categories)
+     - {{SERVICE_1_NAME}} to {{SERVICE_6_NAME}}
+     - {{SERVICE_1_DESC}} to {{SERVICE_6_DESC}}
+
+     ABOUT BLOCK:
+     - {{ABOUT_TEXT}}            : Multi-sentence brand narrative focusing on neighborhood location.
+     - {{ABOUT_YEARS}}           : Tag line highlight depicting duration in operational practice.
+     - {{ABOUT_IMAGE}}           : Image representing local service team or workspace.
+
+     TRUST & CONFIDENCE LABELS:
+     - {{TRUST_1_ICON}} to {{TRUST_3_ICON}}
+     - {{TRUST_1_LABEL}} to {{TRUST_3_LABEL}}
+
+     SERVICE AREA BLOCK:
+     - {{AREA_TITLE}}            : Title text declaring target district boundaries.
+     - {{AREA_CITIES}}           : Comma-separated list of barangays, villages, or cities serviced.
+     - {{AREA_MAP_URL}}          : Dynamic Google Maps frame URL used for the right-hand map view.
+
+     GALLERY PORTFOLIO:
+     - {{GALLERY_IMG_1}} to {{GALLERY_IMG_6}} (Image paths displaying live onsite job results)
+
+     REVIEWS & TESTIMONIALS:
+     - {{TESTIMONIAL_1_QUOTE}} to {{TESTIMONIAL_3_QUOTE}}
+     - {{TESTIMONIAL_1_NAME}} to {{TESTIMONIAL_3_NAME}}
+     - {{TESTIMONIAL_1_LOCATION}} to {{TESTIMONIAL_3_LOCATION}}
+
+     EMERGENCY & CONTACT CHANNELS:
+     - {{EMERGENCY_PHONE}}       : Highly visible phone number for emergency/immediate jobs.
+     - {{EMERGENCY_HOURS}}       : Hours available (e.g. 24/7 or 6am-10pm).
+     - {{CONTACT_ADDRESS}}       : Physical business HQ location.
+     - {{CONTACT_PHONE}}         : Main telephone contact.
+     - {{CONTACT_WHATSAPP}}      : Quick tap-to-viber or wa.me redirect link.
+     - {{CONTACT_FACEBOOK}}      : Business facebook profile page URL.
+     - {{CONTACT_INSTAGRAM}}     : Business Instagram URL.
+
+     FOOTER BLOCK:
+     - {{FOOTER_COPYRIGHT}}      : Official business legal name for copyright.
+-->

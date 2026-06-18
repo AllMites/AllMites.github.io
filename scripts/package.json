@@ -1,0 +1,10 @@
+{
+  "name": "client-portal-scripts",
+  "version": "1.0.0",
+  "description": "Helper scripts for the client onboarding portal (Supabase-backed)",
+  "private": true,
+  "dependencies": {
+    "@supabase/supabase-js": "^2.108.2",
+    "dotenv": "^17.4.2"
+  }
+}

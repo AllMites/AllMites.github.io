@@ -1,0 +1,235 @@
+{
+  "_meta": {
+    "businessName": "Paranaque Plumbing & Electrical Services",
+    "businessSlug": "paranaque-plumbing-electrical",
+    "businessType": "trades",
+    "location": "San Antonio Valley 6, Parañaque, NCR",
+    "gatheredAt": "2026-06-06T00:14:00Z",
+    "sources": [
+      "facebook",
+      "servicepros"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 26,
+      "missing": 12
+    }
+  },
+  "identity": {
+    "businessName": {
+      "value": "Paranaque Plumbing & Electrical Services",
+      "source": "facebook"
+    },
+    "tagline": {
+      "value": "A service provider you can trust",
+      "source": "servicepros"
+    },
+    "aboutText": {
+      "value": "Need an installation or repair? Call us. We'll have one of our team members out to appraise the situation and get you up and running. We specialize in plumbing, electrical, and septic tank services for residential and commercial clients in Parañaque and surrounding areas.",
+      "source": "facebook"
+    },
+    "established": {
+      "value": null,
+      "source": null
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#1B2A4A",
+      "source": "manual"
+    },
+    "accentColor": {
+      "value": "#E2583E",
+      "source": "manual"
+    },
+    "vibe": {
+      "value": "Professional, reliable, and trustworthy trades service serving the local Parañaque community with emergency plumbing, electrical, and septic tank solutions",
+      "source": "facebook"
+    },
+    "logoUrl": {
+      "value": "https://placehold.co/200x200/1B2A4A/FFFFFF?text=PP+ES",
+      "source": "placehold"
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "+63 915 455 2229",
+      "source": "facebook"
+    },
+    "landline": {
+      "value": "(02) 8230-3078",
+      "source": "facebook"
+    },
+    "email": {
+      "value": "envicare2018@yahoo.com",
+      "source": "facebook"
+    },
+    "address": {
+      "value": "Santo Nino St, San Antonio Valley 6, Parañaque, 1700 Metro Manila, Philippines",
+      "source": "facebook"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/pqueplumbingandelectricalservices/",
+      "source": "facebook"
+    },
+    "instagramUrl": {
+      "value": null,
+      "source": null
+    },
+    "mapsIframe": {
+      "value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.2!2d121.0198!3d14.4717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cee8e8e8e8e8%3A0x0!2sSanto%20Nino%20St%2C%20San%20Antonio%20Valley%206%2C%20Para%C3%B1aque!5e0!3m2!1sen!2sph!4v0\"></iframe>",
+      "source": "manual"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Friday", "time": "8:00 AM - 6:00 PM" },
+        { "days": "Saturday", "time": "Closed" },
+        { "days": "Sunday", "time": "Closed" }
+      ],
+      "source": "servicepros"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Services",
+      "source": "facebook"
+    },
+    "items": [
+      {
+        "name": {
+          "value": "Plumbing Installation & Repair",
+          "source": "facebook"
+        },
+        "desc": {
+          "value": "Pipe repairs, faucet installation, leak detection, and complete plumbing system solutions",
+          "source": "facebook"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": null,
+          "source": null
+        }
+      },
+      {
+        "name": {
+          "value": "Electrical Services",
+          "source": "facebook"
+        },
+        "desc": {
+          "value": "Wiring, outlet installation, breaker panel work, and electrical troubleshooting for homes and businesses",
+          "source": "facebook"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": null,
+          "source": null
+        }
+      },
+      {
+        "name": {
+          "value": "Septic Tank Service",
+          "source": "facebook"
+        },
+        "desc": {
+          "value": "Septic tank cleaning, siphoning, maintenance, and emergency de-clogging",
+          "source": "facebook"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": null,
+          "source": null
+        }
+      },
+      {
+        "name": {
+          "value": "Emergency Repairs",
+          "source": "facebook"
+        },
+        "desc": {
+          "value": "24-hour rapid response for urgent plumbing and electrical emergencies in Parañaque",
+          "source": "facebook"
+        },
+        "price": {
+          "value": null,
+          "source": null
+        },
+        "icon": {
+          "value": null,
+          "source": null
+        }
+      }
+    ],
+    "maxItems": 4
+  },
+  "images": {
+    "hero": {
+      "value": "https://placehold.co/1920x1080/1B2A4A/FFFFFF?text=Paranaque+Plumbing+%26+Electrical+Services",
+      "source": "placehold"
+    },
+    "about": {
+      "value": "https://placehold.co/800x1000/E2583E/FFFFFF?text=Reliable+Local+Trades+Team",
+      "source": "placehold"
+    },
+    "gallery": [
+      {
+        "value": "https://placehold.co/800x800/EAE6DF/1B2A4A?text=Plumbing+Service",
+        "source": "placehold",
+        "label": "Plumbing Service"
+      },
+      {
+        "value": "https://placehold.co/800x800/1B2A4A/FFFFFF?text=Electrical+Work",
+        "source": "placehold",
+        "label": "Electrical Work"
+      },
+      {
+        "value": "https://placehold.co/800x800/EAE6DF/1B2A4A?text=Septic+Tank",
+        "source": "placehold",
+        "label": "Septic Tank Service"
+      },
+      {
+        "value": "https://placehold.co/800x800/EAE6DF/1B2A4A?text=Emergency+Repair",
+        "source": "placehold",
+        "label": "Emergency Repair"
+      },
+      {
+        "value": "https://placehold.co/800x800/1B2A4A/FFFFFF?text=Installation",
+        "source": "placehold",
+        "label": "Installation"
+      },
+      {
+        "value": "https://placehold.co/800x800/EAE6DF/1B2A4A?text=Team+at+Work",
+        "source": "placehold",
+        "label": "Team at Work"
+      }
+    ],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [],
+    "maxTestimonials": 0,
+    "rating": {
+      "value": null,
+      "source": null
+    },
+    "reviewCount": {
+      "value": 0,
+      "source": "facebook"
+    }
+  }
+}

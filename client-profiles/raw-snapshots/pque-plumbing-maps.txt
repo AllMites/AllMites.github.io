@@ -1,0 +1,897 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Skip to main content" [ref=e2] [cursor=pointer]
+      - link "Accessibility help" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=en-PH
+  - generic [ref=e8]:
+    - search [ref=e9]:
+      - generic [ref=e11]:
+        - generic:
+          - generic:
+            - generic:
+              - img
+        - 'link "World Cup 2026: The Art of the Bicycle Kick" [ref=e13] [cursor=pointer]':
+          - /url: https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQPQgK
+          - 'img "World Cup 2026: The Art of the Bicycle Kick" [ref=e14]'
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - combobox "Search" [ref=e19]: Concordia Cafe BF Homes Paranaque Concordia Cafe BF Homes Paranaque
+            - generic [ref=e20]:
+              - button "Clear" [ref=e22] [cursor=pointer]:
+                - img [ref=e24]
+              - generic [ref=e27]:
+                - button "Search by voice" [ref=e28] [cursor=pointer]:
+                  - img [ref=e29]
+                - button "Search by image" [ref=e31] [cursor=pointer]:
+                  - img [ref=e32]
+          - button "Search" [ref=e34] [cursor=pointer]:
+            - img [ref=e37]
+    - generic [ref=e39]:
+      - button "Settings" [ref=e41] [cursor=pointer]:
+        - img [ref=e44]
+      - generic [ref=e47]:
+        - button "Google apps" [ref=e49] [cursor=pointer]:
+          - img [ref=e50]
+        - link "Sign in" [ref=e54] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/search%3Fq%3DConcordia%2BCafe%2BBF%2BHomes%2BParanaque%26sca_esv%3D91a799f1130846ec%26source%3Dhp%26ei%3Dsrcyao_xKtWlvr0PkIfLIQ%26iflsig%3DAFdpzrgAAAAAajLFwqpfMp4dCwprq7BgYT-1qNOrKfKO%26ved%3D0ahUKEwiPkoqcxo6VAxXVkq8BHZDDMgQQ4dUDCCw%26uact%3D5%26oq%3DConcordia%2BCafe%2BBF%2BHomes%2BParanaque%26gs_lp%3DEgdnd3Mtd2l6IiFDb25jb3JkaWEgQ2FmZSBCRiBIb21lcyBQYXJhbmFxdWUyChAuGAMYjwEY6gIyChAAGAMYjwEY6gIyChAAGAMYjwEY6gIyChAAGAMYjwEY6gIyChAuGAMYjwEY6gIyChAAGAMYjwEY6gIyChAAGAMYjwEY6gIyChAAGAMYjwEY6gIyChAAGAMYjwEY6gIyChAAGAMYjwEY6gJIalAWWGhwAXgAkAEAmAEAoAEAqgEAuAEDyAEA-AEBmAIBoAIEqAIKmAME8QXcnE0o_NX3e5IHATGgBwCyBwC4BwDCBwMyLTHIBwOACAE%26sclient%3Dgws-wiz%26sei%3DtbcyasiUF8uBvr0P2YSf2AY&ec=futura_srp_og_si_72236_p
+  - generic [ref=e56]:
+    - navigation [ref=e62]:
+      - generic [ref=e68]:
+        - list [ref=e69]:
+          - listitem [ref=e70]:
+            - link "AI Mode" [ref=e73] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&udm=50&source=hp&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93H7yjmEhUi5AUSwdCoCuNwic2C_J_Rcmu3S7Rsfb8A-Hz00-ik_bO8c4MNkKc6tUmrCnhmBBrT29IjzuTXP2Ak-BeDcyqJz7v2k_Ej-hAjAQ0cyri10ggFh9PmGvCeGndjDicMMh169KjzYcYKe285f73kBkA&aep=1&ntc=1&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ2J8OegQIPBAD
+              - generic [ref=e76]: AI Mode
+          - listitem [ref=e77]:
+            - link "All" [disabled] [ref=e78]:
+              - generic [ref=e80]: All
+          - listitem [ref=e81]:
+            - link "Images" [ref=e82] [cursor=pointer]:
+              - /url: /search?sca_esv=91a799f1130846ec&udm=2&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93H7yjmEhUi5AUSwdCoCuNwic2C_J_Rcmu3S7Rsfb8A-Hz00-ik_bO8c4MNkKc6tUmrCnhmBBrT29IjzuTXP2Ak-BeDcyqJz7v2k_Ej-hAjAQ0cyri10ggFh9PmGvCeGndjDicMMh169KjzYcYKe285f73kBkA&q=Concordia+Cafe+BF+Homes+Paranaque&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQtKgLegQIQhAB
+              - generic [ref=e84]: Images
+          - listitem [ref=e85]:
+            - link "Maps" [ref=e86] [cursor=pointer]:
+              - /url: https://maps.google.com/maps?sca_esv=91a799f1130846ec&output=search&q=Concordia+Cafe+BF+Homes+Paranaque&source=lnms&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93H7yjmEhUi5AUSwdCoCuNwic2C_J_Rcmu3S7Rsfb8A-Hz00-ik_bO8c4MNkKc6tUmrCnhmBBrT29IjzuTXP2Ak-BeDcyqJz7v2k_Ej-hAjAQ0cyri10ggFh9PmGvCeGndjDicMMh169KjzYcYKe285f73kBkA&entry=mc&ved=1t:200715&ictx=111
+              - generic [ref=e88]: Maps
+          - listitem [ref=e89]:
+            - link "Videos" [ref=e90] [cursor=pointer]:
+              - /url: /search?sca_esv=91a799f1130846ec&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93H7yjmEhUi5AUSwdCoCuNwic2C_J_Rcmu3S7Rsfb8A-Hz00-ik_bO8c4MNkKc6tUmrCnhmBBrT29IjzuTXP2Ak-BeDcyqJz7v2k_Ej-hAjAQ0cyri10ggFh9PmGvCeGndjDicMMh169KjzYcYKe285f73kBkA&q=Concordia+Cafe+BF+Homes+Paranaque&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQtKgLegQIQBAB
+              - generic [ref=e92]: Videos
+          - listitem [ref=e93]:
+            - link "Shopping" [ref=e94] [cursor=pointer]:
+              - /url: /search?sca_esv=91a799f1130846ec&udm=28&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93H7yjmEhUi5AUSwdCoCuNwic2C_J_Rcmu3S7Rsfb8A-Hz00-ik_bO8c4MNkKc6tUmrCnhmBBrT29IjzuTXP2Ak-BeDcyqJz7v2k_Ej-hAjAQ0cyri10ggFh9PmGvCeGndjDicMMh169KjzYcYKe285f73kBkA&q=Concordia+Cafe+BF+Homes+Paranaque&ved=1t:220175&ictx=111
+              - generic [ref=e96]: Shopping
+          - listitem [ref=e97]:
+            - link "Forums" [ref=e98] [cursor=pointer]:
+              - /url: /search?sca_esv=91a799f1130846ec&udm=18&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3j2nXl-YQ05KjnWz5SrU93H7yjmEhUi5AUSwdCoCuNwic2C_J_Rcmu3S7Rsfb8A-Hz00-ik_bO8c4MNkKc6tUmrCnhmBBrT29IjzuTXP2Ak-BeDcyqJz7v2k_Ej-hAjAQ0cyri10ggFh9PmGvCeGndjDicMMh169KjzYcYKe285f73kBkA&q=Concordia+Cafe+BF+Homes+Paranaque&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQs6gLegQIQRAB
+              - generic [ref=e100]: Forums
+          - listitem [ref=e101]:
+            - button "More filters" [ref=e102] [cursor=pointer]:
+              - generic "More filters" [ref=e103]:
+                - generic [ref=e104]:
+                  - generic [ref=e105]: More
+                  - img [ref=e107]
+        - button "Tools" [ref=e110] [cursor=pointer]:
+          - generic [ref=e112]:
+            - generic [ref=e113]: Tools
+            - img [ref=e115]
+    - heading "Search Results" [level=1] [ref=e117]
+    - generic [ref=e122]:
+      - generic [ref=e131]:
+        - heading "Concordia's Cafe - BF Homes Parañaque" [level=2] [ref=e134]
+        - generic [ref=e135]:
+          - generic [ref=e137]:
+            - generic [ref=e138]: "4.4"
+            - img "Rated 4.4 out of 5," [ref=e139]
+            - button "431 Google reviews" [ref=e144] [cursor=pointer]
+            - generic [ref=e145]: ‧
+            - generic [ref=e146]: ₱1–500
+            - generic [ref=e147]: ‧
+            - generic [ref=e148]: Coffee shop
+            - generic [ref=e149]: ‧
+            - generic [ref=e151]: Open
+          - button "More options for Concordia's Cafe - BF Homes Parañaque" [ref=e158] [cursor=pointer]:
+            - img "More options for Concordia's Cafe - BF Homes Parañaque" [ref=e159]:
+              - img [ref=e161]
+      - complementary "Featured results" [ref=e171]:
+        - generic [ref=e173]:
+          - generic [ref=e176]:
+            - generic [ref=e177]:
+              - button "Photo 1 of 4" [ref=e180] [cursor=pointer]:
+                - img "Photo 1 of 4" [ref=e183]
+              - button "Photo 2 of 4 0:10" [ref=e186] [cursor=pointer]:
+                - generic [ref=e187]:
+                  - img "Photo 2 of 4" [ref=e189]
+                  - generic [ref=e190]:
+                    - generic:
+                      - generic:
+                        - img
+                      - generic: 0:10
+              - button "Photo 3 of 4" [ref=e193] [cursor=pointer]:
+                - img "Photo 3 of 4" [ref=e196]
+              - button "Photo 4 of 4" [ref=e199] [cursor=pointer]:
+                - img "Photo 4 of 4" [ref=e202]
+            - button "View all photos" [ref=e204] [cursor=pointer]:
+              - generic [ref=e206]:
+                - generic "View all photos" [ref=e207]:
+                  - img [ref=e208]
+                - tooltip [ref=e216]: View all photos
+          - generic [ref=e219] [cursor=pointer]:
+            - link "Map of Concordia's Cafe - BF Homes Parañaque." [ref=e221]:
+              - /url: /maps/place/Concordia+Cafe+BF+Homes+Paranaque/data=!4m2!3m1!1s0x3397cf35b5b9636f:0xd34fa7cb4f96b692?sa=X&ved=1t:242&ictx=111
+            - link "106 Aguirre Ave Parañaque" [ref=e224]:
+              - /url: /maps/place/Concordia+Cafe+BF+Homes+Paranaque/data=!4m2!3m1!1s0x3397cf35b5b9636f:0xd34fa7cb4f96b692?sa=X&ved=1t:242&ictx=111
+              - generic [ref=e225]:
+                - generic [ref=e226]: 106 Aguirre Ave
+                - generic [ref=e227]: Parañaque
+          - link "Hours Closes soon" [ref=e229] [cursor=pointer]:
+            - generic [ref=e232]:
+              - text: Hours
+              - img [ref=e233]
+            - generic [ref=e237]: Closes soon
+          - generic [ref=e243] [cursor=pointer]:
+            - button "Popular times" [ref=e244]:
+              - generic [ref=e247]: Popular times
+              - img [ref=e250]
+            - generic [ref=e286]:
+              - generic [ref=e287]: 10 PM
+              - generic [ref=e288]: 11 PM
+          - link "Reviews Rated 4.4 out of 5, 431 reviews" [ref=e290] [cursor=pointer]:
+            - /url: /search?sca_esv=91a799f1130846ec&q=Concordia+Cafe+BF+Homes+Paranaque&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWNRXCh1iYaG4uxgtqRudnxQ3hg-WxoW1riZlhZCSchqRlfzUQu5ACE52zsTajgyLj8CvxgtTRmRVOg4qUH9RRNvpEnfKr2D2JPSPo0tHmYY4CEkZNl_5JPGZCwSaRMRM37h4_A%3D&uds=ALYpb_nw0wHUAXihXi01PU6S-KJgp1xqvMTdErMCQVxvqUwOUPvNPYGKOFi3zmd5Xy23lrk9JBvFxRAiaSulDv2ABJgMA1C1vA8Qbwhty0y9cCrVNTnZHa1egP7zQNq9HGxUHmWfWMKv&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQrrQLegQIHBAA
+            - generic [ref=e292]:
+              - generic [ref=e293]: Reviews
+              - img [ref=e295]
+            - generic [ref=e297]:
+              - img "Rated 4.4 out of 5," [ref=e299]:
+                - generic [ref=e300]: "4.4"
+                - img [ref=e301]
+              - generic [ref=e304]: 431 reviews
+      - main [ref=e309]:
+        - generic [ref=e313]:
+          - generic [ref=e316]:
+            - heading "Web Result with Site Links" [level=2] [ref=e317]
+            - generic [ref=e318]:
+              - generic [ref=e322]:
+                - generic [ref=e324]:
+                  - link "Concordia's Cafe - BF Homes Facebook · Concordia’s Cafe - BF Homes 19.4K+ followers" [ref=e326] [cursor=pointer]:
+                    - /url: https://www.facebook.com/concordiascafe/
+                    - heading "Concordia's Cafe - BF Homes" [level=3] [ref=e327]
+                    - generic [ref=e333]:
+                      - generic [ref=e335]: Facebook · Concordia’s Cafe - BF Homes
+                      - generic [ref=e337]: 19.4K+ followers
+                  - button "About this result" [ref=e338] [cursor=pointer]:
+                    - img [ref=e341]
+                - generic [ref=e345]:
+                  - text: Located at 51B Aguirre Ave.,
+                  - emphasis [ref=e346]: BF Homes
+                  - text: ","
+                  - emphasis [ref=e347]: Parañaque
+                  - text: City.
+              - group "Personalized recommendations based on your history" [ref=e348]:
+                - rowgroup [ref=e349]:
+                  - row "Concordia’s Cafe Concordia's Cafe - BF Homes, B. F. Homes. 19407 likes · 62 talking ..." [ref=e350]:
+                    - cell "Concordia’s Cafe Concordia's Cafe - BF Homes, B. F. Homes. 19407 likes · 62 talking ..." [ref=e351]:
+                      - generic [ref=e357]:
+                        - heading "Concordia’s Cafe" [level=3] [ref=e358]:
+                          - link "Concordia’s Cafe" [ref=e359] [cursor=pointer]:
+                            - /url: https://www.facebook.com/concordiascafe/mentions/
+                            - text: Concordia’s Cafe
+                        - generic [ref=e362]: Concordia's Cafe - BF Homes, B. F. Homes. 19407 likes · 62 talking ...
+                  - row "Concordia's Cafe You can find us at 106 Aguirre Ave., BF Homes Parañaque. 3y. 2 ..." [ref=e363]:
+                    - cell "Concordia's Cafe You can find us at 106 Aguirre Ave., BF Homes Parañaque. 3y. 2 ..." [ref=e364]:
+                      - generic [ref=e370]:
+                        - heading "Concordia's Cafe" [level=3] [ref=e371]:
+                          - link "Concordia's Cafe" [ref=e372] [cursor=pointer]:
+                            - /url: https://www.facebook.com/concordiascafe/photos/we-are-open-7am12mn-106-aguirre-ave-bf-homes-para%C3%B1aque/162303000035325/
+                            - text: Concordia's Cafe
+                        - generic [ref=e375]: You can find us at 106 Aguirre Ave., BF Homes Parañaque. 3y. 2 ...
+                  - row "Concordia’s Cafe - BF Homes BF Homes Paranaque. 1d󰞋󱟠. 󳄫. YES, we are OPEN for you this ..." [ref=e376]:
+                    - cell "Concordia’s Cafe - BF Homes BF Homes Paranaque. 1d󰞋󱟠. 󳄫. YES, we are OPEN for you this ..." [ref=e377]:
+                      - generic [ref=e383]:
+                        - heading "Concordia’s Cafe - BF Homes" [level=3] [ref=e384]:
+                          - link "Concordia’s Cafe - BF Homes" [ref=e385] [cursor=pointer]:
+                            - /url: https://www.facebook.com/concordiascafe/photos/991565123773993/
+                            - text: Concordia’s Cafe - BF Homes
+                        - generic [ref=e388]: BF Homes Paranaque. 1d󰞋󱟠. 󳄫. YES, we are OPEN for you this ...
+                  - row "Concordia's Cafe - BF Homes Concordia's Cafe - BF Homes is at Aguirre Ave. BF Homes ..." [ref=e389]:
+                    - cell "Concordia's Cafe - BF Homes Concordia's Cafe - BF Homes is at Aguirre Ave. BF Homes ..." [ref=e390]:
+                      - generic [ref=e396]:
+                        - heading "Concordia's Cafe - BF Homes" [level=3] [ref=e397]:
+                          - link "Concordia's Cafe - BF Homes" [ref=e398] [cursor=pointer]:
+                            - /url: https://www.facebook.com/concordiascafe/posts/2a67094b/850055524591621/
+                            - text: Concordia's Cafe - BF Homes
+                        - generic [ref=e401]: Concordia's Cafe - BF Homes is at Aguirre Ave. BF Homes ...
+                  - row "BF Homes... - Concordia’s Cafe Concordia's Cafe - BF Homes added a new photo — at BF ..." [ref=e402]:
+                    - cell "BF Homes... - Concordia’s Cafe Concordia's Cafe - BF Homes added a new photo — at BF ..." [ref=e403]:
+                      - generic [ref=e409]:
+                        - heading "BF Homes... - Concordia’s Cafe" [level=3] [ref=e410]:
+                          - link "BF Homes... - Concordia’s Cafe" [ref=e411] [cursor=pointer]:
+                            - /url: https://www.facebook.com/concordiascafe/photos/780943191502855/
+                            - text: BF Homes... - Concordia’s Cafe
+                        - generic [ref=e414]: Concordia's Cafe - BF Homes added a new photo — at BF ...
+                  - row "More results from facebook.com »" [ref=e416]:
+                    - cell "More results from facebook.com »" [ref=e417]:
+                      - link "More results from facebook.com »" [ref=e419] [cursor=pointer]:
+                        - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque+site:facebook.com&sca_esv=91a799f1130846ec&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQrAN6BAgvEAE
+          - generic [ref=e421]:
+            - generic [ref=e436]:
+              - link "Directions" [ref=e438]:
+                - generic [ref=e439] [cursor=pointer]:
+                  - img [ref=e441]
+                  - generic [ref=e446]: Directions
+              - link "Reviews" [ref=e448] [cursor=pointer]:
+                - /url: /search?sca_esv=91a799f1130846ec&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOWNRXCh1iYaG4uxgtqRudnwjPSAt5iUpp35pNeK-2xL8-KxpkGFYpbGjVN-bgXOulxxhOzFxdLyxoRpkdAVvYGZdjn4xFo3cVJnbPxvUGX8RS04zbi0v5kHbpwENWFV6zGEZBl8%3D&q=Concordia%27s+Cafe+-+BF+Homes+Para%C3%B1aque+Reviews&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ0bkNegQIGhAF
+                - generic [ref=e449]:
+                  - img [ref=e451]
+                  - generic [ref=e453]: Reviews
+              - button "+3":
+                - generic [ref=e455] [cursor=pointer]: "+3"
+              - generic [ref=e456]:
+                - button "Order pickup" [ref=e457] [cursor=pointer]:
+                  - generic [ref=e458]:
+                    - img [ref=e460]
+                    - generic [ref=e462]: Order pickup
+                - button "Order delivery" [ref=e463] [cursor=pointer]:
+                  - generic [ref=e464]:
+                    - img [ref=e466]
+                    - generic [ref=e469]: Order delivery
+            - generic [ref=e478]:
+              - heading "Menu highlights" [level=2] [ref=e481]
+              - generic [ref=e483]:
+                - generic [ref=e484]:
+                  - list [ref=e486]:
+                    - listitem [ref=e487]:
+                      - generic [ref=e492] [cursor=pointer]:
+                        - heading "Big Breakfast" [level=3] [ref=e497]:
+                          - generic [ref=e498]: Big Breakfast
+                        - generic [ref=e499]:
+                          - generic [ref=e500]:
+                            - generic [ref=e502]: 4 reviews
+                            - generic [ref=e503]: ·
+                            - generic [ref=e505]: 21 photos
+                          - generic [ref=e507]: ₱425.00
+                    - listitem [ref=e508]:
+                      - generic [ref=e513] [cursor=pointer]:
+                        - heading "Ube Latte" [level=3] [ref=e518]:
+                          - generic [ref=e519]: Ube Latte
+                        - generic [ref=e521]:
+                          - generic [ref=e523]: 8 reviews
+                          - generic [ref=e524]: ·
+                          - generic [ref=e526]: 3 photos
+                    - listitem [ref=e529]:
+                      - generic [ref=e534] [cursor=pointer]:
+                        - heading "Pistachio Sansirival Cake" [level=3] [ref=e539]:
+                          - generic [ref=e540]: Pistachio Sansirival Cake
+                        - generic [ref=e541]:
+                          - generic [ref=e544]: 13 photos
+                          - generic [ref=e546]: ₱315.00
+                    - listitem [ref=e547]:
+                      - generic [ref=e552] [cursor=pointer]:
+                        - heading "Mozzarella Sticks" [level=3] [ref=e557]:
+                          - generic [ref=e558]: Mozzarella Sticks
+                        - generic [ref=e559]:
+                          - generic [ref=e560]:
+                            - generic [ref=e562]: 1 review
+                            - generic [ref=e563]: ·
+                            - generic [ref=e565]: 8 photos
+                          - generic [ref=e567]: ₱305.00
+                    - listitem [ref=e568]:
+                      - generic [ref=e573] [cursor=pointer]:
+                        - heading "Angus Beef Burger" [level=3] [ref=e578]:
+                          - generic [ref=e579]: Angus Beef Burger
+                        - generic [ref=e581]:
+                          - generic [ref=e583]: 1 review
+                          - generic [ref=e584]: ·
+                          - generic [ref=e586]: 6 photos
+                    - listitem [ref=e589]:
+                      - generic [ref=e594] [cursor=pointer]:
+                        - heading "Three Cheese Panini" [level=3] [ref=e599]:
+                          - generic [ref=e600]: Three Cheese Panini
+                        - generic [ref=e601]:
+                          - generic [ref=e604]: 4 photos
+                          - generic [ref=e606]: ₱320.00
+                    - listitem [ref=e607]:
+                      - generic [ref=e612] [cursor=pointer]:
+                        - heading "Bangus Belly Bowl" [level=3] [ref=e617]:
+                          - generic [ref=e618]: Bangus Belly Bowl
+                        - generic [ref=e619]:
+                          - generic [ref=e622]: 4 photos
+                          - generic [ref=e624]: ₱370.00
+                    - listitem [ref=e625]:
+                      - generic [ref=e630] [cursor=pointer]:
+                        - heading "Strawberry Cheesecake" [level=3] [ref=e635]:
+                          - generic [ref=e636]: Strawberry Cheesecake
+                        - generic [ref=e638]:
+                          - generic [ref=e640]: 1 review
+                          - generic [ref=e641]: ·
+                          - generic [ref=e643]: 3 photos
+                    - listitem [ref=e646]:
+                      - generic [ref=e651] [cursor=pointer]:
+                        - heading "Tuna Aglio Olio" [level=3] [ref=e656]:
+                          - generic [ref=e657]: Tuna Aglio Olio
+                        - generic [ref=e658]:
+                          - generic [ref=e661]: 13 photos
+                          - generic [ref=e663]: ₱390.00
+                    - listitem [ref=e664]:
+                      - generic [ref=e669] [cursor=pointer]:
+                        - heading "Seafood Marinara" [level=3] [ref=e674]:
+                          - generic [ref=e675]: Seafood Marinara
+                        - generic [ref=e676]:
+                          - generic [ref=e679]: 4 photos
+                          - generic [ref=e681]: ₱400.00
+                    - listitem [ref=e682]:
+                      - generic [ref=e687] [cursor=pointer]:
+                        - heading "Spanish Latte" [level=3] [ref=e692]:
+                          - generic [ref=e693]: Spanish Latte
+                        - generic [ref=e695]:
+                          - generic [ref=e697]: 7 reviews
+                          - generic [ref=e698]: ·
+                          - generic [ref=e700]: 4 photos
+                    - listitem [ref=e703]:
+                      - generic [ref=e708] [cursor=pointer]:
+                        - heading "Chicken Milanese" [level=3] [ref=e713]:
+                          - generic [ref=e714]: Chicken Milanese
+                        - generic [ref=e715]:
+                          - generic [ref=e716]:
+                            - generic [ref=e718]: 3 reviews
+                            - generic [ref=e719]: ·
+                            - generic [ref=e721]: 4 photos
+                          - generic [ref=e723]: ₱375.00
+                    - listitem [ref=e724]:
+                      - generic [ref=e729] [cursor=pointer]:
+                        - heading "Pumpkin Soup" [level=3] [ref=e734]:
+                          - generic [ref=e735]: Pumpkin Soup
+                        - generic [ref=e736]:
+                          - generic [ref=e737]:
+                            - generic [ref=e739]: 2 reviews
+                            - generic [ref=e740]: ·
+                            - generic [ref=e742]: 6 photos
+                          - generic [ref=e744]: ₱255.00
+                    - listitem [ref=e745]:
+                      - generic [ref=e750] [cursor=pointer]:
+                        - heading "Seafood Fried Rice" [level=3] [ref=e755]:
+                          - generic [ref=e756]: Seafood Fried Rice
+                        - generic [ref=e757]:
+                          - generic [ref=e758]:
+                            - generic [ref=e760]: 4 reviews
+                            - generic [ref=e761]: ·
+                            - generic [ref=e763]: 3 photos
+                          - generic [ref=e765]: ₱315.00
+                  - button [ref=e766] [cursor=pointer]:
+                    - img [ref=e769]
+                - button "See full menu" [ref=e772]:
+                  - generic [ref=e773] [cursor=pointer]:
+                    - separator [ref=e774]
+                    - generic [ref=e775]:
+                      - generic [ref=e776]: See full menu
+                      - img [ref=e778]
+          - generic [ref=e780]:
+            - generic [ref=e788]:
+              - generic [ref=e790]:
+                - generic [ref=e791]:
+                  - link "Address" [ref=e792] [cursor=pointer]:
+                    - /url: /search?sca_esv=91a799f1130846ec&q=concordia%27s+cafe+-+bf+homes+para%C3%B1aque+address&ludocid=15226573356818413202&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ6BN6BAhEEAI
+                  - text: ":"
+                - text: 106 Aguirre Ave, Parañaque, 1720 Metro Manila
+              - generic [ref=e797]:
+                - text: "Menu:"
+                - link "facebook.com" [ref=e799] [cursor=pointer]:
+                  - /url: https://www.facebook.com/media/set/?set=a.167472392851719&type=3&mibextid=ncKXMA
+              - generic [ref=e800]:
+                - generic [ref=e801]:
+                  - link "Hours" [ref=e802] [cursor=pointer]:
+                    - /url: /search?sca_esv=91a799f1130846ec&q=Concordia%27s+Cafe+-+BF+Homes+Para%C3%B1aque+Hours&ludocid=15226573356818413202&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ6BN6BAhDEAI
+                  - text: ":"
+                - button "Closes soon · 12 AM · Opens 7 AM Thu" [ref=e804]:
+                  - generic [ref=e810]: Closes soon · 12 AM · Opens 7 AM Thu
+              - generic [ref=e814]:
+                - generic [ref=e815]:
+                  - button "Suggest an edit" [ref=e818] [cursor=pointer]
+                  - text: ·
+                  - link "Own this business?" [ref=e819] [cursor=pointer]:
+                    - /url: https://business.google.com/create?hl=en&getstarted&authuser=0&fp=15226573356818413202&gmbsrc=ph-en-et-ip-z-gmb-s-z-l~skp%7Cclaimbz_aoc_a%7Cu&ppsrc=GMBSI
+                - generic [ref=e820]:
+                  - generic [ref=e821]: Add missing information
+                  - link "Add place's phone number" [ref=e822] [cursor=pointer]: Add place's phone number
+                  - link "Add website" [ref=e823] [cursor=pointer]: Add website
+              - 'button "Price per person: ₱1–500 Reported by 50 people" [ref=e829] [cursor=pointer]':
+                - generic [ref=e832]:
+                  - text: "Price per person:"
+                  - generic [ref=e833]:
+                    - text: ₱1–500
+                    - generic [ref=e835]: Reported by 50 people
+            - generic [ref=e837]:
+              - heading "Web results" [level=2] [ref=e838]
+              - generic [ref=e839]:
+                - generic [ref=e842]:
+                  - link "CONCORDIA'S CAFE - BF HOMES (@concordiascafebf) Instagram · concordiascafebf 13.6K+ followers" [ref=e844] [cursor=pointer]:
+                    - /url: https://www.instagram.com/concordiascafebf/?hl=en
+                    - heading "CONCORDIA'S CAFE - BF HOMES (@concordiascafebf)" [level=3] [ref=e845]
+                    - generic [ref=e851]:
+                      - generic [ref=e853]: Instagram · concordiascafebf
+                      - generic [ref=e855]: 13.6K+ followers
+                  - button "About this result" [ref=e856] [cursor=pointer]:
+                    - img [ref=e859]
+                - generic [ref=e863]:
+                  - text: 7am-12mn | Mon-Sun Pets are welcome here. Homey meals, quiet spaces, and real connections — us here! 📍106 Aguirre Ave.,
+                  - emphasis [ref=e864]: BF Homes Parañaque
+                  - text: ☀️ 7AM-12MN | Mon-Sun ...
+          - generic [ref=e865]:
+            - generic [ref=e871]:
+              - heading "Reviews" [level=3] [ref=e874]
+              - generic [ref=e879]:
+                - generic [ref=e880]:
+                  - heading "Google reviews" [level=3] [ref=e881]
+                  - button "More info" [ref=e886] [cursor=pointer]:
+                    - img [ref=e888]
+                  - generic [ref=e890]:
+                    - button "Write a review" [ref=e894] [cursor=pointer]:
+                      - generic [ref=e895]: Write a review
+                    - link "Add photos" [ref=e897] [cursor=pointer]:
+                      - /url: "#"
+                - generic [ref=e898]:
+                  - text: "4.4"
+                  - img "Rated 4.4 out of 5," [ref=e899]
+                  - button "431 Google reviews" [ref=e904] [cursor=pointer]
+            - generic [ref=e914]:
+              - generic [ref=e915]:
+                - heading "From Concordia's Cafe - BF Homes Parañaque" [level=3] [ref=e916]
+                - button "Report description" [ref=e918]:
+                  - img [ref=e919]
+              - generic [ref=e921]: "\"Our home, your home 🏡 💙\""
+            - generic [ref=e928]:
+              - heading "Profiles" [level=3] [ref=e929]
+              - generic [ref=e930]:
+                - link "TikTok" [ref=e934] [cursor=pointer]:
+                  - /url: https://www.tiktok.com/@concordiascafe
+                  - generic [ref=e940]: TikTok
+                - link "Facebook" [ref=e944] [cursor=pointer]:
+                  - /url: https://www.facebook.com/concordiascafe/
+                  - generic [ref=e950]: Facebook
+                - link "Instagram" [ref=e954] [cursor=pointer]:
+                  - /url: https://instagram.com/concordiascafe/
+                  - generic [ref=e960]: Instagram
+            - generic [ref=e963]:
+              - generic [ref=e966]:
+                - link "Concordia's Cafe BF Homes Menu Booky https://booky.ph › biz › concordia-s-cafe-bf-homes › me..." [ref=e968] [cursor=pointer]:
+                  - /url: https://booky.ph/biz/concordia-s-cafe-bf-homes/menu/
+                  - heading "Concordia's Cafe BF Homes Menu" [level=3] [ref=e969]
+                  - generic [ref=e975]:
+                    - generic [ref=e977]: Booky
+                    - generic [ref=e979]: https://booky.ph › biz › concordia-s-cafe-bf-homes › me...
+                - button "About this result" [ref=e980] [cursor=pointer]:
+                  - img [ref=e983]
+              - generic [ref=e986]: View menu, contact details, location, photos, and more about. All-Day Breakfast Starters Salads Mains Filipino Special Pasta Pastries Cookies Plant-Based Cakes
+          - generic [ref=e987]:
+            - generic [ref=e993]:
+              - heading "Popular times" [level=3] [ref=e996]
+              - generic [ref=e1000]:
+                - generic [ref=e1001]:
+                  - radiogroup [ref=e1003]:
+                    - radio "Monday" [ref=e1004] [cursor=pointer]:
+                      - generic [ref=e1005]: Mon
+                    - radio "Tuesday" [ref=e1006] [cursor=pointer]:
+                      - generic [ref=e1007]: Tue
+                    - radio "Wednesday" [checked] [ref=e1008] [cursor=pointer]:
+                      - generic [ref=e1009]: Wed
+                    - radio "Thursday" [ref=e1010] [cursor=pointer]:
+                      - generic [ref=e1011]: Thu
+                    - radio "Friday" [ref=e1012] [cursor=pointer]:
+                      - generic [ref=e1013]: Fri
+                    - radio "Saturday" [ref=e1014] [cursor=pointer]:
+                      - generic [ref=e1015]: Sat
+                    - radio "Sunday" [ref=e1016] [cursor=pointer]:
+                      - generic [ref=e1017]: Sun
+                  - generic [ref=e1019]:
+                    - region [ref=e1022]:
+                      - generic [ref=e1026]: "Live:"
+                      - text: Not too busy
+                    - radiogroup [ref=e1027]:
+                      - radio [disabled] [ref=e1029] [cursor=pointer]
+                      - radio "7 AM" [ref=e1031] [cursor=pointer]
+                      - radio "8 AM" [ref=e1034] [cursor=pointer]
+                      - radio "9 AM" [ref=e1037] [cursor=pointer]
+                      - radio "10 AM" [ref=e1040] [cursor=pointer]
+                      - radio "11 AM" [ref=e1043] [cursor=pointer]
+                      - radio "12 PM" [ref=e1046] [cursor=pointer]
+                      - radio "1 PM" [ref=e1049] [cursor=pointer]
+                      - radio "2 PM" [ref=e1052] [cursor=pointer]
+                      - radio "3 PM" [ref=e1055] [cursor=pointer]
+                      - radio "4 PM" [ref=e1058] [cursor=pointer]
+                      - radio "5 PM" [ref=e1061] [cursor=pointer]
+                      - radio "6 PM" [ref=e1064] [cursor=pointer]
+                      - radio "7 PM" [ref=e1067] [cursor=pointer]
+                      - radio "8 PM" [ref=e1070] [cursor=pointer]
+                      - radio "9 PM" [ref=e1073] [cursor=pointer]
+                      - radio "10 PM" [ref=e1076] [cursor=pointer]
+                      - radio "11 PM" [checked] [ref=e1079] [cursor=pointer]
+                    - generic [ref=e1083]:
+                      - generic [ref=e1090]: 9a
+                      - generic [ref=e1096]: 12p
+                      - generic [ref=e1102]: 3p
+                      - generic [ref=e1108]: 6p
+                      - generic [ref=e1114]: 9p
+                - generic [ref=e1117]:
+                  - img [ref=e1118]
+                  - generic [ref=e1126]: People typically spend 45 min to 3 hr here
+            - generic [ref=e1129]:
+              - generic [ref=e1132]:
+                - 'link "Concordia''s Cafe: A New Cafe in BF Homes (Parañaque ... Zoy To The World https://www.zoytotheworld.com › blog › concordias-ca..." [ref=e1134] [cursor=pointer]':
+                  - /url: https://www.zoytotheworld.com/blog/concordias-cafe-bf-homes-paranaque-city
+                  - 'heading "Concordia''s Cafe: A New Cafe in BF Homes (Parañaque ..." [level=3] [ref=e1135]'
+                  - generic [ref=e1141]:
+                    - generic [ref=e1143]: Zoy To The World
+                    - generic [ref=e1145]: https://www.zoytotheworld.com › blog › concordias-ca...
+                - button "About this result" [ref=e1146] [cursor=pointer]:
+                  - img [ref=e1149]
+              - generic [ref=e1152]:
+                - generic [ref=e1153]: Jul 22, 2023 —
+                - generic [ref=e1154]:
+                  - text: "Concordia's Cafe, a new cafe that only opened in March 27, 2023. Address:"
+                  - emphasis [ref=e1155]: 106 Aguirre Ave., BF Homes, Parañaque City
+                  - text: ","
+          - generic [ref=e1157]:
+            - generic [ref=e1160]:
+              - heading "People also search for" [level=3] [ref=e1162]
+              - generic [ref=e1167]:
+                - list [ref=e1168]:
+                  - listitem [ref=e1170]:
+                    - generic [ref=e1171]:
+                      - link "Alch3mist Coffee":
+                        - /url: /search?sca_esv=91a799f1130846ec&si=AL3DRZGNtcdgKOqVhotcr-UG2kkYpwR2WO4qu3O00NmpwBmLnYsaD5qkU96vrWhB2to7uJ7ieiiNnrNV0VU5QRfSIlE1shECvG_BEnqDRCf6e9KR0O3vJt84BYouybNun6ORth6DTyeHNVmto8HlbVxIPKXFZB4xeSbUtnmgvUGkAgZlEGWUCtq9qomzpT46e5jUvbZ3wxqgWMnUjS3PQyOXGipwl9Y85qfVE7NGIaQMXwmjkqKpk5pbShON0TU_3RQU3X-tiIbkZYOZIev37NwsRq3x05XUMKYJH-0eCUmG2bjyq6faNKTNd6S0PoJe-iTp012MlE2I&q=Alch3mist+Coffee&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQs9oBKAB6BAgMEAY
+                      - heading [level=3] [ref=e1176]:
+                        - generic [ref=e1177]: Alch3mist Coffee
+                  - listitem [ref=e1179]:
+                    - generic [ref=e1180]:
+                      - link "Masa Bakehouse BF homes":
+                        - /url: /search?sca_esv=91a799f1130846ec&si=AL3DRZGNtcdgKOqVhotcr-UG2kkYpwR2WO4qu3O00NmpwBmLneMpy4KDOO2-lDeppZvDqQN28ER4edorQEjSJCvE1DkwAkTU9uqNq5ajTxdnOn9UsGM9euYtcocDIyLyP-XLop3UrwDOpjYUTTZRdiiLUsOzy1ieQWQrV-9lQxmeGq7bLTryMG9finrkS-b6wTFv3iumUA0CpH3uB55E2Mtg3F_WzEmPZnPQQ4FMrzceBLE-ipU5XSGhVeO1QSjT_ZuuWliUXdUdPqeGPSgJysy7kiBcQI2JxjKG_YemE5cmNTm_rtjrcTRXyQ1e_KqwNO4hsKaFwD_pkrOYwD3pA0kNh0uJDs3VlQ%3D%3D&q=Masa+Bakehouse+BF+homes&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQs9oBKAB6BAgMEAo
+                      - heading [level=3] [ref=e1185]:
+                        - generic [ref=e1186]: Masa Bakehouse BF homes
+                  - listitem [ref=e1188]:
+                    - generic [ref=e1189]:
+                      - link "The Alex Coffee":
+                        - /url: /search?sca_esv=91a799f1130846ec&si=AL3DRZGNtcdgKOqVhotcr-UG2kkYpwR2WO4qu3O00NmpwBmLnav7-fwe5aUyE2Z9T-BJf8tQwu4Cw5OUbYJrwuIzzWdQEnOcpofVs4i7rLVLt7uVZoWgmAG63QL6uXmYFyf2tCzk54FDwDbrzLDMZtDqhAHgUh10hKwsiCZ9Pa77aZcr_I13K1xWBpYZjLIXtmdPwDobD2c6qVseqxT_w7uShgWWjqpGjK9yuyCQFiFSWKbTo148gBC2f00X0NGlSHMBn4j68g7sEG00op1xaZf93_-hxBHt4lGkCsTcgxzb8z9_bPx9O8lcge3ycePcr39gAn1OA0lZ&q=The+Alex+Coffee&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQs9oBKAB6BAgMEA4
+                      - heading [level=3] [ref=e1194]:
+                        - generic [ref=e1195]: The Alex Coffee
+                  - listitem [ref=e1197]:
+                    - generic [ref=e1198]:
+                      - link "Curious Coffee Co.":
+                        - /url: /search?sca_esv=91a799f1130846ec&si=AL3DRZGNtcdgKOqVhotcr-UG2kkYpwR2WO4qu3O00NmpwBmLnXrIR73fBTDD6rIXEHCYYH2GGncRDUa9oaBn5F9XXA0Yrdt_8MQhLiLlwyX1QwKRrXtWbRYeI8eFaI1sC1KWw86qBYVyQyZNn7MrDHiAWDxvkaJ0Ygtf7cF7Dk0gN-MoHklGvfCXGRttg4BU9bGx5t5-hK20ioCUGlczc7CBDG4G1V-IcBrmSmDnvm3LWDTQQmkAk7xo4cYwsxoMhtQ57FMjMFSsi4wh-kEyJ4BEp2dCGZTzBSLMSTziKkezvbbxT--g4JqCKOw7dueQVpoZBCjl5Z5h&q=Curious+Coffee+Co.&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQs9oBKAB6BAgMEBI
+                      - heading [level=3] [ref=e1203]:
+                        - generic [ref=e1204]: Curious Coffee Co.
+                - link "See more" [ref=e1206] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia%27s+Cafe&stick=H4sIAAAAAAAAAONgFuLVT9c3NCwuNjUtLE4pVkLlagkGZ6aklidWFvulVpQEl6QWFP9iFAtIzS_ISVVIzCnOVyhOTSxKzlBIyy9axCrgnJ-XnF-UkpmoXqzgnJiWuoOV8RabJMNS5dv8z0IzFsZWHHuiPOvd82lNfVYrUk3zAMXVNqd-AAAA&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQzO0BKAR6BAgMEBQ
+                  - generic [ref=e1207]:
+                    - generic [ref=e1208]: See more
+                    - img [ref=e1210]
+            - generic [ref=e1214]:
+              - heading "People also ask" [level=2] [ref=e1216]
+              - generic [ref=e1217]:
+                - button "Who owns Concordia Cafe?" [ref=e1223] [cursor=pointer]:
+                  - generic [ref=e1225]: Who owns Concordia Cafe?
+                  - img [ref=e1228]
+                - button "Where to eat in BF Homes?" [ref=e1237] [cursor=pointer]:
+                  - generic [ref=e1239]: Where to eat in BF Homes?
+                  - img [ref=e1242]
+                - button "Is Concordia Cafe pet friendly?" [ref=e1251] [cursor=pointer]:
+                  - generic [ref=e1253]: Is Concordia Cafe pet friendly?
+                  - img [ref=e1256]
+                - button "What is the biggest coffee shop in the Philippines?" [ref=e1265] [cursor=pointer]:
+                  - generic [ref=e1267]: What is the biggest coffee shop in the Philippines?
+                  - img [ref=e1270]
+          - generic [ref=e1275]:
+            - heading "Web results" [level=2] [ref=e1276]
+            - generic [ref=e1277]:
+              - generic [ref=e1280]:
+                - link "Concordia's Cafe - Parañaque Menu, Price Food Panda https://www.foodpanda.ph › Parañaque City" [ref=e1282] [cursor=pointer]:
+                  - /url: https://www.foodpanda.ph/restaurant/eeij/concordias-cafe-paranaque
+                  - heading "Concordia's Cafe - Parañaque Menu, Price" [level=3] [ref=e1283]
+                  - generic [ref=e1289]:
+                    - generic [ref=e1291]: Food Panda
+                    - generic [ref=e1293]: https://www.foodpanda.ph › Parañaque City
+                - button "About this result" [ref=e1294] [cursor=pointer]:
+                  - img [ref=e1297]
+              - generic [ref=e1300]:
+                - generic [ref=e1301]:
+                  - text: Popular Cuisines in Parañaque · Asian food · Cakes · Fast food · Filipino food.
+                  - emphasis [ref=e1302]: 106 Aguirre Avenue Barangay BF Homes 2nd District
+                  - text: (C2WC+Q5). ealyn6/4/2026staffs ...
+                - link "Read more" [ref=e1303] [cursor=pointer]:
+                  - /url: https://www.foodpanda.ph/restaurant/eeij/concordias-cafe-paranaque#:~:text=Popular%20Cuisines%20in%20Para%C3%B1aque,Filipino%20food
+          - generic [ref=e1307]:
+            - generic [ref=e1310]:
+              - link "Concordia's Cafe - BF Homes Parañaque Corner.inc https://www.corner.inc › place › pexpLQLCHYr5" [ref=e1312] [cursor=pointer]:
+                - /url: https://www.corner.inc/place/pexpLQLCHYr5
+                - heading "Concordia's Cafe - BF Homes Parañaque" [level=3] [ref=e1313]
+                - generic [ref=e1319]:
+                  - generic [ref=e1321]: Corner.inc
+                  - generic [ref=e1323]: https://www.corner.inc › place › pexpLQLCHYr5
+              - button "About this result" [ref=e1324] [cursor=pointer]:
+                - img [ref=e1327]
+            - generic [ref=e1331]:
+              - emphasis [ref=e1332]: 106 Aguirre Ave, Parañaque
+              - text: . Spacious cafe with decent coffee and cozy vibes open. Perfect for group hangouts or casual meetings. Menu includes grilled salmon, ...
+          - generic [ref=e1336]:
+            - generic [ref=e1339]:
+              - link "Concordia's Cafe BF Homes Booky https://booky.ph › concordia-s-cafe-bf-homes › about" [ref=e1341] [cursor=pointer]:
+                - /url: https://booky.ph/biz/concordia-s-cafe-bf-homes/about/
+                - heading "Concordia's Cafe BF Homes" [level=3] [ref=e1342]
+                - generic [ref=e1348]:
+                  - generic [ref=e1350]: Booky
+                  - generic [ref=e1352]: https://booky.ph › concordia-s-cafe-bf-homes › about
+              - button "About this result" [ref=e1353] [cursor=pointer]:
+                - img [ref=e1356]
+            - generic [ref=e1360]:
+              - text: This homey-slash-pet-friendly cafe will surely welcome you with the best coffee and delicious foods.
+              - emphasis [ref=e1361]: Opening hours monday 07:00 AM - 12:00 AM
+              - text: (0962) 884-3971 @ ...
+          - generic [ref=e1365]:
+            - heading "Short videos" [level=2] [ref=e1367]
+            - generic [ref=e1369]:
+              - list [ref=e1371]:
+                - listitem [ref=e1372]:
+                  - generic [ref=e1375]:
+                    - generic [ref=e1377]:
+                      - link "Each corner is curated to welcome you ☕️💙 Treat yourself to ... by Concordia’s Cafe - BF Homes on Facebook. Play on Facebook. 0:13" [ref=e1379] [cursor=pointer]:
+                        - /url: https://www.facebook.com/concordiascafe/videos/find-your-cozy-space-at-concordias-%EF%B8%8F/1311081131065062/
+                        - generic [ref=e1384]:
+                          - img [ref=e1385]
+                          - generic [ref=e1387]: 0:13
+                      - link "Each corner is curated to welcome you ☕️💙 Treat yourself to ... Facebook · Concordia’s Cafe - BF Homes" [ref=e1389] [cursor=pointer]:
+                        - /url: https://www.facebook.com/concordiascafe/videos/find-your-cozy-space-at-concordias-%EF%B8%8F/1311081131065062/
+                        - generic [ref=e1390]:
+                          - heading "Each corner is curated to welcome you ☕️💙 Treat yourself to ..." [level=3] [ref=e1392]:
+                            - generic [ref=e1393]: Each corner is curated to welcome you ☕️💙 Treat yourself to ...
+                          - generic [ref=e1398]: Facebook · Concordia’s Cafe - BF Homes
+                    - button "About this result" [ref=e1402] [cursor=pointer]:
+                      - img [ref=e1405]
+                - listitem [ref=e1407]:
+                  - generic [ref=e1410]:
+                    - generic [ref=e1412]:
+                      - link "Discover Concordia's Cafe in BF Homes, Parañaque—where ... by Your MommyLola Foodie on Instagram. Play on Instagram. 0:36" [ref=e1414] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/C_z8gK6Br6Y/?hl=en
+                        - generic [ref=e1419]:
+                          - img [ref=e1420]
+                          - generic [ref=e1422]: 0:36
+                      - link "Discover Concordia's Cafe in BF Homes, Parañaque—where ... Instagram · Your MommyLola Foodie" [ref=e1424] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/C_z8gK6Br6Y/?hl=en
+                        - generic [ref=e1425]:
+                          - heading "Discover Concordia's Cafe in BF Homes, Parañaque—where ..." [level=3] [ref=e1427]:
+                            - generic [ref=e1428]: Discover Concordia's Cafe in BF Homes, Parañaque—where ...
+                          - generic [ref=e1433]: Instagram · Your MommyLola Foodie
+                    - button "About this result" [ref=e1437] [cursor=pointer]:
+                      - img [ref=e1440]
+                - listitem [ref=e1442]:
+                  - generic [ref=e1445]:
+                    - generic [ref=e1447]:
+                      - 'link "CONCORDIA''S CAFE - BF HOMES on Instagram: \"Dine in ... by CONCORDIA’S CAFE - BF HOMES on Instagram. Play on Instagram. 0:12" [ref=e1449] [cursor=pointer]':
+                        - /url: https://www.instagram.com/reel/DBdAumAy3_b/
+                        - generic [ref=e1454]:
+                          - img [ref=e1455]
+                          - generic [ref=e1457]: 0:12
+                      - 'link "CONCORDIA''S CAFE - BF HOMES on Instagram: \"Dine in ... Instagram · CONCORDIA’S CAFE - BF HOMES" [ref=e1459] [cursor=pointer]':
+                        - /url: https://www.instagram.com/reel/DBdAumAy3_b/
+                        - generic [ref=e1460]:
+                          - 'heading "CONCORDIA''S CAFE - BF HOMES on Instagram: \"Dine in ..." [level=3] [ref=e1462]':
+                            - generic [ref=e1463]: "CONCORDIA'S CAFE - BF HOMES on Instagram: \"Dine in ..."
+                          - generic [ref=e1468]: Instagram · CONCORDIA’S CAFE - BF HOMES
+                    - button "About this result" [ref=e1472] [cursor=pointer]:
+                      - img [ref=e1475]
+                - listitem [ref=e1477]:
+                  - generic [ref=e1480]:
+                    - generic [ref=e1482]:
+                      - link "Fun Coffee Experience at Concordia's Cafe in BF Homes ... by littlemsina on TikTok. Play on TikTok. 0:31" [ref=e1484] [cursor=pointer]:
+                        - /url: https://www.tiktok.com/@littlemsina/video/7257846502452776198
+                        - generic [ref=e1492]:
+                          - img [ref=e1493]
+                          - generic [ref=e1495]: 0:31
+                      - link "Fun Coffee Experience at Concordia's Cafe in BF Homes ... TikTok · littlemsina" [ref=e1497] [cursor=pointer]:
+                        - /url: https://www.tiktok.com/@littlemsina/video/7257846502452776198
+                        - generic [ref=e1498]:
+                          - heading "Fun Coffee Experience at Concordia's Cafe in BF Homes ..." [level=3] [ref=e1500]:
+                            - generic [ref=e1501]: Fun Coffee Experience at Concordia's Cafe in BF Homes ...
+                          - generic [ref=e1506]: TikTok · littlemsina
+                    - button "About this result" [ref=e1510] [cursor=pointer]:
+                      - img [ref=e1513]
+                - listitem [ref=e1515]:
+                  - generic [ref=e1518]:
+                    - generic [ref=e1520]:
+                      - 'link "CONCORDIA''S CAFE - BF HOMES on Instagram: \"Photobooth ... by CONCORDIA’S CAFE - BF HOMES on Instagram. Play on Instagram. 0:07" [ref=e1522] [cursor=pointer]':
+                        - /url: https://www.instagram.com/reel/DF5UpgDzVsq/
+                        - generic [ref=e1527]:
+                          - img [ref=e1528]
+                          - generic [ref=e1530]: 0:07
+                      - 'link "CONCORDIA''S CAFE - BF HOMES on Instagram: \"Photobooth ... Instagram · CONCORDIA’S CAFE - BF HOMES" [ref=e1532] [cursor=pointer]':
+                        - /url: https://www.instagram.com/reel/DF5UpgDzVsq/
+                        - generic [ref=e1533]:
+                          - 'heading "CONCORDIA''S CAFE - BF HOMES on Instagram: \"Photobooth ..." [level=3] [ref=e1535]':
+                            - generic [ref=e1536]: "CONCORDIA'S CAFE - BF HOMES on Instagram: \"Photobooth ..."
+                          - generic [ref=e1541]: Instagram · CONCORDIA’S CAFE - BF HOMES
+                    - button "About this result" [ref=e1545] [cursor=pointer]:
+                      - img [ref=e1548]
+                - listitem [ref=e1550]:
+                  - generic [ref=e1553]:
+                    - generic [ref=e1555]:
+                      - 'link "Concordia Cafe: A Must-Visit in BF Homes Parañaque by jp_matubis on TikTok. Play on TikTok. 1:00" [ref=e1557] [cursor=pointer]':
+                        - /url: https://www.tiktok.com/@jp_matubis/video/7300540694882520325
+                        - generic [ref=e1565]:
+                          - img [ref=e1566]
+                          - generic [ref=e1568]: 1:00
+                      - 'link "Concordia Cafe: A Must-Visit in BF Homes Parañaque TikTok · jp_matubis" [ref=e1570] [cursor=pointer]':
+                        - /url: https://www.tiktok.com/@jp_matubis/video/7300540694882520325
+                        - generic [ref=e1571]:
+                          - 'heading "Concordia Cafe: A Must-Visit in BF Homes Parañaque" [level=3] [ref=e1573]':
+                            - generic [ref=e1574]: "Concordia Cafe: A Must-Visit in BF Homes Parañaque"
+                          - generic [ref=e1579]: TikTok · jp_matubis
+                    - button "About this result" [ref=e1583] [cursor=pointer]:
+                      - img [ref=e1586]
+                - listitem [ref=e1588]:
+                  - generic [ref=e1591]:
+                    - generic [ref=e1593]:
+                      - link "In a city filled with scenic views and vibrant food spots ... by Tagaytay Tourism and Cultural Development Office on Facebook. Play on Facebook. 1:25" [ref=e1595] [cursor=pointer]:
+                        - /url: https://www.facebook.com/tagaytaytourism/videos/in-a-city-filled-with-scenic-views-and-vibrant-food-spots-concordias-caf%C3%A9-stands/1964929384394851/
+                        - generic [ref=e1600]:
+                          - img [ref=e1601]
+                          - generic [ref=e1603]: 1:25
+                      - link "In a city filled with scenic views and vibrant food spots ... Facebook · Tagaytay Tourism and Cultural Development Office" [ref=e1605] [cursor=pointer]:
+                        - /url: https://www.facebook.com/tagaytaytourism/videos/in-a-city-filled-with-scenic-views-and-vibrant-food-spots-concordias-caf%C3%A9-stands/1964929384394851/
+                        - generic [ref=e1606]:
+                          - heading "In a city filled with scenic views and vibrant food spots ..." [level=3] [ref=e1608]:
+                            - generic [ref=e1609]: In a city filled with scenic views and vibrant food spots ...
+                          - generic [ref=e1614]: Facebook · Tagaytay Tourism and Cultural Development Office
+                    - button "About this result" [ref=e1618] [cursor=pointer]:
+                      - img [ref=e1621]
+                - listitem [ref=e1623]:
+                  - generic [ref=e1626]:
+                    - generic [ref=e1628]:
+                      - link "CONCORDIA'S CAFE BF Homes, Parañaque 4/5 ⭐️⭐️ ... by Ma. Realiza Pangilinan Almazan on Instagram. Play on Instagram. 0:20" [ref=e1630] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DYJwnTjx28k/
+                        - generic [ref=e1635]:
+                          - img [ref=e1636]
+                          - generic [ref=e1638]: 0:20
+                      - link "CONCORDIA'S CAFE BF Homes, Parañaque 4/5 ⭐️⭐️ ... Instagram · Ma. Realiza Pangilinan Almazan" [ref=e1640] [cursor=pointer]:
+                        - /url: https://www.instagram.com/reel/DYJwnTjx28k/
+                        - generic [ref=e1641]:
+                          - heading "CONCORDIA'S CAFE BF Homes, Parañaque 4/5 ⭐️⭐️ ..." [level=3] [ref=e1643]:
+                            - generic [ref=e1644]: CONCORDIA'S CAFE BF Homes, Parañaque 4/5 ⭐️⭐️ ...
+                          - generic [ref=e1649]: Instagram · Ma. Realiza Pangilinan Almazan
+                    - button "About this result" [ref=e1653] [cursor=pointer]:
+                      - img [ref=e1656]
+                - listitem [ref=e1658]:
+                  - generic [ref=e1661]:
+                    - generic [ref=e1663]:
+                      - 'link "Concordia Cafe: New Gem in Tagaytay ☁️ by thespotfinder on TikTok. Play on TikTok. 0:27" [ref=e1665] [cursor=pointer]':
+                        - /url: https://www.tiktok.com/@thespotfinder/video/7571413479878528274
+                        - generic [ref=e1670]:
+                          - img [ref=e1671]
+                          - generic [ref=e1673]: 0:27
+                      - 'link "Concordia Cafe: New Gem in Tagaytay ☁️ TikTok · thespotfinder" [ref=e1675] [cursor=pointer]':
+                        - /url: https://www.tiktok.com/@thespotfinder/video/7571413479878528274
+                        - generic [ref=e1676]:
+                          - 'heading "Concordia Cafe: New Gem in Tagaytay ☁️" [level=3] [ref=e1678]':
+                            - generic [ref=e1679]: "Concordia Cafe: New Gem in Tagaytay ☁️"
+                          - generic [ref=e1684]: TikTok · thespotfinder
+                    - button "About this result" [ref=e1688] [cursor=pointer]:
+                      - img [ref=e1691]
+                - listitem [ref=e1693]:
+                  - generic [ref=e1696]:
+                    - generic [ref=e1698]:
+                      - 'link "Booky on Instagram: \"Trust us, these are worth the drive ... by Booky on Instagram. Play on Instagram. 0:41" [ref=e1700] [cursor=pointer]':
+                        - /url: https://www.instagram.com/reel/Cw9IuUSrYox/
+                        - generic [ref=e1708]:
+                          - img [ref=e1709]
+                          - generic [ref=e1711]: 0:41
+                      - 'link "Booky on Instagram: \"Trust us, these are worth the drive ... Instagram · Booky" [ref=e1713] [cursor=pointer]':
+                        - /url: https://www.instagram.com/reel/Cw9IuUSrYox/
+                        - generic [ref=e1714]:
+                          - 'heading "Booky on Instagram: \"Trust us, these are worth the drive ..." [level=3] [ref=e1716]':
+                            - generic [ref=e1717]: "Booky on Instagram: \"Trust us, these are worth the drive ..."
+                          - generic [ref=e1722]: Instagram · Booky
+                    - button "About this result" [ref=e1726] [cursor=pointer]:
+                      - img [ref=e1729]
+              - button [ref=e1731] [cursor=pointer]:
+                - img [ref=e1734]
+            - link "More short videos" [ref=e1737] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&udm=39&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ3egMegQIcBAS
+              - separator [ref=e1738]
+              - generic [ref=e1739]:
+                - generic [ref=e1740]: More short videos
+                - img [ref=e1742]
+        - generic [ref=e1745]:
+          - generic [ref=e1750]:
+            - heading "People also search for" [level=2] [ref=e1752]
+            - generic [ref=e1754]:
+              - generic [ref=e1755]:
+                - link "Concordia cafe bf homes paranaque reviews" [ref=e1759] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia+cafe+bf+homes+paranaque+reviews&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ1QJ6BAhPEAE
+                  - generic [ref=e1760]:
+                    - generic [ref=e1765]: Concordia cafe bf homes paranaque reviews
+                    - img [ref=e1769]
+                - link "Concordia Cafe BF Homes menu" [ref=e1774] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia+Cafe+BF+Homes+menu&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ1QJ6BAhsEAE
+                  - generic [ref=e1775]:
+                    - generic [ref=e1780]: Concordia Cafe BF Homes menu
+                    - img [ref=e1784]
+                - link "Concordia Cafe - Tagaytay" [ref=e1789] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia+Cafe+-+Tagaytay&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ1QJ6BAhoEAE
+                  - generic [ref=e1790]:
+                    - generic [ref=e1795]: Concordia Cafe - Tagaytay
+                    - img [ref=e1799]
+                - link "Concordia cafe bf homes paranaque menu" [ref=e1804] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia+cafe+bf+homes+paranaque+menu&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ1QJ6BAhfEAE
+                  - generic [ref=e1805]:
+                    - generic [ref=e1810]: Concordia cafe bf homes paranaque menu
+                    - img [ref=e1814]
+              - generic [ref=e1816]:
+                - link "Concordia cafe bf homes paranaque price" [ref=e1820] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia+cafe+bf+homes+paranaque+price&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ1QJ6BAhbEAE
+                  - generic [ref=e1821]:
+                    - generic [ref=e1826]: Concordia cafe bf homes paranaque price
+                    - img [ref=e1830]
+                - link "Concordia's Cafe menu" [ref=e1835] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia%27s+Cafe+menu&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ1QJ6BAhaEAE
+                  - generic [ref=e1836]:
+                    - generic [ref=e1841]: Concordia's Cafe menu
+                    - img [ref=e1845]
+                - link "Concordia cafe bf homes paranaque contact number" [ref=e1850] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia+cafe+bf+homes+paranaque+contact+number&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ1QJ6BAhZEAE
+                  - generic [ref=e1851]:
+                    - generic [ref=e1856]: Concordia cafe bf homes paranaque contact number
+                    - img [ref=e1860]
+                - link "Concordia's Cafe - BF Homes Parañaque photos" [ref=e1865] [cursor=pointer]:
+                  - /url: /search?sca_esv=91a799f1130846ec&q=Concordia%27s+Cafe+-+BF+Homes+Para%C3%B1aque+photos&sa=X&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ1QJ6BAhREAE
+                  - generic [ref=e1866]:
+                    - generic [ref=e1871]: Concordia's Cafe - BF Homes Parañaque photos
+                    - img [ref=e1875]
+          - navigation [ref=e1877]:
+            - heading "Page Navigation" [level=1] [ref=e1878]
+            - text: "1"
+            - link "Page 2" [ref=e1881] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&ei=tbcyap2JH7nb1e8P2JKg4AY&start=10&sa=N&sstk=AU9db-BH1VCM3-21ufIKz2E1sNqVsCAyiuZJmZuxcrK1yACdXsr43DNrgz3rkPGxYxTxjzxeFixJZoQgt0AootKZPzwTG6jtx4WRXA&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ8tMDegQIdxAE
+              - text: "2"
+            - link "Page 3" [ref=e1883] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&ei=tbcyap2JH7nb1e8P2JKg4AY&start=20&sa=N&sstk=AU9db-BH1VCM3-21ufIKz2E1sNqVsCAyiuZJmZuxcrK1yACdXsr43DNrgz3rkPGxYxTxjzxeFixJZoQgt0AootKZPzwTG6jtx4WRXA&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ8tMDegQIdxAG
+              - text: "3"
+            - link "Page 4" [ref=e1885] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&ei=tbcyap2JH7nb1e8P2JKg4AY&start=30&sa=N&sstk=AU9db-BH1VCM3-21ufIKz2E1sNqVsCAyiuZJmZuxcrK1yACdXsr43DNrgz3rkPGxYxTxjzxeFixJZoQgt0AootKZPzwTG6jtx4WRXA&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ8tMDegQIdxAI
+              - text: "4"
+            - link "Page 5" [ref=e1887] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&ei=tbcyap2JH7nb1e8P2JKg4AY&start=40&sa=N&sstk=AU9db-BH1VCM3-21ufIKz2E1sNqVsCAyiuZJmZuxcrK1yACdXsr43DNrgz3rkPGxYxTxjzxeFixJZoQgt0AootKZPzwTG6jtx4WRXA&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ8tMDegQIdxAK
+              - text: "5"
+            - link "Page 6" [ref=e1889] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&ei=tbcyap2JH7nb1e8P2JKg4AY&start=50&sa=N&sstk=AU9db-BH1VCM3-21ufIKz2E1sNqVsCAyiuZJmZuxcrK1yACdXsr43DNrgz3rkPGxYxTxjzxeFixJZoQgt0AootKZPzwTG6jtx4WRXA&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ8tMDegQIdxAM
+              - text: "6"
+            - link "Page 7" [ref=e1891] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&ei=tbcyap2JH7nb1e8P2JKg4AY&start=60&sa=N&sstk=AU9db-BH1VCM3-21ufIKz2E1sNqVsCAyiuZJmZuxcrK1yACdXsr43DNrgz3rkPGxYxTxjzxeFixJZoQgt0AootKZPzwTG6jtx4WRXA&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ8tMDegQIdxAO
+              - text: "7"
+            - link "Page 8" [ref=e1893] [cursor=pointer]:
+              - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&ei=tbcyap2JH7nb1e8P2JKg4AY&start=70&sa=N&sstk=AU9db-BH1VCM3-21ufIKz2E1sNqVsCAyiuZJmZuxcrK1yACdXsr43DNrgz3rkPGxYxTxjzxeFixJZoQgt0AootKZPzwTG6jtx4WRXA&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ8tMDegQIdxAQ
+              - text: "8"
+            - heading "Next" [level=2] [ref=e1895]:
+              - link "Next" [ref=e1896] [cursor=pointer]:
+                - /url: /search?q=Concordia+Cafe+BF+Homes+Paranaque&sca_esv=91a799f1130846ec&ei=tbcyap2JH7nb1e8P2JKg4AY&start=10&sa=N&sstk=AU9db-BH1VCM3-21ufIKz2E1sNqVsCAyiuZJmZuxcrK1yACdXsr43DNrgz3rkPGxYxTxjzxeFixJZoQgt0AootKZPzwTG6jtx4WRXA&ved=2ahUKEwjdt7Wdxo6VAxW5bfUHHVgJCGwQ8NMDegQIdxAS
+                - generic [ref=e1898]: Next
+        - navigation
+    - contentinfo [ref=e1901]:
+      - heading "Footer Links" [level=1] [ref=e1902]
+      - generic [ref=e1906]:
+        - generic [ref=e1908]:
+          - text: Philippines
+          - generic [ref=e1910]:
+            - button "Makati City, Metro Manila - From your IP address" [ref=e1912] [cursor=pointer]:
+              - generic [ref=e1913]: Makati City, Metro Manila
+              - generic [ref=e1915]:
+                - text: "-"
+                - generic [ref=e1916]: From your IP address
+            - text: "-"
+            - button "Update location" [ref=e1918] [cursor=pointer]: Update location
+        - generic [ref=e1921]:
+          - link "Help" [ref=e1922] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=en-PH&fg=1
+          - link "Send feedback" [ref=e1923] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy" [ref=e1924] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en-PH&fg=1
+          - link "Terms" [ref=e1925] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en-PH&fg=1

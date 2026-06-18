@@ -1,0 +1,250 @@
+{
+  "_meta": {
+    "businessName": "Bond St. Social",
+    "businessSlug": "bond-st-social",
+    "businessType": "barbershop",
+    "location": "BF Homes, Parañaque, NCR",
+    "gatheredAt": "2026-06-06T08:45:00+08:00",
+    "updatedAt": "2026-06-06T08:45:00+08:00",
+    "sources": [
+      "facebook",
+      "instagram",
+      "google_maps",
+      "setmore",
+      "barberhead"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 32,
+      "missing": 6
+    },
+    "stillMissing": [
+      "offerings.items[4].price",
+      "offerings.items[5].price",
+      "contact.whatsapp",
+      "images.staff[0].photo",
+      "images.staff[1].photo"
+    ],
+    "unverified": [
+      "offerings.items[1-5] (template defaults, unknown actual prices)"
+    ]
+  },
+  "identity": {
+    "businessName": {
+      "value": "Bond St. Social",
+      "source": "facebook"
+    },
+    "tagline": {
+      "value": "Home of the Southern Gentleman. Since 2015.",
+      "source": "setmore"
+    },
+    "aboutText": {
+      "value": "Vintage-inspired barbershop in BF Homes, Parañaque founded in 2015 by Jed and Gianna. Premium grooming services with house call home service option. Known for classic barber experience, Southern Gentleman aesthetic, and quality haircuts. Walk-ins welcome, book online via Setmore.",
+      "source": "constructed"
+    },
+    "established": {
+      "value": "2015",
+      "source": "facebook"
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#2C2C2C",
+      "source": "extracted_from_logo"
+    },
+    "accentColor": {
+      "value": "#C9A96E",
+      "source": "extracted_from_logo"
+    },
+    "vibe": {
+      "value": "Vintage Southern Gentleman — dark charcoal and gold aesthetic, premium barbershop with classic barber chairs, warm lighting, wooden accents, old-world charm mixed with modern grooming",
+      "source": "manual"
+    },
+    "logoUrl": {
+      "value": "https://scontent.cdninstagram.com/v/t51.2885-19/21981116_2117239735170102_6678665671309524992_n.jpg",
+      "source": "instagram"
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "+63 917 687 2663",
+      "source": "setmore"
+    },
+    "address": {
+      "value": "240 Aguirre Ave, BF Homes, Parañaque, 1720 Metro Manila",
+      "source": "instagram"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/bondstsocial",
+      "source": "facebook"
+    },
+    "instagramUrl": {
+      "value": "https://www.instagram.com/bondstsocial/",
+      "source": "instagram"
+    },
+    "mapsIframe": {
+      "value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.85!2d121.0348783!3d14.4545119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cfcb3dec7109%3A0xb1ab9b07d521e7ed!2sBond%20St.%20Social!5e0!3m2!1sen!2sph!4v1\" width=\"100%\" height=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "source": "google_maps"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Friday", "time": "12:00 PM - 9:00 PM" },
+        { "days": "Saturday", "time": "10:00 AM - 9:00 PM" },
+        { "days": "Sunday", "time": "10:00 AM - 7:00 PM" }
+      ],
+      "source": "facebook"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Premium Grooming Services",
+      "source": "manual"
+    },
+    "items": [
+      {
+        "name": { "value": "House Call Haircut", "source": "setmore" },
+        "desc": { "value": "⭐ Home service — barber comes to your door for a premium cut", "source": "setmore" },
+        "price": { "value": "₱900", "source": "setmore" },
+        "icon": { "value": "🏠", "source": "manual" }
+      },
+      {
+        "name": { "value": "Classic Haircut", "source": "manual" },
+        "desc": { "value": "Scissors, clippers, and razor finish — our signature service", "source": "manual" },
+        "price": { "value": "₱250", "source": "manual" },
+        "icon": { "value": "💈", "source": "manual" }
+      },
+      {
+        "name": { "value": "Hot Towel Shave", "source": "manual" },
+        "desc": { "value": "Straight razor shave with hot towel treatment", "source": "manual" },
+        "price": { "value": "₱350", "source": "manual" },
+        "icon": { "value": "🪒", "source": "manual" }
+      },
+      {
+        "name": { "value": "Beard & Mustache Trim", "source": "manual" },
+        "desc": { "value": "Shaping, detailing, and conditioning", "source": "manual" },
+        "price": { "value": "₱200", "source": "manual" },
+        "icon": { "value": "🧔", "source": "manual" }
+      },
+      {
+        "name": { "value": "Kid's Cut", "source": "manual" },
+        "desc": { "value": "Friendly, patient service for the little gentlemen", "source": "manual" },
+        "price": { "value": "₱200", "source": "manual" },
+        "icon": { "value": "👦", "source": "manual" }
+      },
+      {
+        "name": { "value": "Hair & Beard Combo", "source": "manual" },
+        "desc": { "value": "Full grooming — haircut + hot towel shave + beard trim", "source": "manual" },
+        "price": { "value": "₱500", "source": "manual" },
+        "icon": { "value": "✨", "source": "manual" }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": "https://scontent.cdninstagram.com/v/t51.82787-15/652581426_18031277270621824_7979110474908155562_n.jpg",
+      "source": "instagram"
+    },
+    "about": {
+      "value": "https://scontent.cdninstagram.com/v/t51.82787-15/650925761_18099214817489136_5773807538635271122_n.jpg",
+      "source": "instagram"
+    },
+    "gallery": [
+      {
+        "value": "https://scontent.cdninstagram.com/v/t51.82787-15/649101867_18071448002634714_590335950599273426_n.jpg",
+        "source": "instagram",
+        "label": "Barbershop Interior"
+      },
+      {
+        "value": "https://scontent.cdninstagram.com/v/t51.82787-15/650981204_18090930098135176_1394515623418583000_n.jpg",
+        "source": "instagram",
+        "label": "Barber at Work"
+      },
+      {
+        "value": "https://scontent.cdninstagram.com/v/t51.82787-15/651155530_18108791485693010_7674039073565604621_n.jpg",
+        "source": "instagram",
+        "label": "Shop Setup"
+      },
+      {
+        "value": "https://scontent.cdninstagram.com/v/t51.82787-15/650668661_18082461527520686_2432531142776814718_n.jpg",
+        "source": "instagram",
+        "label": "Haircut Styles"
+      },
+      {
+        "value": "https://scontent.cdninstagram.com/v/t51.82787-15/656366766_18248729740305849_5302859407802614541_n.jpg",
+        "source": "instagram",
+        "label": "Grooming Products"
+      },
+      {
+        "value": "https://scontent.cdninstagram.com/v/t51.82787-15/618267360_18090386231473855_5928979076887303274_n.jpg",
+        "source": "instagram",
+        "label": "Shop Front"
+      }
+    ],
+    "maxGallery": 6,
+    "staff": [
+      {
+        "name": "Val",
+        "specialty": "Classic Cuts & Fades",
+        "photo": null
+      },
+      {
+        "name": "Celso",
+        "specialty": "Beard Grooming & Shaves",
+        "photo": null
+      }
+    ]
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": {
+          "value": "Huge congrats to one of our founders who finally tied the knot — We both love you! 🙏🏾😊",
+          "source": "instagram",
+          "verified": false
+        },
+        "name": {
+          "value": "Bond St. Social (owner post)",
+          "source": "instagram"
+        },
+        "location": {
+          "value": null,
+          "source": null
+        }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.9,
+      "source": "facebook"
+    },
+    "reviewCount": {
+      "value": 339,
+      "source": "facebook"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "Bond St. Social — Home of the Southern Gentleman. Vintage-inspired barbershop in BF Homes, Parañaque serving premium haircuts, hot towel shaves, and beard grooming since 2015. Walk-ins welcome.",
+      "source": "constructed"
+    },
+    "keywords": {
+      "value": "bond st social, bondstsocial, barbershop parañaque, bf homes barber, vintage barbershop, southern gentleman, premium haircut parañaque, aguirre ave barber, house call haircut",
+      "source": "constructed"
+    },
+    "city": {
+      "value": "Parañaque",
+      "source": "extracted_from_address"
+    },
+    "province": {
+      "value": "NCR",
+      "source": "default"
+    }
+  }
+}

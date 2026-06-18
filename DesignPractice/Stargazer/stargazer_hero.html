@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#ebbac7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
     <style>
         :root {
             --pink-bg: #ffffff;
@@ -19,14 +19,14 @@
             --stamen: #e8a850;
             --card-peach: rgba(255, 231, 210, 0.85);
             --card-pink: rgba(255, 210, 211, 0.85);
-            --card-yellow: rgba(210, 235, 200, 0.7);
+            --card-yellow: rgba(188, 208, 180, 0.7);
             --card-clear: rgba(180, 60, 90, 0.12);
             --text-primary: rgba(255, 255, 255, 0.92);
             --text-secondary: #c85a7a;
             --text-muted: rgba(200, 70, 100, 0.55);
             --font-brand: 'Proza Libre', sans-serif;
-            --font-display: 'EB Garamond', serif;
-            --font-body: 'Libre Baskerville', serif;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'EB Garamond', serif;
         }
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -383,12 +383,16 @@
         .hero-text h1 {
             font-family: var(--font-display);
             font-weight: 600;
-            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-size: clamp(3.2rem, 8vw, 6rem);
             color: var(--text-secondary);
-            letter-spacing: 0.36em;
-            line-height: 1.1;
+            letter-spacing: 0.18em;
+            line-height: 1;
             text-transform: uppercase;
             filter: url(#text-glass);
+        }
+        .hero-text h1 .italic-word {
+            font-style: italic;
+            font-weight: 700;
         }
         .hero-text .tagline {
             font-family: var(--font-display);
@@ -931,7 +935,7 @@
 
         <!-- Hero Text -->
         <div class="hero-text bloom-reveal" data-bloom-at="0.4">
-            <h1>LILIUM<br>STARGAZER</h1>
+            <h1>LILIUM<br><span class="italic-word">STARGAZER</span></h1>
             <p class="tagline">The Oriental Lily &nbsp;&middot;&nbsp; 東方の百合</p>
         </div>
 

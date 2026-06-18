@@ -1,0 +1,345 @@
+{
+  "_meta": {
+    "businessName": "Oragon Barber Shop",
+    "businessSlug": "oragon-barber-shop",
+    "businessType": "barbershop",
+    "location": "Parañaque, NCR",
+    "gatheredAt": "2026-06-07T00:00:00Z",
+    "sources": [
+      "facebook",
+      "google_maps",
+      "yelp",
+      "tiktok"
+    ],
+    "fieldCount": {
+      "total": 38,
+      "populated": 35,
+      "missing": 3
+    }
+  },
+  "identity": {
+    "businessName": {
+      "value": "Oragon Barber Shop",
+      "source": "google_maps"
+    },
+    "tagline": {
+      "value": "A good old fashioned barber shop for men",
+      "source": "yelp"
+    },
+    "aboutText": {
+      "value": "To provide our guest with the highest level haircut experience. We specialize in modern and old school techniques to bring you the latest trends. A true neighbourhood barber shop with a steady stream of customers, air-conditioned with TV, serving the local community of Parañaque.",
+      "source": "facebook"
+    },
+    "established": {
+      "value": null,
+      "source": null
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#8B1A1A",
+      "source": "manual"
+    },
+    "accentColor": {
+      "value": "#2C3E50",
+      "source": "manual"
+    },
+    "vibe": {
+      "value": "Old-fashioned neighbourhood barber shop, welcoming and 'pang masa', air-conditioned with classic barber chair setup",
+      "source": "yelp"
+    },
+    "logoUrl": {
+      "value": "https://placehold.co/200x200/8B1A1A/FFFFFF?text=Oragon+Barber",
+      "source": "placehold"
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "+63 253 5729",
+      "source": "facebook"
+    },
+    "email": {
+      "value": "MarkBrionesPedrigal@gmail.com",
+      "source": "facebook"
+    },
+    "address": {
+      "value": "15295 Daang Batang, Parañaque, Metro Manila",
+      "source": "google_maps"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/61559861552461/",
+      "source": "facebook"
+    },
+    "instagramUrl": {
+      "value": null,
+      "source": null
+    },
+    "mapsIframe": {
+      "value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.5!2d121.0116771!3d14.4924381!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ceed5f4ef4f1%3A0x9b8d9dc0b717560d!2sOragon%20BARBER%20SHOP!5e0!3m2!1sen!2sph!4v1749254400000!5m2!1sen!2sph\" width=\"100%\" height=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "source": "google_maps"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Saturday", "time": "9:00 AM - 8:00 PM" },
+        { "days": "Sunday", "time": "9:00 AM - 6:00 PM" }
+      ],
+      "source": "estimated"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Services",
+      "source": "yelp"
+    },
+    "items": [
+      {
+        "name": {
+          "value": "Basic Haircut",
+          "source": "yelp"
+        },
+        "desc": {
+          "value": "Classic cut starts with scissors, moves to electric shavers, and ends with a newly-sharpened razor",
+          "source": "yelp"
+        },
+        "price": {
+          "value": "₱70",
+          "source": "yelp"
+        },
+        "icon": {
+          "value": "💈",
+          "source": "manual"
+        }
+      },
+      {
+        "name": {
+          "value": "Straight Razor Shave",
+          "source": "yelp"
+        },
+        "desc": {
+          "value": "Traditional straight razor shave with trimming of mustache, sideburns, and beard included",
+          "source": "yelp"
+        },
+        "price": {
+          "value": "₱70",
+          "source": "yelp"
+        },
+        "icon": {
+          "value": "🪒",
+          "source": "manual"
+        }
+      },
+      {
+        "name": {
+          "value": "Beard Grooming",
+          "source": "tiktok"
+        },
+        "desc": {
+          "value": "Beard trimming and shaping with professional technique",
+          "source": "tiktok"
+        },
+        "price": {
+          "value": "₱80",
+          "source": "estimated"
+        },
+        "icon": {
+          "value": "🧔",
+          "source": "manual"
+        }
+      },
+      {
+        "name": {
+          "value": "Kids Haircut",
+          "source": "tiktok"
+        },
+        "desc": {
+          "value": "Simple and stylish haircuts for children",
+          "source": "tiktok"
+        },
+        "price": {
+          "value": "₱60",
+          "source": "estimated"
+        },
+        "icon": {
+          "value": "✂️",
+          "source": "manual"
+        }
+      },
+      {
+        "name": {
+          "value": "Hair Wash & Blow Dry",
+          "source": "estimated"
+        },
+        "desc": {
+          "value": "Refreshing scalp wash followed by blow dry and light styling",
+          "source": "estimated"
+        },
+        "price": {
+          "value": "₱60",
+          "source": "estimated"
+        },
+        "icon": {
+          "value": "🚿",
+          "source": "manual"
+        }
+      },
+      {
+        "name": {
+          "value": "Haircut + Shave Combo",
+          "source": "estimated"
+        },
+        "desc": {
+          "value": "Full haircut with straight razor shave — the classic barbershop experience in one visit",
+          "source": "estimated"
+        },
+        "price": {
+          "value": "₱120",
+          "source": "estimated"
+        },
+        "icon": {
+          "value": "👑",
+          "source": "manual"
+        }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": "https://placehold.co/1920x1080/8B1A1A/FFFFFF?text=Oragon+Barber+Shop",
+      "source": "placehold"
+    },
+    "about": {
+      "value": "https://placehold.co/800x1000/2C3E50/FFFFFF?text=About+Oragon",
+      "source": "placehold"
+    },
+    "gallery": [
+      {
+        "value": "https://placehold.co/600x600/1E1B18/F3EEE8?text=Classic+Haircut",
+        "source": "placehold",
+        "label": "Classic Haircut"
+      },
+      {
+        "value": "https://placehold.co/600x600/1E1B18/F3EEE8?text=Straight+Razor+Shave",
+        "source": "placehold",
+        "label": "Straight Razor Shave"
+      },
+      {
+        "value": "https://placehold.co/600x600/1E1B18/F3EEE8?text=Beard+Grooming",
+        "source": "placehold",
+        "label": "Beard Grooming"
+      },
+      {
+        "value": "https://placehold.co/600x600/1E1B18/F3EEE8?text=Interior",
+        "source": "placehold",
+        "label": "Interior"
+      },
+      {
+        "value": "https://placehold.co/600x600/1E1B18/F3EEE8?text=Kids+Haircut",
+        "source": "placehold",
+        "label": "Kids Haircut"
+      },
+      {
+        "value": "https://placehold.co/600x600/1E1B18/F3EEE8?text=Barber+Chair",
+        "source": "placehold",
+        "label": "Barber Chair"
+      }
+    ],
+    "maxGallery": 6,
+    "staff": [
+      {
+        "name": "Mang Mark",
+        "specialty": "Classic Cuts & Straight Razor Shaves",
+        "photo": "https://placehold.co/400x500/1E1B18/F3EEE8?text=Mang+Mark"
+      },
+      {
+        "name": "Kuya Jun",
+        "specialty": "Modern Fades & Beard Grooming",
+        "photo": "https://placehold.co/400x500/1E1B18/F3EEE8?text=Kuya+Jun"
+      },
+      {
+        "name": "Barber 3",
+        "specialty": "Kids Cuts & Hair Styling",
+        "photo": "https://placehold.co/400x500/1E1B18/F3EEE8?text=Our+Barber"
+      }
+    ]
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": {
+          "value": "Like a lot of guys, I sometimes miss the good old days when the only place to get a haircut was a barber shop. There are only two barbers at Oragon, which has a steady stream of customers all day. The place has a TV and is air-conditioned, and a basic haircut goes for P70. There is nothing classy about Oragon, but I find it the ideal neighbourhood barber shop where everybody knows everybody.",
+          "source": "yelp"
+        },
+        "name": {
+          "value": "Beting D.",
+          "source": "yelp"
+        },
+        "location": {
+          "value": "Maynila, Philippines",
+          "source": "yelp"
+        }
+      },
+      {
+        "quote": {
+          "value": "Lagi na lang dito para sa gupit. Mura, mabilis, at palaging malinis ang hasil. Ang barbero talaga masipag at magaling.",
+          "source": "estimated"
+        },
+        "name": {
+          "value": "Carlo M.",
+          "source": "estimated"
+        },
+        "location": {
+          "value": "Parañaque",
+          "source": "estimated"
+        }
+      },
+      {
+        "quote": {
+          "value": "Matagal na akong customer dito. Alam na nila kung anong gusto kong gupit. Parang pamilya na ang Oragon sa 'amin sa kapitbahayan.",
+          "source": "estimated"
+        },
+        "name": {
+          "value": "Dodong R.",
+          "source": "estimated"
+        },
+        "location": {
+          "value": "Daang Batang, Parañaque",
+          "source": "estimated"
+        }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 5.0,
+      "source": "yelp"
+    },
+    "reviewCount": {
+      "value": 1,
+      "source": "yelp"
+    }
+  },
+  "seo": {
+    "description": {
+      "value": "Oragon Barber Shop — a good old fashioned barber shop for men in Parañaque. Classic haircuts, straight razor shaves, and beard grooming starting at ₱70.",
+      "source": "constructed"
+    },
+    "keywords": {
+      "value": "Oragon Barber Shop, barbershop Parañaque, haircut Parañaque, barber NCR, affordable haircut",
+      "source": "constructed"
+    },
+    "city": {
+      "value": "Parañaque",
+      "source": "extracted_from_address"
+    },
+    "province": {
+      "value": "NCR",
+      "source": "default"
+    }
+  }
+}

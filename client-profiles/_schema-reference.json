@@ -1,0 +1,119 @@
+{
+  "_meta": {
+    "businessName": "EXAMPLE BUSINESS",
+    "businessSlug": "example-business",
+    "businessType": "cafe",
+    "location": "BF Homes, Parañaque, NCR",
+    "gatheredAt": "2026-06-02T00:00:00Z",
+    "sources": ["facebook", "google_maps", "instagram", "website"],
+    "fieldCount": { "total": 38, "populated": 32, "missing": 6 }
+  },
+  "identity": {
+    "businessName": { "value": "Example Business", "source": "google_maps" },
+    "tagline": { "value": "A sample tagline for testing.", "source": "facebook" },
+    "aboutText": { "value": "This is a sample about text that describes the business in detail. It was gathered from the Facebook page about section.", "source": "facebook" },
+    "established": { "value": "2020", "source": "facebook" }
+  },
+  "branding": {
+    "primaryColor": { "value": "#2C3D2E", "source": "extracted_from_photos" },
+    "accentColor": { "value": "#D95B43", "source": "extracted_from_photos" },
+    "vibe": { "value": "Warm industrial with wood tones and Edison bulbs", "source": "manual" },
+    "logoUrl": { "value": "https://placehold.co/200x200/2C3D2E/FAF7F2?text=Logo", "source": "facebook" }
+  },
+  "contact": {
+    "phone": { "value": "+63 917 123 4567", "source": "google_maps" },
+    "address": { "value": "123 Aguirre Avenue, BF Homes, Parañaque, NCR", "source": "google_maps" },
+    "facebookUrl": { "value": "https://facebook.com/example", "source": "facebook" },
+    "instagramUrl": { "value": "https://instagram.com/example", "source": "instagram" },
+    "mapsIframe": { "value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863!2d121.0189!3d14.4526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0:0x0!2z!5e0!3m2!1sen!2sph!4v1620000000000\"></iframe>", "source": "google_maps" },
+    "whatsapp": { "value": "+639171234567", "source": "facebook" }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Monday - Thursday", "time": "7:00 AM - 8:00 PM" },
+        { "days": "Friday - Saturday", "time": "7:00 AM - 10:00 PM" },
+        { "days": "Sunday", "time": "8:00 AM - 6:00 PM" }
+      ],
+      "source": "google_maps"
+    }
+  },
+  "offerings": {
+    "title": { "value": "Neighborhood Favorites", "source": "facebook" },
+    "items": [
+      {
+        "name": { "value": "Item One", "source": "facebook" },
+        "desc": { "value": "Description of item one.", "source": "facebook" },
+        "price": { "value": "₱120", "source": "facebook" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Item Two", "source": "facebook" },
+        "desc": { "value": "Description of item two.", "source": "facebook" },
+        "price": { "value": "₱180", "source": "facebook" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Item Three", "source": "facebook" },
+        "desc": { "value": "Description of item three.", "source": "facebook" },
+        "price": { "value": "₱150", "source": "facebook" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Item Four", "source": "facebook" },
+        "desc": { "value": "Description of item four.", "source": "facebook" },
+        "price": { "value": "₱160", "source": "facebook" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Item Five", "source": "google_maps" },
+        "desc": { "value": "Description of item five.", "source": "google_maps" },
+        "price": { "value": "₱200", "source": "google_maps" },
+        "icon": { "value": null, "source": null }
+      },
+      {
+        "name": { "value": "Item Six", "source": "google_maps" },
+        "desc": { "value": "Description of item six.", "source": "google_maps" },
+        "price": { "value": "₱250", "source": "google_maps" },
+        "icon": { "value": null, "source": null }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": { "value": "https://placehold.co/1920x1080/2C3D2E/FAF7F2?text=Hero+Image", "source": "facebook" },
+    "about": { "value": "https://placehold.co/800x1000/D95B43/FAF7F2?text=About+Image", "source": "google_maps" },
+    "gallery": [
+      { "value": "https://placehold.co/800x800/EFECE6/2C3D2E?text=Gallery+1", "source": "facebook", "label": "Storefront" },
+      { "value": "https://placehold.co/800x800/EFECE6/2C3D2E?text=Gallery+2", "source": "google_maps", "label": "Interior" },
+      { "value": "https://placehold.co/800x800/EFECE6/2C3D2E?text=Gallery+3", "source": "instagram", "label": "Product Shot" },
+      { "value": "https://placehold.co/800x800/EFECE6/2C3D2E?text=Gallery+4", "source": "google_maps", "label": "Exterior" },
+      { "value": "https://placehold.co/800x800/EFECE6/2C3D2E?text=Gallery+5", "source": "facebook", "label": "Team at Work" },
+      { "value": "https://placehold.co/800x800/EFECE6/2C3D2E?text=Gallery+6", "source": "instagram", "label": "Ambiance" }
+    ],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": { "value": "Great service, highly recommended!", "source": "google_maps" },
+        "name": { "value": "Maria S.", "source": "google_maps" },
+        "location": { "value": "BF Homes, Parañaque", "source": "google_maps" }
+      },
+      {
+        "quote": { "value": "Best in the neighborhood. Will come back again.", "source": "facebook" },
+        "name": { "value": "Juan D.", "source": "facebook" },
+        "location": { "value": "Don Bosco, Parañaque", "source": "facebook" }
+      },
+      {
+        "quote": { "value": "Reasonable prices for the quality. Five stars.", "source": "google_maps" },
+        "name": { "value": "Ana L.", "source": "google_maps" },
+        "location": { "value": "San Antonio, Parañaque", "source": "google_maps" }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": { "value": 4.6, "source": "google_maps" },
+    "reviewCount": { "value": 87, "source": "google_maps" }
+  }
+}

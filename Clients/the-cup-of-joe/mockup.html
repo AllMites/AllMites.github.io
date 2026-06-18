@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cup of Joe | Cafe in Parañaque</title>
+    <meta name="description" content="The Cup of Joe — a cozy coffee shop in Better Living, Parañaque. Handcrafted drinks from Dirty Matcha to Spanish Mocha Latte. Open daily 7AM–12AM.">
+    <link rel="icon" href="images/logo.jpg" sizes="any">
+    <meta name="keywords" content="The Cup of Joe, coffee shop Parañaque, Better Living coffee, café Parañaque, coffee near me, drinks Parañaque">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="The Cup of Joe | Cafe in Parañaque">
+    <meta property="og:description" content="The Cup of Joe — a cozy coffee shop in Better Living, Parañaque. Handcrafted drinks from Dirty Matcha to Spanish Mocha Latte. Open daily 7AM–12AM.">
+    <meta property="og:image" content="https://allmites.github.io/the-cup-of-joe/images/hero.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allmites.github.io/the-cup-of-joe/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (LocalBusiness) — populated by JS -->
+    <script type="application/ld+json" id="seo-jsonld">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "",
+        "image": "",
+        "telephone": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "",
+            "addressRegion": "",
+            "addressCountry": "PH"
+        },
+        "url": "",
+        "description": "",
+        "priceRange": "₱"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!--
+         TO RESKIN:
+           Option A (manual): Edit the SITE_CONFIG object below. Change values, save, open in browser.
+           Option B (automated): Fill in premium_config.json, run: node replace.js premium_config.json output/mockup.html premium
+
+         {{TOKEN}} placeholders below are targets for replace.js.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            // 1. BRAND COLORS & FONTS
+            theme: {
+                colors: {
+                    background: "#f5f5f5",  // Off-white / Crema
+                    text: "#061a32",        // Deep Tropical Green
+                    accent: "#fcb029",      // Terracotta / Rattan
+                    surface: "#E9E9E9",     // Slightly darker background for cards
+                    border: "#DDDDDD"       // Subtle lines
+                },
+                fonts: {
+                    heading: "'Playfair Display', serif",
+                    body: "'Poppins', sans-serif"
+                }
+            },
+
+            // 2. SEO (meta, Open Graph, JSON-LD)
+            seo: {
+                templateTitle: "The Cup of Joe | Cafe in Parañaque",  // Set via config.json token or leave blank for auto-construct
+                description: "The Cup of Joe — a cozy coffee shop in Better Living, Parañaque. Handcrafted drinks from Dirty Matcha to Spanish Mocha Latte. Open daily 7AM–12AM.",   // ~155 char meta description; auto-constructed if blank
+                keywords: "The Cup of Joe, coffee shop Parañaque, Better Living coffee, café Parañaque, coffee near me, drinks Parañaque",      // comma-separated; auto-constructed if blank
+                city: "Parañaque",          // e.g., "Parañaque"; extracted from address if blank
+                province: "NCR",      // e.g., "NCR"; defaults to "NCR" if blank
+                phone: "0953 970 0246",         // same as contact.phone; auto-copied if blank
+                image: "images/hero.jpg",         // same as hero slide 1; auto-copied if blank
+                url: null          // set at deploy time (GitHub Pages URL)
+            },
+
+            // 3. HERO CAROUSEL SECTION
+            hero: {
+                businessName: "The Cup of Joe",
+                tagline: "A place to savor life's little moments.",
+                buttonText: "See the Menu",
+                carousel: {
+                    autoplayDelay: 3500,
+                    transitionSpeed: 2400
+                },
+                slides: [
+                    { image: "images/hero.jpg", caption: "Better Living, Parañaque", headline: "The Cup of Joe", tagline: "A place to savor life's little moments." },
+                    { image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&h=1080&fit=crop", caption: "Cozy Interiors", headline: "Your Neighborhood Spot", tagline: "Stay awhile. Sip slow." },
+                    { image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&h=1080&fit=crop", caption: "Handcrafted Drinks", headline: "Crafted With Care", tagline: "From Dirty Matcha to Spanish Mocha Latte." }
+                ]
+            },
+
+            // 4. ABOUT SECTION
+            about: {
+                title: "Our Story",
+                text: "The Cup of Joe is a cozy coffee shop in Better Living, Parañaque — a place to savor life's little moments over a handcrafted cup. From Dirty Matcha to Spanish Mocha Latte, every drink is made to be enjoyed at your own pace. Open daily from 7 AM to midnight.",
+                image: "images/about.jpg"
+            },
+
+            // 5. STORY SECTION (heritage / origin narrative)
+            story: {
+                title: "How It All Began",
+                paragraph1: "It started with a simple idea: bring specialty coffee to the neighborhood without the pretension. The Cup of Joe was born in Better Living, Parañaque — a cozy corner where anyone can slow down and savor life's little moments over a handcrafted cup.",
+                paragraph2: "From the rich layers of Dirty Matcha to the creamy indulgence of Spanish Mocha Latte, every drink on our menu is made to be enjoyed at your own pace. Open daily from 7 AM to midnight, we're here whenever you need a warm cup and a quiet space.",
+                image: "images/about.jpg",
+                imageCaption: "The Cup of Joe — Better Living, Parañaque"
+            },
+
+            // 6. MENU HIGHLIGHTS (4 Items)
+            menuTitle: "Our Menu",
+            menu: [
+                { 
+                    name: "Dirty Matcha", 
+                    desc: "Rich matcha latte with an espresso kick — bold green tea meets smooth coffee.", 
+                    price: "₱179+" 
+                },
+                { 
+                    name: "Spanish Mocha Latte", 
+                    desc: "Chocolate and espresso with a Spanish twist — creamy, indulgent, and satisfying.", 
+                    price: "₱179+" 
+                },
+                { 
+                    name: "Salted Caramel Popcorn", 
+                    desc: "Sweet and salty caramel popcorn crunch — a playful treat to pair with your coffee.", 
+                    price: "₱179+" 
+                },
+                { 
+                    name: "Hazelnut Mocha", 
+                    desc: "Nutty hazelnut meets rich chocolate mocha — a warm, comforting classic.", 
+                    price: "₱179+" 
+                }
+            ],
+
+            // 7. PHOTO GALLERY (Exactly 6 image URLs)
+            galleryTitle: "Our Space",
+            galleryCards: [
+                    { image: "images/about.jpg", title: "The Space", desc: "Our cozy interior — the perfect spot to unwind and savor the moment." },
+                    { image: "images/coffee-cup.jpg", title: "Our Drinks", desc: "Handcrafted beverages — from Dirty Matcha to Spanish Mocha Latte." },
+                    { image: "images/menu-board.jpg", title: "Full Menu", desc: "Seven signature drinks and more — there's something for everyone." },
+                    { image: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=800&fit=crop", title: "Coffee Station", desc: "Watch our baristas work their craft." },
+                    { image: "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=800&fit=crop", title: "Neighborhood Vibes", desc: "A warm, welcoming corner in the heart of Better Living." },
+                    { image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=800&fit=crop", title: "Late Nights", desc: "Open until midnight — rare in the area, perfect for evening coffee runs." }
+                ],
+            gallery: [
+                "images/about.jpg",
+                "images/coffee-cup.jpg",
+                "images/menu-board.jpg",
+                "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=800&h=800&fit=crop",
+                "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=800&h=800&fit=crop",
+                "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&h=800&fit=crop"
+            ],
+
+            // 8. TESTIMONIALS
+                        testimonials: {
+                rating: 0,
+                count: 0,
+                items: [
+                    { quote: "\"Tried the Dirty Matcha — really good! Friendly staff and cozy place. Will definitely come back.\"", name: "Carlo M.", location: "Parañaque" },
+                    { quote: "\"Spanish Mocha Latte is perfect for my sweet tooth. My go-to spot in Better Living.\"", name: "Alyssa T.", location: "Parañaque" },
+                    { quote: "\"Open until midnight which is rare in the area. Perfect for late night coffee runs. Love the Salted Caramel Popcorn too.\"", name: "Paolo R.", location: "Parañaque" }
+                ]
+            },// 9. HOURS & LOCATION
+            locationTitle: "Visit Us",
+            hours: [
+                { day: "Monday - Thursday", time: "7:00 AM – 12:00 AM" },
+                { day: "Friday - Saturday", time: "7:00 AM – 12:00 AM" },
+                { day: "Sunday", time: "7:00 AM – 12:00 AM" }
+            ],
+            contact: {
+                address: "Matthew St. Annex 35, Better Living Subd. Don Bosco, Parañaque",
+                phone: "0953 970 0246",
+                facebook: "https://www.facebook.com/geyldealca",
+                instagram: "",
+                whatsapp: "https://wa.me/639539700246",
+                locationImage: "images/about.jpg",
+                // Go to Google Maps -> Share -> Embed a map -> Copy HTML
+                mapIframe: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.9516988101414!2d121.02781159999999!3d14.487462299999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cfc97b5cafc9%3A0x4601373b2a3e3022!2sThe%20Cup%20of%20Joe!5e0!3m2!1sen!2sph!4v1781771877406!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+            },
+
+            // 10. LOGO (optional — if set, replaces text logo in nav)
+            logoUrl: "images/logo.jpg"
+        };
+    </script>
+    <!-- === TOKEN REFERENCE (for replace.js) ===
+         SEO_TITLE, SEO_DESCRIPTION, SEO_KEYWORDS, SEO_CITY, SEO_PROVINCE, SEO_PHONE, SEO_IMAGE,
+         BUSINESS_NAME, TAGLINE,
+         PRIMARY_COLOR, ACCENT_COLOR, BACKGROUND_COLOR, SURFACE_COLOR, BORDER_COLOR,
+         HEADING_FONT, BODY_FONT,
+         HERO_SLIDE_1_IMAGE, HERO_SLIDE_1_CAPTION,
+         HERO_SLIDE_1_HEADLINE, HERO_SLIDE_1_TAGLINE,
+         HERO_SLIDE_2_IMAGE, HERO_SLIDE_2_CAPTION,
+         HERO_SLIDE_2_HEADLINE, HERO_SLIDE_2_TAGLINE,
+         HERO_SLIDE_3_IMAGE, HERO_SLIDE_3_CAPTION,
+         HERO_SLIDE_3_HEADLINE, HERO_SLIDE_3_TAGLINE,
+         ABOUT_TITLE, ABOUT_TEXT, ABOUT_IMAGE_URL,
+         STORY_TITLE, STORY_PARAGRAPH_1, STORY_PARAGRAPH_2,
+         STORY_IMAGE, STORY_IMAGE_CAPTION,
+         MENU_TITLE,
+         MENU_ITEM_1_NAME, MENU_ITEM_1_DESC, MENU_ITEM_1_PRICE,
+         MENU_ITEM_2_NAME, MENU_ITEM_2_DESC, MENU_ITEM_2_PRICE,
+         MENU_ITEM_3_NAME, MENU_ITEM_3_DESC, MENU_ITEM_3_PRICE,
+         MENU_ITEM_4_NAME, MENU_ITEM_4_DESC, MENU_ITEM_4_PRICE,
+         GALLERY_TITLE,
+         GALLERY_IMAGE_1 through GALLERY_IMAGE_6,
+         GALLERY_CARD_1_IMAGE, GALLERY_CARD_1_TITLE, GALLERY_CARD_1_DESC,
+         GALLERY_CARD_2_IMAGE, GALLERY_CARD_2_TITLE, GALLERY_CARD_2_DESC,
+         ... through GALLERY_CARD_6,
+         LOCATION_IMAGE,
+         TESTIMONIAL_RATING, TESTIMONIAL_COUNT,
+         TESTIMONIAL_1_QUOTE, TESTIMONIAL_1_NAME, TESTIMONIAL_1_LOCATION,
+         TESTIMONIAL_2_QUOTE, TESTIMONIAL_2_NAME, TESTIMONIAL_2_LOCATION,
+         TESTIMONIAL_3_QUOTE, TESTIMONIAL_3_NAME, TESTIMONIAL_3_LOCATION,
+         PHONE, FACEBOOK_URL, INSTAGRAM_URL, WHATSAPP_URL, WHATSAPP_NUMBER,
+         ADDRESS, MAPS_EMBED_URL,
+         HOURS_MON_THU, HOURS_FRI_SAT, HOURS_SUN,
+         LOCATION_TITLE, LOGO_URL, COPYRIGHT_YEAR
+    === END TOKEN REFERENCE === -->
+    <!-- === END EDIT HERE === -->
+    <!-- ======================================================================= -->
+
+    <!-- SYSTEM STYLES (Do not edit unless modifying structural layout) -->
+    <style>
+        /* CSS Variables mapped by JS */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #000000;
+            --surface-color: #f4f4f4;
+            --border-color: #e0e0e0;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        /* Prevent FOUC — body hidden until JS runs */
+        body { opacity: 0; transition: opacity 0.2s ease; }
+        body.ready { opacity: 1; }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Layout Utility */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        .section { padding: 130px 0; }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* Navbar */
+        #navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            padding: 1.5rem 0;
+            z-index: 100;
+            transition: all 0.4s ease;
+            color: #ffffff;
+        }
+        #navbar.scrolled {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-logo img {
+            height: 108px;
+            width: auto;
+            border-radius: 4px;
+            display: block;
+            margin: -36px 0;
+        }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: opacity 0.3s ease;
+        }
+        .nav-links a:hover { opacity: 0.7; }
+
+        /* Hero Swiper */
+        .hero-swiper { width: 100%; height: 100vh; min-height: 600px; }
+        .hero-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 800px;
+            padding: 0 5%;
+        }
+        .hero-bg-parallax {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 101;
+        }
+        .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: currentColor;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger.active .hamburger-line:nth-child(2) { opacity: 0; }
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* About */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .about-image-wrapper { position: relative; }
+        .about-image { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+        .about-text { font-size: 1.1rem; color: var(--text-color); opacity: 0.85; }
+        .about-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+
+        /* Story — inverted dark section */
+        .story-section {
+            background-color: #061a32;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        /* Subtle grain texture overlay on story section */
+        .story-section::before {
+            content: '';
+            position: absolute; inset: 0;
+            pointer-events: none; z-index: 0;
+            opacity: 0.02;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            background-size: 256px 256px;
+        }
+        /* Warm accent glow behind text */
+        .story-section::after {
+            content: '';
+            position: absolute;
+            top: 10%; right: 5%;
+            width: 350px; height: 350px;
+            background: radial-gradient(circle, rgba(252,176,41,0.15) 0%, transparent 70%);
+            pointer-events: none; z-index: 0;
+            border-radius: 50%;
+        }
+        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; position: relative; z-index: 1; }
+        .story-image-wrapper {
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            box-shadow: 0 0 0 4px rgba(252,176,41,0.25), 0 20px 60px rgba(0,0,0,0.4);
+        }
+        .story-image {
+            width: 100%;
+            height: 130%;
+            position: relative;
+            top: -15%;
+            background-size: cover;
+            background-position: center;
+        }
+        .parallax-scroll {
+            will-change: transform;
+        }
+        .story-image-caption {
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            margin-top: 0.75rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.7);
+        }
+        .story-text { font-size: 1.05rem; color: rgba(255,255,255,0.85); }
+        .story-text p + p { margin-top: 1.5rem; }
+        .story-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+            color: #fcb029;
+        }
+        /* Ornament divider before story title */
+        .story-title::before {
+            content: '☕ ☕ ☕';
+            display: block;
+            font-size: 0.9rem;
+            letter-spacing: 6px;
+            opacity: 0.4;
+            margin-bottom: 1rem;
+            font-family: sans-serif;
+        }
+
+        /* Menu */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem 5rem;
+        }
+        .menu-item { display: flex; flex-direction: column; gap: 0.5rem; }
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px dotted var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        .menu-item-name { font-size: 1.3rem; }
+        .menu-item-price { font-weight: 500; color: var(--accent-color); font-size: 1.1rem;}
+        .menu-item-desc { font-size: 0.95rem; opacity: 0.7; }
+
+        /* Gallery — card grid with texture detail */
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .gallery-card {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 8px;
+            background: var(--surface-color);
+            /* Crayon-textured border via SVG filter */
+            filter: url(#crayon-border);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+        .gallery-card:hover {
+            filter: none;
+            transform: translateY(-4px);
+        }
+        /* Inner frame — subtle inset shadow for depth */
+        .gallery-card-inner {
+            position: absolute; inset: 6px;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .gallery-card-bg {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
+            transition: transform 0.6s ease;
+        }
+        .gallery-card:hover .gallery-card-bg { transform: scale(1.05); }
+
+        /* Always-visible info bar at bottom of card */
+        .gallery-card-info {
+            position: absolute; bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(6,26,50,0.88) 0%, rgba(6,26,50,0.4) 60%, transparent 100%);
+            padding: 3rem 1.25rem 1.25rem;
+            color: #fff;
+            z-index: 2;
+        }
+        .gallery-card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        .gallery-card-desc {
+            font-size: 0.8rem;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+        /* Detail ornament — small accent line above title */
+        .gallery-card-ornament {
+            width: 24px; height: 2px;
+            background: #fcb029;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        /* Hover enhancement layer */
+        .gallery-card-overlay {
+            position: absolute; inset: 0;
+            background: rgba(6,26,50,0.35);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            z-index: 3;
+        }
+        .gallery-card:hover .gallery-card-overlay { opacity: 1; }
+        .gallery-card-zoom-icon {
+            font-size: 2.5rem;
+            color: #fff;
+            opacity: 0.9;
+        }
+
+        /* Backward compat: bare image grid (when galleryCards is empty) */
+        .gallery-item {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            background-color: var(--surface-color);
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed; inset: 0; z-index: 9999;
+            background: rgba(0,0,0,0.92);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.open { opacity: 1; pointer-events: auto; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; }
+        .lightbox-close {
+            position: absolute; top: 20px; right: 30px;
+            color: #fff; font-size: 2rem; cursor: pointer;
+            background: none; border: none; font-family: sans-serif;
+        }
+        .lightbox-nav {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            color: #fff; font-size: 2.5rem; cursor: pointer;
+            background: none; border: none; padding: 1rem; font-family: sans-serif;
+        }
+        .lightbox-nav.prev { left: 10px; }
+        .lightbox-nav.next { right: 10px; }
+
+        /* Testimonials */
+        .testimonials-section { background-color: var(--surface-color); }
+        .testimonials-swiper { padding: 0 60px; margin-top: 2rem; }
+        .testimonial-card {
+            background: var(--bg-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 100%;
+        }
+        .testimonial-stars { color: var(--accent-color); font-size: 1.1rem; letter-spacing: 2px; }
+        .testimonial-quote { font-size: 1rem; line-height: 1.7; opacity: 0.85; font-style: italic; }
+        .testimonial-author { font-size: 0.9rem; font-weight: 600; margin-top: auto; }
+        .testimonial-location { font-size: 0.8rem; opacity: 0.6; }
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .swiper-button-next, .swiper-button-prev { color: var(--text-color) !important; }
+        .swiper-button-next::after, .swiper-button-prev::after { font-size: 1.5rem !important; }
+
+        /* Swiper Pagination Dots */
+        .hero-pagination { bottom: 30px !important; z-index: 10; }
+        .hero-pagination .swiper-pagination-bullet {
+            width: 10px; height: 10px;
+            background: rgba(255,255,255,0.5);
+            opacity: 1;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .hero-pagination .swiper-pagination-bullet-active {
+            background: #fff;
+            transform: scale(1.3);
+        }
+        .testimonials-pagination { position: static; margin-top: 2rem; }
+        .testimonials-pagination .swiper-pagination-bullet {
+            width: 8px; height: 8px;
+            background: var(--border-color);
+            opacity: 1;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .testimonials-pagination .swiper-pagination-bullet-active {
+            background: var(--accent-color);
+            transform: scale(1.4);
+        }
+
+        /* Location */
+        .location-section { position: relative; overflow: hidden; }
+        .location-bg {
+            position: absolute;
+            top: -10%; left: 0; right: 0;
+            height: 70%;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            opacity: 0.15;
+        }
+        .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background-color: var(--surface-color); }
+        .location-content { padding: 4rem 10%; display: flex; flex-direction: column; justify-content: center; }
+        .map-container { width: 100%; height: 100%; min-height: 400px; }
+        .map-container iframe { width: 100%; height: 100%; min-height: 400px; }
+        .hours-list { margin: 2rem 0; border-top: 1px solid var(--border-color); }
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+        .hour-day { font-weight: 500; }
+        .contact-details { margin-top: 1rem; }
+        .contact-details a, .contact-details p { display: block; margin-bottom: 0.5rem; opacity: 0.8; }
+        .whatsapp-link::before { content: "💬 "; }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .footer-socials { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .footer-socials a { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; transition: color 0.3s ease; }
+        .footer-socials a:hover { color: var(--accent-color); }
+        .footer-copy { font-size: 0.85rem; opacity: 0.6; }
+
+        /* Sticky Mobile CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 9998;
+            background: var(--text-color);
+            padding: 12px 5%;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+        }
+        .sticky-cta a {
+            flex: 1;
+            max-width: 200px;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            text-decoration: none;
+        }
+        .sticky-cta .sticky-call { background: var(--accent-color); }
+        .sticky-cta .sticky-wa { background: #25D366; }
+        .sticky-cta a:hover { opacity: 0.9; }
+
+        /* Scroll Animations */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); transition-delay: calc(var(--i, 0) * 0.1s); }
+
+        /* Accessibility: disable motion for vestibular users */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto; }
+            .parallax-scroll { transform: none !important; }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .story-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .story-image-wrapper { aspect-ratio: 16/9; }
+            .location-grid { grid-template-columns: 1fr; }
+            .location-content { padding: 3rem 5%; }
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background-color: var(--bg-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 100;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { font-size: 1.5rem; }
+        }
+        /* Global Grain Texture Overlay */
+        .grain-overlay {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.035;
+            mix-blend-mode: multiply;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Accent line under section titles */
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 48px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 0.75rem auto 0;
+            opacity: 0.7;
+            border-radius: 2px;
+        }
+
+        /* About section subtle texture */
+        .about-section { position: relative; overflow: hidden; }
+        .about-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+        .about-section > * { position: relative; z-index: 1; }
+
+        /* Background text decoration — massive, crayon-blurred, parallax */
+        .bg-text-decor {
+            position: absolute;
+            pointer-events: none;
+            z-index: 0;
+            font-family: var(--font-heading);
+            font-size: clamp(6rem, 15vw, 18rem);
+            font-weight: 900;
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+            line-height: 1;
+            opacity: 0.02;
+            color: var(--text-color);
+            filter: url(#crayon-blur);
+            user-select: none;
+            will-change: transform;
+        }
+        /* Section-level clipping — vertical only, allow horizontal bleed */
+        .section--has-decor {
+            position: relative;
+            clip-path: inset(0 -100vw 0 -100vw);
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .section--has-decor > *:not(.bg-text-decor) {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Menu item warm highlight on hover */
+        .menu-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 1.25rem;
+            border-radius: 8px;
+        }
+        .menu-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(6,26,50,0.08);
+            background: var(--bg-color);
+        }
+        .menu-item-header { transition: border-color 0.3s ease; }
+        .menu-item:hover .menu-item-header { border-bottom-color: var(--accent-color); }
+
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .testimonials-swiper { padding: 0 16px; }
+            .sticky-cta { display: flex; }
+            body { padding-bottom: 70px; }
+        }
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SVG Filter Definitions -->
+    <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
+        <defs>
+            <!-- Crayon-textured border filter for gallery cards -->
+            <filter id="crayon-border" x="-5%" y="-5%" width="110%" height="110%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2.5" xChannelSelector="R" yChannelSelector="G" result="displaced"/>
+                <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#061a32" flood-opacity="0.12"/>
+            </filter>
+            <!-- Grain texture for sections -->
+            <filter id="grain-texture">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+                <feColorMatrix type="saturate" values="0"/>
+            </filter>
+            <!-- Crayon warp + blur for background text decorations -->
+            <filter id="crayon-blur" x="-10%" y="-10%" width="120%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" result="warped"/>
+                <feGaussianBlur in="warped" stdDeviation="1.5" result="blurred"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Nav -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" id="dom-nav-logo" class="nav-logo font-heading"></a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#story">Story</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#location">Visit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div class="swiper hero-swiper" id="hero-swiper">
+        <div class="swiper-wrapper" id="hero-slides-container">
+            <!-- Slides injected by JS -->
+        </div>
+        <div class="swiper-pagination hero-pagination"></div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section section--has-decor container">
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.06" style="top: 15%; left: -5%;">THE CUP OF JOE</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="0.09" style="bottom: 10%; right: -8%; font-size: clamp(4rem, 10vw, 12rem);">BRING COFFEE</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.04" style="top: 55%; left: -15%; font-size: clamp(5rem, 11vw, 14rem);">BETTER LIVING</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="0.07" style="top: 35%; right: -12%; font-size: clamp(3.5rem, 7vw, 8rem);">COZY • WARM • CAFE</div>
+        <div class="about-grid">
+            <div class="about-image-wrapper fade-up">
+                <img id="dom-about-img" class="about-image" src="" alt="About Us">
+            </div>
+            <div class="fade-up">
+                <h2 id="dom-about-title" class="about-title font-heading"></h2>
+                <p id="dom-about-text" class="about-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="section story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="fade-up">
+                    <h2 id="dom-story-title" class="story-title font-heading"></h2>
+                    <div id="dom-story-text" class="story-text"></div>
+                </div>
+                <div class="fade-up">
+                    <div class="story-image-wrapper">
+                        <div id="dom-story-image" class="story-image"></div>
+                    </div>
+                    <p id="dom-story-caption" class="story-image-caption"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section section--has-decor">
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.07" style="top: 8%; left: 0; right: 0; text-align: center;">COFFEE</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="0.05" style="bottom: 5%; right: -8%; font-size: clamp(3rem, 8vw, 9rem);">DIRTY MATCHA</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.03" style="top: 40%; left: -10%; font-size: clamp(6rem, 13vw, 16rem);">SPANISH LATTE</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="0.06" style="top: 65%; left: 0; right: 0; text-align: center; font-size: clamp(2.5rem, 6vw, 7rem);">SALTED CARAMEL • HAZELNUT</div>
+        <div class="container">
+            <h2 id="dom-menu-title" class="section-title font-heading fade-up"></h2>
+            <div id="dom-menu-grid" class="menu-grid">
+                <!-- Menu items injected -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section section--has-decor container">
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.08" style="top: 20%; right: -5%;">BETTER LIVING</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="0.04" style="bottom: 15%; left: -8%; font-size: clamp(5rem, 11vw, 14rem);">OUR SPACE</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.05" style="top: 50%; left: 0; right: 0; text-align: center; font-size: clamp(3rem, 7vw, 9rem);">ESPRESSO • MATCHA • MOCHA</div>
+        <h2 id="dom-gallery-title" class="section-title font-heading fade-up"></h2>
+        <div id="dom-gallery-grid" class="gallery-grid" style="margin-top: 3rem;">
+            <!-- Gallery items injected -->
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-nav prev" id="lightbox-prev">&lsaquo;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-nav next" id="lightbox-next">&rsaquo;</button>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="reviews" class="section testimonials-section section--has-decor">
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.05" style="top: 10%; left: -8%; font-size: clamp(4rem, 10vw, 12rem);">SIP SLOW</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="0.06" style="bottom: 12%; right: -10%; font-size: clamp(3.5rem, 8vw, 10rem);">NEIGHBORHOOD</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.03" style="top: 45%; left: 0; right: 0; text-align: center; font-size: clamp(2.5rem, 5vw, 6rem);">COZY • WARM • WELCOMING</div>
+        <div class="container">
+            <h2 class="section-title font-heading fade-up">What People Say</h2>
+            <div id="dom-rating-badge" class="fade-up" style="text-align: center;">
+                <span class="rating-badge">★ <span id="dom-rating-text"></span></span>
+            </div>
+            <div class="swiper testimonials-swiper" id="testimonials-swiper">
+                <div class="swiper-wrapper" id="testimonials-slides-container">
+                    <!-- Testimonial slides injected -->
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination testimonials-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Hours Section -->
+    <section id="location" class="section location-section section--has-decor" style="padding-bottom: 0;">
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.06" style="top: 30%; left: -10%;">PARAÑAQUE</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="0.08" style="top: 60%; right: -12%; font-size: clamp(4.5rem, 9vw, 11rem);">DON BOSCO</div>
+        <div class="bg-text-decor parallax-scroll" data-parallax-speed="-0.04" style="top: 15%; left: 0; right: 0; text-align: center; font-size: clamp(2rem, 4vw, 5rem);">7AM — MIDNIGHT DAILY</div>
+        <div id="dom-location-bg" class="location-bg parallax-scroll" data-parallax-speed="0.1"></div>
+        <div class="location-grid">
+            <div class="location-content fade-up">
+                <h2 id="dom-location-title" class="about-title font-heading" style="margin-bottom: 0.5rem;"></h2>
+                <div id="dom-hours-list" class="hours-list">
+                    <!-- Hours injected -->
+                </div>
+                <div class="contact-details">
+                    <p id="dom-address" class="font-heading" style="font-size: 1.2rem;"></p>
+                    <a id="dom-phone" href=""></a>
+                    <a id="dom-whatsapp" href="" target="_blank" rel="noopener" class="whatsapp-link">Message us on WhatsApp</a>
+                </div>
+            </div>
+            <div id="dom-map" class="map-container fade-up">
+                <!-- Iframe injected -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container fade-up">
+            <div class="footer-socials">
+                <a id="dom-fb" href="" target="_blank">Facebook</a>
+                <a id="dom-ig" href="" target="_blank">Instagram</a>
+                <a id="dom-wa-footer" href="" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+            <p id="dom-footer-copy" class="footer-copy"></p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta">
+        <a id="sticky-call-btn" href="#" class="sticky-call">📞 Call Now</a>
+        <a id="sticky-wa-btn" href="#" target="_blank" rel="noopener" class="sticky-wa">💬 WhatsApp</a>
+    </div>
+
+    <!-- Swiper JS + Init -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Apply CSS Variables from Config
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', SITE_CONFIG.theme.colors.background);
+            root.style.setProperty('--text-color', SITE_CONFIG.theme.colors.text);
+            root.style.setProperty('--accent-color', SITE_CONFIG.theme.colors.accent);
+            root.style.setProperty('--surface-color', SITE_CONFIG.theme.colors.surface);
+            root.style.setProperty('--border-color', SITE_CONFIG.theme.colors.border);
+            root.style.setProperty('--font-heading', SITE_CONFIG.theme.fonts.heading);
+            root.style.setProperty('--font-body', SITE_CONFIG.theme.fonts.body);
+
+            // 2. Populate SEO & Standard Content
+            const seo = SITE_CONFIG.seo;
+            const city = seo.city || "Parañaque";
+            const province = seo.province || "NCR";
+            document.title = seo.templateTitle || SITE_CONFIG.hero.businessName + " | " + city + ", " + province;
+            document.querySelector('meta[name="description"]').content = seo.description || SITE_CONFIG.hero.businessName + " — " + SITE_CONFIG.hero.tagline + ". Located in " + city + ", " + province + ".";
+            document.querySelector('meta[name="keywords"]').content = seo.keywords || SITE_CONFIG.hero.businessName.toLowerCase().replace(/\s+/g,', ') + ", " + city.toLowerCase() + ", " + province.toLowerCase();
+            // Open Graph
+            document.querySelector('meta[property="og:title"]').content = document.title;
+            document.querySelector('meta[property="og:description"]').content = seo.description || SITE_CONFIG.hero.businessName + " — " + SITE_CONFIG.hero.tagline + ".";
+            document.querySelector('meta[property="og:image"]').content = seo.image || SITE_CONFIG.hero.slides[0].image;
+            // JSON-LD LocalBusiness
+            try {
+                const ld = JSON.parse(document.getElementById('seo-jsonld').textContent);
+                ld.name = SITE_CONFIG.hero.businessName;
+                ld.image = seo.image || SITE_CONFIG.hero.slides[0].image;
+                ld.telephone = seo.phone || SITE_CONFIG.contact.phone;
+                ld.description = seo.description || SITE_CONFIG.hero.businessName + " — " + SITE_CONFIG.hero.tagline;
+                const addrParts = (SITE_CONFIG.contact.address || '').split(',').map(s => s.trim());
+                ld.address.streetAddress = addrParts[0] || SITE_CONFIG.contact.address;
+                ld.address.addressLocality = city;
+                ld.address.addressRegion = province;
+                ld.url = seo.url || window.location.href;
+                document.getElementById('seo-jsonld').textContent = JSON.stringify(ld, null, 2);
+            } catch (e) { console.warn('JSON-LD injection failed:', e); }
+
+            // Nav logo
+            if (SITE_CONFIG.logoUrl) {
+                document.getElementById('dom-nav-logo').innerHTML = '<img src="' + SITE_CONFIG.logoUrl + '" alt="' + SITE_CONFIG.hero.businessName + '">';
+            } else {
+                document.getElementById('dom-nav-logo').textContent = SITE_CONFIG.hero.businessName;
+            }
+
+            // 3. Hero slides — per-slide text with fallback to hero defaults
+            const slidesContainer = document.getElementById('hero-slides-container');
+            SITE_CONFIG.hero.slides.forEach(slide => {
+                const slideEl = document.createElement('div');
+                slideEl.className = 'swiper-slide hero-slide';
+                const headline = slide.headline || SITE_CONFIG.hero.businessName;
+                const tagline = slide.tagline || SITE_CONFIG.hero.tagline;
+                slideEl.innerHTML =
+                    '<div class="hero-bg-parallax" data-swiper-parallax="40%" style="background-image: url(\'' + slide.image + '\')"></div>' +
+                    '<div class="hero-content"><h1 class="hero-title font-heading">' + headline + '</h1><p class="hero-tagline">' + tagline + '</p><a href="#menu" class="btn">' + SITE_CONFIG.hero.buttonText + '</a></div>';
+                slidesContainer.appendChild(slideEl);
+            });
+
+            // Init Hero Swiper (with dot pagination)
+            new Swiper('.hero-swiper', {
+                effect: 'slide',
+                speed: SITE_CONFIG.hero.carousel.transitionSpeed,
+                autoplay: {
+                    delay: SITE_CONFIG.hero.carousel.autoplayDelay,
+                    disableOnInteraction: false
+                },
+                loop: true,
+                slidesPerView: 1,
+                allowTouchMove: true,
+                parallax: true,
+                pagination: {
+                    el: '.hero-pagination',
+                    clickable: true
+                }
+            });
+
+            // 4. About
+            document.getElementById('dom-about-title').textContent = SITE_CONFIG.about.title;
+            document.getElementById('dom-about-text').textContent = SITE_CONFIG.about.text;
+            document.getElementById('dom-about-img').src = SITE_CONFIG.about.image;
+
+            // 5. Story
+            document.getElementById('dom-story-title').textContent = SITE_CONFIG.story.title;
+            document.getElementById('dom-story-text').innerHTML = '<p>' + SITE_CONFIG.story.paragraph1 + '</p><p>' + SITE_CONFIG.story.paragraph2 + '</p>';
+            const storyImg = document.getElementById('dom-story-image');
+            storyImg.classList.add('parallax-scroll');
+            storyImg.dataset.parallaxSpeed = '0.13';
+            storyImg.style.backgroundImage = "url('" + SITE_CONFIG.story.image + "')";
+            document.getElementById('dom-story-caption').textContent = SITE_CONFIG.story.imageCaption;
+
+            // 6. Menu
+            document.getElementById('dom-menu-title').textContent = SITE_CONFIG.menuTitle;
+            const menuGrid = document.getElementById('dom-menu-grid');
+            SITE_CONFIG.menu.forEach((item, index) => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item fade-up';
+                menuItem.style.cssText = '--i: ' + index;
+                menuItem.innerHTML = '<div class="menu-item-header"><h3 class="menu-item-name font-heading">' + item.name + '</h3><span class="menu-item-price">' + item.price + '</span></div><p class="menu-item-desc">' + item.desc + '</p>';
+                menuGrid.appendChild(menuItem);
+            });
+
+            // 7. Gallery (cards if galleryCards[], else bare images)
+            document.getElementById('dom-gallery-title').textContent = SITE_CONFIG.galleryTitle;
+            const galleryGrid = document.getElementById('dom-gallery-grid');
+            const useCards = SITE_CONFIG.galleryCards && SITE_CONFIG.galleryCards.length > 0;
+            let galleryImages = [];
+
+            if (useCards) {
+                // Card format with texture border + always-visible detail
+                SITE_CONFIG.galleryCards.forEach((card, index) => {
+                    const cardEl = document.createElement('div');
+                    cardEl.className = 'gallery-card fade-up';
+                    cardEl.style.cssText = '--i: ' + index;
+                    cardEl.setAttribute('data-gallery-index', index);
+                    cardEl.innerHTML =
+                        '<div class="gallery-card-inner">' +
+                            '<div class="gallery-card-bg" style="background-image: url(\'' + card.image + '\')"></div>' +
+                        '</div>' +
+                        '<div class="gallery-card-info">' +
+                            '<div class="gallery-card-ornament"></div>' +
+                            '<h3 class="gallery-card-title font-heading">' + (card.title || '') + '</h3>' +
+                            '<p class="gallery-card-desc">' + (card.desc || '') + '</p>' +
+                        '</div>' +
+                        '<div class="gallery-card-overlay">' +
+                            '<span class="gallery-card-zoom-icon">🔍</span>' +
+                        '</div>';
+                    galleryGrid.appendChild(cardEl);
+                });
+
+                galleryImages = SITE_CONFIG.galleryCards.map(function(c) { return c.image; });
+                document.querySelectorAll('.gallery-card').forEach(function(card, i) {
+                    card.addEventListener('click', function() {
+                        currentImgIndex = i;
+                        lightboxImg.src = galleryImages[currentImgIndex];
+                        lightbox.classList.add('open');
+                    });
+                });
+            } else {
+                // Fallback: old bare image grid
+                SITE_CONFIG.gallery.forEach(function(imgUrl, index) {
+                    const imgContainer = document.createElement('div');
+                    imgContainer.className = 'gallery-item fade-up';
+                    imgContainer.style.cssText = '--i: ' + index;
+                    imgContainer.innerHTML = '<img src="' + imgUrl + '" alt="Gallery Image" loading="lazy">';
+                    galleryGrid.appendChild(imgContainer);
+                });
+
+                galleryImages = SITE_CONFIG.gallery;
+                document.querySelectorAll('.gallery-item img').forEach(function(img, i) {
+                    img.addEventListener('click', function() {
+                        currentImgIndex = i;
+                        lightboxImg.src = galleryImages[currentImgIndex];
+                        lightbox.classList.add('open');
+                    });
+                });
+            }
+
+            // Lightbox
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxClose = document.getElementById("lightbox-close");
+            const lightboxPrev = document.getElementById("lightbox-prev");
+            const lightboxNext = document.getElementById("lightbox-next");
+            let currentImgIndex = 0;
+
+            function closeLightbox() { lightbox.classList.remove("open"); }
+            lightboxClose.addEventListener("click", closeLightbox);
+            lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener("keydown", (e) => {
+                if (!lightbox.classList.contains("open")) return;
+                if (e.key === "Escape") closeLightbox();
+                if (e.key === "ArrowLeft") navigateLightbox(-1);
+                if (e.key === "ArrowRight") navigateLightbox(1);
+            });
+            function navigateLightbox(dir) {
+                currentImgIndex = (currentImgIndex + dir + galleryImages.length) % galleryImages.length;
+                lightboxImg.src = galleryImages[currentImgIndex];
+            }
+            lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
+            lightboxNext.addEventListener("click", () => navigateLightbox(1));
+
+            // 8. Testimonials
+            const t = SITE_CONFIG.testimonials;
+            if (t.rating && t.count > 0) {
+                document.getElementById('dom-rating-text').textContent = t.rating + ' from ' + t.count + ' reviews';
+            } else if (t.rating) {
+                document.getElementById('dom-rating-text').textContent = t.rating + ' stars';
+            } else {
+                document.getElementById('dom-rating-badge').style.display = 'none';
+            }
+
+            const testimonialsContainer = document.getElementById('testimonials-slides-container');
+            function buildStars(rating) {
+                var s = '';
+                var full = Math.floor(rating);
+                var half = (rating - full) >= 0.5 ? 1 : 0;
+                var empty = 5 - full - half;
+                for (var i = 0; i < full; i++) s += '★';
+                if (half) s += '⯪';
+                for (var j = 0; j < empty; j++) s += '☆';
+                return s;
+            }
+            const starsDisplay = t.rating ? buildStars(t.rating) : '★★★★★';
+
+            t.items.forEach(item => {
+                if (!item || !item.quote) return;
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                const locHtml = item.location ? '<span class="testimonial-location">' + item.location + '</span>' : '';
+                slide.innerHTML = '<div class="testimonial-card"><div class="testimonial-stars">' + starsDisplay + '</div><div class="testimonial-quote">' + item.quote + '</div><div class="testimonial-author">' + (item.name || '') + '</div>' + locHtml + '</div>';
+                testimonialsContainer.appendChild(slide);
+            });
+
+            // Init Testimonials Swiper
+            new Swiper('.testimonials-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                speed: 300,
+                loop: false,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                pagination: {
+                    el: '.testimonials-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2, spaceBetween: 24 }
+                }
+            });
+
+            // 9. Location & Hours
+            // Location parallax background
+            if (SITE_CONFIG.contact.locationImage) {
+                const locBg = document.getElementById('dom-location-bg');
+                locBg.style.backgroundImage = "url('" + SITE_CONFIG.contact.locationImage + "')";
+            }
+
+            document.getElementById('dom-location-title').textContent = SITE_CONFIG.locationTitle;
+            const hoursList = document.getElementById('dom-hours-list');
+            SITE_CONFIG.hours.forEach((hour, index) => {
+                const hourEl = document.createElement('div');
+                hourEl.className = 'hour-item';
+                if (index === 0) hourEl.dataset.day = "mon-thu";
+                else if (index === 1) hourEl.dataset.day = "fri-sat";
+                else if (index === 2) hourEl.dataset.day = "sun";
+                hourEl.innerHTML = '<span class="hour-day">' + hour.day + '</span><span class="hour-time">' + hour.time + '</span>';
+                hoursList.appendChild(hourEl);
+            });
+
+            // Hours dedup: if all entries have same time, collapse to "Daily"
+            var hourItems = document.querySelectorAll('.hour-item');
+            if (hourItems.length === 3) {
+                var times = [];
+                hourItems.forEach(function(el) { times.push(el.querySelector('.hour-time').textContent); });
+                if (times.every(function(t) { return t === times[0]; })) {
+                    hoursList.innerHTML = '';
+                    var dailyEl = document.createElement('div');
+                    dailyEl.className = 'hour-item';
+                    dailyEl.innerHTML = '<span class="hour-day">Daily</span><span class="hour-time">' + times[0] + '</span>';
+                    hoursList.appendChild(dailyEl);
+                }
+            }
+
+            // Highlight today's hours
+            var today = new Date().getDay();
+            var dayMap = {1:"mon-thu",2:"mon-thu",3:"mon-thu",4:"mon-thu",5:"fri-sat",6:"fri-sat",0:"sun"};
+            var todayClass = dayMap[today];
+            document.querySelectorAll(".hour-item").forEach(el => {
+                if (el.dataset.day === todayClass) {
+                    el.style.color = "var(--accent-color)";
+                    el.style.fontWeight = "600";
+                }
+            });
+
+            document.getElementById('dom-address').textContent = SITE_CONFIG.contact.address;
+            var phoneEl = document.getElementById('dom-phone');
+            phoneEl.textContent = SITE_CONFIG.contact.phone;
+            phoneEl.href = 'tel:' + SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, '');
+            document.getElementById('dom-map').innerHTML = SITE_CONFIG.contact.mapIframe;
+
+            // Footer
+            document.getElementById('dom-fb').href = SITE_CONFIG.contact.facebook;
+            document.getElementById('dom-ig').href = SITE_CONFIG.contact.instagram;
+            document.getElementById('dom-whatsapp').href = SITE_CONFIG.contact.whatsapp;
+            document.getElementById('dom-wa-footer').href = SITE_CONFIG.contact.whatsapp;
+            document.getElementById('dom-footer-copy').textContent = '© ' + new Date().getFullYear() + ' ' + SITE_CONFIG.hero.businessName + '. All rights reserved.';
+
+            // Sticky Mobile CTA
+            var stickyCall = document.getElementById('sticky-call-btn');
+            var stickyWa = document.getElementById('sticky-wa-btn');
+            if (SITE_CONFIG.contact.phone) {
+                stickyCall.href = 'tel:' + SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, '');
+            }
+            if (SITE_CONFIG.contact.whatsapp) {
+                stickyWa.href = SITE_CONFIG.contact.whatsapp;
+            }
+
+            // 10. Scroll Animations (IntersectionObserver)
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+            // 11. Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 12. Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger-btn');
+            const navLinks = document.getElementById('nav-links');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    const isOpen = navLinks.classList.toggle('open');
+                    hamburger.classList.toggle('active');
+                    hamburger.setAttribute('aria-expanded', isOpen);
+                });
+                // Close menu on link click
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('open');
+                        hamburger.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // 13. Scroll-based parallax for .parallax-scroll elements
+            (function initScrollParallax() {
+                const parallaxEls = document.querySelectorAll('.parallax-scroll');
+                if (!parallaxEls.length) return;
+
+                let hasActive = false;
+                const parallaxObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.dataset.parallaxActive = 'true';
+                            if (!hasActive) { hasActive = true; requestAnimationFrame(updateParallax); }
+                        } else {
+                            entry.target.dataset.parallaxActive = 'false';
+                        }
+                    });
+                }, { threshold: 0 });
+
+                parallaxEls.forEach(el => parallaxObserver.observe(el));
+
+                function updateParallax() {
+                    const viewportCenter = window.innerHeight / 2;
+                    let anyActive = false;
+                    parallaxEls.forEach(el => {
+                        if (el.dataset.parallaxActive !== 'true') return;
+                        anyActive = true;
+                        const rect = el.getBoundingClientRect();
+                        const elCenter = rect.top + rect.height / 2;
+                        const speed = parseFloat(el.dataset.parallaxSpeed || 0.13);
+                        const offset = (elCenter - viewportCenter) * speed;
+                        el.style.transform = 'translateY(' + offset + 'px)';
+                    });
+                    if (anyActive) { requestAnimationFrame(updateParallax); } else { hasActive = false; }
+                }
+                // Start on first frame — elements become active via IntersectionObserver
+            })();
+
+            // Reveal body after all content is injected
+            requestAnimationFrame(() => {
+                document.body.classList.add('ready');
+            });
+        });
+    </script>
+
+    <!-- Global Grain Texture Overlay -->
+    <svg class="grain-overlay" aria-hidden="true">
+        <filter id="grain">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/>
+            <feColorMatrix type="saturate" values="0"/>
+        </filter>
+        <rect width="100%" height="100%" filter="url(#grain)"/>
+    </svg>
+</body>
+</html>

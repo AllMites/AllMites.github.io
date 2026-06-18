@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Name</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Open Graph / Social Preview -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data (LocalBusiness) — populated by JS -->
+    <script type="application/ld+json" id="seo-jsonld">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "",
+        "image": "",
+        "telephone": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "",
+            "addressRegion": "",
+            "addressCountry": "PH"
+        },
+        "url": "",
+        "description": "",
+        "priceRange": "₱"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css">
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!--
+         TO RESKIN:
+           Option A (manual): Edit the SITE_CONFIG object below. Change values, save, open in browser.
+           Option B (automated): Fill in premium_config.json, run: node replace.js premium_config.json output/mockup.html premium
+
+         {{TOKEN}} placeholders below are targets for replace.js.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            // 1. BRAND COLORS & FONTS
+            theme: {
+                colors: {
+                    background: "#FAF7F2",  // Off-white / Crema
+                    text: "#2C3D2E",        // Deep Tropical Green
+                    accent: "#D95B43",      // Terracotta / Rattan
+                    surface: "#EFECE6",     // Slightly darker background for cards
+                    border: "#D6D2C9"       // Subtle lines
+                },
+                fonts: {
+                    heading: "'Playfair Display', serif",
+                    body: "'Poppins', sans-serif"
+                }
+            },
+
+            // 2. SEO (meta, Open Graph, JSON-LD)
+            seo: {
+                templateTitle: "",  // Set via config.json token or leave blank for auto-construct
+                description: "",   // ~155 char meta description; auto-constructed if blank
+                keywords: "",      // comma-separated; auto-constructed if blank
+                city: "",          // e.g., "Parañaque"; extracted from address if blank
+                province: "",      // e.g., "NCR"; defaults to "NCR" if blank
+                phone: "",         // same as contact.phone; auto-copied if blank
+                image: "",         // same as hero slide 1; auto-copied if blank
+                url: null          // set at deploy time (GitHub Pages URL)
+            },
+
+            // 3. HERO CAROUSEL SECTION
+            hero: {
+                businessName: "Kanto Coffee",
+                tagline: "Your neighborhood brew, elevated.",
+                buttonText: "See the Menu",
+                carousel: {
+                    autoplayDelay: 3500,
+                    transitionSpeed: 2400
+                },
+                slides: [
+                    { image: "https://images.unsplash.com/photo-1564849744694-348ecd00c279?w=1920&h=1080&fit=crop", caption: "", headline: "", tagline: "" },
+                    { image: "https://images.unsplash.com/photo-1606486544554-164d98da4889?w=1920&h=1080&fit=crop", caption: "", headline: "", tagline: "" },
+                    { image: "https://images.unsplash.com/photo-1675005881989-9455fd3780c6?w=1920&h=1080&fit=crop", caption: "", headline: "", tagline: "" }
+                ]
+            },
+
+            // 4. ABOUT SECTION
+            about: {
+                title: "Our Story",
+                text: "Born on a busy street corner in BF Homes, Kanto Coffee elevates the daily Filipino habit of 'kape at kwentuhan'. We source premium local beans from the highlands of Atok to Mount Apo, serving them with authentic neighborhood warmth. Whether you're here for a quick morning pandesal or a slow afternoon pour-over, there's always a seat for you at the kanto.",
+                image: "https://images.unsplash.com/photo-1762657440624-d0b5cfae5bac?w=800&h=1000&fit=crop"
+            },
+
+            // 5. STORY SECTION (heritage / origin narrative)
+            story: {
+                title: "How It All Began",
+                paragraph1: "It started with a simple idea: bring specialty coffee to the neighborhood without the pretension. Our founder spent years tasting beans from across the Philippines — from the highlands of Atok to the slopes of Mount Apo — searching for flavors that would make people stop and say, 'Sarap naman.'",
+                paragraph2: "What began as a small cart on a street corner has grown into a space where friends meet, stories are shared, and every cup tells a story. The name 'Kanto' is a nod to where we started — and a reminder that the best things in life happen on street corners, over a warm cup of coffee.",
+                image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&h=600&fit=crop",
+                imageCaption: "Our founder at the original kanto cart, 2018"
+            },
+
+            // 6. MENU HIGHLIGHTS (4 Items)
+            menuTitle: "Neighborhood Favorites",
+            menu: [
+                {
+                    name: "Kape Barako Pour Over",
+                    desc: "Single-origin Batangas beans, bold and earthy.",
+                    price: "₱120"
+                },
+                {
+                    name: "Ube Macapuno Latte",
+                    desc: "Signature espresso with sweet purple yam and coconut milk.",
+                    price: "₱180"
+                },
+                {
+                    name: "Pandesal & Kesong Puti",
+                    desc: "Warm artisanal pandesal with local white cheese and guava jam.",
+                    price: "₱150"
+                },
+                {
+                    name: "Calamansi Espresso Tonic",
+                    desc: "Refreshing iced espresso splashed with fresh calamansi and tonic.",
+                    price: "₱160"
+                }
+            ],
+
+            // 7. PHOTO GALLERY (Exactly 6 image URLs)
+            galleryTitle: "Our Space",
+            galleryCards: [
+                { image: "https://images.unsplash.com/photo-1606486544554-164d98da4889?w=800&h=800&fit=crop", title: "The Main Bar", desc: "Our centerpiece, hand-built from reclaimed wood." },
+                { image: "https://images.unsplash.com/photo-1564849744694-348ecd00c279?w=800&h=800&fit=crop", title: "Outdoor Patio", desc: "Al fresco seating under string lights." },
+                { image: "https://images.unsplash.com/photo-1675005881989-9455fd3780c6?w=800&h=800&fit=crop", title: "The Reading Nook", desc: "Quiet corner with curated books and good lighting." },
+                { image: "https://images.unsplash.com/photo-1675306408031-a9aad9f23308?w=800&h=800&fit=crop", title: "Coffee Station", desc: "Watch our baristas work their craft." },
+                { image: "https://images.unsplash.com/photo-1645677020082-721a854c24f2?w=800&h=800&fit=crop", title: "Private Room", desc: "Bookable for small gatherings and meetings." },
+                { image: "https://images.unsplash.com/photo-1628394726060-37cc4da4cf03?w=800&h=800&fit=crop", title: "Weekend Setup", desc: "Saturday market pop-up with local vendors." }
+            ],
+            gallery: [
+                "https://images.unsplash.com/photo-1606486544554-164d98da4889?w=800&h=800&fit=crop",
+                "https://images.unsplash.com/photo-1564849744694-348ecd00c279?w=800&h=800&fit=crop",
+                "https://images.unsplash.com/photo-1675005881989-9455fd3780c6?w=800&h=800&fit=crop",
+                "https://images.unsplash.com/photo-1675306408031-a9aad9f23308?w=800&h=800&fit=crop",
+                "https://images.unsplash.com/photo-1645677020082-721a854c24f2?w=800&h=800&fit=crop",
+                "https://images.unsplash.com/photo-1628394726060-37cc4da4cf03?w=800&h=800&fit=crop"
+            ],
+
+            // 8. TESTIMONIALS
+            testimonials: {
+                rating: 4.5,
+                count: 27,
+                items: [
+                    { quote: "\"Great coffee and cozy atmosphere!\"", name: "Maria", location: "Parañaque" },
+                    { quote: "\"The best neighborhood cafe in BF. Their Ube Latte is a must-try.\"", name: "Juan", location: "Las Piñas" },
+                    { quote: "\"Love the vibe and the staff are amazing. Perfect place to work.\"", name: "Carla", location: "Makati" }
+                ]
+            },
+
+            // 9. HOURS & LOCATION
+            locationTitle: "Visit Us",
+            hours: [
+                { day: "Monday - Thursday", time: "7:00 AM - 8:00 PM" },
+                { day: "Friday - Saturday", time: "7:00 AM - 10:00 PM" },
+                { day: "Sunday", time: "8:00 AM - 6:00 PM" }
+            ],
+            contact: {
+                address: "123 Aguirre Avenue, BF Homes, Parañaque, NCR",
+                phone: "+63 917 123 4567",
+                facebook: "https://facebook.com",
+                instagram: "https://instagram.com",
+                whatsapp: "https://wa.me/639171234567",
+                locationImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1200&h=800&fit=crop",
+                // Go to Google Maps -> Share -> Embed a map -> Copy HTML
+                mapIframe: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0605988168273!2d121.0189!3d14.4526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDI3JzA5LjQiTiAxMjHCsDAxJzA4LjAiRQ!5e0!3m2!1sen!2sph!4v1620000000000!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+            },
+
+            // 10. LOGO (optional — if set, replaces text logo in nav)
+            logoUrl: null
+        };
+    </script>
+    <!-- === TOKEN REFERENCE (for replace.js) ===
+         SEO_TITLE, SEO_DESCRIPTION, SEO_KEYWORDS, SEO_CITY, SEO_PROVINCE, SEO_PHONE, SEO_IMAGE,
+         BUSINESS_NAME, TAGLINE,
+         PRIMARY_COLOR, ACCENT_COLOR, BACKGROUND_COLOR, SURFACE_COLOR, BORDER_COLOR,
+         HEADING_FONT, BODY_FONT,
+         HERO_SLIDE_1_IMAGE, HERO_SLIDE_1_CAPTION,
+         HERO_SLIDE_1_HEADLINE, HERO_SLIDE_1_TAGLINE,
+         HERO_SLIDE_2_IMAGE, HERO_SLIDE_2_CAPTION,
+         HERO_SLIDE_2_HEADLINE, HERO_SLIDE_2_TAGLINE,
+         HERO_SLIDE_3_IMAGE, HERO_SLIDE_3_CAPTION,
+         HERO_SLIDE_3_HEADLINE, HERO_SLIDE_3_TAGLINE,
+         ABOUT_TITLE, ABOUT_TEXT, ABOUT_IMAGE_URL,
+         STORY_TITLE, STORY_PARAGRAPH_1, STORY_PARAGRAPH_2,
+         STORY_IMAGE, STORY_IMAGE_CAPTION,
+         MENU_TITLE,
+         MENU_ITEM_1_NAME, MENU_ITEM_1_DESC, MENU_ITEM_1_PRICE,
+         MENU_ITEM_2_NAME, MENU_ITEM_2_DESC, MENU_ITEM_2_PRICE,
+         MENU_ITEM_3_NAME, MENU_ITEM_3_DESC, MENU_ITEM_3_PRICE,
+         MENU_ITEM_4_NAME, MENU_ITEM_4_DESC, MENU_ITEM_4_PRICE,
+         GALLERY_TITLE,
+         GALLERY_IMAGE_1 through GALLERY_IMAGE_6,
+         GALLERY_CARD_1_IMAGE, GALLERY_CARD_1_TITLE, GALLERY_CARD_1_DESC,
+         GALLERY_CARD_2_IMAGE, GALLERY_CARD_2_TITLE, GALLERY_CARD_2_DESC,
+         ... through GALLERY_CARD_6,
+         LOCATION_IMAGE,
+         TESTIMONIAL_RATING, TESTIMONIAL_COUNT,
+         TESTIMONIAL_1_QUOTE, TESTIMONIAL_1_NAME, TESTIMONIAL_1_LOCATION,
+         TESTIMONIAL_2_QUOTE, TESTIMONIAL_2_NAME, TESTIMONIAL_2_LOCATION,
+         TESTIMONIAL_3_QUOTE, TESTIMONIAL_3_NAME, TESTIMONIAL_3_LOCATION,
+         PHONE, FACEBOOK_URL, INSTAGRAM_URL, WHATSAPP_URL, WHATSAPP_NUMBER,
+         ADDRESS, MAPS_EMBED_URL,
+         HOURS_MON_THU, HOURS_FRI_SAT, HOURS_SUN,
+         LOCATION_TITLE, LOGO_URL, COPYRIGHT_YEAR
+    === END TOKEN REFERENCE === -->
+    <!-- === END EDIT HERE === -->
+    <!-- ======================================================================= -->
+
+    <!-- SYSTEM STYLES (Do not edit unless modifying structural layout) -->
+    <style>
+        /* CSS Variables mapped by JS */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #000000;
+            --surface-color: #f4f4f4;
+            --border-color: #e0e0e0;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        /* Prevent FOUC — body hidden until JS runs */
+        body { opacity: 0; transition: opacity 0.2s ease; }
+        body.ready { opacity: 1; }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Layout Utility */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        .section { padding: 130px 0; }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        /* Navbar */
+        #navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            padding: 1.5rem 0;
+            z-index: 100;
+            transition: all 0.4s ease;
+            color: #ffffff;
+        }
+        #navbar.scrolled {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .nav-logo img {
+            height: 108px;
+            width: auto;
+            border-radius: 4px;
+            display: block;
+            margin: -36px 0;
+        }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: opacity 0.3s ease;
+        }
+        .nav-links a:hover { opacity: 0.7; }
+
+        /* Hero Swiper */
+        .hero-swiper { width: 100%; height: 100vh; min-height: 600px; }
+        .hero-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0.5));
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 800px;
+            padding: 0 5%;
+        }
+        .hero-bg-parallax {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            z-index: 101;
+        }
+        .hamburger-line {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: currentColor;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+        .hamburger.active .hamburger-line:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+        .hamburger.active .hamburger-line:nth-child(2) { opacity: 0; }
+        .hamburger.active .hamburger-line:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* About */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .about-image-wrapper { position: relative; }
+        .about-image { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+        .about-text { font-size: 1.1rem; color: var(--text-color); opacity: 0.85; }
+        .about-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+
+        /* Story */
+        .story-section { background-color: var(--surface-color); }
+        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .story-image-wrapper {
+            overflow: hidden;
+            aspect-ratio: 4/3;
+        }
+        .story-image {
+            width: 100%;
+            height: 130%;
+            position: relative;
+            top: -15%;
+            background-size: cover;
+            background-position: center;
+        }
+        .parallax-scroll {
+            will-change: transform;
+        }
+        .story-image-caption {
+            text-align: center;
+            font-size: 0.85rem;
+            opacity: 0.6;
+            margin-top: 0.75rem;
+            font-style: italic;
+        }
+        .story-text { font-size: 1.05rem; color: var(--text-color); opacity: 0.85; }
+        .story-text p + p { margin-top: 1.5rem; }
+        .story-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+
+        /* Menu */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 4rem 5rem;
+        }
+        .menu-item { display: flex; flex-direction: column; gap: 0.5rem; }
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px dotted var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        .menu-item-name { font-size: 1.3rem; }
+        .menu-item-price { font-weight: 500; color: var(--accent-color); font-size: 1.1rem;}
+        .menu-item-desc { font-size: 0.95rem; opacity: 0.7; }
+
+        /* Gallery */
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+        .gallery-card {
+            position: relative;
+            aspect-ratio: 3/4;
+            overflow: hidden;
+            cursor: pointer;
+            border-radius: 6px;
+        }
+        .gallery-card-bg {
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
+            transition: transform 0.6s ease;
+        }
+        .gallery-card:hover .gallery-card-bg { transform: scale(1.05); }
+
+        .gallery-card-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 40%, transparent 100%);
+            display: flex; flex-direction: column; justify-content: flex-end;
+            padding: 1.5rem;
+            color: #fff;
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .gallery-card:hover .gallery-card-overlay { opacity: 1; }
+
+        .gallery-card-title { font-size: 1.15rem; font-weight: 600; margin-bottom: 0.25rem; }
+        .gallery-card-desc { font-size: 0.85rem; opacity: 0.85; line-height: 1.4; }
+
+        /* Backward compat: bare image grid (when galleryCards is empty) */
+        .gallery-item {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            background-color: var(--surface-color);
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed; inset: 0; z-index: 9999;
+            background: rgba(0,0,0,0.92);
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.open { opacity: 1; pointer-events: auto; }
+        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; }
+        .lightbox-close {
+            position: absolute; top: 20px; right: 30px;
+            color: #fff; font-size: 2rem; cursor: pointer;
+            background: none; border: none; font-family: sans-serif;
+        }
+        .lightbox-nav {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            color: #fff; font-size: 2.5rem; cursor: pointer;
+            background: none; border: none; padding: 1rem; font-family: sans-serif;
+        }
+        .lightbox-nav.prev { left: 10px; }
+        .lightbox-nav.next { right: 10px; }
+
+        /* Testimonials */
+        .testimonials-section { background-color: var(--surface-color); }
+        .testimonials-swiper { padding: 0 60px; margin-top: 2rem; }
+        .testimonial-card {
+            background: var(--bg-color);
+            border-radius: 12px;
+            padding: 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            height: 100%;
+        }
+        .testimonial-stars { color: var(--accent-color); font-size: 1.1rem; letter-spacing: 2px; }
+        .testimonial-quote { font-size: 1rem; line-height: 1.7; opacity: 0.85; font-style: italic; }
+        .testimonial-author { font-size: 0.9rem; font-weight: 600; margin-top: auto; }
+        .testimonial-location { font-size: 0.8rem; opacity: 0.6; }
+        .rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent-color);
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .swiper-button-next, .swiper-button-prev { color: var(--text-color) !important; }
+        .swiper-button-next::after, .swiper-button-prev::after { font-size: 1.5rem !important; }
+
+        /* Swiper Pagination Dots */
+        .hero-pagination { bottom: 30px !important; z-index: 10; }
+        .hero-pagination .swiper-pagination-bullet {
+            width: 10px; height: 10px;
+            background: rgba(255,255,255,0.5);
+            opacity: 1;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .hero-pagination .swiper-pagination-bullet-active {
+            background: #fff;
+            transform: scale(1.3);
+        }
+        .testimonials-pagination { position: static; margin-top: 2rem; }
+        .testimonials-pagination .swiper-pagination-bullet {
+            width: 8px; height: 8px;
+            background: var(--border-color);
+            opacity: 1;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+        .testimonials-pagination .swiper-pagination-bullet-active {
+            background: var(--accent-color);
+            transform: scale(1.4);
+        }
+
+        /* Location */
+        .location-section { position: relative; overflow: hidden; }
+        .location-bg {
+            position: absolute;
+            top: -10%; left: 0; right: 0;
+            height: 70%;
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+            opacity: 0.15;
+        }
+        .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background-color: var(--surface-color); }
+        .location-content { padding: 4rem 10%; display: flex; flex-direction: column; justify-content: center; }
+        .map-container { width: 100%; height: 100%; min-height: 400px; }
+        .map-container iframe { width: 100%; height: 100%; min-height: 400px; }
+        .hours-list { margin: 2rem 0; border-top: 1px solid var(--border-color); }
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+        .hour-day { font-weight: 500; }
+        .contact-details { margin-top: 1rem; }
+        .contact-details a, .contact-details p { display: block; margin-bottom: 0.5rem; opacity: 0.8; }
+        .whatsapp-link::before { content: "💬 "; }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .footer-socials { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .footer-socials a { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; transition: color 0.3s ease; }
+        .footer-socials a:hover { color: var(--accent-color); }
+        .footer-copy { font-size: 0.85rem; opacity: 0.6; }
+
+        /* Sticky Mobile CTA */
+        .sticky-cta {
+            display: none;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 9998;
+            background: var(--text-color);
+            padding: 12px 5%;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+        }
+        .sticky-cta a {
+            flex: 1;
+            max-width: 200px;
+            text-align: center;
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            text-decoration: none;
+        }
+        .sticky-cta .sticky-call { background: var(--accent-color); }
+        .sticky-cta .sticky-wa { background: #25D366; }
+        .sticky-cta a:hover { opacity: 0.9; }
+
+        /* Scroll Animations */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); transition-delay: calc(var(--i, 0) * 0.1s); }
+
+        /* Accessibility: disable motion for vestibular users */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            html { scroll-behavior: auto; }
+            .parallax-scroll { transform: none !important; }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .story-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .story-image-wrapper { aspect-ratio: 16/9; }
+            .location-grid { grid-template-columns: 1fr; }
+            .location-content { padding: 3rem 5%; }
+            .hamburger { display: flex; }
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0; left: 0; right: 0; bottom: 0;
+                background-color: var(--bg-color);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 100;
+            }
+            .nav-links.open { display: flex; }
+            .nav-links a { font-size: 1.5rem; }
+        }
+        @media (max-width: 768px) {
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-card-overlay { opacity: 1; }
+            .testimonials-grid { grid-template-columns: 1fr; }
+            .testimonials-swiper { padding: 0 16px; }
+            .sticky-cta { display: flex; }
+            body { padding-bottom: 70px; }
+        }
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" id="dom-nav-logo" class="nav-logo font-heading"></a>
+            <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <div class="nav-links" id="nav-links">
+                <a href="#about">About</a>
+                <a href="#story">Story</a>
+                <a href="#menu">Menu</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#location">Visit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Carousel -->
+    <div class="swiper hero-swiper" id="hero-swiper">
+        <div class="swiper-wrapper" id="hero-slides-container">
+            <!-- Slides injected by JS -->
+        </div>
+        <div class="swiper-pagination hero-pagination"></div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="section container">
+        <div class="about-grid">
+            <div class="about-image-wrapper fade-up">
+                <img id="dom-about-img" class="about-image" src="" alt="About Us">
+            </div>
+            <div class="fade-up">
+                <h2 id="dom-about-title" class="about-title font-heading"></h2>
+                <p id="dom-about-text" class="about-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="section story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="fade-up">
+                    <h2 id="dom-story-title" class="story-title font-heading"></h2>
+                    <div id="dom-story-text" class="story-text"></div>
+                </div>
+                <div class="fade-up">
+                    <div class="story-image-wrapper">
+                        <div id="dom-story-image" class="story-image"></div>
+                    </div>
+                    <p id="dom-story-caption" class="story-image-caption"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 id="dom-menu-title" class="section-title font-heading fade-up"></h2>
+            <div id="dom-menu-grid" class="menu-grid">
+                <!-- Menu items injected -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="section container">
+        <h2 id="dom-gallery-title" class="section-title font-heading fade-up"></h2>
+        <div id="dom-gallery-grid" class="gallery-grid" style="margin-top: 3rem;">
+            <!-- Gallery items injected -->
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-nav prev" id="lightbox-prev">&lsaquo;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-nav next" id="lightbox-next">&rsaquo;</button>
+    </div>
+
+    <!-- Testimonials Section -->
+    <section id="reviews" class="section testimonials-section">
+        <div class="container">
+            <h2 class="section-title font-heading fade-up">What People Say</h2>
+            <div id="dom-rating-badge" class="fade-up" style="text-align: center;">
+                <span class="rating-badge">★ <span id="dom-rating-text"></span></span>
+            </div>
+            <div class="swiper testimonials-swiper" id="testimonials-swiper">
+                <div class="swiper-wrapper" id="testimonials-slides-container">
+                    <!-- Testimonial slides injected -->
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination testimonials-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Hours Section -->
+    <section id="location" class="section location-section" style="padding-bottom: 0;">
+        <div id="dom-location-bg" class="location-bg parallax-scroll" data-parallax-speed="0.1"></div>
+        <div class="location-grid">
+            <div class="location-content fade-up">
+                <h2 id="dom-location-title" class="about-title font-heading" style="margin-bottom: 0.5rem;"></h2>
+                <div id="dom-hours-list" class="hours-list">
+                    <!-- Hours injected -->
+                </div>
+                <div class="contact-details">
+                    <p id="dom-address" class="font-heading" style="font-size: 1.2rem;"></p>
+                    <a id="dom-phone" href=""></a>
+                    <a id="dom-whatsapp" href="" target="_blank" rel="noopener" class="whatsapp-link">Message us on WhatsApp</a>
+                </div>
+            </div>
+            <div id="dom-map" class="map-container fade-up">
+                <!-- Iframe injected -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container fade-up">
+            <div class="footer-socials">
+                <a id="dom-fb" href="" target="_blank">Facebook</a>
+                <a id="dom-ig" href="" target="_blank">Instagram</a>
+                <a id="dom-wa-footer" href="" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+            <p id="dom-footer-copy" class="footer-copy"></p>
+        </div>
+    </footer>
+
+    <!-- Sticky Mobile CTA -->
+    <div class="sticky-cta">
+        <a id="sticky-call-btn" href="#" class="sticky-call">📞 Call Now</a>
+        <a id="sticky-wa-btn" href="#" target="_blank" rel="noopener" class="sticky-wa">💬 WhatsApp</a>
+    </div>
+
+    <!-- Swiper JS + Init -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Apply CSS Variables from Config
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', SITE_CONFIG.theme.colors.background);
+            root.style.setProperty('--text-color', SITE_CONFIG.theme.colors.text);
+            root.style.setProperty('--accent-color', SITE_CONFIG.theme.colors.accent);
+            root.style.setProperty('--surface-color', SITE_CONFIG.theme.colors.surface);
+            root.style.setProperty('--border-color', SITE_CONFIG.theme.colors.border);
+            root.style.setProperty('--font-heading', SITE_CONFIG.theme.fonts.heading);
+            root.style.setProperty('--font-body', SITE_CONFIG.theme.fonts.body);
+
+            // 2. Populate SEO & Standard Content
+            const seo = SITE_CONFIG.seo;
+            const city = seo.city || "Parañaque";
+            const province = seo.province || "NCR";
+            document.title = seo.templateTitle || SITE_CONFIG.hero.businessName + " | " + city + ", " + province;
+            document.querySelector('meta[name="description"]').content = seo.description || SITE_CONFIG.hero.businessName + " — " + SITE_CONFIG.hero.tagline + ". Located in " + city + ", " + province + ".";
+            document.querySelector('meta[name="keywords"]').content = seo.keywords || SITE_CONFIG.hero.businessName.toLowerCase().replace(/\s+/g,', ') + ", " + city.toLowerCase() + ", " + province.toLowerCase();
+            // Open Graph
+            document.querySelector('meta[property="og:title"]').content = document.title;
+            document.querySelector('meta[property="og:description"]').content = seo.description || SITE_CONFIG.hero.businessName + " — " + SITE_CONFIG.hero.tagline + ".";
+            document.querySelector('meta[property="og:image"]').content = seo.image || SITE_CONFIG.hero.slides[0].image;
+            // JSON-LD LocalBusiness
+            try {
+                const ld = JSON.parse(document.getElementById('seo-jsonld').textContent);
+                ld.name = SITE_CONFIG.hero.businessName;
+                ld.image = seo.image || SITE_CONFIG.hero.slides[0].image;
+                ld.telephone = seo.phone || SITE_CONFIG.contact.phone;
+                ld.description = seo.description || SITE_CONFIG.hero.businessName + " — " + SITE_CONFIG.hero.tagline;
+                const addrParts = (SITE_CONFIG.contact.address || '').split(',').map(s => s.trim());
+                ld.address.streetAddress = addrParts[0] || SITE_CONFIG.contact.address;
+                ld.address.addressLocality = city;
+                ld.address.addressRegion = province;
+                ld.url = seo.url || window.location.href;
+                document.getElementById('seo-jsonld').textContent = JSON.stringify(ld, null, 2);
+            } catch (e) { console.warn('JSON-LD injection failed:', e); }
+
+            // Nav logo
+            if (SITE_CONFIG.logoUrl) {
+                document.getElementById('dom-nav-logo').innerHTML = '<img src="' + SITE_CONFIG.logoUrl + '" alt="' + SITE_CONFIG.hero.businessName + '">';
+            } else {
+                document.getElementById('dom-nav-logo').textContent = SITE_CONFIG.hero.businessName;
+            }
+
+            // 3. Hero slides — per-slide text with fallback to hero defaults
+            const slidesContainer = document.getElementById('hero-slides-container');
+            SITE_CONFIG.hero.slides.forEach(slide => {
+                const slideEl = document.createElement('div');
+                slideEl.className = 'swiper-slide hero-slide';
+                const headline = slide.headline || SITE_CONFIG.hero.businessName;
+                const tagline = slide.tagline || SITE_CONFIG.hero.tagline;
+                slideEl.innerHTML =
+                    '<div class="hero-bg-parallax" data-swiper-parallax="40%" style="background-image: url(\'' + slide.image + '\')"></div>' +
+                    '<div class="hero-content"><h1 class="hero-title font-heading">' + headline + '</h1><p class="hero-tagline">' + tagline + '</p><a href="#menu" class="btn">' + SITE_CONFIG.hero.buttonText + '</a></div>';
+                slidesContainer.appendChild(slideEl);
+            });
+
+            // Init Hero Swiper (with dot pagination)
+            new Swiper('.hero-swiper', {
+                effect: 'slide',
+                speed: SITE_CONFIG.hero.carousel.transitionSpeed,
+                autoplay: {
+                    delay: SITE_CONFIG.hero.carousel.autoplayDelay,
+                    disableOnInteraction: false
+                },
+                loop: true,
+                slidesPerView: 1,
+                allowTouchMove: true,
+                parallax: true,
+                pagination: {
+                    el: '.hero-pagination',
+                    clickable: true
+                }
+            });
+
+            // 4. About
+            document.getElementById('dom-about-title').textContent = SITE_CONFIG.about.title;
+            document.getElementById('dom-about-text').textContent = SITE_CONFIG.about.text;
+            document.getElementById('dom-about-img').src = SITE_CONFIG.about.image;
+
+            // 5. Story
+            document.getElementById('dom-story-title').textContent = SITE_CONFIG.story.title;
+            document.getElementById('dom-story-text').innerHTML = '<p>' + SITE_CONFIG.story.paragraph1 + '</p><p>' + SITE_CONFIG.story.paragraph2 + '</p>';
+            const storyImg = document.getElementById('dom-story-image');
+            storyImg.classList.add('parallax-scroll');
+            storyImg.dataset.parallaxSpeed = '0.13';
+            storyImg.style.backgroundImage = "url('" + SITE_CONFIG.story.image + "')";
+            document.getElementById('dom-story-caption').textContent = SITE_CONFIG.story.imageCaption;
+
+            // 6. Menu
+            document.getElementById('dom-menu-title').textContent = SITE_CONFIG.menuTitle;
+            const menuGrid = document.getElementById('dom-menu-grid');
+            SITE_CONFIG.menu.forEach((item, index) => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item fade-up';
+                menuItem.style.cssText = '--i: ' + index;
+                menuItem.innerHTML = '<div class="menu-item-header"><h3 class="menu-item-name font-heading">' + item.name + '</h3><span class="menu-item-price">' + item.price + '</span></div><p class="menu-item-desc">' + item.desc + '</p>';
+                menuGrid.appendChild(menuItem);
+            });
+
+            // 7. Gallery (cards if galleryCards[], else bare images)
+            document.getElementById('dom-gallery-title').textContent = SITE_CONFIG.galleryTitle;
+            const galleryGrid = document.getElementById('dom-gallery-grid');
+            const useCards = SITE_CONFIG.galleryCards && SITE_CONFIG.galleryCards.length > 0;
+            let galleryImages = [];
+
+            if (useCards) {
+                // New card format
+                SITE_CONFIG.galleryCards.forEach((card, index) => {
+                    const cardEl = document.createElement('div');
+                    cardEl.className = 'gallery-card fade-up';
+                    cardEl.style.cssText = '--i: ' + index;
+                    cardEl.setAttribute('data-gallery-index', index);
+                    cardEl.innerHTML =
+                        '<div class="gallery-card-bg" style="background-image: url(\'' + card.image + '\')"></div>' +
+                        '<div class="gallery-card-overlay">' +
+                            '<h3 class="gallery-card-title font-heading">' + (card.title || '') + '</h3>' +
+                            '<p class="gallery-card-desc">' + (card.desc || '') + '</p>' +
+                        '</div>';
+                    galleryGrid.appendChild(cardEl);
+                });
+
+                galleryImages = SITE_CONFIG.galleryCards.map(function(c) { return c.image; });
+                document.querySelectorAll('.gallery-card').forEach(function(card, i) {
+                    card.addEventListener('click', function() {
+                        currentImgIndex = i;
+                        lightboxImg.src = galleryImages[currentImgIndex];
+                        lightbox.classList.add('open');
+                    });
+                });
+            } else {
+                // Fallback: old bare image grid
+                SITE_CONFIG.gallery.forEach(function(imgUrl, index) {
+                    const imgContainer = document.createElement('div');
+                    imgContainer.className = 'gallery-item fade-up';
+                    imgContainer.style.cssText = '--i: ' + index;
+                    imgContainer.innerHTML = '<img src="' + imgUrl + '" alt="Gallery Image" loading="lazy">';
+                    galleryGrid.appendChild(imgContainer);
+                });
+
+                galleryImages = SITE_CONFIG.gallery;
+                document.querySelectorAll('.gallery-item img').forEach(function(img, i) {
+                    img.addEventListener('click', function() {
+                        currentImgIndex = i;
+                        lightboxImg.src = galleryImages[currentImgIndex];
+                        lightbox.classList.add('open');
+                    });
+                });
+            }
+
+            // Lightbox
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+            const lightboxClose = document.getElementById("lightbox-close");
+            const lightboxPrev = document.getElementById("lightbox-prev");
+            const lightboxNext = document.getElementById("lightbox-next");
+            let currentImgIndex = 0;
+
+            function closeLightbox() { lightbox.classList.remove("open"); }
+            lightboxClose.addEventListener("click", closeLightbox);
+            lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
+            document.addEventListener("keydown", (e) => {
+                if (!lightbox.classList.contains("open")) return;
+                if (e.key === "Escape") closeLightbox();
+                if (e.key === "ArrowLeft") navigateLightbox(-1);
+                if (e.key === "ArrowRight") navigateLightbox(1);
+            });
+            function navigateLightbox(dir) {
+                currentImgIndex = (currentImgIndex + dir + galleryImages.length) % galleryImages.length;
+                lightboxImg.src = galleryImages[currentImgIndex];
+            }
+            lightboxPrev.addEventListener("click", () => navigateLightbox(-1));
+            lightboxNext.addEventListener("click", () => navigateLightbox(1));
+
+            // 8. Testimonials
+            const t = SITE_CONFIG.testimonials;
+            if (t.rating && t.count > 0) {
+                document.getElementById('dom-rating-text').textContent = t.rating + ' from ' + t.count + ' reviews';
+            } else if (t.rating) {
+                document.getElementById('dom-rating-text').textContent = t.rating + ' stars';
+            } else {
+                document.getElementById('dom-rating-badge').style.display = 'none';
+            }
+
+            const testimonialsContainer = document.getElementById('testimonials-slides-container');
+            function buildStars(rating) {
+                var s = '';
+                var full = Math.floor(rating);
+                var half = (rating - full) >= 0.5 ? 1 : 0;
+                var empty = 5 - full - half;
+                for (var i = 0; i < full; i++) s += '★';
+                if (half) s += '⯪';
+                for (var j = 0; j < empty; j++) s += '☆';
+                return s;
+            }
+            const starsDisplay = t.rating ? buildStars(t.rating) : '★★★★★';
+
+            t.items.forEach(item => {
+                if (!item || !item.quote) return;
+                const slide = document.createElement('div');
+                slide.className = 'swiper-slide';
+                const locHtml = item.location ? '<span class="testimonial-location">' + item.location + '</span>' : '';
+                slide.innerHTML = '<div class="testimonial-card"><div class="testimonial-stars">' + starsDisplay + '</div><div class="testimonial-quote">' + item.quote + '</div><div class="testimonial-author">' + (item.name || '') + '</div>' + locHtml + '</div>';
+                testimonialsContainer.appendChild(slide);
+            });
+
+            // Init Testimonials Swiper
+            new Swiper('.testimonials-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                speed: 300,
+                loop: false,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev'
+                },
+                pagination: {
+                    el: '.testimonials-pagination',
+                    clickable: true
+                },
+                breakpoints: {
+                    768: { slidesPerView: 2, spaceBetween: 24 }
+                }
+            });
+
+            // 9. Location & Hours
+            // Location parallax background
+            if (SITE_CONFIG.contact.locationImage) {
+                const locBg = document.getElementById('dom-location-bg');
+                locBg.style.backgroundImage = "url('" + SITE_CONFIG.contact.locationImage + "')";
+            }
+
+            document.getElementById('dom-location-title').textContent = SITE_CONFIG.locationTitle;
+            const hoursList = document.getElementById('dom-hours-list');
+            SITE_CONFIG.hours.forEach((hour, index) => {
+                const hourEl = document.createElement('div');
+                hourEl.className = 'hour-item';
+                if (index === 0) hourEl.dataset.day = "mon-thu";
+                else if (index === 1) hourEl.dataset.day = "fri-sat";
+                else if (index === 2) hourEl.dataset.day = "sun";
+                hourEl.innerHTML = '<span class="hour-day">' + hour.day + '</span><span class="hour-time">' + hour.time + '</span>';
+                hoursList.appendChild(hourEl);
+            });
+
+            // Hours dedup: if all entries have same time, collapse to "Daily"
+            var hourItems = document.querySelectorAll('.hour-item');
+            if (hourItems.length === 3) {
+                var times = [];
+                hourItems.forEach(function(el) { times.push(el.querySelector('.hour-time').textContent); });
+                if (times.every(function(t) { return t === times[0]; })) {
+                    hoursList.innerHTML = '';
+                    var dailyEl = document.createElement('div');
+                    dailyEl.className = 'hour-item';
+                    dailyEl.innerHTML = '<span class="hour-day">Daily</span><span class="hour-time">' + times[0] + '</span>';
+                    hoursList.appendChild(dailyEl);
+                }
+            }
+
+            // Highlight today's hours
+            var today = new Date().getDay();
+            var dayMap = {1:"mon-thu",2:"mon-thu",3:"mon-thu",4:"mon-thu",5:"fri-sat",6:"fri-sat",0:"sun"};
+            var todayClass = dayMap[today];
+            document.querySelectorAll(".hour-item").forEach(el => {
+                if (el.dataset.day === todayClass) {
+                    el.style.color = "var(--accent-color)";
+                    el.style.fontWeight = "600";
+                }
+            });
+
+            document.getElementById('dom-address').textContent = SITE_CONFIG.contact.address;
+            var phoneEl = document.getElementById('dom-phone');
+            phoneEl.textContent = SITE_CONFIG.contact.phone;
+            phoneEl.href = 'tel:' + SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, '');
+            document.getElementById('dom-map').innerHTML = SITE_CONFIG.contact.mapIframe;
+
+            // Footer
+            document.getElementById('dom-fb').href = SITE_CONFIG.contact.facebook;
+            document.getElementById('dom-ig').href = SITE_CONFIG.contact.instagram;
+            document.getElementById('dom-whatsapp').href = SITE_CONFIG.contact.whatsapp;
+            document.getElementById('dom-wa-footer').href = SITE_CONFIG.contact.whatsapp;
+            document.getElementById('dom-footer-copy').textContent = '© ' + new Date().getFullYear() + ' ' + SITE_CONFIG.hero.businessName + '. All rights reserved.';
+
+            // Sticky Mobile CTA
+            var stickyCall = document.getElementById('sticky-call-btn');
+            var stickyWa = document.getElementById('sticky-wa-btn');
+            if (SITE_CONFIG.contact.phone) {
+                stickyCall.href = 'tel:' + SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, '');
+            }
+            if (SITE_CONFIG.contact.whatsapp) {
+                stickyWa.href = SITE_CONFIG.contact.whatsapp;
+            }
+
+            // 10. Scroll Animations (IntersectionObserver)
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+            // 11. Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            // 12. Hamburger menu toggle
+            const hamburger = document.getElementById('hamburger-btn');
+            const navLinks = document.getElementById('nav-links');
+            if (hamburger && navLinks) {
+                hamburger.addEventListener('click', () => {
+                    const isOpen = navLinks.classList.toggle('open');
+                    hamburger.classList.toggle('active');
+                    hamburger.setAttribute('aria-expanded', isOpen);
+                });
+                // Close menu on link click
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('open');
+                        hamburger.classList.remove('active');
+                        hamburger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            }
+
+            // 13. Scroll-based parallax for .parallax-scroll elements
+            (function initScrollParallax() {
+                const parallaxEls = document.querySelectorAll('.parallax-scroll');
+                if (!parallaxEls.length) return;
+
+                let hasActive = false;
+                const parallaxObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.dataset.parallaxActive = 'true';
+                            if (!hasActive) { hasActive = true; requestAnimationFrame(updateParallax); }
+                        } else {
+                            entry.target.dataset.parallaxActive = 'false';
+                        }
+                    });
+                }, { threshold: 0 });
+
+                parallaxEls.forEach(el => parallaxObserver.observe(el));
+
+                function updateParallax() {
+                    const viewportCenter = window.innerHeight / 2;
+                    let anyActive = false;
+                    parallaxEls.forEach(el => {
+                        if (el.dataset.parallaxActive !== 'true') return;
+                        anyActive = true;
+                        const rect = el.getBoundingClientRect();
+                        const elCenter = rect.top + rect.height / 2;
+                        const speed = parseFloat(el.dataset.parallaxSpeed || 0.13);
+                        const offset = (elCenter - viewportCenter) * speed;
+                        el.style.transform = 'translateY(' + offset + 'px)';
+                    });
+                    if (anyActive) { requestAnimationFrame(updateParallax); } else { hasActive = false; }
+                }
+                // Start on first frame — elements become active via IntersectionObserver
+            })();
+
+            // Reveal body after all content is injected
+            requestAnimationFrame(() => {
+                document.body.classList.add('ready');
+            });
+        });
+    </script>
+</body>
+</html>

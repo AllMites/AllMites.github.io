@@ -1,0 +1,249 @@
+{
+  "_meta": {
+    "businessName": "Sinaya Coffee",
+    "businessSlug": "sinaya-coffee",
+    "businessType": "cafe",
+    "location": "Las Piñas, NCR",
+    "gatheredAt": "2026-06-03T08:05:00+08:00",
+    "updatedAt": "2026-06-03T00:00:00+08:00",
+    "sources": [
+      "facebook",
+      "instagram",
+      "philstar_life",
+      "foodpanda",
+      "tiktok",
+      "google_maps",
+      "menu_images"
+    ],
+    "fieldCount": {
+      "total": 34,
+      "populated": 32,
+      "missing": 2
+    },
+    "stillMissing": [
+      "identity.established",
+      "contact.whatsapp"
+    ],
+    "unverified": [
+      "socialProof.testimonials[1].quote",
+      "socialProof.testimonials[2].quote"
+    ]
+  },
+  "identity": {
+    "businessName": {
+      "value": "Sinaya Coffee",
+      "source": "facebook"
+    },
+    "tagline": {
+      "value": "Life begins after coffee — Fresh brews & sweet treats await.",
+      "source": "instagram"
+    },
+    "aboutText": {
+      "value": "Named after a sea goddess who embodies serenity, nourishment, and connection. A cozy, pet-friendly cafe in Pilar Village, Las Piñas offering specialty coffee, matcha, frappes, mocktails, and comfort food in a warm space with couches and cushions.",
+      "source": "philstar_life"
+    },
+    "established": {
+      "value": null,
+      "source": null
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#2C3D2E",
+      "source": "default_cafe_palette"
+    },
+    "accentColor": {
+      "value": "#D95B43",
+      "source": "default_cafe_palette"
+    },
+    "vibe": {
+      "value": "Warm, cozy, pet-friendly, nature-inspired — sea goddess serenity, couch-and-cushion comfort",
+      "source": "manual"
+    },
+    "logoUrl": {
+      "value": "https://scontent.cdninstagram.com/v/t51.2885-19/466142006_894162239101030_5885242822250592644_n.jpg",
+      "source": "instagram"
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "09953588748",
+      "source": "instagram_story"
+    },
+    "address": {
+      "value": "18 Mod St., Pilar Village, Las Piñas City, Metro Manila",
+      "source": "instagram"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/people/Sinaya-Coffee/61568244761074/",
+      "source": "facebook"
+    },
+    "instagramUrl": {
+      "value": "https://www.instagram.com/sinayacoffee/",
+      "source": "instagram"
+    },
+    "mapsIframe": {
+      "value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3864.034451427025!2d121.0125046!3d14.4251776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d1002128529d%3A0x6b67fe0b6cdccea7!2sSinaya%20Coffee!5e0!3m2!1sen!2sph!4v1780479689391!5m2!1sen!2sph\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "source": "google_maps"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Daily", "time": "11:00 AM - 10:00 PM" }
+      ],
+      "source": "instagram_story",
+      "note": "Updated starting May 16 per store advisory"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Neighborhood Favorites",
+      "source": "manual"
+    },
+    "items": [
+      {
+        "name": { "value": "Sinaya Signature", "source": "menu_images" },
+        "desc": { "value": "The house specialty drink — only at Sinaya", "source": "manual" },
+        "price": { "value": "P180", "source": "menu_images" },
+        "icon": { "value": "☕", "source": "manual" }
+      },
+      {
+        "name": { "value": "Matcha & Frappe", "source": "menu_images" },
+        "desc": { "value": "Matcha Latte, Java Chip, Creamy Avocado, Biscoff Bliss", "source": "menu_images" },
+        "price": { "value": "P165 - P230", "source": "menu_images" },
+        "icon": { "value": "🍵", "source": "manual" }
+      },
+      {
+        "name": { "value": "Bagnet Classics", "source": "menu_images" },
+        "desc": { "value": "Bagnet Sisig, Binagoongan, Kare Kare, and in Sinaya Sauce", "source": "menu_images" },
+        "price": { "value": "P190 - P260", "source": "menu_images" },
+        "icon": { "value": "🍖", "source": "manual" }
+      },
+      {
+        "name": { "value": "Hickory Ribs", "source": "menu_images" },
+        "desc": { "value": "Solo, Half Rack, or Full Rack — slow-cooked, fall-off-the-bone", "source": "menu_images" },
+        "price": { "value": "P380 - P1,199", "source": "menu_images" },
+        "icon": { "value": "🥩", "source": "manual" }
+      },
+      {
+        "name": { "value": "Pizza & Quesadilla", "source": "menu_images" },
+        "desc": { "value": "Truffle Honey Pizza, Hawaiian, Beef & Chicken Quesadilla", "source": "menu_images" },
+        "price": { "value": "P230 - P529", "source": "menu_images" },
+        "icon": { "value": "🍕", "source": "manual" }
+      },
+      {
+        "name": { "value": "Mocktails & Lemon Series", "source": "menu_images" },
+        "desc": { "value": "Strawberry Lychee, Brazilian Lemonade, Pink Lemonade and more", "source": "menu_images" },
+        "price": { "value": "P110 - P195", "source": "menu_images" },
+        "icon": { "value": "🍹", "source": "manual" }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": "https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/470204157_122114294756608158_833400815224387645_n.jpg",
+      "source": "facebook"
+    },
+    "about": {
+      "value": "https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/701705312_122182291514608158_8329786311750094293_n.jpg",
+      "source": "facebook"
+    },
+    "gallery": [
+      {
+        "value": "https://scontent.fmnl37-2.fna.fbcdn.net/v/t39.30808-6/470204157_122114294756608158_833400815224387645_n.jpg",
+        "source": "facebook",
+        "label": "Cafe interior"
+      },
+      {
+        "value": "https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/702100232_122181870734608158_7461581980165723835_n.jpg",
+        "source": "facebook",
+        "label": "Interior shot"
+      },
+      {
+        "value": "https://scontent.fmnl37-2.fna.fbcdn.net/v/t51.82787-15/670779700_17921830773348220_845084911713058881_n.jpg",
+        "source": "facebook",
+        "label": "Drink photo"
+      },
+      {
+        "value": "https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/690929009_122181098030608158_8753615871021357107_n.jpg",
+        "source": "facebook",
+        "label": "Food photo"
+      },
+      {
+        "value": "https://scontent.fmnl3-1.fna.fbcdn.net/v/t39.30808-6/691081337_122181092072608158_4236722567975094418_n.jpg",
+        "source": "facebook",
+        "label": "Cafe ambiance"
+      },
+      {
+        "value": "https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/669334035_122178627482608158_5297819998156770463_n.jpg",
+        "source": "facebook",
+        "label": "Storefront"
+      }
+    ],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "seo": {
+    "description": {
+      "value": "Sinaya Coffee — Life begins after coffee. Cozy, pet-friendly cafe in Pilar Village, Las Piñas offering specialty coffee, matcha, frappes, mocktails, and comfort food.",
+      "source": "constructed"
+    },
+    "keywords": {
+      "value": "sinaya coffee, las piñas, coffee, cafe, pilar village, pet-friendly cafe, matcha, frappe",
+      "source": "constructed"
+    },
+    "city": {
+      "value": "Las Piñas",
+      "source": "extracted_from_address"
+    },
+    "province": {
+      "value": "NCR",
+      "source": "default"
+    }
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": {
+          "value": "100% recommend — cozy place, great coffee",
+          "source": "facebook"
+        },
+        "name": { "value": "Facebook Reviewer", "source": "facebook" },
+        "location": { "value": "Las Piñas", "source": "facebook" }
+      },
+      {
+        "quote": {
+          "value": "Baristas perfectly made our orders and served them fast — the place was so cozy!",
+          "source": "facebook",
+          "verified": false
+        },
+        "name": { "value": "Facebook Reviewer", "source": "facebook" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": {
+          "value": "Good variety of coffee mixes with prices at par with other cafes.",
+          "source": "facebook",
+          "verified": false
+        },
+        "name": { "value": "Facebook Reviewer", "source": "facebook" },
+        "location": { "value": null, "source": null }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.3,
+      "source": "google_maps"
+    },
+    "reviewCount": {
+      "value": 30,
+      "source": "google_maps"
+    }
+  }
+}

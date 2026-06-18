@@ -1,0 +1,239 @@
+{
+  "_meta": {
+    "businessName": "Maestro Café",
+    "businessSlug": "maestro-cafe",
+    "businessType": "cafe",
+    "location": "Angono, Rizal",
+    "gatheredAt": "2026-06-03T09:45:00+08:00",
+    "updatedAt": "2026-06-03T00:00:00+08:00",
+    "sources": [
+      "facebook",
+      "google_maps",
+      "restaurant_guru",
+      "menu_images"
+    ],
+    "fieldCount": {
+      "total": 34,
+      "populated": 33,
+      "missing": 1
+    },
+    "stillMissing": [
+      "identity.established"
+    ],
+    "unverified": []
+  },
+  "identity": {
+    "businessName": {
+      "value": "Maestro Café",
+      "source": "facebook"
+    },
+    "tagline": {
+      "value": "Master the Art of Filipino Flavor — where art, music, and cuisine come together in perfect harmony.",
+      "source": "facebook"
+    },
+    "aboutText": {
+      "value": "Once a beloved music-themed hangout (Music Wizard Cafe), Maestro Café is the same soul in a new key. We've traded the wizard hat for the conductor's baton — still playing the music of art, culture, and Filipino flavor. Every dish is a composition, every coffee a concerto. From Spanish Lattes to sizzling sisig, we serve Filipino and American comfort food in a space that hums with warmth and creativity.",
+      "source": "facebook"
+    },
+    "established": {
+      "value": null,
+      "source": null
+    }
+  },
+  "branding": {
+    "primaryColor": {
+      "value": "#4A2C2A",
+      "source": "default_cafe_palette"
+    },
+    "accentColor": {
+      "value": "#D4A853",
+      "source": "default_cafe_palette"
+    },
+    "vibe": {
+      "value": "Warm, art-and-music-inspired, Filipino comfort — cozy interior with gallery touches, warm lighting, family-friendly",
+      "source": "manual"
+    },
+    "logoUrl": {
+      "value": null,
+      "source": null
+    }
+  },
+  "contact": {
+    "phone": {
+      "value": "+63 961 656 8113",
+      "source": "restaurant_guru"
+    },
+    "address": {
+      "value": "CPV Business Center, Manila East Road cor. Col Guido Street, Barangay San Roque, Angono, Rizal",
+      "source": "facebook"
+    },
+    "facebookUrl": {
+      "value": "https://www.facebook.com/maestrocafeph/",
+      "source": "facebook"
+    },
+    "instagramUrl": {
+      "value": null,
+      "source": null
+    },
+    "mapsIframe": {
+      "value": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.2797887868865!2d121.15770599999998!3d14.5259821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c6c64f6a544b%3A0xb02e820c2db44ff!2sMAESTRO%20CAF%C3%89!5e0!3m2!1sen!2sph!4v1780495051782!5m2!1sen!2sph\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+      "source": "user_provided"
+    },
+    "whatsapp": {
+      "value": null,
+      "source": null
+    }
+  },
+  "hours": {
+    "schedule": {
+      "value": [
+        { "days": "Daily", "time": "11:00 AM - 9:00 PM" }
+      ],
+      "source": "restaurant_guru"
+    }
+  },
+  "offerings": {
+    "title": {
+      "value": "Our Menu",
+      "source": "manual"
+    },
+    "items": [
+      {
+        "name": { "value": "Spanish Latte", "source": "menu_images" },
+        "desc": { "value": "⭐ Must-try — rich espresso with steamed milk and Spanish-style sweetness", "source": "manual" },
+        "price": { "value": "P175 - P185", "source": "menu_images" },
+        "icon": { "value": "☕", "source": "manual" }
+      },
+      {
+        "name": { "value": "Matcha Espresso Duet", "source": "menu_images" },
+        "desc": { "value": "⭐ Must-try — creamy matcha meets espresso", "source": "manual" },
+        "price": { "value": "P175 - P185", "source": "menu_images" },
+        "icon": { "value": "🍵", "source": "manual" }
+      },
+      {
+        "name": { "value": "Manak ni San Pedro", "source": "menu_images" },
+        "desc": { "value": "⭐ Classic or Spicy — signature chicken dish", "source": "manual" },
+        "price": { "value": "P305 - P505", "source": "menu_images" },
+        "icon": { "value": "🍗", "source": "manual" }
+      },
+      {
+        "name": { "value": "Maestro Sisig", "source": "menu_images" },
+        "desc": { "value": "⭐ Signature sizzling sisig — a crowd favorite", "source": "manual" },
+        "price": { "value": "P415", "source": "menu_images" },
+        "icon": { "value": "🍳", "source": "manual" }
+      },
+      {
+        "name": { "value": "Crispy Pato", "source": "menu_images" },
+        "desc": { "value": "⭐ Crispy fried duck — best for sharing", "source": "manual" },
+        "price": { "value": "P735", "source": "menu_images" },
+        "icon": { "value": "🦆", "source": "manual" }
+      },
+      {
+        "name": { "value": "Mango Smoothie", "source": "menu_images" },
+        "desc": { "value": "⭐ Refreshing fruit smoothie — cool and creamy", "source": "manual" },
+        "price": { "value": "P185", "source": "menu_images" },
+        "icon": { "value": "🥭", "source": "manual" }
+      }
+    ],
+    "maxItems": 6
+  },
+  "images": {
+    "hero": {
+      "value": "images/hero.jpg",
+      "source": "facebook"
+    },
+    "about": {
+      "value": "images/hero.jpg",
+      "source": "restaurant_guru"
+    },
+    "gallery": [
+      {
+        "value": "images/hero.jpg",
+        "source": "restaurant_guru",
+        "label": "Cafe dining area and interior"
+      },
+      {
+        "value": "images/food1.jpg",
+        "source": "restaurant_guru",
+        "label": "Food plating"
+      },
+      {
+        "value": "images/food2.jpg",
+        "source": "restaurant_guru",
+        "label": "Cafe food"
+      },
+      {
+        "value": "images/food3.jpg",
+        "source": "restaurant_guru",
+        "label": "Meal spread"
+      },
+      {
+        "value": "images/food1.jpg",
+        "source": "restaurant_guru",
+        "label": "Food plating (alt)"
+      },
+      {
+        "value": "images/food3.jpg",
+        "source": "restaurant_guru",
+        "label": "Meal spread (alt)"
+      }
+    ],
+    "maxGallery": 6,
+    "staff": []
+  },
+  "seo": {
+    "description": {
+      "value": "Maestro Café — Master the Art of Filipino Flavor. Filipino and American comfort food, specialty coffee, and refreshing beverages in Angono, Rizal.",
+      "source": "constructed"
+    },
+    "keywords": {
+      "value": "maestro cafe, angono, rizal, filipino food, coffee, cafe, restaurant angono, filipino cuisine",
+      "source": "constructed"
+    },
+    "city": {
+      "value": "Angono",
+      "source": "extracted_from_address"
+    },
+    "province": {
+      "value": "Rizal",
+      "source": "extracted_from_address"
+    }
+  },
+  "socialProof": {
+    "testimonials": [
+      {
+        "quote": {
+          "value": "It has a cozy vibe. Loving the drinks, especially their mocha. They have a variety of pastas to choose from. With the feel you can get, I could stay there longer.",
+          "source": "user_provided"
+        },
+        "name": { "value": "Alyssa C", "source": "user_provided" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": {
+          "value": "The vibe and the service is very friendly.",
+          "source": "user_provided"
+        },
+        "name": { "value": "Anna", "source": "user_provided" },
+        "location": { "value": null, "source": null }
+      },
+      {
+        "quote": {
+          "value": "Masarap at mura (Delicious and cheap) — the food is great for the price.",
+          "source": "google_maps"
+        },
+        "name": { "value": "Adonis Mausisa", "source": "google_maps" },
+        "location": { "value": null, "source": null }
+      }
+    ],
+    "maxTestimonials": 3,
+    "rating": {
+      "value": 4.5,
+      "source": "restaurant_guru"
+    },
+    "reviewCount": {
+      "value": 135,
+      "source": "restaurant_guru"
+    }
+  }
+}
