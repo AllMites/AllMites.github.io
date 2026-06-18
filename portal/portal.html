@@ -754,14 +754,14 @@ body {
 <div id="errorScreen" class="card hidden" role="alert">
   <span class="error-icon">&#x26A0;&#xFE0F;</span>
   <h2>Could not load your project</h2>
-  <p>We couldn't find a project matching your link. Double-check the URL or reach out to Rider for assistance.</p>
+  <p>We couldn't find a project matching your link. Double-check the URL or reach out to Daniel for assistance.</p>
 </div>
 
 <!-- PORTAL CONTENT -->
 <div id="portalContent">
   <!-- HEADER -->
   <div class="header card" style="padding-bottom:16px;">
-    <span class="brand">Rider &middot; Web</span>
+    <span class="brand">Daniel Asis</span>
     <span id="statusBadge" class="status-badge">Loading</span>
   </div>
 
@@ -805,12 +805,12 @@ body {
     <p>Thank you! Your agreement has been acknowledged. The next step is to send the deposit so we can begin working on your site.</p>
     <div class="payment-section">
       <p style="font-size:0.82rem;color:var(--text-muted);margin-bottom:4px;">Send deposit to:</p>
-      <p style="font-weight:700;margin-bottom:4px;">Rider Web</p>
+      <p style="font-weight:700;margin-bottom:4px;">Daniel Asis</p>
       <div id="paymentDetails" class="payment-details">
         <div class="payment-amount" id="depositAmount">&#x20B1;7,500</div>
         <div id="paymentInfoText" class="payment-instruction">Bank transfer details loading...</div>
       </div>
-      <div class="payment-instruction">Once sent, message Rider to confirm. We'll update your portal within 24 hours.</div>
+      <div class="payment-instruction">Once sent, message Daniel to confirm. We'll update your portal within 24 hours.</div>
     </div>
   </div>
 
@@ -867,8 +867,8 @@ body {
   <div id="sectionCompleted" class="card status-section hidden">
     <h2>Project Complete &#x2705;</h2>
     <p>Your website project is fully complete. We hope you love it!</p>
-    <p style="margin-top:12px;">Need ongoing updates, content changes, or a new page? Maintenance is available at &#x20B1;2,500/month &mdash; just message Rider.</p>
-    <p style="font-size:0.82rem;color:var(--text-muted);">Reach out to Rider to discuss maintenance options.</p>
+    <p style="margin-top:12px;">Need ongoing updates, content changes, or a new page? Maintenance is available at &#x20B1;2,500/month &mdash; just message Daniel.</p>
+    <p style="font-size:0.82rem;color:var(--text-muted);">Reach out to Daniel to discuss maintenance options.</p>
   </div>
 
   <!-- QUICK ACTIONS -->
@@ -1036,7 +1036,7 @@ body {
     if (data.payment_info) {
       paymentInfoText.innerHTML = data.payment_info.replace(/\n/g, '<br>');
     } else {
-      paymentInfoText.textContent = 'Bank details provided via GCash. Contact Rider for instructions.';
+      paymentInfoText.textContent = 'Bank details provided via GCash. Contact Daniel for instructions.';
     }
 
     /* Mockup / live links */
@@ -1287,13 +1287,13 @@ body {
         .then(function(result) {
           if (result.error) {
             console.warn('Failed to save agreement:', result.error);
-            showToast('Saved locally! Rider will follow up.');
+            showToast('Saved locally! Daniel will follow up.');
           } else {
             showToast('Agreement recorded! We\'ll confirm shortly.');
           }
         });
     } else {
-      showToast('Thanks! Rider will confirm your agreement shortly.');
+      showToast('Thanks! Daniel will confirm your agreement shortly.');
     }
   });
 
