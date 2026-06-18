@@ -11,19 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Proza+Libre:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700;1,800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --pink-bg: #ebbac7;
+            --pink-bg: #ffffff;
             --blush-pink: #d4849a;
             --hot-pink: #e4507a;
             --void: #0d1117;
             --deep-purple: #1a0a2e;
             --stamen: #e8a850;
-            --card-peach: rgba(255, 231, 210, 0.7);
-            --card-pink: rgba(255, 210, 211, 0.7);
-            --card-yellow: rgba(253, 255, 210, 0.45);
-            --card-clear: rgba(0, 0, 0, 0.25);
+            --card-peach: rgba(255, 231, 210, 0.85);
+            --card-pink: rgba(255, 210, 211, 0.85);
+            --card-yellow: rgba(253, 255, 210, 0.65);
+            --card-clear: rgba(180, 60, 90, 0.12);
             --text-primary: rgba(255, 255, 255, 0.92);
-            --text-secondary: rgba(255, 255, 255, 0.58);
-            --text-muted: rgba(255, 255, 255, 0.38);
+            --text-secondary: #d45a7a;
+            --text-muted: rgba(200, 70, 100, 0.55);
             --font-brand: 'Proza Libre', sans-serif;
             --font-display: 'EB Garamond', serif;
             --font-body: 'Libre Baskerville', serif;
@@ -39,7 +39,7 @@
         }
 
         body {
-            background: #c890a5;
+            background: #ffffff;
             color: var(--text-primary);
             font-family: var(--font-body);
             height: 100vh;
@@ -1239,6 +1239,81 @@
 
         document.addEventListener('mouseleave', function() {
             lastPos = null;
+        });
+    })();
+    </script>
+
+    <!-- ── Mouse Parallax + Liquid Distortion ── -->
+    <script>
+    (function initParallaxAndLiquid() {
+        var isDesktop = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        if (!isDesktop) return;
+
+        var bgClone = document.querySelector('.parallax-clone--bg');
+        var fgClone = document.querySelector('.parallax-clone--fg');
+        if (!bgClone || !fgClone) return;
+
+        // SVG filter elements for liquid distortion
+        var turbulence = document.getElementById('ld-turbulence');
+        var displacement = document.getElementById('ld-displacement');
+        if (!turbulence || !displacement) return;
+
+        // Mouse state
+        var mouse = { x: 0, y: 0 };
+        var smoothBg = { x: 0, y: 0 };
+        var smoothFg = { x: 0, y: 0 };
+        var prevMouse = { x: 0, y: 0 };
+        var speed = 0;
+        var smoothSpeed = 0;
+
+        // Track mouse position + speed
+        document.addEventListener('mousemove', function(e) {
+            mouse.x = (e.clientX / window.innerWidth) * 2 - 1;
+            mouse.y = -(e.clientY / window.innerHeight) * 2 + 1;
+
+            // Speed: pixel delta, low-pass filtered
+            var dx = e.clientX - prevMouse.x;
+            var dy = e.clientY - prevMouse.y;
+            var rawSpeed = Math.hypot(dx, dy);
+            speed = speed * 0.7 + rawSpeed * 0.3;
+            prevMouse.x = e.clientX;
+            prevMouse.y = e.clientY;
+        });
+
+        // Decay speed when mouse stops
+        setInterval(function() {
+            speed *= 0.85;
+        }, 50);
+
+        // Animation loop (shared with ink if running)
+        function update() {
+            // Parallax: smooth lerp
+            smoothBg.x += (mouse.x * 12 - smoothBg.x) * 0.05;
+            smoothBg.y += (mouse.y * 8 - smoothBg.y) * 0.05;
+            smoothFg.x += (mouse.x * -6 - smoothFg.x) * 0.05;
+            smoothFg.y += (mouse.y * -4 - smoothFg.y) * 0.05;
+
+            bgClone.style.transform = 'translate(' + smoothBg.x + 'px, ' + smoothBg.y + 'px)';
+            fgClone.style.transform = 'translate(' + smoothFg.x + 'px, ' + smoothFg.y + 'px)';
+
+            // Liquid distortion: smoother speed tracking
+            smoothSpeed += (speed - smoothSpeed) * 0.1;
+
+            // Map speed to filter parameters
+            var freq = Math.min(0.08, 0.001 + smoothSpeed * 0.0005);
+            var scale = Math.min(20, smoothSpeed * 0.5);
+
+            turbulence.setAttribute('baseFrequency', freq + ' ' + freq);
+            displacement.setAttribute('scale', Math.round(scale));
+
+            requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+
+        // Mouse leave → lerp back to center
+        document.addEventListener('mouseleave', function() {
+            mouse.x = 0;
+            mouse.y = 0;
         });
     })();
     </script>
