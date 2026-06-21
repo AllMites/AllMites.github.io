@@ -14,10 +14,28 @@
 
 html { font-size: 16px; -webkit-font-smoothing: antialiased; }
 
+:root {
+  --bg: #0a0a0f;
+  --card-bg: rgba(255,255,255,0.06);
+  --card-bg-hover: rgba(255,255,255,0.09);
+  --text: #f5f3f0;
+  --text-muted: #a8a6a3;
+  --accent: #d4a853;
+  --accent-strong: #c49a3f;
+  --accent-light: rgba(212,168,83,0.12);
+  --success: #7a9a7a;
+  --success-light: rgba(122,154,122,0.12);
+  --border: rgba(255,255,255,0.08);
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --radius: 12px;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Serif 4', Georgia, serif;
+}
+
 body {
-  font-family: 'Source Serif 4', Georgia, serif;
-  background: #0a0a0f;
-  color: #f5f3f0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
   min-height: 100vh;
   padding: 32px 16px;
   line-height: 1.6;
@@ -43,10 +61,10 @@ body {
 }
 
 .header h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 700;
-  color: #f5f3f0;
+  color: var(--text);
 }
 
 .header-actions {
@@ -57,9 +75,9 @@ body {
 
 /* ===== CARD ===== */
 .card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 24px;
 }
 
@@ -76,11 +94,11 @@ body {
   letter-spacing: 0.4px;
   white-space: nowrap;
 }
-.badge-neutral { background: rgba(212,168,83,0.12); color: #d4a853; }
-.badge-blue { background: rgba(212,168,83,0.12); color: #d4a853; }
-.badge-amber { background: rgba(212,168,83,0.12); color: #d4a853; }
-.badge-green { background: rgba(122,154,122,0.12); color: #7a9a7a; }
-.badge-red { background: rgba(212,168,83,0.12); color: #d4a853; }
+.badge-neutral { background: var(--accent-light); color: var(--accent); }
+.badge-blue { background: var(--accent-light); color: var(--accent); }
+.badge-amber { background: var(--accent-light); color: var(--accent); }
+.badge-green { background: var(--success-light); color: var(--success); }
+.badge-red { background: var(--accent-light); color: var(--accent); }
 
 /* ===== TABLE ===== */
 .table-wrap { overflow-x: auto; }
@@ -95,11 +113,11 @@ th {
   text-align: left;
   padding: 8px 12px 12px 12px;
   font-weight: 700;
-  color: #f5f3f0;
+  color: var(--text);
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid var(--border);
 }
 
 td {
@@ -114,12 +132,12 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 
 .client-name {
   font-weight: 600;
-  color: #f5f3f0;
+  color: var(--text);
 }
 
 .client-slug {
   font-size: 0.75rem;
-  color: #f5f3f0;
+  color: var(--text-muted);
 }
 
 /* ===== STATUS DOT ===== */
@@ -131,9 +149,9 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   margin-right: 6px;
   vertical-align: middle;
 }
-.status-dot.yes { background: #7a9a7a; }
+.status-dot.yes { background: var(--success); }
 .status-dot.no  { background: rgba(255,255,255,0.2); }
-.status-dot.pending { background: #d4a853; animation: pulse 1.5s ease-in-out infinite; }
+.status-dot.pending { background: var(--accent); animation: pulse 1.5s ease-in-out infinite; }
 @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
 
 /* ===== BUTTONS ===== */
@@ -154,9 +172,9 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 }
 .btn:hover { opacity: 0.85; }
 .btn:active { transform: scale(0.97); }
-.btn-primary { background: #d4a853; color: #f5f3f0; }
-.btn-outline { background: transparent; border: 1px solid rgba(255,255,255,0.15); color: #f5f3f0; }
-.btn-outline:hover { background: rgba(255,255,255,0.06); }
+.btn-primary { background: var(--accent); color: var(--text); }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+.btn-outline:hover { background: var(--card-bg); }
 .btn-sm { padding: 6px 16px; font-size: 0.72rem; }
 .btn-block { width: 100%; }
 
@@ -164,7 +182,7 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 .empty-state {
   text-align: center;
   padding: 40px 20px;
-  color: #f5f3f0;
+  color: var(--text-muted);
 }
 .empty-state p { margin-bottom: 8px; }
 .empty-state .emoji { font-size: 2rem; margin-bottom: 12px; display: block; }
@@ -178,9 +196,9 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 }
 
 .login-card {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   padding: 36px 32px;
   max-width: 380px;
   width: 100%;
@@ -188,15 +206,15 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 }
 
 .login-card h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-display);
   font-size: 1.3rem;
   margin-bottom: 6px;
   font-weight: 700;
-  color: #f5f3f0;
+  color: var(--text);
 }
 
 .login-card p {
-  color: #f5f3f0;
+  color: var(--text-muted);
   font-size: 0.85rem;
   margin-bottom: 20px;
 }
@@ -204,24 +222,24 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 .login-card input {
   width: 100%;
   padding: 10px 14px;
-  border: 1px solid rgba(255,255,255,0.12);
+  border: 1px solid var(--border);
   border-radius: 9999px;
-  font-family: 'Source Serif 4', Georgia, serif;
+  font-family: var(--font-body);
   font-size: 0.9rem;
   background: rgba(255,255,255,0.04);
-  color: #f5f3f0;
+  color: var(--text);
   outline: none;
   transition: border-color 0.2s;
   margin-bottom: 12px;
 }
 
 .login-card input:focus {
-  border-color: #d4a853;
-  box-shadow: 0 0 0 3px rgba(212,168,83,0.12);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
 }
 
 .login-error {
-  color: #d4a853;
+  color: var(--accent);
   font-size: 0.8rem;
   margin-top: -8px;
   margin-bottom: 12px;
@@ -235,7 +253,7 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   left: 50%;
   transform: translateX(-50%) translateY(80px);
   background: #1a1a10;
-  color: #f5f3f0;
+  color: var(--text);
   padding: 10px 20px;
   border-radius: 9999px;
   font-size: 0.82rem;
@@ -261,8 +279,8 @@ tr:hover td { background: rgba(255,255,255,0.03); }
 }
 .modal-card {
   background: #14141a;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   box-shadow: 0 16px 48px rgba(0,0,0,0.4);
   padding: 28px 24px;
   max-width: 400px;
@@ -270,13 +288,13 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   text-align: center;
 }
 .modal-card h3 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: var(--font-display);
   font-size: 1.15rem;
   margin-bottom: 8px;
-  color: #f5f3f0;
+  color: var(--text);
 }
 .modal-card p {
-  color: #f5f3f0;
+  color: var(--text-muted);
   font-size: 0.9rem;
   margin-bottom: 20px;
 }
@@ -324,7 +342,7 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   <div class="header">
     <h1>Clients</h1>
     <div class="header-actions">
-      <span id="clientCount" style="font-size:0.82rem;color:#f5f3f0;">0 clients</span>
+      <span id="clientCount" style="font-size:0.82rem;color:var(--text-muted);">0 clients</span>
       <button id="refreshBtn" class="btn btn-outline btn-sm">&#x21bb; Refresh</button>
     </div>
   </div>
@@ -355,8 +373,8 @@ tr:hover td { background: rgba(255,255,255,0.03); }
   </div>
 
   <!-- FOOTER -->
-  <div style="margin-top:24px;text-align:center;font-size:0.75rem;color:#f5f3f0;">
-    Daniel Asis &middot; <a href="/portal/" style="color:#d4a853;text-decoration:none;">Client Portal</a>
+  <div style="margin-top:24px;text-align:center;font-size:0.75rem;color:var(--text-muted);">
+    Daniel Asis &middot; <a href="/portal/" style="color:var(--accent);text-decoration:none;">Client Portal</a>
   </div>
 </div>
 
