@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concordia's Cafe | Neighborhood Coffee Shop in BF Homes</title>
+    <meta name="description" content="Concordia's Cafe — BF Homes Parañaque's favorite neighborhood coffee shop. 4.4★ (431 reviews). Specialty coffee, Spanish Latte, all-day breakfast, pastries, and free WiFi along Aguirre Ave.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!-- INSTRUCTIONS: 
+         This SITE_CONFIG object is the single source of truth. Changing these 
+         values or compiling with the {{TOKEN}} replacement engine will 
+         instantly reskin and re-populate the entire cafe template.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            theme: {
+                colors: {
+                    background: "#FDF8F0",
+                    text: "#3D2E1F",
+                    accent: "#C67B4B",
+                    surface: "#F5EDE3",
+                    border: "#E0D5C5"
+                },
+                fonts: {
+                    heading: "'Fraunces', serif",
+                    body: "'DM Sans', sans-serif"
+                }
+            },
+            hero: {
+                businessName: "Concordia's Cafe",
+                tagline: "Where every cup tells a story.",
+                buttonText: "See the Menu",
+                backgroundImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80"
+            },
+            about: {
+                title: "Our Story",
+                text: "Nestled along the bustling Aguirre Avenue in BF Homes, Parañaque, Concordia's Cafe is more than just a coffee shop — it's a neighborhood sanctuary. Named after the Latin word for harmony, Concordia's brings together the finest locally-sourced coffee beans, handcrafted pastries, and the warmth of Filipino hospitality. Whether you're grabbing a quick Spanish Latte before work, settling in for an afternoon of remote productivity with our free WiFi, or catching up with friends over desserts, every visit feels like coming home. We believe great coffee builds community — and at Concordia's, there's always a seat at the table.",
+                image: "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80"
+            },
+            menuTitle: "Our Signature Brews & Bites",
+            menu: [
+                { name: "Spanish Latte", desc: "Our signature drink — bold espresso sweetened with condensed milk and finished with steamed milk. Rich, creamy, and perfectly balanced.", price: "₱165" },
+                { name: "Salted Caramel Latte", desc: "Velvety espresso harmony of house-made salted caramel and silky steamed milk. Topped with a drizzle of caramel and sea salt.", price: "₱185" },
+                { name: "Matcha Latte", desc: "Premium ceremonial-grade matcha whisked to perfection with your choice of oat, soy, or whole milk. Earthy, smooth, and vibrant.", price: "₱175" },
+                { name: "Iced Americano", desc: "Double shot of our house espresso pulled over ice and topped with chilled filtered water. Clean, crisp, and refreshing.", price: "₱130" },
+                { name: "Avocado Toast", desc: "Thick-cut sourdough topped with smashed ripe avocado, cherry tomatoes, microgreens, and a sprinkle of chili flakes.", price: "₱245" },
+                { name: "Grilled Cheese Sandwich", desc: "Three-cheese melt of cheddar, mozzarella, and gouda between buttery toasted brioche. Served with house-made tomato soup dip.", price: "₱220" },
+                { name: "Chocolate Chip Cookie", desc: "Freshly baked oversized cookie with Belgian dark chocolate chunks and a sprinkle of Maldon sea salt. Crispy edges, chewy center.", price: "₱95" },
+                { name: "Classic Tiramisu", desc: "Layers of espresso-soaked ladyfingers and mascarpone cream, dusted with cocoa. Made fresh daily using our house espresso.", price: "₱195" },
+                { name: "Cold Brew Concentrate", desc: "Single-origin beans steeped for 18 hours. Smooth, naturally sweet, and less acidic. Served black or with your choice of milk.", price: "₱155" }
+            ],
+            gallery: [
+                "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80",
+                "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80",
+                "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80",
+                "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+                "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
+                "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80"
+            ],
+            locationTitle: "Visit Concordia's",
+            hours: [
+                { day: "Monday - Thursday", time: "7:00 AM - 10:00 PM" },
+                { day: "Friday", time: "7:00 AM - 11:00 PM" },
+                { day: "Saturday", time: "8:00 AM - 11:00 PM" },
+                { day: "Sunday", time: "8:00 AM - 9:00 PM" }
+            ],
+            contact: {
+                address: "106 Aguirre Ave, BF Homes, Parañaque, 1720 Metro Manila",
+                phone: "+63 917 123 4567",
+                facebook: "https://facebook.com/concordiascafe",
+                instagram: "https://instagram.com/concordiascafe",
+                mapIframe: '<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0!2d121.0204376!3d14.4469987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf35b5b9636f%3A0xd34fa7cb4f96b692!2sConcordia's%20Cafe%20-%20BF%20Homes%20Parañaque!5e0!3m2!1sen!2sph!4v1719600000000!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>'
+            }
+        };
+
+        // DEFAULT STANDALONE MOCK DATA (Fallback when direct-opening the file without compilation)
+        const DEFAULT_FALLBACKS = {
+            "#FDF8F0": "#FDF8F0",
+            "#3D2E1F": "#3D2E1F",
+            "#C67B4B": "#C67B4B",
+            "#F5EDE3": "#F5EDE3",
+            "#E0D5C5": "#E0D5C5",
+            "'Fraunces', serif": "'Fraunces', serif",
+            "'DM Sans', sans-serif": "'DM Sans', sans-serif",
+            "Concordia's Cafe": "Concordia's Cafe",
+            "Where every cup tells a story.": "Where every cup tells a story.",
+            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80",
+            "See the Menu": "See the Menu",
+            "Our Story": "Our Story",
+            "Nestled along the bustling Aguirre Avenue in BF Homes, Parañaque, Concordia's Cafe is more than just a coffee shop — it's a neighborhood sanctuary. Named after the Latin word for harmony, Concordia's brings together the finest locally-sourced coffee beans, handcrafted pastries, and the warmth of Filipino hospitality. Whether you're grabbing a quick Spanish Latte before work, settling in for an afternoon of remote productivity with our free WiFi, or catching up with friends over desserts, every visit feels like coming home. We believe great coffee builds community — and at Concordia's, there's always a seat at the table.": "Nestled along the bustling Aguirre Avenue in BF Homes, Parañaque, Concordia's Cafe is more than just a coffee shop — it's a neighborhood sanctuary.",
+            "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=800&q=80",
+            "Our Signature Brews & Bites": "Our Signature Brews & Bites",
+            "Spanish Latte": "Spanish Latte", "Our signature drink — bold espresso sweetened with condensed milk and finished with steamed milk. Rich, creamy, and perfectly balanced.": "Our signature drink — bold espresso sweetened with condensed milk.", "₱165": "₱165",
+            "Salted Caramel Latte": "Salted Caramel Latte", "Velvety espresso harmony of house-made salted caramel and silky steamed milk. Topped with a drizzle of caramel and sea salt.": "Velvety espresso with house-made salted caramel.", "₱185": "₱185",
+            "Matcha Latte": "Matcha Latte", "Premium ceremonial-grade matcha whisked to perfection with your choice of oat, soy, or whole milk. Earthy, smooth, and vibrant.": "Premium ceremonial-grade matcha whisked to perfection.", "₱175": "₱175",
+            "Iced Americano": "Iced Americano", "Double shot of our house espresso pulled over ice and topped with chilled filtered water. Clean, crisp, and refreshing.": "Double shot espresso over ice with chilled filtered water.", "₱130": "₱130",
+            "Avocado Toast": "Avocado Toast", "Thick-cut sourdough topped with smashed ripe avocado, cherry tomatoes, microgreens, and a sprinkle of chili flakes.": "Sourdough with smashed avocado, cherry tomatoes, and chili flakes.", "₱245": "₱245",
+            "Grilled Cheese Sandwich": "Grilled Cheese Sandwich", "Three-cheese melt of cheddar, mozzarella, and gouda between buttery toasted brioche. Served with house-made tomato soup dip.": "Three-cheese melt on buttery brioche with tomato soup dip.", "₱220": "₱220",
+            "Chocolate Chip Cookie": "Chocolate Chip Cookie", "Freshly baked oversized cookie with Belgian dark chocolate chunks and a sprinkle of Maldon sea salt. Crispy edges, chewy center.": "Freshly baked with Belgian dark chocolate and sea salt.", "₱95": "₱95",
+            "Classic Tiramisu": "Classic Tiramisu", "Layers of espresso-soaked ladyfingers and mascarpone cream, dusted with cocoa. Made fresh daily using our house espresso.": "Espresso-soaked ladyfingers with mascarpone cream and cocoa.", "₱195": "₱195",
+            "Cold Brew Concentrate": "Cold Brew Concentrate", "Single-origin beans steeped for 18 hours. Smooth, naturally sweet, and less acidic. Served black or with your choice of milk.": "Single-origin beans steeped 18 hours. Smooth and naturally sweet.", "₱155": "₱155",
+            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80": "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80",
+            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80",
+            "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80": "https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&q=80",
+            "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80",
+            "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
+            "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80",
+            "Visit Concordia's": "Visit Concordia's",
+            "Monday - Thursday": "Monday - Thursday", "7:00 AM - 10:00 PM": "7:00 AM - 10:00 PM",
+            "Friday": "Friday", "7:00 AM - 11:00 PM": "7:00 AM - 11:00 PM",
+            "Saturday": "Saturday", "8:00 AM - 11:00 PM": "8:00 AM - 11:00 PM",
+            "Sunday": "Sunday", "8:00 AM - 9:00 PM": "8:00 AM - 9:00 PM",
+            "106 Aguirre Ave, BF Homes, Parañaque, 1720 Metro Manila": "106 Aguirre Ave, BF Homes, Parañaque, 1720 Metro Manila",
+            "+63 917 123 4567": "+63 917 123 4567",
+            "https://facebook.com/concordiascafe": "https://facebook.com/concordiascafe",
+            "https://instagram.com/concordiascafe": "https://instagram.com/concordiascafe",
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0!2d121.0204376!3d14.4469987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf35b5b9636f%3A0xd34fa7cb4f96b692!2sConcordia's%20Cafe%20-%20BF%20Homes%20Parañaque!5e0!3m2!1sen!2sph!4v1719600000000!5m2!1sen!2sph": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0!2d121.0204376!3d14.4469987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf35b5b9636f%3A0xd34fa7cb4f96b692!2sConcordia's%20Cafe%20-%20BF%20Homes%20Parañaque!5e0!3m2!1sen!2sph!4v1719600000000!5m2!1sen!2sph",
+            "<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0!2d121.0204376!3d14.4469987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf35b5b9636f%3A0xd34fa7cb4f96b692!2sConcordia's%20Cafe%20-%20BF%20Homes%20Parañaque!5e0!3m2!1sen!2sph!4v1719600000000!5m2!1sen!2sph" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0!2d121.0204376!3d14.4469987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf35b5b9636f%3A0xd34fa7cb4f96b692!2sConcordia's%20Cafe%20-%20BF%20Homes%20Parañaque!5e0!3m2!1sen!2sph!4v1719600000000!5m2!1sen!2sph\" width=\"100%\" height=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+            "Concordia's Cafe": "Concordia's Cafe",
+            "Concordia's Cafe | Neighborhood Coffee Shop in BF Homes": "Concordia's Cafe | Neighborhood Coffee Shop in BF Homes",
+            "Concordia's Cafe — BF Homes Parañaque's favorite neighborhood coffee shop. 4.4★ (431 reviews). Specialty coffee, Spanish Latte, all-day breakfast, pastries, and free WiFi along Aguirre Ave.": "Concordia's Cafe — BF Homes Parañaque's favorite neighborhood coffee shop.",
+        };
+
+        // Automatic mapping utility: resolve any remaining {{TOKEN}} placeholders from DEFAULT_FALLBACKS
+        Object.keys(SITE_CONFIG).forEach(key => {
+            const val = SITE_CONFIG[key];
+            if (typeof val === 'string' && val.startsWith('{{')) {
+                SITE_CONFIG[key] = DEFAULT_FALLBACKS[val] || '';
+            } else if (typeof val === 'object' && val !== null) {
+                Object.keys(val).forEach(subKey => {
+                    if (typeof val[subKey] === 'string' && val[subKey].startsWith('{{')) {
+                        val[subKey] = DEFAULT_FALLBACKS[val[subKey]] || '';
+                    } else if (typeof val[subKey] === 'object' && val[subKey] !== null) {
+                        Object.keys(val[subKey]).forEach(deepKey => {
+                            if (typeof val[subKey][deepKey] === 'string' && val[subKey][deepKey].startsWith('{{')) {
+                                val[subKey][deepKey] = DEFAULT_FALLBACKS[val[subKey][deepKey]] || '';
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        ['menu', 'gallery', 'hours'].forEach(arrKey => {
+            if (SITE_CONFIG[arrKey]) {
+                SITE_CONFIG[arrKey] = SITE_CONFIG[arrKey].map((item) => {
+                    if (typeof item === 'string' && item.startsWith('{{')) {
+                        return DEFAULT_FALLBACKS[item] || '';
+                    } else if (typeof item === 'object') {
+                        const cleanObj = {};
+                        Object.keys(item).forEach(k => {
+                            cleanObj[k] = (typeof item[k] === 'string' && item[k].startsWith('{{')) ? DEFAULT_FALLBACKS[item[k]] : item[k];
+                        });
+                        return cleanObj;
+                    }
+                    return item;
+                });
+            }
+        });
+    </script>
+    <!-- === END EDIT HERE === -->
+    <!-- ======================================================================= -->
+
+
+    <!-- SYSTEM STYLES (Do not edit unless modifying structural layout) -->
+    <style>
+        /* CSS Variables mapped by JS */
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #000000;
+            --surface-color: #f4f4f4;
+            --border-color: #e0e0e0;
+            --font-heading: sans-serif;
+            --font-body: sans-serif;
+        }
+
+        /* Reset & Base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* Layout Utility */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        .section { padding: 100px 0; }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+        /* Navbar */
+        #navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            padding: 1.5rem 0;
+            z-index: 100;
+            transition: all 0.4s ease;
+            color: #ffffff; /* Default light for hero overlay */
+        }
+        #navbar.scrolled {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Hero */
+        #hero {
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 800px;
+            padding: 0 5%;
+        }
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* About */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image-wrapper { position: relative; }
+        .about-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -20px; right: -20px; bottom: 20px; left: 20px;
+            border: 1px solid var(--accent-color);
+            z-index: -1;
+        }
+        .about-image { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+        .about-text { font-size: 1.1rem; color: var(--text-color); opacity: 0.85; }
+        .about-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+
+        /* Menu */
+        #menu { background-color: var(--surface-color); }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem 4rem;
+        }
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        .menu-item-name { font-size: 1.3rem; }
+        .menu-item-price { font-weight: 500; color: var(--accent-color); font-size: 1.1rem;}
+        .menu-item-desc { font-size: 0.95rem; opacity: 0.7; }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .gallery-item {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            background-color: var(--surface-color);
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        /* Location & Hours */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background-color: var(--surface-color);
+        }
+        .location-content { padding: 4rem 10%; display: flex; flex-direction: column; justify-content: center; }
+        .map-container { width: 100%; height: 100%; min-height: 400px; }
+        .hours-list { margin: 2rem 0; border-top: 1px solid var(--border-color); }
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+        .hour-day { font-weight: 500; }
+        .contact-details { margin-top: 1rem; }
+        .contact-details a, .contact-details p { display: block; margin-bottom: 0.5rem; opacity: 0.8; }
+
+        /* Footer */
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .footer-socials { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .footer-socials a { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; transition: color 0.3s ease; }
+        .footer-socials a:hover { color: var(--accent-color); }
+        .footer-copy { font-size: 0.85rem; opacity: 0.6; }
+
+        /* Animations */
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 900px) {
+            .about-grid, .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .about-image-wrapper::after { display: none; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .location-content { padding: 3rem 5%; }
+        }
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- DOM Structure (Dynamically injected with Data) -->
+    
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" id="dom-nav-logo" class="nav-logo font-heading"></a>
+            <div class="nav-links"><a href="#location">Visit Us</a></div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content fade-up">
+            <h1 id="dom-hero-title" class="hero-title font-heading"></h1>
+            <p id="dom-hero-tagline" class="hero-tagline"></p>
+            <a href="#menu" id="dom-hero-btn" class="btn"></a>
+        </div>
+    </header>
+
+    <section id="about" class="section container">
+        <div class="about-grid">
+            <div class="about-image-wrapper fade-up">
+                <img id="dom-about-img" class="about-image" src="" alt="About Us">
+            </div>
+            <div class="fade-up">
+                <h2 id="dom-about-title" class="about-title font-heading"></h2>
+                <p id="dom-about-text" class="about-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 id="dom-menu-title" class="section-title font-heading fade-up"></h2>
+            <div id="dom-menu-grid" class="menu-grid">
+                <!-- Menu items injected here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section container" style="padding-top: 50px;">
+        <div id="dom-gallery-grid" class="gallery-grid">
+            <!-- Gallery items injected here -->
+        </div>
+    </section>
+
+    <section id="location" class="section" style="padding-bottom: 0;">
+        <div class="location-grid">
+            <div class="location-content fade-up">
+                <h2 id="dom-location-title" class="about-title font-heading" style="margin-bottom: 0.5rem;"></h2>
+                <div id="dom-hours-list" class="hours-list">
+                    <!-- Hours injected here -->
+                </div>
+                <div class="contact-details">
+                    <p id="dom-address" class="font-heading" style="font-size: 1.2rem;"></p>
+                    <a id="dom-phone" href=""></a>
+                </div>
+            </div>
+            <div id="dom-map" class="map-container fade-up">
+                <!-- Iframe injected here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container fade-up">
+            <div class="footer-socials">
+                <a id="dom-fb" href="" target="_blank">Facebook</a>
+                <a id="dom-ig" href="" target="_blank">Instagram</a>
+            </div>
+            <p id="dom-footer-copy" class="footer-copy"></p>
+        </div>
+    </footer>
+
+
+    <!-- SYSTEM SCRIPTS (Core Rendering Engine) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // 1. Apply CSS Variables from Config
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', SITE_CONFIG.theme.colors.background);
+            root.style.setProperty('--text-color', SITE_CONFIG.theme.colors.text);
+            root.style.setProperty('--accent-color', SITE_CONFIG.theme.colors.accent);
+            root.style.setProperty('--surface-color', SITE_CONFIG.theme.colors.surface);
+            root.style.setProperty('--border-color', SITE_CONFIG.theme.colors.border);
+            root.style.setProperty('--font-heading', SITE_CONFIG.theme.fonts.heading);
+            root.style.setProperty('--font-body', SITE_CONFIG.theme.fonts.body);
+
+            // 2. Populate Standard Content
+            document.title = `${SITE_CONFIG.hero.businessName} | Neighborhood Cafe`;
+            document.getElementById('dom-nav-logo').textContent = SITE_CONFIG.hero.businessName;
+            
+            // Hero
+            const heroSection = document.getElementById('hero');
+            heroSection.style.backgroundImage = `url('${SITE_CONFIG.hero.backgroundImage}')`;
+            document.getElementById('dom-hero-title').textContent = SITE_CONFIG.hero.businessName;
+            document.getElementById('dom-hero-tagline').textContent = SITE_CONFIG.hero.tagline;
+            document.getElementById('dom-hero-btn').textContent = SITE_CONFIG.hero.buttonText;
+
+            // About
+            document.getElementById('dom-about-title').textContent = SITE_CONFIG.about.title;
+            document.getElementById('dom-about-text').textContent = SITE_CONFIG.about.text;
+            document.getElementById('dom-about-img').src = SITE_CONFIG.about.image;
+
+            // Menu
+            document.getElementById('dom-menu-title').textContent = SITE_CONFIG.menuTitle;
+            const menuGrid = document.getElementById('dom-menu-grid');
+            SITE_CONFIG.menu.forEach(item => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item fade-up';
+                menuItem.innerHTML = `
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name font-heading">${item.name}</h3>
+                        <span class="menu-item-price">${item.price}</span>
+                    </div>
+                    <p class="menu-item-desc">${item.desc}</p>
+                `;
+                menuGrid.appendChild(menuItem);
+            });
+
+            // Gallery
+            const galleryGrid = document.getElementById('dom-gallery-grid');
+            SITE_CONFIG.gallery.forEach(imgUrl => {
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'gallery-item fade-up';
+                imgContainer.innerHTML = `<img src="${imgUrl}" alt="Cafe Gallery Image">`;
+                galleryGrid.appendChild(imgContainer);
+            });
+
+            // Location & Hours
+            document.getElementById('dom-location-title').textContent = SITE_CONFIG.locationTitle;
+            const hoursList = document.getElementById('dom-hours-list');
+            SITE_CONFIG.hours.forEach(hour => {
+                const hourEl = document.createElement('div');
+                hourEl.className = 'hour-item';
+                hourEl.innerHTML = `<span class="hour-day">${hour.day}</span><span class="hour-time">${hour.time}</span>`;
+                hoursList.appendChild(hourEl);
+            });
+            document.getElementById('dom-address').textContent = SITE_CONFIG.contact.address;
+            
+            const phoneEl = document.getElementById('dom-phone');
+            phoneEl.textContent = SITE_CONFIG.contact.phone;
+            phoneEl.href = `tel:${SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, '')}`; // Strip spaces for link
+            
+            document.getElementById('dom-map').innerHTML = SITE_CONFIG.contact.mapIframe;
+
+            // Footer
+            document.getElementById('dom-fb').href = SITE_CONFIG.contact.facebook;
+            document.getElementById('dom-ig').href = SITE_CONFIG.contact.instagram;
+            document.getElementById('dom-footer-copy').textContent = `© ${new Date().getFullYear()} ${SITE_CONFIG.hero.businessName}. All rights reserved.`;
+
+            // 3. Setup Scroll Animations (Intersection Observer)
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with .fade-up
+            setTimeout(() => {
+                document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+            }, 100);
+
+            // 4. Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
