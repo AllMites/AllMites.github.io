@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kape Bodega — San Isidro, Sucat | Coffee Shop</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&display=swap" rel="stylesheet">
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!-- INSTRUCTIONS: 
+         This SITE_CONFIG object is the single source of truth. Changing these 
+         values or compiling with the {{TOKEN}} replacement engine will 
+         instantly reskin and re-populate the entire restaurant template.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            theme: {
+                colors: {
+                    background: "#FDF8F3",
+                    text: "#2C1810",
+                    accent: "#C67B4B",
+                    surface: "#F5EDE4",
+                    border: "#D9C9B8"
+                },
+                fonts: {
+                    heading: "'Fraunces', serif",
+                    body: "'DM Sans', sans-serif"
+                }
+            },
+            hero: {
+                businessName: "Kape Bodega",
+                tagline: "Your Neighborhood Coffee Haven — Brewed with Passion in Sucat",
+                backgroundImage: "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80",
+                ctaText: "Explore Our Menu"
+            },
+            menuTitle: "Our Signature Brews & Bites",
+            menu: [
+                { name: "Bodega Signature Latte", desc: "Our house favorite — double shot espresso with velvety steamed milk and a hint of vanilla.", price: "₱150" },
+                { name: "Spanish Latte", desc: "Bold espresso sweetened with condensed milk, topped with creamy steamed milk. A cult favorite.", price: "₱140" },
+                { name: "Caramel Macchiato", desc: "Freshly pulled espresso marked with house-made caramel sauce and steamed milk.", price: "₱160" },
+                { name: "Iced White Mocha", desc: "Chilled white chocolate espresso with milk over ice — sweet, creamy, and refreshing.", price: "₱170" },
+                { name: "Matcha Latte", desc: "Premium Japanese matcha whisked with steamed milk. Available hot or iced.", price: "₱165" },
+                { name: "Cold Brew", desc: "Slow-steeped for 18 hours. Smooth, bold, and naturally sweet without the acidity.", price: "₱145" },
+                { name: "Grilled Cheese Sandwich", desc: "Sourdough bread with three-cheese blend, grilled golden brown. The perfect coffee companion.", price: "₱180" },
+                { name: "Chocolate Chip Cookie", desc: "Freshly baked, thick and chewy with Belgian chocolate chunks. Pairs perfectly with any latte.", price: "₱95" }
+            ],
+            about: {
+                title: "The Kape Bodega Story",
+                text: "Born in the heart of Sucat, Parañaque, Kape Bodega is more than just a coffee shop — it's a community. Since opening our doors at SARNER COMPLEX along Dr. Arcadio Santos Avenue, we've been crafting exceptional coffee experiences that bring people together. From our carefully sourced single-origin beans to our signature handcrafted drinks, every cup tells a story of quality and passion. With a 4.9★ rating from over 400 glowing reviews, Kape Bodega has become Sucat's favorite destination for coffee lovers, remote workers, and anyone seeking that perfect brew in a warm, welcoming space.",
+                image: "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80"
+            },
+            gallery: [
+                "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80",
+                "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80",
+                "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=600&q=80",
+                "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80",
+                "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80",
+                "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80"
+            ],
+            locationTitle: "Visit Kape Bodega",
+            hours: [
+                { day: "Monday - Thursday", time: "7:00 AM - 10:00 PM" },
+                { day: "Friday - Saturday", time: "7:00 AM - 11:00 PM" },
+                { day: "Sunday", time: "8:00 AM - 9:00 PM" }
+            ],
+            contact: {
+                address: "SARNER COMPLEX, 8226 Dr Arcadio Santos Ave, Parañaque, 1708 Metro Manila",
+                phone: "0938 703 5399",
+                facebook: "https://facebook.com/KapeBodega",
+                instagram: "https://instagram.com/kapebodega",
+                mapIframe: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.6!2d121.0046228!3d14.4727132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf6b4ef5ae13%3A0x51a86ed8485e6897!2sKape+Bodega+-+San+Isidro%2C+Sucat!5e0!3m2!1sen!2sph!4v1719600000000!5m2!1sen!2sph'
+            }
+        };
+
+        // DEFAULT STANDALONE MOCK DATA (Fallback when direct-opening the file without compilation)
+        const DEFAULT_FALLBACKS = {
+            "#FDF8F3": "#FFF8E7",
+            "#2C1810": "#3B2314",
+            "#C67B4B": "#C0392B",
+            "#F5EDE4": "#F5E6CC",
+            "#D9C9B8": "#D4B896",
+            "'Fraunces', serif": "'Fraunces', serif",
+            "'DM Sans', sans-serif": "'DM Sans', sans-serif",
+            "Kape Bodega": "Little Quiapo",
+            "Your Neighborhood Coffee Haven — Brewed with Passion in Sucat": "Lasang Filipino, Dito sa BF Homes",
+            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=1920&q=80": "https://placehold.co/1920x1080/8B0000/FFF8E7?text=Little+Quiapo+Storefront",
+            "Explore Our Menu": "Tingnan ang Menu",
+            "Our Signature Brews & Bites": "Mga Paborito ng Bayan",
+            "Bodega Signature Latte": "Pancit Palabok", "Our house favorite — double shot espresso with velvety steamed milk and a hint of vanilla.": "Classic rice noodles with rich annatto shrimp sauce.", "₱150": "₱195",
+            "Spanish Latte": "Fresh Lumpiang Ubod", "Bold espresso sweetened with condensed milk, topped with creamy steamed milk. A cult favorite.": "Heart of palm wrapped in delicate crepe with garlic-peanut sauce.", "₱140": "₱165",
+            "Caramel Macchiato": "Kare-Kare", "Freshly pulled espresso marked with house-made caramel sauce and steamed milk.": "Slow-cooked oxtail in thick peanut sauce with house bagoong.", "₱160": "₱395",
+            "Iced White Mocha": "Halo-Halo Espesyal", "Chilled white chocolate espresso with milk over ice — sweet, creamy, and refreshing.": "Shaved ice with ube ice cream, leche flan, sweetened beans.", "₱170": "₱175",
+            "Matcha Latte": "Crispy Pata", "Premium Japanese matcha whisked with steamed milk. Available hot or iced.": "Deep-fried pork knuckle with spiced vinegar and atchara.", "₱165": "₱595",
+            "Cold Brew": "Sizzling Bulalo Steak", "Slow-steeped for 18 hours. Smooth, bold, and naturally sweet without the acidity.": "Tender beef shank on sizzling plate with mushroom gravy.", "₱145": "₱495",
+            "Grilled Cheese Sandwich": "Dinuguan at Puto", "Sourdough bread with three-cheese blend, grilled golden brown. The perfect coffee companion.": "Classic Filipino pork blood stew with steamed rice cakes.", "₱180": "₱235",
+            "Chocolate Chip Cookie": "Lechon Kawali", "Freshly baked, thick and chewy with Belgian chocolate chunks. Pairs perfectly with any latte.": "Crispy deep-fried pork belly with liver sauce and steamed rice.", "₱95": "₱345",
+            "The Kape Bodega Story": "Ang Aming Kwento",
+            "Born in the heart of Sucat, Parañaque, Kape Bodega is more than just a coffee shop — it's a community. Since opening our doors at SARNER COMPLEX along Dr. Arcadio Santos Avenue, we've been crafting exceptional coffee experiences that bring people together. From our carefully sourced single-origin beans to our signature handcrafted drinks, every cup tells a story of quality and passion. With a 4.9★ rating from over 400 glowing reviews, Kape Bodega has become Sucat's favorite destination for coffee lovers, remote workers, and anyone seeking that perfect brew in a warm, welcoming space.": "Since the 1950s, Little Quiapo has been a beloved Filipino dining institution, named after Manila's historic Quiapo district. Our BF Homes branch carries on the tradition of authentic, home-style Filipino cooking served with warmth and hospitality.",
+            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80": "https://placehold.co/800x1000/C0392B/FFF8E7?text=Little+Quiapo+Dining",
+            "https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=600&q=80": "https://placehold.co/600x600/F5E6CC/3B2314?text=Pancit+Palabok",
+            "https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80": "https://placehold.co/600x600/F5E6CC/3B2314?text=Lumpiang+Ubod",
+            "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=600&q=80": "https://placehold.co/600x600/F5E6CC/3B2314?text=Kare-Kare",
+            "https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=600&q=80": "https://placehold.co/600x600/F5E6CC/3B2314?text=Halo-Halo",
+            "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=600&q=80": "https://placehold.co/600x600/F5E6CC/3B2314?text=Crispy+Pata",
+            "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=600&q=80": "https://placehold.co/600x600/F5E6CC/3B2314?text=Dining+Area",
+            "Visit Kape Bodega": "Bisitahin ang Little Quiapo",
+            "Monday - Thursday": "Monday - Thursday", "7:00 AM - 10:00 PM": "10:00 AM - 9:00 PM",
+            "Friday - Saturday": "Friday - Saturday", "7:00 AM - 11:00 PM": "9:00 AM - 10:00 PM",
+            "Sunday": "Sunday", "8:00 AM - 9:00 PM": "9:00 AM - 9:00 PM",
+            "SARNER COMPLEX, 8226 Dr Arcadio Santos Ave, Parañaque, 1708 Metro Manila": "42 Aguirre Ave, BF Homes, Parañaque, 1700 Metro Manila",
+            "0938 703 5399": "(02) 8807 0220",
+            "https://facebook.com/KapeBodega": "https://facebook.com/LittleQuiapo",
+            "https://instagram.com/kapebodega": "https://instagram.com/littlequiapo",
+            "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.6!2d121.0046228!3d14.4727132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf6b4ef5ae13%3A0x51a86ed8485e6897!2sKape+Bodega+-+San+Isidro%2C+Sucat!5e0!3m2!1sen!2sph!4v1719600000000!5m2!1sen!2sph": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.0605988168273!2d121.0231506!3d14.4451094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ce2ec2f57361%3A0xf583a74093cd5cb1!2sLittle%20Quiapo%20-%20Paranaque%20(BF%20Homes)!5e0!3m2!1sen!2sph!4v1719600000000!5m2!1sen!2sph\" width=\"100%\" height=\"100%\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+            "Kape Bodega — San Isidro, Sucat": "Little Quiapo Parañaque"
+        };
+
+        // Automatic mapping utility: resolve any remaining {{TOKEN}} placeholders from DEFAULT_FALLBACKS
+        Object.keys(SITE_CONFIG).forEach(key => {
+            const val = SITE_CONFIG[key];
+            if (typeof val === 'string' && val.startsWith('{{')) {
+                SITE_CONFIG[key] = DEFAULT_FALLBACKS[val] || '';
+            } else if (typeof val === 'object' && val !== null) {
+                Object.keys(val).forEach(subKey => {
+                    if (typeof val[subKey] === 'string' && val[subKey].startsWith('{{')) {
+                        val[subKey] = DEFAULT_FALLBACKS[val[subKey]] || '';
+                    } else if (typeof val[subKey] === 'object' && val[subKey] !== null) {
+                        Object.keys(val[subKey]).forEach(deepKey => {
+                            if (typeof val[subKey][deepKey] === 'string' && val[subKey][deepKey].startsWith('{{')) {
+                                val[subKey][deepKey] = DEFAULT_FALLBACKS[val[subKey][deepKey]] || '';
+                            }
+                        });
+                    }
+                });
+            }
+        });
+
+        ['menu', 'gallery', 'hours'].forEach(arrKey => {
+            if (SITE_CONFIG[arrKey]) {
+                SITE_CONFIG[arrKey] = SITE_CONFIG[arrKey].map((item) => {
+                    if (typeof item === 'string' && item.startsWith('{{')) {
+                        return DEFAULT_FALLBACKS[item] || '';
+                    } else if (typeof item === 'object') {
+                        const cleanObj = {};
+                        Object.keys(item).forEach(k => {
+                            cleanObj[k] = (typeof item[k] === 'string' && item[k].startsWith('{{')) ? DEFAULT_FALLBACKS[item[k]] : item[k];
+                        });
+                        return cleanObj;
+                    }
+                    return item;
+                });
+            }
+        });
+    </script>
+    <!-- === END EDIT HERE === -->
+    <!-- ======================================================================= -->
+
+    <!-- SYSTEM STYLES (Do not edit unless modifying structural layout) -->
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-color: #000000;
+            --surface-color: #f4f4f4;
+            --border-color: #e0e0e0;
+            --font-heading: sans-serif;
+            --font-body: sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 16px;
+        }
+        h1, h2, h3, h4, .font-heading {
+            font-family: var(--font-heading);
+            font-weight: 400;
+            line-height: 1.2;
+        }
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        .section { padding: 100px 0; }
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 1rem 2.5rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
+
+        #navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            padding: 1.5rem 0;
+            z-index: 100;
+            transition: all 0.4s ease;
+            color: #ffffff;
+        }
+        #navbar.scrolled {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        .nav-links a {
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        #hero {
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        #hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7));
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #ffffff;
+            max-width: 800px;
+            padding: 0 5%;
+        }
+        .hero-title {
+            font-size: clamp(3.5rem, 8vw, 6.5rem);
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2vw, 1.5rem);
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image-wrapper { position: relative; }
+        .about-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: -20px; right: -20px; bottom: 20px; left: 20px;
+            border: 1px solid var(--accent-color);
+            z-index: -1;
+        }
+        .about-image { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+        .about-text { font-size: 1.1rem; color: var(--text-color); opacity: 0.85; }
+        .about-title { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+
+        #menu { background-color: var(--surface-color); }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem 4rem;
+        }
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        .menu-item-name { font-size: 1.3rem; }
+        .menu-item-price { font-weight: 500; color: var(--accent-color); font-size: 1.1rem; }
+        .menu-item-desc { font-size: 0.95rem; opacity: 0.7; }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .gallery-item {
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            background-color: var(--surface-color);
+        }
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.05); }
+
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            background-color: var(--surface-color);
+        }
+        .location-content { padding: 4rem 10%; display: flex; flex-direction: column; justify-content: center; }
+        .map-container { width: 100%; height: 100%; min-height: 400px; }
+        .hours-list { margin: 2rem 0; border-top: 1px solid var(--border-color); }
+        .hour-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 0.95rem;
+        }
+        .hour-day { font-weight: 500; }
+        .contact-details { margin-top: 1rem; }
+        .contact-details a, .contact-details p { display: block; margin-bottom: 0.5rem; opacity: 0.8; }
+
+        footer {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+        .footer-socials { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .footer-socials a { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; transition: color 0.3s ease; }
+        .footer-socials a:hover { color: var(--accent-color); }
+        .footer-copy { font-size: 0.85rem; opacity: 0.6; }
+
+        .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 900px) {
+            .about-grid, .location-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .about-image-wrapper::after { display: none; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .location-content { padding: 3rem 5%; }
+        }
+        @media (max-width: 600px) {
+            .gallery-grid { grid-template-columns: 1fr; }
+            .menu-grid { grid-template-columns: 1fr; }
+            .section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav id="navbar">
+        <div class="container nav-inner">
+            <a href="#" id="dom-nav-logo" class="nav-logo font-heading"></a>
+            <div class="nav-links"><a href="#location">Visit Us</a></div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <div class="hero-content fade-up">
+            <h1 id="dom-hero-title" class="hero-title font-heading"></h1>
+            <p id="dom-hero-tagline" class="hero-tagline"></p>
+            <p id="dom-hero-rating" class="hero-tagline" style="font-size: 1rem; margin-bottom: 2.5rem; color: #FFD700; letter-spacing: 2px;"></p>
+            <a href="#menu" id="dom-hero-btn" class="btn"></a>
+        </div>
+    </header>
+
+    <section id="about" class="section container">
+        <div class="about-grid">
+            <div class="about-image-wrapper fade-up">
+                <img id="dom-about-img" class="about-image" src="" alt="About Us">
+            </div>
+            <div class="fade-up">
+                <h2 id="dom-about-title" class="about-title font-heading"></h2>
+                <p id="dom-about-text" class="about-text"></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="container">
+            <h2 id="dom-menu-title" class="section-title font-heading fade-up"></h2>
+            <div id="dom-menu-grid" class="menu-grid"></div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section container" style="padding-top: 50px;">
+        <div id="dom-gallery-grid" class="gallery-grid"></div>
+    </section>
+
+    <section id="location" class="section" style="padding-bottom: 0;">
+        <div class="location-grid">
+            <div class="location-content fade-up">
+                <h2 id="dom-location-title" class="about-title font-heading" style="margin-bottom: 0.5rem;"></h2>
+                <div id="dom-hours-list" class="hours-list"></div>
+                <div class="contact-details">
+                    <p id="dom-address" class="font-heading" style="font-size: 1.2rem;"></p>
+                    <a id="dom-phone" href=""></a>
+                </div>
+            </div>
+            <div id="dom-map" class="map-container fade-up"></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container fade-up">
+            <div class="footer-socials">
+                <a id="dom-fb" href="" target="_blank">Facebook</a>
+                <a id="dom-ig" href="" target="_blank">Instagram</a>
+            </div>
+            <p id="dom-footer-copy" class="footer-copy"></p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const root = document.documentElement;
+            root.style.setProperty('--bg-color', SITE_CONFIG.theme.colors.background);
+            root.style.setProperty('--text-color', SITE_CONFIG.theme.colors.text);
+            root.style.setProperty('--accent-color', SITE_CONFIG.theme.colors.accent);
+            root.style.setProperty('--surface-color', SITE_CONFIG.theme.colors.surface);
+            root.style.setProperty('--border-color', SITE_CONFIG.theme.colors.border);
+            root.style.setProperty('--font-heading', SITE_CONFIG.theme.fonts.heading);
+            root.style.setProperty('--font-body', SITE_CONFIG.theme.fonts.body);
+
+            document.title = `${SITE_CONFIG.hero.businessName} \u2014 San Isidro, Sucat | Coffee Shop`;
+            document.getElementById('dom-nav-logo').textContent = SITE_CONFIG.hero.businessName;
+
+            const heroSection = document.getElementById('hero');
+            heroSection.style.backgroundImage = `url('${SITE_CONFIG.hero.backgroundImage}')`;
+            document.getElementById('dom-hero-title').textContent = SITE_CONFIG.hero.businessName;
+            document.getElementById('dom-hero-tagline').textContent = SITE_CONFIG.hero.tagline;
+            document.getElementById('dom-hero-rating').textContent = '★★★★★  4.9  ·  412 Reviews';
+            document.getElementById('dom-hero-btn').textContent = SITE_CONFIG.hero.ctaText;
+
+            document.getElementById('dom-about-title').textContent = SITE_CONFIG.about.title;
+            document.getElementById('dom-about-text').textContent = SITE_CONFIG.about.text;
+            document.getElementById('dom-about-img').src = SITE_CONFIG.about.image;
+
+            document.getElementById('dom-menu-title').textContent = SITE_CONFIG.menuTitle;
+            const menuGrid = document.getElementById('dom-menu-grid');
+            SITE_CONFIG.menu.forEach(item => {
+                const menuItem = document.createElement('div');
+                menuItem.className = 'menu-item fade-up';
+                menuItem.innerHTML = `
+                    <div class="menu-item-header">
+                        <h3 class="menu-item-name font-heading">${item.name}</h3>
+                        <span class="menu-item-price">${item.price}</span>
+                    </div>
+                    <p class="menu-item-desc">${item.desc}</p>
+                `;
+                menuGrid.appendChild(menuItem);
+            });
+
+            const galleryGrid = document.getElementById('dom-gallery-grid');
+            SITE_CONFIG.gallery.forEach(imgUrl => {
+                const imgContainer = document.createElement('div');
+                imgContainer.className = 'gallery-item fade-up';
+                imgContainer.innerHTML = `<img src="${imgUrl}" alt="Gallery Image">`;
+                galleryGrid.appendChild(imgContainer);
+            });
+
+            document.getElementById('dom-location-title').textContent = SITE_CONFIG.locationTitle;
+            const hoursList = document.getElementById('dom-hours-list');
+            SITE_CONFIG.hours.forEach(hour => {
+                const hourEl = document.createElement('div');
+                hourEl.className = 'hour-item';
+                hourEl.innerHTML = `<span class="hour-day">${hour.day}</span><span class="hour-time">${hour.time}</span>`;
+                hoursList.appendChild(hourEl);
+            });
+            document.getElementById('dom-address').textContent = SITE_CONFIG.contact.address;
+
+            const phoneEl = document.getElementById('dom-phone');
+            phoneEl.textContent = SITE_CONFIG.contact.phone;
+            phoneEl.href = `tel:${SITE_CONFIG.contact.phone.replace(/[^0-9+]/g, '')}`;
+
+            document.getElementById('dom-map').innerHTML = `<iframe src="${SITE_CONFIG.contact.mapIframe}" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+
+            document.getElementById('dom-fb').href = SITE_CONFIG.contact.facebook;
+            document.getElementById('dom-ig').href = SITE_CONFIG.contact.instagram;
+            document.getElementById('dom-footer-copy').textContent = `© ${new Date().getFullYear()} ${SITE_CONFIG.hero.businessName}. All rights reserved.`;
+
+            const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            setTimeout(() => {
+                document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+            }, 100);
+
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
