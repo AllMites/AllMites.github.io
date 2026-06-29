@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Barbershop</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <script type="application/ld+json" id="seo-jsonld">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "",
+        "image": "",
+        "telephone": "",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "",
+            "addressLocality": "",
+            "addressRegion": "",
+            "addressCountry": "PH"
+        },
+        "url": "",
+        "description": "",
+        "priceRange": "₱"
+    }
+    </script>
+
+    <!-- Oswald (bold condensed display) + DM Sans (clean body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- ======================================================================= -->
+    <!-- === EDIT HERE === -->
+    <!--
+         TO RESKIN:
+           Option A (manual): Edit SITE_CONFIG below. Save, open in browser.
+           Option B (automated): Fill config.json, run: node replace.js
+
+         {{TOKEN}} values are replaced by replace.js.
+    -->
+    <script>
+        const SITE_CONFIG = {
+            // 1. BRAND COLORS & FONTS
+            theme: {
+                colors: {
+                    background: "#FDF8F5",      // #111009 near-black warm
+                    text:       "#1C1A18",    // #F2EDDF warm off-white
+                    accent:     "#B8755C",  // #C49A55 warm gold
+                    surface:    "#F5EEE9", // #1C1B13 dark surface
+                    border:     "#D9CEC4"   // #2A2820 subtle divider
+                },
+                fonts: {
+                    heading: "'Playfair Display', serif", // 'Oswald', sans-serif
+                    body:    "'DM Sans', sans-serif"     // 'DM Sans', sans-serif
+                }
+            },
+
+            // 2. NAV
+            nav: {
+                brandName: "AZTA URBAN SALON",   // e.g. "Barber BF"
+                cta:       "Book Now",     // e.g. "Book Now"
+                ctaLink:   "#visit" // e.g. "#visit"
+            },
+
+            // 3. HERO (max 4 text elements: eyebrow, headline, tagline, CTA)
+            hero: {
+                eyebrow:  "4.9★ · 366 Reviews · Ayala Malls Manila Bay",  // e.g. "Est. 2015 · BF Homes"
+                headline: "Urban style.
+Redefined.", // e.g. "Sharp cuts.\nClean lines."
+                tagline:  "Premium haircuts, dimensional balayage, keratin treatments, and complete hair transformations — right here at the 3rd Level of Ayala Malls Manila Bay.",  // max 20 words
+                ctaText:  "See Services", // e.g. "See Prices"
+                ctaLink:  "#services", // e.g. "#services"
+                image:    "https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1920&q=80"     // placehold.co or real URL
+            },
+
+            // 4. SERVICES (6 items)
+            services: [
+                { name: "Precision Haircut & Blowdry", description: "Personalized consultation, expert cut tailored to your face shape, finished with a luxurious blow-dry and style.", price: "₱900+" },
+                { name: "Full Hair Color", description: "Rich, dimensional color using premium products with bond protection for healthy, vibrant results.", price: "₱3,500+" },
+                { name: "Balayage & Highlights", description: "Hand-painted, sun-kissed balayage or foil highlights for natural-looking dimension and brightness.", price: "₱5,500+" },
+                { name: "Keratin Smoothing Treatment", description: "Brazilian and Japanese keratin options to eliminate frizz, add brilliance, and keep hair silky-smooth for months.", price: "₱4,500+" },
+                { name: "Digital Perm & Waves", description: "Soft, natural-looking curls and beach waves using gentle digital perm technology with heat-controlled precision.", price: "₱4,000+" },
+                { name: "The Azta Signature Package", description: "Complete transformation: premium haircut, full color or balayage, deep conditioning treatment, scalp massage, and blow-dry styling.", price: "₱7,800+" }
+            ],
+
+            // 5. ABOUT
+            about: {
+                headlineA: "Where artistry", // e.g. "Neighborhood cuts,"
+                headlineB: "meets you.", // e.g. "done right."
+                body:      "Azta Urban Salon brings trend-forward hair artistry to the heart of Ayala Malls Manila Bay. With a stellar 4.9★ rating from 366 glowing reviews, our team of expert stylists delivers precision cuts, dimensional color, and complete transformations. Every visit is a curated experience — from personalized consultation to the final reveal, using only premium products and advanced techniques. Because you deserve hair that turns heads.",       // 2-3 sentences
+                image:     "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=800&q=80",      // placehold.co or real URL
+                year:      "4.9★ · 366 Reviews"        // e.g. "2015"
+            },
+
+            // 6. BARBERS (3 — first is featured large, 2nd and 3rd are compact)
+            barbers: [
+                { name: "Senior Stylist Alex", specialty: "Creative Director — Balayage & Color", image: "https://images.unsplash.com/photo-1595475038784-b4391f842ce9?w=700&q=80" },
+                { name: "Stylist Jamie", specialty: "Precision Cuts & Keratin Treatments", image: "https://images.unsplash.com/photo-1621607512214-68297480165e?w=700&q=80" },
+                { name: "Stylist Reese", specialty: "Digital Perms & Bridal Styling", image: "https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=700&q=80" }
+            ],
+
+            // 7. GALLERY (6 images)
+            gallery: {
+                heading: "The Azta Lookbook",
+                images: [
+                    "https://images.unsplash.com/photo-1605980776566-2046e2a5c80b?w=600&q=80", "https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?w=600&q=80", "https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=80",
+                    "https://images.unsplash.com/photo-1522337660859-02fbef4f4b66?w=600&q=80", "https://images.unsplash.com/photo-1593702288056-7927b442d0fa?w=600&q=80", "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&q=80"
+                ]
+            },
+
+            // 8. HOURS + LOCATION
+            hours: {
+                heading:   "Visit Us",
+                days: [
+                    { label: "Mon - Thu", time: "10:00 AM - 9:00 PM" },
+                    { label: "Fri - Sat", time: "10:00 AM - 9:00 PM" },
+                    { label: "Sunday", time: "10:00 AM - 9:00 PM" }
+                ],
+                address:   "3rd Level, Ayala Malls Manila Bay, Diosdado Macapagal Blvd, cor Asean Ave, Parañaque, 1701 Metro Manila",
+                mapsEmbed: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3862.8!2d120.9899638!3d14.5246328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397cf6ae8d1d2db%3A0xffe8066f88d9ae92!2sAzta+Urban+Salon!5e0!3m2!1sen!2sph!4v1750000000000!5m2!1sen!2sph"
+            },
+
+            // 9. CONTACT
+            contact: {
+                phone:     "0917 631 6991",
+                facebook:  "https://facebook.com/aztaurban",
+                instagram: "https://instagram.com/aztaurban"
+            }
+        };
+    </script>
+
+    <style>
+        /* ============================================================
+           CSS VARIABLES — injected from SITE_CONFIG by JS
+        ============================================================ */
+        :root {
+            --bg:     #111009;
+            --text:   #F2EDDF;
+            --accent: #C49A55;
+            --surf:   #1C1B13;
+            --bord:   #2A2820;
+            --font-h: 'Oswald', sans-serif;
+            --font-b: 'DM Sans', system-ui, sans-serif;
+            --nav-h:  64px;
+            --r:      3px;
+        }
+
+        /* ============================================================
+           RESET + BASE
+        ============================================================ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--font-b);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { display: block; max-width: 100%; height: auto; }
+        a { color: inherit; text-decoration: none; }
+        button { border: none; cursor: pointer; font-family: var(--font-b); }
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: var(--r);
+        }
+
+        /* ============================================================
+           SCROLL REVEAL
+        ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(18px);
+            transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { opacity: 1; transform: none; transition: none; }
+        }
+
+        /* ============================================================
+           NAVIGATION
+        ============================================================ */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 100;
+            height: var(--nav-h);
+            background: var(--bg);
+            border-bottom: 1px solid var(--bord);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 clamp(1.25rem, 4vw, 3rem);
+        }
+        .nav__brand {
+            font-family: var(--font-h);
+            font-size: clamp(1.05rem, 2vw, 1.3rem);
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            flex-shrink: 0;
+        }
+        .nav__links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav__links a {
+            color: rgba(242, 237, 223, 0.45);
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 180ms ease;
+        }
+        .nav__links a:hover { color: var(--text); }
+        @media (max-width: 767px) { .nav__links { display: none; } }
+
+        .nav__cta {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg);
+            padding: 0.5rem 1.25rem;
+            border-radius: var(--r);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 180ms ease, transform 180ms ease;
+            flex-shrink: 0;
+        }
+        .nav__cta:hover { background: #d4a85e; transform: translateY(-1px); }
+        .nav__cta:active { transform: translateY(0); }
+
+        .nav__hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            background: none;
+            padding: 4px;
+        }
+        .nav__hamburger span {
+            display: block;
+            width: 22px; height: 2px;
+            background: var(--text);
+            border-radius: 2px;
+            transition: all 200ms ease;
+        }
+        @media (max-width: 767px) { .nav__hamburger { display: flex; } }
+
+        .nav__drawer {
+            display: none;
+            position: fixed;
+            top: var(--nav-h); left: 0; right: 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--bord);
+            padding: 1.5rem clamp(1.25rem, 4vw, 3rem) 2rem;
+            z-index: 99;
+        }
+        .nav__drawer.open { display: block; }
+        .nav__drawer ul { list-style: none; display: flex; flex-direction: column; }
+        .nav__drawer a {
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            display: block;
+            padding: 0.875rem 0;
+            border-bottom: 1px solid var(--bord);
+            transition: color 150ms ease;
+        }
+        .nav__drawer a:last-child { border-bottom: none; }
+        .nav__drawer a:hover { color: var(--accent); }
+
+        /* ============================================================
+           HERO
+        ============================================================ */
+        .hero {
+            min-height: 100dvh;
+            display: grid;
+            grid-template-columns: 60fr 40fr;
+            padding-top: var(--nav-h);
+        }
+        .hero__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(3rem, 8vh, 6rem) clamp(1.5rem, 5vw, 4rem);
+        }
+        .hero__eyebrow {
+            font-size: 0.7rem;
+            font-weight: 500;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        .hero__headline {
+            font-family: var(--font-h);
+            font-size: clamp(3rem, 7vw, 6.5rem);
+            font-weight: 700;
+            line-height: 1.0;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+        }
+        .hero__headline span { color: var(--accent); }
+        .hero__tagline {
+            font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+            font-weight: 400;
+            color: rgba(242, 237, 223, 0.55);
+            max-width: 38ch;
+            margin-bottom: 2.5rem;
+        }
+        .hero__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--accent);
+            color: var(--bg);
+            padding: 0.875rem 2rem;
+            border-radius: var(--r);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 200ms ease, transform 200ms ease;
+            align-self: flex-start;
+        }
+        .hero__cta svg { transition: transform 200ms ease; }
+        .hero__cta:hover { background: #d4a85e; transform: translateY(-2px); }
+        .hero__cta:hover svg { transform: translateX(3px); }
+        .hero__cta:active { transform: translateY(0); }
+        /* hero load cascade — after .hero__cta so its `transition` shorthand doesn't reset these delays */
+        .hero__eyebrow  { transition-delay: 0.05s; }
+        .hero__headline { transition-delay: 0.15s; }
+        .hero__tagline  { transition-delay: 0.25s; }
+        .hero__cta      { transition-delay: 0.35s; }
+        .hero__cta:hover, .hero__cta:active { transition-delay: 0s; }
+
+        .hero__image-panel {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero__image-panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero__image-panel::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, var(--bg) 0%, transparent 30%);
+        }
+
+        @media (max-width: 767px) {
+            .hero {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto 260px;
+                min-height: auto;
+            }
+            .hero__content { padding: 3rem 1.5rem 2.5rem; }
+            .hero__image-panel::after {
+                background: linear-gradient(to bottom, var(--bg) 0%, transparent 25%);
+            }
+        }
+
+        /* ============================================================
+           SERVICES
+        ============================================================ */
+        .services {
+            background: var(--surf);
+            padding: clamp(4rem, 10vh, 7rem) clamp(1.5rem, 5vw, 4rem);
+        }
+        .services__header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: clamp(2.5rem, 6vh, 4.5rem);
+        }
+        .services__heading {
+            font-family: var(--font-h);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1;
+        }
+        .services__note {
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(242, 237, 223, 0.4);
+        }
+        .services__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.25rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--bord);
+        }
+        .service-item:nth-child(odd)  { padding-right: 2.5rem; border-right: 1px solid var(--bord); }
+        .service-item:nth-child(even) { padding-left: 2.5rem; }
+        .service-item:nth-last-child(-n+2) { border-bottom: none; }
+        .service__num {
+            font-family: var(--font-h);
+            font-size: 0.65rem;
+            font-weight: 400;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            padding-top: 3px;
+            min-width: 22px;
+        }
+        .service__body { flex: 1; min-width: 0; }
+        .service__name {
+            font-family: var(--font-h);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            margin-bottom: 0.3rem;
+        }
+        .service__desc {
+            font-size: 0.78rem;
+            color: rgba(242, 237, 223, 0.45);
+            line-height: 1.5;
+        }
+        .service__price {
+            font-family: var(--font-h);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.04em;
+            white-space: nowrap;
+            padding-top: 1px;
+        }
+        @media (max-width: 640px) {
+            .services__grid { grid-template-columns: 1fr; }
+            .service-item:nth-child(odd)  { padding-right: 0; border-right: none; }
+            .service-item:nth-child(even) { padding-left: 0; }
+            .service-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--bord); }
+            .service-item:last-child { border-bottom: none; }
+        }
+
+        /* ============================================================
+           ABOUT
+        ============================================================ */
+        .about {
+            display: grid;
+            grid-template-columns: 55fr 45fr;
+            min-height: 520px;
+        }
+        .about__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: clamp(3.5rem, 9vh, 6rem) clamp(1.5rem, 5vw, 4rem);
+            background: var(--bg);
+        }
+        .about__year {
+            font-family: var(--font-h);
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+        .about__heading {
+            font-family: var(--font-h);
+            font-size: clamp(2rem, 4.5vw, 3.75rem);
+            font-weight: 700;
+            line-height: 1.05;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            margin-bottom: 1.5rem;
+        }
+        .about__heading span { color: var(--accent); }
+        .about__body {
+            font-size: clamp(0.875rem, 1.3vw, 0.975rem);
+            color: rgba(242, 237, 223, 0.6);
+            max-width: 46ch;
+            line-height: 1.8;
+        }
+        .about__image {
+            position: relative;
+            overflow: hidden;
+        }
+        .about__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        @media (max-width: 767px) {
+            .about { grid-template-columns: 1fr; min-height: auto; }
+            .about__image { min-height: 280px; }
+        }
+
+        /* ============================================================
+           BARBERS — featured (tall) + 2 compact, NOT 3 equal cards
+        ============================================================ */
+        .barbers {
+            background: var(--surf);
+            padding: clamp(4rem, 10vh, 7rem) clamp(1.5rem, 5vw, 4rem);
+        }
+        .barbers__heading {
+            font-family: var(--font-h);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1;
+            margin-bottom: clamp(2.5rem, 6vh, 4rem);
+        }
+        .barbers__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--bord);
+        }
+        .barber {
+            position: relative;
+            overflow: hidden;
+            background: var(--bg);
+        }
+        .barber--featured {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            min-height: 500px;
+        }
+        .barber--secondary { min-height: 245px; }
+        .barber img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .barber::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 55%;
+            background: linear-gradient(to top, rgba(17, 16, 9, 0.94) 0%, transparent 100%);
+        }
+        .barber__info {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 1.5rem;
+            z-index: 1;
+        }
+        .barber--featured .barber__info { padding: 2rem; }
+        .barber__name {
+            font-family: var(--font-h);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--text);
+            line-height: 1;
+        }
+        .barber--featured .barber__name { font-size: 1.7rem; }
+        .barber__specialty {
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-top: 0.35rem;
+        }
+        @media (max-width: 640px) {
+            .barbers__grid { grid-template-columns: 1fr; }
+            .barber--featured { grid-row: auto; min-height: 340px; }
+            .barber--secondary { min-height: 220px; }
+        }
+
+        /* ============================================================
+           GALLERY
+        ============================================================ */
+        .gallery {
+            padding: clamp(4rem, 10vh, 7rem) clamp(1.5rem, 5vw, 4rem);
+        }
+        .gallery__heading {
+            font-family: var(--font-h);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1;
+            margin-bottom: clamp(2.5rem, 6vh, 4rem);
+        }
+        .gallery__mosaic {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 260px 260px;
+            gap: 4px;
+        }
+        .gallery__tile {
+            overflow: hidden;
+            background: var(--surf);
+        }
+        .gallery__tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery__tile:hover img { transform: scale(1.04); }
+        .gallery__tile:nth-child(1) { grid-column: 1 / 3; }
+        @media (max-width: 640px) {
+            .gallery__mosaic {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: repeat(4, 160px);
+            }
+        }
+
+        /* ============================================================
+           VISIT
+        ============================================================ */
+        .visit {
+            background: var(--surf);
+            padding: clamp(4rem, 10vh, 7rem) clamp(1.5rem, 5vw, 4rem);
+        }
+        .visit__heading {
+            font-family: var(--font-h);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            line-height: 1;
+            margin-bottom: clamp(2.5rem, 6vh, 4rem);
+        }
+        .visit__grid {
+            display: grid;
+            grid-template-columns: 1fr 1.4fr;
+            gap: clamp(2rem, 5vw, 5rem);
+            align-items: start;
+        }
+        .hours__list { list-style: none; }
+        .hours__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--bord);
+            gap: 1rem;
+        }
+        .hours__item:first-child { border-top: 1px solid var(--bord); }
+        .hours__label {
+            font-family: var(--font-h);
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+        .hours__time {
+            font-size: 0.8rem;
+            color: rgba(242, 237, 223, 0.5);
+        }
+        .visit__address {
+            margin-top: 1.5rem;
+            font-size: 0.85rem;
+            color: rgba(242, 237, 223, 0.45);
+            line-height: 1.7;
+        }
+        .visit__map {
+            border-radius: var(--r);
+            overflow: hidden;
+            border: 1px solid var(--bord);
+            background: var(--bg);
+        }
+        .visit__map iframe {
+            width: 100%;
+            aspect-ratio: 4/3;
+            display: block;
+            border: none;
+        }
+        @media (max-width: 767px) { .visit__grid { grid-template-columns: 1fr; } }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        footer {
+            background: var(--bg);
+            border-top: 1px solid var(--bord);
+            padding: clamp(3rem, 7vh, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(1.5rem, 4vh, 2.5rem);
+        }
+        .footer__top {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid var(--bord);
+            margin-bottom: 2rem;
+        }
+        .footer__brand {
+            font-family: var(--font-h);
+            font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            margin-bottom: 0.6rem;
+        }
+        .footer__tagline {
+            font-size: 0.78rem;
+            color: rgba(242, 237, 223, 0.35);
+        }
+        .footer__col-heading {
+            font-family: var(--font-h);
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer__col a {
+            font-size: 0.82rem;
+            color: rgba(242, 237, 223, 0.45);
+            transition: color 150ms ease;
+        }
+        .footer__col a:hover { color: var(--text); }
+        .footer__social {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+        .footer__social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 34px; height: 34px;
+            border: 1px solid var(--bord);
+            border-radius: var(--r);
+            color: rgba(242, 237, 223, 0.45);
+            transition: border-color 150ms ease, color 150ms ease;
+        }
+        .footer__social a:hover { border-color: var(--accent); color: var(--accent); }
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .footer__copy {
+            font-size: 0.72rem;
+            color: rgba(242, 237, 223, 0.25);
+        }
+        @media (max-width: 767px) { .footer__top { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 480px) { .footer__top { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a class="nav__brand" href="#" id="nav-brand">The Barbershop</a>
+        <ul class="nav__links" role="list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#barbers">Stylists</a></li>
+            <li><a href="#visit">Visit</a></li>
+        </ul>
+        <a class="nav__cta" href="#visit" id="nav-cta">Book Now</a>
+        <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false" id="hamburger">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE DRAWER -->
+    <nav class="nav__drawer" id="drawer" aria-label="Mobile navigation">
+        <ul>
+            <li><a href="#services" onclick="closeDrawer()">Services</a></li>
+            <li><a href="#barbers" onclick="closeDrawer()">Stylists</a></li>
+            <li><a href="#visit"    onclick="closeDrawer()">Visit</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home" aria-label="Hero">
+        <div class="hero__content">
+            <p class="hero__eyebrow reveal" id="hero-eyebrow">Est. 2015 &middot; BF Homes</p>
+            <h1 class="hero__headline reveal" id="hero-headline">Sharp cuts.<br><span>Clean lines.</span></h1>
+            <p class="hero__tagline reveal" id="hero-tagline">Walk-ins welcome. No frills, no nonsense. Just a good cut every time.</p>
+            <a class="hero__cta reveal" href="#services" id="hero-cta">
+                See Prices
+                <svg width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+        <div class="hero__image-panel">
+            <img src="https://placehold.co/800x1100/1C1B13/C49A55?text=." id="hero-img" alt="" aria-hidden="true">
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services" aria-label="Services and pricing">
+        <div class="services__header reveal">
+            <h2 class="services__heading" id="services-heading">Services</h2>
+            <span class="services__note">All prices inclusive</span>
+        </div>
+        <div class="services__grid" id="services-grid">
+            <!-- populated by JS -->
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-label="About">
+        <div class="about__content">
+            <p class="about__year reveal" id="about-year">Est. 2015</p>
+            <h2 class="about__heading reveal" id="about-heading">Neighborhood cuts,<br><span>done right.</span></h2>
+            <p class="about__body reveal" id="about-body">Started in a small space off Aguirre, we have been cutting hair the same way since day one. No shortcuts, no upsells, just clean work by people who care about the craft.</p>
+        </div>
+        <div class="about__image">
+            <img src="https://placehold.co/800x900/2A2820/C49A55?text=." id="about-img" alt="" aria-hidden="true">
+        </div>
+    </section>
+
+    <!-- BARBERS -->
+    <section class="barbers" id="barbers" aria-label="Meet the stylists">
+        <h2 class="barbers__heading reveal" id="barbers-heading">The Stylists</h2>
+        <div class="barbers__grid" id="barbers-grid">
+            <!-- populated by JS: first barber featured (tall), 2nd and 3rd compact -->
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery" id="gallery" aria-label="Gallery">
+        <h2 class="gallery__heading reveal" id="gallery-heading">The Work</h2>
+        <div class="gallery__mosaic" id="gallery-mosaic">
+            <!-- populated by JS -->
+        </div>
+    </section>
+
+    <!-- VISIT -->
+    <section class="visit" id="visit" aria-label="Visit us">
+        <h2 class="visit__heading reveal" id="visit-heading">Come In</h2>
+        <div class="visit__grid">
+            <div>
+                <ul class="hours__list reveal" id="hours-list">
+                    <!-- populated by JS -->
+                </ul>
+                <p class="visit__address reveal" id="visit-address">123 Aguirre Ave, BF Homes,<br>Paranaque City, NCR</p>
+            </div>
+            <div class="visit__map reveal">
+                <iframe title="Shop location" src="" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map-iframe"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer__top">
+            <div>
+                <p class="footer__brand" id="footer-brand">The Barbershop</p>
+                <p class="footer__tagline">Sharp cuts since 2015.</p>
+            </div>
+            <div class="footer__col">
+                <p class="footer__col-heading">Contact</p>
+                <ul>
+                    <li><a href="tel:" id="footer-phone">+63 912 345 6789</a></li>
+                </ul>
+                <div class="footer__social">
+                    <a href="#" id="social-fb" aria-label="Facebook">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" id="social-ig" aria-label="Instagram">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <circle cx="12" cy="12" r="4"/>
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer__col">
+                <p class="footer__col-heading">Explore</p>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#barbers">Stylists</a></li>
+                    <li><a href="#visit">Visit Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copy" id="footer-copy">&copy; 2025 The Barbershop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* =====================================================================
+           1. INJECT SITE_CONFIG → CSS VARIABLES
+        ===================================================================== */
+        (function () {
+            var c = SITE_CONFIG.theme.colors;
+            var f = SITE_CONFIG.theme.fonts;
+            var d = document.documentElement;
+            function isToken(v) { return !v || String(v).indexOf('{{') === 0; }
+            if (!isToken(c.background)) d.style.setProperty('--bg',     c.background);
+            if (!isToken(c.text))       d.style.setProperty('--text',   c.text);
+            if (!isToken(c.accent))     d.style.setProperty('--accent', c.accent);
+            if (!isToken(c.surface))    d.style.setProperty('--surf',   c.surface);
+            if (!isToken(c.border))     d.style.setProperty('--bord',   c.border);
+            if (!isToken(f.heading))    d.style.setProperty('--font-h', f.heading);
+            if (!isToken(f.body))       d.style.setProperty('--font-b', f.body);
+        })();
+
+        /* =====================================================================
+           2. POPULATE DOM FROM SITE_CONFIG
+        ===================================================================== */
+        (function () {
+            function isToken(v) { return !v || String(v).indexOf('{{') === 0; }
+            function set(id, val) {
+                var el = document.getElementById(id);
+                if (el && !isToken(val)) el.textContent = val;
+            }
+            function setHref(id, val) {
+                var el = document.getElementById(id);
+                if (el && !isToken(val)) el.href = val;
+            }
+            function setSrc(id, val) {
+                var el = document.getElementById(id);
+                if (el && !isToken(val)) el.src = val;
+            }
+
+            var n = SITE_CONFIG.nav;
+            set('nav-brand', n.brandName);
+            set('nav-cta', n.cta);
+            setHref('nav-cta', n.ctaLink);
+            set('footer-brand', n.brandName);
+
+            var h = SITE_CONFIG.hero;
+            set('hero-eyebrow', h.eyebrow);
+            if (!isToken(h.headline)) {
+                var hl = document.getElementById('hero-headline');
+                if (hl) {
+                    var lines = h.headline.split('\n');
+                    hl.innerHTML = lines.map(function (line, i) {
+                        return i === 1 ? '<span>' + line + '</span>' : line;
+                    }).join('<br>');
+                }
+            }
+            set('hero-tagline', h.tagline);
+            if (!isToken(h.ctaText)) {
+                var ctaEl = document.getElementById('hero-cta');
+                if (ctaEl) {
+                    var arrowSvg = ctaEl.querySelector('svg');
+                    ctaEl.textContent = h.ctaText;
+                    if (arrowSvg) ctaEl.appendChild(arrowSvg);
+                }
+            }
+            setHref('hero-cta', h.ctaLink);
+            setSrc('hero-img', h.image);
+
+            var ab = SITE_CONFIG.about;
+            if (!isToken(ab.year)) set('about-year', 'Est. ' + ab.year);
+            if (!isToken(ab.headlineA) && !isToken(ab.headlineB)) {
+                var abHl = document.getElementById('about-heading');
+                if (abHl) abHl.innerHTML = ab.headlineA + '<br><span>' + ab.headlineB + '</span>';
+            }
+            set('about-body', ab.body);
+            setSrc('about-img', ab.image);
+
+            // Services
+            var grid = document.getElementById('services-grid');
+            if (grid) {
+                var defaultSvcs = [
+                    { name: 'Haircut',    description: 'Classic cut, any style.',        price: '₱80'  },
+                    { name: 'Fade',       description: 'Low, mid, or high fade.',         price: '₱120' },
+                    { name: 'Beard Trim', description: 'Shape and clean up.',             price: '₱60'  },
+                    { name: 'Hot Shave',  description: 'Straight razor, hot towel.',      price: '₱150' },
+                    { name: 'Kids Cut',   description: 'Under 12, quick and clean.',      price: '₱70'  },
+                    { name: 'Combo',      description: 'Haircut plus beard, full groom.', price: '₱180' }
+                ];
+                var svcs = SITE_CONFIG.services;
+                var allTok = svcs.every(function (s) { return isToken(s.name); });
+                var items = allTok ? defaultSvcs : svcs.map(function (s, i) {
+                    return {
+                        name:        isToken(s.name)        ? defaultSvcs[i].name        : s.name,
+                        description: isToken(s.description) ? defaultSvcs[i].description : s.description,
+                        price:       isToken(s.price)       ? defaultSvcs[i].price       : s.price
+                    };
+                });
+                grid.innerHTML = items.map(function (s, i) {
+                    return '<div class="service-item reveal" style="transition-delay:' + (i * 0.05) + 's">' +
+                        '<span class="service__num">0' + (i + 1) + '</span>' +
+                        '<div class="service__body">' +
+                            '<p class="service__name">' + s.name + '</p>' +
+                            '<p class="service__desc">' + s.description + '</p>' +
+                        '</div>' +
+                        '<span class="service__price">' + s.price + '</span>' +
+                    '</div>';
+                }).join('');
+            }
+
+            // Barbers — first is featured (tall), rest compact
+            var bGrid = document.getElementById('barbers-grid');
+            if (bGrid) {
+                var defaultBarbers = [
+                    { name: 'Kuya Jun',   specialty: 'Fades and Classic Cuts', image: 'https://placehold.co/700x1000/1C1B13/C49A55?text=.' },
+                    { name: 'Mang Eddie', specialty: 'Hot Shave and Beard',    image: 'https://placehold.co/700x500/2A2820/C49A55?text=.'  },
+                    { name: 'Bro Kyle',   specialty: 'Modern Styles',          image: 'https://placehold.co/700x500/111009/C49A55?text=.'  }
+                ];
+                var barbers = SITE_CONFIG.barbers;
+                var allBTok = barbers.every(function (b) { return isToken(b.name); });
+                var bItems = allBTok ? defaultBarbers : barbers.map(function (b, i) {
+                    return {
+                        name:      isToken(b.name)      ? defaultBarbers[i].name      : b.name,
+                        specialty: isToken(b.specialty) ? defaultBarbers[i].specialty : b.specialty,
+                        image:     isToken(b.image)     ? defaultBarbers[i].image     : b.image
+                    };
+                });
+                bGrid.innerHTML = bItems.map(function (b, i) {
+                    var cls = i === 0 ? 'barber barber--featured' : 'barber barber--secondary';
+                    return '<div class="' + cls + ' reveal" style="transition-delay:' + (i * 0.08) + 's">' +
+                        '<img src="' + b.image + '" alt="' + b.name + '" loading="lazy">' +
+                        '<div class="barber__info">' +
+                            '<p class="barber__name">' + b.name + '</p>' +
+                            '<p class="barber__specialty">' + b.specialty + '</p>' +
+                        '</div>' +
+                    '</div>';
+                }).join('');
+            }
+
+            // Gallery
+            var gal = SITE_CONFIG.gallery;
+            set('gallery-heading', gal.heading);
+            var mosaic = document.getElementById('gallery-mosaic');
+            if (mosaic) {
+                var defaultImgs = [
+                    'https://placehold.co/800x520/1C1B13/C49A55?text=.',
+                    'https://placehold.co/400x520/2A2820/C49A55?text=.',
+                    'https://placehold.co/400x260/111009/C49A55?text=.',
+                    'https://placehold.co/400x260/1C1B13/C49A55?text=.',
+                    'https://placehold.co/400x260/2A2820/C49A55?text=.',
+                    'https://placehold.co/400x260/111009/C49A55?text=.'
+                ];
+                gal.images.forEach(function (src, i) {
+                    var tile = document.createElement('div');
+                    tile.className = 'gallery__tile';
+                    var imgSrc = isToken(src) ? defaultImgs[i] : src;
+                    tile.innerHTML = '<img src="' + imgSrc + '" alt="Gallery photo ' + (i + 1) + '" loading="lazy">';
+                    mosaic.appendChild(tile);
+                });
+            }
+
+            // Hours
+            var hrs = SITE_CONFIG.hours;
+            set('visit-heading', hrs.heading);
+            var hList = document.getElementById('hours-list');
+            if (hList) {
+                var defaultDays = [
+                    { label: 'Mon - Fri', time: '9:00 AM - 8:00 PM'  },
+                    { label: 'Saturday',  time: '8:00 AM - 9:00 PM'  },
+                    { label: 'Sunday',    time: '10:00 AM - 6:00 PM' }
+                ];
+                var days = hrs.days;
+                var allDTok = days.every(function (d) { return isToken(d.label); });
+                var dItems = allDTok ? defaultDays : days.map(function (d, i) {
+                    return {
+                        label: isToken(d.label) ? defaultDays[i].label : d.label,
+                        time:  isToken(d.time)  ? defaultDays[i].time  : d.time
+                    };
+                });
+                hList.innerHTML = dItems.map(function (d) {
+                    return '<li class="hours__item">' +
+                        '<span class="hours__label">' + d.label + '</span>' +
+                        '<span class="hours__time">' + d.time + '</span>' +
+                    '</li>';
+                }).join('');
+            }
+            if (!isToken(hrs.address)) {
+                var addrEl = document.getElementById('visit-address');
+                if (addrEl) addrEl.innerHTML = hrs.address.replace(/,\s/g, ',<br>');
+            }
+            if (!isToken(hrs.mapsEmbed)) {
+                var mapEl = document.getElementById('map-iframe');
+                if (mapEl) mapEl.src = hrs.mapsEmbed;
+            }
+
+            // Contact
+            var ct = SITE_CONFIG.contact;
+            if (!isToken(ct.phone)) {
+                setHref('footer-phone', 'tel:' + ct.phone);
+                set('footer-phone', ct.phone);
+            }
+            if (!isToken(ct.facebook)) setHref('social-fb', ct.facebook);
+            if (!isToken(ct.instagram)) setHref('social-ig', ct.instagram);
+
+            // SEO JSON-LD + title
+            var jld = document.getElementById('seo-jsonld');
+            if (jld) {
+                try {
+                    var data = JSON.parse(jld.textContent);
+                    if (!isToken(n.brandName)) { data.name = n.brandName; document.title = n.brandName; }
+                    if (!isToken(hrs.address)) data.address.streetAddress = hrs.address;
+                    if (!isToken(ct.phone)) data.telephone = ct.phone;
+                    jld.textContent = JSON.stringify(data, null, 2);
+                } catch (e) {}
+            }
+        })();
+
+        /* =====================================================================
+           3. HAMBURGER
+        ===================================================================== */
+        (function () {
+            var btn    = document.getElementById('hamburger');
+            var drawer = document.getElementById('drawer');
+            var open   = false;
+            if (!btn || !drawer) return;
+            btn.addEventListener('click', function () {
+                open = !open;
+                drawer.classList.toggle('open', open);
+                btn.setAttribute('aria-expanded', String(open));
+                btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+            });
+        })();
+        function closeDrawer() {
+            var drawer = document.getElementById('drawer');
+            var btn    = document.getElementById('hamburger');
+            if (drawer) drawer.classList.remove('open');
+            if (btn)    btn.setAttribute('aria-expanded', 'false');
+        }
+
+        /* =====================================================================
+           4. SCROLL REVEAL
+        ===================================================================== */
+        (function () {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) { entry.target.classList.add('visible'); io.unobserve(entry.target); }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -28px 0px' });
+            document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+        })();
+    </script>
+</body>
+</html>
